@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Memento Mori | 藍二乗的小站</title><meta name="author" content="藍二乗"><meta name="copyright" content="藍二乗"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更新日志： 1.评论区功能已上线，由于waline部署在vercal上，所以需要配合代理使用 2.接入bangumi的api实现随机动画功能，并在此基础上加了一点算法改进实现了真随机功能 3.继续修历史遗留问题 日记： 1.复习+背120个日语单词，依旧没看语法，明天一定！ 2.下午试图理清楚项目架构，实则在捣鼓这个破网站，明天深入挖代码细节 3.晚上背八股，大概背的七七八八了 4.看了一部随机出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Memento Mori">
+<meta property="og:url" content="https://yuki2012720.github.io/2026/03/15/2026-03-15-new-post/index.html">
+<meta property="og:site_name" content="藍二乗的小站">
+<meta property="og:description" content="更新日志： 1.评论区功能已上线，由于waline部署在vercal上，所以需要配合代理使用 2.接入bangumi的api实现随机动画功能，并在此基础上加了一点算法改进实现了真随机功能 3.继续修历史遗留问题 日记： 1.复习+背120个日语单词，依旧没看语法，明天一定！ 2.下午试图理清楚项目架构，实则在捣鼓这个破网站，明天深入挖代码细节 3.晚上背八股，大概背的七七八八了 4.看了一部随机出">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuki2012720.github.io/img/head.png">
+<meta property="article:published_time" content="2026-03-15T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-15T09:06:51.685Z">
+<meta property="article:author" content="藍二乗">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuki2012720.github.io/img/head.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Memento Mori",
+  "url": "https://yuki2012720.github.io/2026/03/15/2026-03-15-new-post/",
+  "image": "https://yuki2012720.github.io/img/head.png",
+  "datePublished": "2026-03-15T00:00:00.000Z",
+  "dateModified": "2026-03-15T09:06:51.685Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "藍二乗",
+      "url": "https://yuki2012720.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yuki2012720.github.io/2026/03/15/2026-03-15-new-post/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Memento Mori',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/waline-custom.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><link rel="stylesheet" href="/css/aplayer-custom.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/magic.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/head.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 杂七杂八</span></a></div><div class="menus_item"><a class="site-page" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></div><div class="menus_item"><a class="site-page" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动漫</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">藍二乗的小站</span></a><a class="nav-page-title" href="/"><span class="site-name">Memento Mori</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 杂七杂八</span></a></div><div class="menus_item"><a class="site-page" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></div><div class="menus_item"><a class="site-page" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动漫</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Memento Mori</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-15T00:00:00.000Z" title="发表于 2026-03-15 00:00:00">2026-03-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-15T09:06:51.685Z" title="更新于 2026-03-15 09:06:51">2026-03-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>更新日志：</p>
+<p>1.评论区功能已上线，由于waline部署在vercal上，所以需要配合代理使用</p>
+<p>2.接入bangumi的api实现随机动画功能，并在此基础上加了一点算法改进实现了真随机功能</p>
+<p>3.继续修历史遗留问题</p>
+<p>日记：</p>
+<p>1.复习+背120个日语单词，依旧没看语法，明天一定！</p>
+<p>2.下午试图理清楚项目架构，<del>实则在捣鼓这个破网站</del>，明天深入挖代码细节</p>
+<p>3.晚上背八股，大概背的七七八八了</p>
+<p>4.看了一部随机出来的古早低分ova，纯粹的ppt画面、意义不明的台词以及试图在半个钟塞一堆混乱的人际关系，这种动画做出来到底是为了什么，真是大开眼界啊……</p>
+<p>5.晚上看到网友们聊桌游的时候，突然想到小学不知道哪一年的暑假，楼下的一家教育机构免费帮忙看小孩写作业，还会讲讲课，然后我就被送去了，实际上经常没老师管，我们几个小孩就上二楼开着空调打了几乎一暑假三国杀，真是怀念啊，我还记得那个暑假最后一天我是恋恋不舍的走出那家教育机构的。现如今回想起这样悠哉的记忆竟有些不真实。</p>
+<p>6.对第5点结尾的补充：人们常说过去的记忆会被美化，但我对小学的回忆都不太愉快，周末转两班公交去补习，或是去不知道哪家教育机构举办的哪所民办初中的入围考试，然后在黄昏的时候一个人听着林俊杰回家。由于经常落榜，家里人经常打压我学习能力不行，让我向XXX家的孩子学习。可是啊，明明考试考的和我补习补的根本不是一个东西，真的是我学习能力不行吗？真的是买几本不知道哪来的奥数书就能解决的问题吗？当时不知道，现在想想只是教育机构勾结这些民办初中利用信息差割韭菜罢了，通过宣传升学率高吸引家长花重金送小孩补习考试内容。虽然说小学到初中的学习内容并没有到拼天赋的时候，可是在十几年前信息差仍然广泛存在的情况下，一个普通人家的普通小孩，要去哪里搜罗这些考试内容呢？面对考场上一堆技巧性极强的题目应该如何动笔呢？一个人的境遇真的跟ta自身的努力程度有很大关系吗？想发散的还有很多，今天就写到这吧。</p>
+<p><img src="/img/1773508119208-cmxfyg.png" alt="图片"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yuki2012720.github.io">藍二乗</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yuki2012720.github.io/2026/03/15/2026-03-15-new-post/">https://yuki2012720.github.io/2026/03/15/2026-03-15-new-post/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://yuki2012720.github.io" target="_blank">藍二乗的小站</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/head.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/03/14/2026-03-14-new-post/" title="TOWN-0 PHASE-5"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">TOWN-0 PHASE-5</div></div><div class="info-2"><div class="info-item-1">更新日志： 1.通过调用vndb公开的api实现了随机GAL功能，并利用前人做好的标签映射实现绝大部分标签汉化 2.试图把发布时间精确到时分秒，并加入上传音乐功能，前者不难，后者有点麻烦，还没想好怎么弄，暂且一起搁置 3.修了一些历史遗留问题，我也不知道到底修好没，目前看起来没问题，能跑就行 日记： 1.复习+背120个日语单词，语法还是没动 2.下午复习项目代码细节，晚上背八股 3.再也不瞎折腾这个破网站了，我的一些美好品质被这个网站毁了，博客最重要的是写博客。。 4&#x2F;10 5.利用随机GAL挖掘到了一些古早乙女同人，有时间玩玩 6.网易云的ZARD版权居然回来了 7.谁能赞助我20刀买个cursor会员  </div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/head.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">藍二乗</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="javascript:toRandomPost()"><i class="fas fa-dice"></i><span>I'm Feeling Lucky</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">GET ROUND IN THE SEASON...</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/15/2026-03-15-new-post/" title="Memento Mori">Memento Mori</a><time datetime="2026-03-15T00:00:00.000Z" title="发表于 2026-03-15 00:00:00">2026-03-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/14/2026-03-14-new-post/" title="TOWN-0 PHASE-5">TOWN-0 PHASE-5</a><time datetime="2026-03-14T00:00:00.000Z" title="发表于 2026-03-14 00:00:00">2026-03-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/13/2026-03-13-new-post/" title="vanilla flavor piece">vanilla flavor piece</a><time datetime="2026-03-13T00:00:00.000Z" title="发表于 2026-03-13 00:00:00">2026-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/12/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" title="日记&amp;更新日志">日记&amp;更新日志</a><time datetime="2026-03-12T01:42:16.000Z" title="发表于 2026-03-12 01:42:16">2026-03-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="第一篇博客">第一篇博客</a><time datetime="2026-03-11T01:42:16.000Z" title="发表于 2026-03-11 01:42:16">2026-03-11</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 藍二乗</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"lang":"zh-CN","placeholder":"写下你的留言吧...","emoji":["https://cdn.jsdelivr.net/npm/@waline/emojis@1.0.1/weibo"],"requiredMeta":["nick"],"meta":["nick"],"anonymous":true,"login":"disable"}
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://comment-phi-blond.vercel.app',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script src="/js/random.js"></script><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="/js/custom-aplayer.js"></script><script src="/js/music-autoplay.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

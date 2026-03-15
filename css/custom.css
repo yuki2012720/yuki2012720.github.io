@@ -1,0 +1,31 @@
+/* 页脚透明化 */
+#footer {
+  background: transparent !important;
+}
+#footer::before {
+  background: transparent !important;
+}
+
+/* 副标题星光闪烁特效 */
+#site-subtitle {
+  text-shadow: 0 0 5px rgba(73, 177, 245, 0.8),
+               0 0 10px rgba(73, 177, 245, 0.6),
+               0 0 15px rgba(73, 177, 245, 0.4);
+  animation: flare 3s ease-in-out infinite;
+}
+
+@keyframes flare {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(73, 177, 245, 0.8),
+                 0 0 10px rgba(73, 177, 245, 0.6),
+                 0 0 15px rgba(73, 177, 245, 0.4);
+  }
+  50% {
+    opacity: 0.85;
+    text-shadow: 0 0 8px rgba(73, 177, 245, 1),
+                 0 0 15px rgba(73, 177, 245, 0.8),
+                 0 0 25px rgba(73, 177, 245, 0.6),
+                 0 0 35px rgba(73, 177, 245, 0.4);
+  }
+}

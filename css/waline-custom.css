@@ -1,0 +1,79 @@
+/* Waline 评论系统自定义样式 - 强制覆盖 */
+
+/* 整体容器 */
+#waline,
+.wl-container,
+.wl-wrap {
+  font-size: 18px !important;
+}
+
+/* 昵称标签 - 强制放大到20px */
+label[for="wl-nick"],
+.wl-label[for="wl-nick"],
+label.wl-label {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+/* 昵称输入框 - 强制放大到20px */
+input.wl-input.nick,
+input[name="nick"],
+.wl-meta input[type="text"] {
+  font-size: 20px !important;
+  padding: 12px 16px !important;
+  height: auto !important;
+  min-height: 50px !important;
+}
+
+/* 评论输入框 - 强制放大到20px */
+.wl-editor,
+textarea.wl-editor,
+.wl-input-area textarea {
+  font-size: 20px !important;
+  padding: 16px !important;
+  min-height: 150px !important;
+}
+
+/* 提交按钮 */
+.wl-submit,
+button.wl-submit {
+  font-size: 18px !important;
+  padding: 12px 24px !important;
+  height: auto !important;
+  min-height: 50px !important;
+}
+
+/* 隐藏所有登录相关元素 */
+.wl-login,
+.wl-btn-login,
+.wl-action .wl-login,
+button.wl-btn-login,
+a.wl-login,
+.wl-header-item .wl-login {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* 调整输入区域布局 */
+.wl-meta {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 15px !important;
+}
+
+/* 确保所有文本都放大 */
+.wl-panel,
+.wl-header,
+.wl-header-item {
+  font-size: 18px !important;
+}
+
+/* 隐藏登录按钮的容器 */
+.wl-action {
+  display: flex !important;
+}
+
+.wl-action > *:not(.wl-submit):not(.wl-count) {
+  display: none !important;
+}

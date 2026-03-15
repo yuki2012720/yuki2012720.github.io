@@ -1,0 +1,59 @@
+/* 留言板页面样式 */
+.message-board {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.message-board h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.message-board h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.message-board p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-color-secondary);
+  margin-bottom: 2rem;
+}
+
+/* 评论区样式 */
+#waline {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .message-board {
+    padding: 1.5rem;
+  }
+  
+  .message-board h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .message-board {
+    background: var(--card-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}

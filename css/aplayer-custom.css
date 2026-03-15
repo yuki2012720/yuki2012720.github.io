@@ -1,0 +1,133 @@
+/* =========================================================
+   APlayer 悬浮黑胶唱片版 (标准模式魔改)
+   ========================================================= */
+
+/* 1. 将常规播放器悬浮在左下角 */
+#aplayer {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    width: 320px !important;
+    z-index: 9999 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    margin: 0 !important;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    /* overflow: hidden !important; */
+    white-space: nowrap !important;
+}
+
+/* 夜间模式底色适配 */
+[data-theme="dark"] #aplayer {
+    background: rgba(30, 30, 30, 0.95) !important;
+}
+
+/* 2. 定义收起状态（aplayer-collapsed 类） */
+/* 宽度刚好等于 CD 的宽度(70px) + 左右外边距(10px*2) = 90px */
+#aplayer.aplayer-collapsed {
+    width: 90px !important;
+}
+
+/* 3. 收起时，让文字和进度条渐隐并失去点击响应 */
+#aplayer .aplayer-info {
+    transition: opacity 0.3s ease !important;
+}
+#aplayer.aplayer-collapsed .aplayer-info {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* 4. 把 CD 封面变成一个可以点击的按钮（鼠标变成小手） */
+#aplayer .aplayer-pic {
+    cursor: pointer !important;
+}
+
+/* 5. 黑胶CD样式与旋转动画 */
+@keyframes aplayer-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#aplayer .aplayer-pic {
+    border-radius: 50% !important;
+    animation: aplayer-spin 15s linear infinite;
+    animation-play-state: paused;
+    margin: 10px !important;
+    width: 70px !important;
+    height: 70px !important;
+    border: 3px solid #1a1a1a !important;
+}
+
+/* CD中心小圆孔 */
+#aplayer .aplayer-pic::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px; height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+[data-theme="dark"] #aplayer .aplayer-pic::after {
+    background: #1e1e1e;
+}
+
+/* 6. 接收 JS 信号，开始旋转（完美解决不转问题） */
+#aplayer.is-playing .aplayer-pic {
+    animation-play-state: running !important;
+}
+
+/* 7. 优化歌词显示（让歌词在播放器上方飘，不挡进度条） */
+#aplayer .aplayer-lrc {
+    position: absolute !important;
+    bottom: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 80px !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 10px 0 !important;
+    margin-bottom: 0 !important;
+    overflow: hidden !important;
+    z-index: 9998 !important;
+    display: block !important;
+}
+
+#aplayer .aplayer-lrc-contents {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+#aplayer .aplayer-lrc p {
+    color: #fff !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+#aplayer .aplayer-lrc p.aplayer-lrc-current {
+    color: #fe7300 !important;
+    font-weight: bold !important;
+}
+
+[data-theme="light"] #aplayer .aplayer-lrc {
+    background: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="light"] #aplayer .aplayer-lrc p {
+    color: #333 !important;
+}
+
+[data-theme="light"] #aplayer .aplayer-lrc p.aplayer-lrc-current {
+    color: #fe7300 !important;
+}
