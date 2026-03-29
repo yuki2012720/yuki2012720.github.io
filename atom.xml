@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>藍二乗</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://yuki12720.org/icon.png</icon>
+  <id>https://yuki12720.org/</id>
+  <link href="https://yuki12720.org/" rel="alternate"/>
+  <link href="https://yuki12720.org/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, 藍二乗</rights>
+  <subtitle>一个普通的生活博客</subtitle>
+  <title>sea of solitude</title>
+  <updated>2026-03-29T16:39:59.872Z</updated>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/30/2026-03-30-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/30/2026-03-30-new-post/"/>
+    <published>2026-03-30T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.优化文章展示，当电脑端鼠标悬停在文章上时会出现封面，移动端默认使用上封面下文章展示样式</p>
+<p>2.优化随机GAL页面今日推荐逻辑</p>
+<p>3.域名DNS切换至Cloudflare，启用Cloudflare代理、缓存与HTTPS，配]]>
+    </summary>
+    <title>fish in the pool</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/29/2026-03-29-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/29/2026-03-29-new-post/"/>
+    <published>2026-03-29T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.将对称、随机GAL&#x2F;动画、关于我页面通通归为杂七杂八一栏</p>
+<p>2.增加友链页面</p>
+<p>3.将“最新文章”一栏改为“随机文章”</p>
+<p>4.增加字数统计和阅读时长估计</p>
+<p>5.更换域名，买了个正式域名，]]>
+    </summary>
+    <title>カラフル</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/28/2026-03-28-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/28/2026-03-28-new-post/"/>
+    <published>2026-03-28T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.提前今日推荐快照生成时间，现在应该不会出现不同时间段作品不一的情况了</p>
+<p>日记：</p>
+<p>1.复习+背130个日语单词，语法未动</p>
+<p>2.走十分钟吃午餐</p>
+<p>3.下午看完了《欢迎加入NHK！》，随手投简历，感]]>
+    </summary>
+    <title>庭師KING</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/27/2026-03-27-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/27/2026-03-27-new-post/"/>
+    <published>2026-03-27T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.优化动画推荐逻辑，热门作品加权提升，排名降权，<del>随机到只有几个人评分的冷门神作概率应该降低了</del></p>
+<p>2.修复杂七杂八页面展示问题</p>
+<p>日记：</p>
+<p>1.复习+背130个日语单词</p>
+<p>2.走]]>
+    </summary>
+    <title>パズル</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/26/2026-03-26-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/26/2026-03-26-new-post/"/>
+    <published>2026-03-26T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.更新部分样式，修复随机GAL&#x2F;动画页面容器展示问题</p>
+<p>2.更新了更多bug</p>
+<p>日记：</p>
+<p>1.复习120个日语单词，语法未动</p>
+<p>2.走十分钟吃午餐，依旧怕油腻，今天吃的少一点</p>
+<p]]>
+    </summary>
+    <title>Panopticon</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/25/2026-03-25-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/25/2026-03-25-new-post/"/>
+    <published>2026-03-25T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.重大更新，主题壁纸以及各页面样式设计全部更换。让我们一同走进上月由良内心那片深不见底的孤独之海，去探寻她在偏执与疯狂中交织的凄美悲歌</p>
+<p>2.原主题：<img src="/img/1774414575377-f77ioq.png"]]>
+    </summary>
+    <title>sea of solitude</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/24/2026-03-24-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/24/2026-03-24-new-post/"/>
+    <published>2026-03-24T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.提前快照预生成时间</p>
+<p>日记:</p>
+<p>1.复习+新学130个日语单词</p>
+<p>2.走十分钟路吃午餐</p>
+<p>3.下午海投简历到上限（150份）有三家有约面意向，不过我都不太想去。还有家线上笔试要双机位，好麻烦。接着]]>
+    </summary>
+    <title>Heaven is a Place On Earth</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/23/2026-03-23-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/23/2026-03-23-new-post/"/>
+    <published>2026-03-23T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志:</p>
+<p>1.优化了动画池子连续出现的限制，今天后应该不会连续两天出现同一池子了</p>
+<p>2.提前了快照生成时间，由于设置成00：00的话不太稳定，所以现在需要在00：01后才能查看今日推荐</p>
+<p>日记：</p>
+<p>1.背+新学130个日语]]>
+    </summary>
+    <title>Pop Virus</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/22/2026-03-22-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/22/2026-03-22-new-post/"/>
+    <published>2026-03-22T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.为今日推荐增加历史推荐功能，可查看历史七天推荐作品</p>
+<p>2.为防止后续推荐算法改进导致历史推荐更改，增加了每日生成快照并自动提交github仓库的功能</p>
+<p>3.对动画推荐算法进行小改动</p>
+<p>日记：</p>
+<p>1]]>
+    </summary>
+    <title>過ぎし３月の君へ</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/21/2026-03-21-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/21/2026-03-21-new-post/"/>
+    <published>2026-03-21T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.优化“随机GAL”页面下的今日推荐逻辑</p>
+<p>2.为“随机动画”页面下的今日推荐设计了不同于GAL的推荐逻辑</p>
+<p>3.试图设计几个新功能&#x2F;彩蛋，有点复杂，暂且搁置</p>
+<p>日记：</p>
+<p>1.复习+背11]]>
+    </summary>
+    <title>Re:pray</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/20/2026-03-20-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/20/2026-03-20-new-post/"/>
+    <published>2026-03-20T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志;<br>1.修复部分页面文本错漏<br>2.随机GAL以及随机动画页面下加入了“今日推荐”板块，每日每人看到的都是根据一定算法生成的同一部作品。由于vndb数据库内的游戏质量实在良莠不齐，在随机的基础上，为了保证一定质量，我对每日推荐的游戏做了比较复杂的分层、加权]]>
+    </summary>
+    <title>憂、安堵、藍。</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/19/2026-03-19-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/19/2026-03-19-new-post/"/>
+    <published>2026-03-19T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.修复移动端预加载动画残留问题</p>
+<p>2.增加“关于”（实则为“关于我”下次和其他更新一起改）界面，<del>没什么用</del></p>
+<p>3.修复了评论数据库权限安全问题，并优化了网站的 Google]]>
+    </summary>
+    <title>Last regrets</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/18/2026-03-18-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/18/2026-03-18-new-post/"/>
+    <published>2026-03-18T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.增加了预加载动画，首次进入主页时，如果2s内没加载出页面就会出现“少女祈祷中…”的字样，但是苯人进行了弱网测试和强制加载也没测出来，之后应该会改</p>
+<p>2.增加了404页面，输入本站点下不存在的页面会出现</p>
+<p>3.移动端若干体]]>
+    </summary>
+    <title>想いを巡らす100の事象</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/18/2026-03-18-new-post2/</id>
+    <link href="https://yuki12720.org/2026/03/18/2026-03-18-new-post2/"/>
+    <published>2026-03-18T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p><em>“I am shinning in</em></p>
+<p><em>this moment frame your shot</em></p>
+<p><em>with your senses open wide</em></p>
+<p><em>Leave that]]>
+    </summary>
+    <title>（施工中）Put Your Camera Down——没有色彩的悉达多与他的巡礼之年</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/17/2026-03-17-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/17/2026-03-17-new-post/"/>
+    <published>2026-03-17T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.好像没有</p>
+<p>日记：</p>
+<p>1.复习+背120个日语单词，过了几课语法</p>
+<p>2.下午继续看项目，看面经，好累啊</p>
+<p>3.晚上不知道在干嘛，然后投了几十份简历，有个装成看起来正经的公司HR要我微信，加了一看是]]>
+    </summary>
+    <title>Pica pica</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/16/2026-03-16-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/16/2026-03-16-new-post/"/>
+    <published>2026-03-16T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.优化随机GAL筛选机制，现在可以通过语言&#x2F;评分&#x2F;年代进行筛选了</p>
+<p>2.优化了主页容器样式，背景由纯白改为透明，另外更改文章字体为黑体并增加了大小，现在看起来没那么费眼了</p>
+<p>3.增加了网页图标，<del]]>
+    </summary>
+    <title>The last 8 bars</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/15/2026-03-15-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/15/2026-03-15-new-post/"/>
+    <published>2026-03-15T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.评论区功能已上线，由于waline部署在vercal上，所以需要配合代理使用</p>
+<p>2.接入bangumi的api实现随机动画功能，并在此基础上加了一点算法改进实现了真随机功能</p>
+<p>3.继续修历史遗留问题</p>
+<p>日记：]]>
+    </summary>
+    <title>Memento Mori</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/14/2026-03-14-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/14/2026-03-14-new-post/"/>
+    <published>2026-03-14T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.通过调用vndb公开的api实现了随机GAL功能，并利用前人做好的标签映射实现绝大部分标签汉化</p>
+<p>2.试图把发布时间精确到时分秒，并加入上传音乐功能，前者不难，后者有点麻烦，还没想好怎么弄，暂且一起搁置</p>
+<p>3.修了一些历]]>
+    </summary>
+    <title>TOWN-0 PHASE-5</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/13/2026-03-13-new-post/</id>
+    <link href="https://yuki12720.org/2026/03/13/2026-03-13-new-post/"/>
+    <published>2026-03-13T00:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>更新日志：</p>
+<p>1.增加音乐播放器，现在可以在线收听星が瞬くこんな夜に了</p>
+<p>2.试图用vercal+Waline+supabase实现评论区功能，部署遇到未知困难，暂且搁置</p>
+<p>3.通过在线编辑进行自动推送的流程出了点问题，自动推送后会回退版]]>
+    </summary>
+    <title>vanilla flavor piece</title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>藍二乗</name>
+    </author>
+    <id>https://yuki12720.org/2026/03/12/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/</id>
+    <link href="https://yuki12720.org/2026/03/12/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/"/>
+    <published>2026-03-12T01:42:16.000Z</published>
+    <summary>
+      <![CDATA[<p>1.背日语单词，今天没学语法</p>
+<p>2.刷了几十道sql题，恢复sql记忆中</p>
+<p>3.试图使用纯前端完成gif对称功能，折腾一晚上换了114514种方法失败，后引入vercal5分钟解决</p>
+<p>4.在ai推荐下加了个不知道什么熔毁功能</p>
+<p]]>
+    </summary>
+    <title>
+      <![CDATA[日记&更新日志]]>
+    </title>
+    <updated>2026-03-29T16:39:59.872Z</updated>
+  </entry>
+</feed>

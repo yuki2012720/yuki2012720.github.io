@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+Disallow: /admin/
+Disallow: /node_modules/
+
+Sitemap: https://yuki12720.org/sitemap.xml
