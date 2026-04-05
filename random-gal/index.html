@@ -1,0 +1,2636 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>随机GAL | sea of solitude</title><meta name="author" content="藍二乗"><meta name="copyright" content="藍二乗"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=".random-gal-container {     max-width: 800px;     margin: 0 auto;     padding: 20px;     text-align: center;   }    .random-gal-container h1 {     font-size: 2.5rem;     margin-bottom: 30px;     b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="随机GAL">
+<meta property="og:url" content="https://yuki12720.org/random-gal/index.html">
+<meta property="og:site_name" content="sea of solitude">
+<meta property="og:description" content=".random-gal-container {     max-width: 800px;     margin: 0 auto;     padding: 20px;     text-align: center;   }    .random-gal-container h1 {     font-size: 2.5rem;     margin-bottom: 30px;     b">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuki12720.org/img/head1.png">
+<meta property="article:published_time" content="2026-04-05T16:37:30.310Z">
+<meta property="article:modified_time" content="2026-04-05T16:37:30.310Z">
+<meta property="article:author" content="藍二乗">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuki12720.org/img/head1.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://yuki12720.org/random-gal/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '随机GAL',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/waline-custom.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><link rel="stylesheet" href="/css/aplayer-custom.css"><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="sea of solitude" type="application/atom+xml">
+</head><body><div id="loading-box" style="display: none; opacity: 0; visibility: hidden;" aria-hidden="true"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">少女祈祷中…</div></div></div><script>(()=&gt;{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const visitedKey = 'homePreloaderVisited'
+  const forceLoading = new URLSearchParams(window.location.search).has('force_loading')
+  const storage = (() =&gt; {
+    try {
+      return window.localStorage
+    } catch (error) {
+      return null
+    }
+  })()
+  const isHomePage = window.location.pathname === '/' ||
+    window.location.pathname.endsWith('/index.html') ||
+    (window.GLOBAL_CONFIG_SITE &amp;&amp; window.GLOBAL_CONFIG_SITE.pageType === 'home')
+  const hasVisitedHome = storage &amp;&amp; storage.getItem(visitedKey) === 'true'
+
+  const hideLoading = () =&gt; {
+    $body.style.overflow = ''
+    $loadingBox.classList.remove('is-visible', 'loaded')
+    $loadingBox.style.display = 'none'
+    $loadingBox.style.opacity = '0'
+    $loadingBox.style.visibility = 'hidden'
+    $loadingBox.setAttribute('aria-hidden', 'true')
+  }
+
+  if ((!isHomePage || hasVisitedHome) &amp;&amp; !forceLoading) {
+    hideLoading()
+    return
+  }
+
+  let isLoaded = false
+  let isVisible = false
+  let cleanupTimer = null
+
+  const showLoading = () =&gt; {
+    if (isLoaded || isVisible) return
+    isVisible = true
+    $body.style.overflow = 'hidden'
+    $loadingBox.style.display = ''
+    $loadingBox.style.opacity = '1'
+    $loadingBox.style.visibility = 'visible'
+    $loadingBox.setAttribute('aria-hidden', 'false')
+    $loadingBox.classList.add('is-visible')
+  }
+
+  const markVisited = () =&gt; {
+    if (!forceLoading &amp;&amp; isHomePage &amp;&amp; storage) {
+      try {
+        storage.setItem(visitedKey, 'true')
+      } catch (error) {}
+    }
+  }
+
+  const endLoading = () =&gt; {
+    if (isLoaded) return
+    isLoaded = true
+    window.clearTimeout(showTimer)
+    window.clearTimeout(cleanupTimer)
+    markVisited()
+    $body.style.overflow = ''
+
+    if (!isVisible) {
+      hideLoading()
+      return
+    }
+
+    if ($loadingBox.classList.contains('loaded')) return
+    $loadingBox.classList.remove('is-visible')
+    $loadingBox.classList.add('loaded')
+    cleanupTimer = window.setTimeout(hideLoading, 650)
+  }
+
+  const showTimer = window.setTimeout(showLoading, forceLoading ? 0 : 2000)
+
+  if (document.readyState === 'complete') {
+    endLoading()
+  } else {
+    window.addEventListener('load', endLoading, { once: true })
+    setTimeout(endLoading, 10000)
+  }
+})()</script><div class="bg-animation" id="web_bg" style="background-image: url(/img/magic.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/head1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-toolbox"></i><span> 杂七杂八</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 在线对称</span></a></li><li><a class="site-page child" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></li><li><a class="site-page child" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">藍二乗</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-toolbox"></i><span> 杂七杂八</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 在线对称</span></a></li><li><a class="site-page child" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></li><li><a class="site-page child" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">随机GAL</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container">
+<style>
+  .random-gal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .random-gal-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .stats-info {
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+
+  .daily-section {
+    margin: 0 auto 35px;
+    text-align: left;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .section-kicker {
+    margin-bottom: 6px;
+    font-size: 0.8rem;
+    letter-spacing: 0.24em;
+    color: #ff8e53;
+    font-weight: 700;
+  }
+
+  .section-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-color, #333);
+  }
+
+  .section-note {
+    color: #888;
+    font-size: 0.92rem;
+    text-align: right;
+  }
+
+  .random-btn {
+    display: inline-block;
+    margin: 0 auto 40px;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  }
+
+  .random-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+  }
+
+  .random-btn:active {
+    transform: translateY(-1px);
+  }
+
+  .random-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .game-card {
+    background: var(--card-bg, #fff);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    display: none;
+    text-align: left;
+  }
+
+  .game-card.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .daily-card {
+    border: 1px solid rgba(255, 142, 83, 0.18);
+    box-shadow: 0 14px 45px rgba(255, 142, 83, 0.12);
+  }
+
+  .daily-card .game-info {
+    padding-top: 24px;
+  }
+
+  .history-section {
+    margin-top: 18px;
+  }
+
+  .history-toggle {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 142, 83, 0.12);
+    box-shadow: 0 10px 30px rgba(255, 142, 83, 0.08);
+    overflow: hidden;
+  }
+
+  .history-toggle summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+    user-select: none;
+  }
+
+  .history-toggle summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .history-toggle-label {
+    color: var(--text-color, #333);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .history-toggle-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    font-size: 0.88rem;
+  }
+
+  .history-toggle-icon {
+    color: #ff8e53;
+    font-size: 0.95rem;
+    transition: transform 0.25s ease;
+  }
+
+  .history-toggle[open] .history-toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .history-title {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    color: var(--text-color, #333);
+  }
+
+  .history-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .history-item {
+    display: grid;
+    grid-template-columns: 78px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(255, 142, 83, 0.12);
+    box-shadow: 0 8px 24px rgba(255, 142, 83, 0.08);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .history-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(255, 142, 83, 0.12);
+  }
+
+  .history-cover {
+    width: 78px;
+    height: 104px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: rgba(245, 247, 250, 0.96);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .history-main {
+    min-width: 0;
+  }
+
+  .history-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .history-date {
+    font-size: 0.84rem;
+    color: #888;
+    font-weight: 600;
+  }
+
+  .history-pool {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .history-pool.pool-premium {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 127, 80, 0.18);
+    color: #ff7f50;
+  }
+
+  .history-pool.pool-solid {
+    background: rgba(255, 193, 7, 0.12);
+    border: 1px solid rgba(255, 193, 7, 0.24);
+    color: #c98a00;
+  }
+
+  .history-pool.pool-notable {
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    color: #5b68d6;
+  }
+
+  .history-pool.pool-surprise {
+    background: rgba(0, 191, 165, 0.12);
+    border: 1px solid rgba(0, 191, 165, 0.22);
+    color: #009688;
+  }
+
+  .history-pool.pool-recent {
+    background: rgba(156, 39, 176, 0.1);
+    border: 1px solid rgba(156, 39, 176, 0.2);
+    color: #8e24aa;
+  }
+
+  .history-pool.pool-archive {
+    background: rgba(96, 125, 139, 0.12);
+    border: 1px solid rgba(96, 125, 139, 0.22);
+    color: #546e7a;
+  }
+
+  .history-name {
+    color: var(--text-color, #333);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  .history-score {
+    color: #ffb300;
+    font-size: 1.08rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    .history-item {
+      grid-template-columns: 64px 1fr;
+      gap: 12px;
+    }
+
+    .history-cover {
+      width: 64px;
+      height: 88px;
+    }
+
+    .history-score {
+      grid-column: 2;
+      justify-self: start;
+      font-size: 0.98rem;
+    }
+  }
+
+  .daily-badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 14px;
+    padding: 11px 20px;
+    border-radius: 999px;
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 127, 80, 0.18);
+    color: #ff7f50;
+    font-size: 0.96rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  .daily-badge.pool-premium {
+    background: rgba(255, 107, 107, 0.1);
+    border-color: rgba(255, 127, 80, 0.18);
+    color: #ff7f50;
+  }
+
+  .daily-badge.pool-solid {
+    background: rgba(255, 193, 7, 0.12);
+    border-color: rgba(255, 193, 7, 0.24);
+    color: #c98a00;
+  }
+
+  .daily-badge.pool-notable {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.2);
+    color: #5b68d6;
+  }
+
+  .daily-badge.pool-surprise {
+    background: rgba(0, 191, 165, 0.12);
+    border-color: rgba(0, 191, 165, 0.22);
+    color: #009688;
+  }
+
+  .daily-badge.pool-recent {
+    background: rgba(156, 39, 176, 0.1);
+    border-color: rgba(156, 39, 176, 0.2);
+    color: #8e24aa;
+  }
+
+  .daily-badge.pool-archive {
+    background: rgba(96, 125, 139, 0.12);
+    border-color: rgba(96, 125, 139, 0.22);
+    color: #546e7a;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .banner-shell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.96) 0%, rgba(233, 238, 247, 0.96) 100%);
+  }
+
+  .game-banner {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: min(72vh, 820px);
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    cursor: zoom-in;
+  }
+
+  .game-banner.is-guarded {
+    filter: blur(18px) saturate(0.88);
+    transform: scale(1.03);
+    cursor: default;
+  }
+
+  .banner-guard {
+    position: absolute;
+    inset: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(24, 28, 39, 0.58);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .banner-guard.show {
+    display: flex;
+  }
+
+  .banner-guard-card {
+    max-width: min(480px, 100%);
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    text-align: center;
+  }
+
+  .banner-guard-title {
+    margin: 0 0 8px;
+    color: #2d3748;
+    font-size: 1.02rem;
+    font-weight: 700;
+  }
+
+  .banner-guard-text {
+    margin: 0;
+    color: #4a5568;
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .banner-guard-btn {
+    margin-top: 16px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff8e53 0%, #ff6b6b 100%);
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.22);
+  }
+
+  .banner-guard-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(255, 107, 107, 0.28);
+  }
+
+  @media (max-width: 768px) {
+    .banner-shell {
+      padding: 14px;
+    }
+
+    .game-banner {
+      max-height: min(56vh, 520px);
+      border-radius: 14px;
+    }
+
+    .banner-guard {
+      inset: 14px;
+      padding: 16px;
+      border-radius: 16px;
+    }
+
+    .banner-guard-card {
+      padding: 16px 18px;
+    }
+  }
+
+  .game-info {
+    padding: 30px;
+  }
+
+  .game-title {
+    font-size: 1.8rem;
+    color: var(--text-color, #333);
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+
+  .game-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .meta-item {
+    background: #f0f0f0;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .game-description {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+  }
+
+  .game-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .link-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .link-btn.vndb {
+    background: #2c3e50;
+    color: white;
+  }
+
+  .link-btn.vndb:hover {
+    background: #34495e;
+  }
+
+  .loading {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+    font-size: 1.2rem;
+    display: none;
+  }
+
+  .loading.show {
+    display: block;
+  }
+
+  .error-msg {
+    background: #ff6b6b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .error-msg.show {
+    display: block;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .rating-score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .rating-label {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .filter-section {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .filter-group label {
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  .filter-group select {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 120px;
+  }
+
+  .filter-group select:focus {
+    outline: none;
+    border-color: #764ba2;
+  }
+</style>
+<!-- <link rel="stylesheet" href="/css/random-playlab.css"> -->
+
+<div class="random-gal-container">
+  <h1>🎲 今天玩什么</h1>
+  
+  <div class="stats-info" id="stats"></div>
+  
+  <div class="error-msg" id="error"></div>
+
+  <section class="daily-section">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">TODAY'S PICK</div>
+        <h2 class="section-title">今日推荐</h2>
+      </div>
+      <div class="section-note" id="dailyNote">正在根据今天的日期观测作品...</div>
+    </div>
+
+    <div class="loading" id="dailyLoading">
+      正在生成今日推荐...
+    </div>
+
+    <div class="error-msg" id="dailyError"></div>
+
+    <div class="game-card daily-card" id="dailyCard">
+      <div class="banner-shell" id="dailyBannerShell">
+        <img class="game-banner medium-zoom-image" id="dailyBanner" src="" alt="今日推荐封面">
+        <div class="banner-guard" id="dailyBannerGuard">
+          <div class="banner-guard-card">
+            <p class="banner-guard-title">该封面可能包含成人内容</p>
+            <p class="banner-guard-text" id="dailyBannerGuardText">基于 VNDB 的图片分级标记，显示前先提醒你一下。</p>
+            <button class="banner-guard-btn" id="dailyBannerReveal" type="button">继续查看封面</button>
+          </div>
+        </div>
+      </div>
+      <div class="game-info">
+        <div class="daily-badge" id="dailyBadge">今日观测结果</div>
+        <h2 class="game-title" id="dailyTitle"></h2>
+        <div class="rating">
+          <span class="rating-score" id="dailyRatingScore"></span>
+          <span class="rating-label">VNDB 评分</span>
+        </div>
+        <div class="game-meta" id="dailyMeta"></div>
+        <div class="game-description" id="dailyDescription"></div>
+        <div class="game-tags" id="dailyTags"></div>
+        <div class="game-links">
+          <a class="link-btn vndb" id="dailyVndbLink" href="#" target="_blank">
+            先看今天这部
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-section" id="historySection" style="display: none;">
+      <details class="history-toggle" id="historyToggle">
+        <summary>
+          <span class="history-toggle-label" id="historyToggleLabel">最近推荐回放</span>
+          <span class="history-toggle-meta">
+            <span id="historyToggleMeta">点击展开</span>
+            <span class="history-toggle-icon">▾</span>
+          </span>
+        </summary>
+        <div class="history-list" id="historyList"></div>
+      </details>
+    </div>
+  </section>
+  
+  <div class="filter-section">
+    <div class="filter-group">
+      <label>语言：</label>
+      <select id="langFilter">
+        <option value="">全部语言</option>
+        <option value="ja">日语</option>
+        <option value="en">英语</option>
+        <option value="zh-Hans">简体中文</option>
+        <option value="zh-Hant">繁体中文</option>
+        <option value="ko">韩语</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>评分：</label>
+      <select id="ratingFilter">
+        <option value="">全部评分</option>
+        <option value="9">9分以上</option>
+        <option value="8-9">8-9分</option>
+        <option value="7-8">7-8分</option>
+        <option value="6-7">6-7分</option>
+        <option value="below6">6分以下</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>年代：</label>
+      <select id="yearFilter">
+        <option value="">全部年代</option>
+        <option value="2025">2025年</option>
+        <option value="2024">2024年</option>
+        <option value="2023">2023年</option>
+        <option value="2022">2022年</option>
+        <option value="2021">2021年</option>
+        <option value="2020">2020年</option>
+        <option value="2010s">2010-2019</option>
+        <option value="2000s">2000-2009</option>
+        <option value="classic">2000年以前</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>模式：</label>
+      <select id="safetyFilter">
+        <option value="sfw" selected>SFW</option>
+        <option value="nsfw">NSFW</option>
+      </select>
+    </div>
+  </div>
+  
+  <button class="random-btn" id="randomBtn" onclick="getRandomGame()">
+    🎮 随机抽取
+  </button>
+  
+  <div class="loading" id="loading">
+    正在抽取中...
+  </div>
+  
+  <div class="game-card" id="gameCard">
+    <div class="banner-shell" id="gameBannerShell">
+      <img class="game-banner medium-zoom-image" id="gameBanner" src="" alt="游戏封面">
+      <div class="banner-guard" id="gameBannerGuard">
+        <div class="banner-guard-card">
+          <p class="banner-guard-title">该封面可能包含成人内容</p>
+          <p class="banner-guard-text" id="gameBannerGuardText">基于 VNDB 的图片分级标记，显示前先提醒你一下。</p>
+          <button class="banner-guard-btn" id="gameBannerReveal" type="button">继续查看封面</button>
+        </div>
+      </div>
+    </div>
+    <div class="game-info">
+      <h2 class="game-title" id="gameTitle"></h2>
+      <div class="rating">
+        <span class="rating-score" id="ratingScore"></span>
+        <span class="rating-label">VNDB 评分</span>
+      </div>
+      <div class="game-meta" id="gameMeta"></div>
+      <div class="game-description" id="gameDescription"></div>
+      <div class="game-tags" id="gameTags"></div>
+      <div class="game-links">
+        <a class="link-btn vndb" id="vndbLink" href="#" target="_blank">
+          查看 VNDB 详情
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- <section class="random-playlab" data-kind="gal"></section> -->
+</div>
+
+<script data-pjax src="/js/vndb-tags-dict.js"></script>
+<script data-pjax>
+(() => {
+  const API_URL = 'https://api.vndb.org/kana';
+  const VN_FIELDS = 'title, alttitle, description, image.url, image.thumbnail, image.sexual, image.violence, image.votecount, rating, votecount, languages, length, released, developers.name, tags.name, tags.rating';
+  const IMAGE_SEXUAL_WARNING_THRESHOLD = 1;
+  const IMAGE_WARNING_MIN_VOTES = 1;
+  const DAILY_BASE_FILTER = ['id', '>=', 'v1'];
+  const DAILY_PREMIUM_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 82]];
+  const DAILY_SOLID_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 76], ['rating', '<', 82]];
+  const DAILY_NOTABLE_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 72], ['rating', '<', 76]];
+  const DAILY_SURPRISE_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 68], ['rating', '<', 72]];
+  const DAILY_RECENT_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 74], ['released', '>=', '2020-01-01']];
+  const DAILY_ARCHIVE_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 74], ['released', '<', '2005-01-01']];
+  const PAGE_SIZE = 50;
+  const DAILY_POOL_PAGE_SIZE = 24;
+  const DAILY_MIN_FRESH_CANDIDATES = 6;
+  const DAILY_HISTORY_LIMIT = 30;
+  const DAILY_NO_REPEAT_DAYS = 15;
+  const DAILY_DOWNWEIGHT_WINDOW = 15;
+  const DAILY_CACHE_KEY = 'randomGalDailyCache.v3';
+  const DAILY_HISTORY_KEY = 'randomGalDailyHistory.v3';
+  const REPO_SNAPSHOT_URL = '/data/random-gal-snapshots.json';
+  const SOURCE_REPO_SNAPSHOT_URL = 'https://raw.githubusercontent.com/yuki2012720/hexo-blog-source/main/source/data/random-gal-snapshots.json';
+  const allowProvisional = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  const DAILY_SNAPSHOT_KEY = 'randomGalDailySnapshots.v1';
+  let totalVNs = 0;
+  const maxIdCache = new Map();
+  const countCache = new Map();
+  let repoSnapshotsPromise = null;
+  let sourceRepoSnapshotsPromise = null;
+  const DAILY_POOL_ORDER = [
+    {
+      key: 'premium',
+      label: '高分核心池',
+      rotationSlots: 2,
+      filter: DAILY_PREMIUM_FILTER
+    },
+    {
+      key: 'solid',
+      label: '稳妥均衡池',
+      rotationSlots: 3,
+      filter: DAILY_SOLID_FILTER
+    },
+    {
+      key: 'notable',
+      label: '风味补充池',
+      rotationSlots: 3,
+      filter: DAILY_NOTABLE_FILTER
+    },
+    {
+      key: 'surprise',
+      label: '惊喜补位池',
+      rotationSlots: 2,
+      filter: DAILY_SURPRISE_FILTER
+    },
+    {
+      key: 'recent',
+      label: '近期信号池',
+      rotationSlots: 3,
+      filter: DAILY_RECENT_FILTER
+    },
+    {
+      key: 'archive',
+      label: '旧作回响池',
+      rotationSlots: 2,
+      filter: DAILY_ARCHIVE_FILTER
+    }
+  ];
+  const DAILY_ROTATION_DECK = [
+    'premium',
+    'solid',
+    'notable',
+    'recent',
+    'surprise',
+    'archive',
+    'solid',
+    'notable',
+    'recent',
+    'premium',
+    'solid',
+    'notable',
+    'recent',
+    'surprise',
+    'archive'
+  ];
+  const DAILY_POOL_COPY = {
+    premium: {
+      title: '高分核心池',
+      description: '今天先从最不会出错的星光里挑一部。'
+    },
+    solid: {
+      title: '稳妥均衡池',
+      description: '落点依旧稳妥，只是比标准答案多一点呼吸。'
+    },
+    notable: {
+      title: '风味补充池',
+      description: '也许没那么耀眼，但常常更容易留下余味。'
+    },
+    surprise: {
+      title: '惊喜补位池',
+      description: '偶尔偏一点，也许会遇到意外合拍的那部。'
+    },
+    recent: {
+      title: '近期信号池',
+      description: '把视线放近一些，看看这些年的新信号。'
+    },
+    archive: {
+      title: '旧作回响池',
+      description: '有些故事过了很多年，回声还是很清晰。'
+    }
+  };
+  const DAILY_POOL_BADGE_CLASS = {
+    premium: 'pool-premium',
+    solid: 'pool-solid',
+    notable: 'pool-notable',
+    surprise: 'pool-surprise',
+    recent: 'pool-recent',
+    archive: 'pool-archive'
+  };
+  const HISTORY_START_DATE = '2026-03-20';
+  const PLACEHOLDER_IMAGE = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+      <defs>
+        <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f5f7fa" />
+          <stop offset="100%" stop-color="#c3cfe2" />
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="675" fill="url(#g)" />
+      <text x="50%" y="50%" text-anchor="middle" fill="#7b8794" font-size="44" font-family="Arial, sans-serif">No Cover</text>
+    </svg>
+  `);
+  
+  function getTagTranslator() {
+    return typeof window.translateSingleTag === 'function' ? window.translateSingleTag : null;
+  }
+
+  function translateTag(tagName) {
+    const translator = getTagTranslator();
+    return translator ? translator(tagName) : tagName;
+  }
+
+  function waitForTagTranslator(timeoutMs = 1500) {
+    if (getTagTranslator()) {
+      return Promise.resolve(true);
+    }
+
+    return new Promise(resolve => {
+      const startedAt = Date.now();
+
+      const checkTranslator = () => {
+        if (getTagTranslator()) {
+          resolve(true);
+          return;
+        }
+
+        if (Date.now() - startedAt >= timeoutMs) {
+          resolve(false);
+          return;
+        }
+
+        setTimeout(checkTranslator, 50);
+      };
+
+      checkTranslator();
+    });
+  }
+
+  function buildDateKey() {
+    const testDate = new URLSearchParams(window.location.search).get('test_date');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(testDate || '')) {
+      return testDate;
+    }
+
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function isSnapshotPreviewMode() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has('test_date')
+      || window.location.hostname === 'localhost'
+      || window.location.hostname === '127.0.0.1';
+  }
+
+  function isTestMode() {
+    return /^\d{4}-\d{2}-\d{2}$/.test(new URLSearchParams(window.location.search).get('test_date') || '');
+  }
+
+  function buildDateLabel(dateKey = buildDateKey()) {
+    const [year, month, day] = dateKey.split('-');
+    return `${year}.${month}.${day}`;
+  }
+
+  function shiftDateKey(dateKey, offsetDays) {
+    const date = new Date(`${dateKey}T00:00:00+08:00`);
+    date.setDate(date.getDate() + offsetDays);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function compareDateKey(a, b) {
+    return a.localeCompare(b);
+  }
+
+  function hashString(input) {
+    let hash = 0;
+    for (let i = 0; i < input.length; i++) {
+      hash = ((hash << 5) - hash) + input.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  function buildDayIndex(dateKey = buildDateKey()) {
+    return Math.floor(new Date(`${dateKey}T00:00:00+08:00`).getTime() / 86400000);
+  }
+
+  function getPoolByKey(key) {
+    return DAILY_POOL_ORDER.find(pool => pool.key === key) || DAILY_POOL_ORDER[0];
+  }
+
+  function getDailyPoolFallbacks(rotationIndex) {
+    const seen = new Set();
+    const pools = [];
+
+    for (let offset = 0; offset < DAILY_ROTATION_DECK.length; offset++) {
+      const deckKey = DAILY_ROTATION_DECK[(rotationIndex + offset) % DAILY_ROTATION_DECK.length];
+      if (seen.has(deckKey)) {
+        continue;
+      }
+      seen.add(deckKey);
+      pools.push(getPoolByKey(deckKey));
+    }
+
+    return pools;
+  }
+
+  function getDailyRecommendationConfig(dateKey = buildDateKey()) {
+    const dayKey = dateKey;
+    const dayIndex = buildDayIndex(dayKey);
+    const rotationIndex = dayIndex % DAILY_ROTATION_DECK.length;
+    const primaryPoolKey = DAILY_ROTATION_DECK[rotationIndex];
+
+    return {
+      dayKey,
+      dayIndex,
+      rotationIndex,
+      primaryPoolKey,
+      pools: getDailyPoolFallbacks(rotationIndex),
+      pickSeed: hashString(`random-gal-pick-${dayKey}`),
+      pageSeed: hashString(`random-gal-page-${dayKey}`)
+    };
+  }
+
+  function safeReadStorage(key, fallbackValue) {
+    try {
+      const rawValue = localStorage.getItem(key);
+      return rawValue ? JSON.parse(rawValue) : fallbackValue;
+    } catch (error) {
+      return fallbackValue;
+    }
+  }
+
+  function safeWriteStorage(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.warn('写入本地缓存失败:', error);
+    }
+  }
+
+  function normalizeHistoryEntry(entry) {
+    if (!entry || !entry.date || !entry.id) {
+      return null;
+    }
+
+    return {
+      date: entry.date,
+      id: entry.id,
+      title: entry.title || '',
+      poolKey: entry.poolKey || ''
+    };
+  }
+
+  function normalizeSnapshotEntry(entry) {
+    if (!entry || !entry.date || !entry.poolKey || !entry.game?.id) {
+      return null;
+    }
+
+    return {
+      date: entry.date,
+      poolKey: entry.poolKey,
+      poolLabel: entry.poolLabel || '',
+      game: entry.game
+    };
+  }
+
+  function getDailyHistory() {
+    const history = safeReadStorage(DAILY_HISTORY_KEY, []);
+    return Array.isArray(history)
+      ? history
+          .map(normalizeHistoryEntry)
+          .filter(Boolean)
+          .sort((a, b) => b.date.localeCompare(a.date))
+          .slice(0, DAILY_HISTORY_LIMIT)
+      : [];
+  }
+
+  function updateDailyHistory(entry) {
+    const normalizedEntry = normalizeHistoryEntry(entry);
+    if (!normalizedEntry) {
+      return;
+    }
+
+    const nextHistory = [
+      normalizedEntry,
+      ...getDailyHistory().filter(item => item.date !== normalizedEntry.date)
+    ].slice(0, DAILY_HISTORY_LIMIT);
+
+    safeWriteStorage(DAILY_HISTORY_KEY, nextHistory);
+  }
+
+  function buildHistoryContext(historyEntries, dayKey) {
+    const history = historyEntries.filter(entry => entry.date < dayKey);
+    const recentNoRepeatIds = new Set(history.slice(0, DAILY_NO_REPEAT_DAYS).map(entry => entry.id));
+    const recentPenaltyWeights = new Map();
+
+    history.slice(0, DAILY_DOWNWEIGHT_WINDOW).forEach((entry, index) => {
+      const existingWeight = recentPenaltyWeights.get(entry.id) || 0;
+      recentPenaltyWeights.set(entry.id, existingWeight + (DAILY_DOWNWEIGHT_WINDOW - index));
+    });
+
+    return {
+      recentNoRepeatIds,
+      recentPenaltyWeights
+    };
+  }
+
+  function getHistoryContext(dayKey) {
+    return buildHistoryContext(getDailyHistory(), dayKey);
+  }
+
+  function getCachedDailyPick(dayKey) {
+    const cache = safeReadStorage(DAILY_CACHE_KEY, null);
+    return cache && cache.date === dayKey ? cache : null;
+  }
+
+  function cacheDailyPick(entry) {
+    safeWriteStorage(DAILY_CACHE_KEY, entry);
+  }
+
+  function getStoredSnapshots() {
+    const snapshots = safeReadStorage(DAILY_SNAPSHOT_KEY, []);
+
+    return Array.isArray(snapshots)
+      ? snapshots
+          .map(normalizeSnapshotEntry)
+          .filter(Boolean)
+          .sort((a, b) => b.date.localeCompare(a.date))
+      : [];
+  }
+
+  function getStoredSnapshotByDate(dateKey) {
+    return getStoredSnapshots().find(entry => entry.date === dateKey) || null;
+  }
+
+  function storeDailySnapshot(entry) {
+    if (isTestMode()) {
+      return;
+    }
+
+    const normalizedEntry = normalizeSnapshotEntry(entry);
+    if (!normalizedEntry) {
+      return;
+    }
+
+    const nextSnapshots = [
+      normalizedEntry,
+      ...getStoredSnapshots().filter(item => item.date !== normalizedEntry.date)
+    ]
+      .sort((a, b) => b.date.localeCompare(a.date));
+
+    safeWriteStorage(DAILY_SNAPSHOT_KEY, nextSnapshots);
+  }
+
+  function fetchSnapshotCollection(url) {
+    return fetch(url, { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => Array.isArray(data)
+        ? data.map(normalizeSnapshotEntry).filter(Boolean)
+        : []
+      )
+      .catch(() => []);
+  }
+
+  async function getRepoSnapshots() {
+    if (!repoSnapshotsPromise) {
+      repoSnapshotsPromise = fetchSnapshotCollection(REPO_SNAPSHOT_URL);
+    }
+
+    return repoSnapshotsPromise;
+  }
+
+  async function getSourceRepoSnapshots() {
+    if (!sourceRepoSnapshotsPromise) {
+      sourceRepoSnapshotsPromise = fetchSnapshotCollection(SOURCE_REPO_SNAPSHOT_URL);
+    }
+
+    return sourceRepoSnapshotsPromise;
+  }
+
+  async function hydrateSnapshotEntry(entry) {
+    const normalizedEntry = normalizeSnapshotEntry(entry);
+    if (!normalizedEntry) {
+      return null;
+    }
+
+    if (normalizedEntry.game.image?.url && normalizedEntry.game.rating) {
+      return normalizedEntry;
+    }
+
+    const detailedGame = await fetchGameByExactId(normalizedEntry.game.id);
+    return {
+      date: normalizedEntry.date,
+      poolKey: normalizedEntry.poolKey,
+      poolLabel: normalizedEntry.poolLabel || getPoolByKey(normalizedEntry.poolKey).label,
+      game: detailedGame
+    };
+  }
+
+  async function getSnapshotForDate(dateKey) {
+    const sourceRepoSnapshots = await getSourceRepoSnapshots();
+    const sourceRepoSnapshot = sourceRepoSnapshots.find(entry => entry.date === dateKey);
+    if (sourceRepoSnapshot) {
+      return hydrateSnapshotEntry(sourceRepoSnapshot);
+    }
+
+    const repoSnapshots = await getRepoSnapshots();
+    const repoSnapshot = repoSnapshots.find(entry => entry.date === dateKey);
+    if (repoSnapshot) {
+      return hydrateSnapshotEntry(repoSnapshot);
+    }
+
+    if (isSnapshotPreviewMode()) {
+      const storedSnapshot = getStoredSnapshotByDate(dateKey);
+      if (storedSnapshot) {
+        return hydrateSnapshotEntry(storedSnapshot);
+      }
+    }
+
+    return null;
+  }
+
+  async function fetchVNBatch(filters, options = {}) {
+    const response = await fetch(`${API_URL}/vn`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        filters,
+        fields: VN_FIELDS,
+        sort: 'id',
+        reverse: false,
+        results: PAGE_SIZE,
+        page: 1,
+        ...options
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
+  }
+
+  async function fetchGameByExactId(vndbId) {
+    const data = await fetchVNBatch(['id', '=', vndbId], {
+      results: 1
+    });
+
+    const game = data.results?.[0] || null;
+    if (!game) {
+      throw new Error('未找到手动指定的作品');
+    }
+
+    return game;
+  }
+
+  function getMaxIdCacheKey(filters) {
+    return JSON.stringify(filters);
+  }
+
+  function extractNumericId(vndbId) {
+    if (!vndbId) return 0;
+    const match = String(vndbId).match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
+  }
+
+  function combineFilters(baseFilters, extraFilter) {
+    if (!extraFilter) {
+      return baseFilters;
+    }
+
+    return ['and', baseFilters, extraFilter];
+  }
+
+  async function fetchMaxId(filters) {
+    const cacheKey = getMaxIdCacheKey(filters);
+    if (maxIdCache.has(cacheKey)) {
+      return maxIdCache.get(cacheKey);
+    }
+
+    const data = await fetchVNBatch(filters, {
+      fields: 'id',
+      sort: 'id',
+      reverse: true,
+      results: 1
+    });
+
+    const maxId = extractNumericId(data.results?.[0]?.id);
+    if (!maxId) {
+      throw new Error('未找到可用作品');
+    }
+
+    maxIdCache.set(cacheKey, maxId);
+    return maxId;
+  }
+
+  async function fetchVNCount(filters) {
+    const cacheKey = getMaxIdCacheKey(filters);
+    if (countCache.has(cacheKey)) {
+      return countCache.get(cacheKey);
+    }
+
+    const data = await fetchVNBatch(filters, {
+      fields: 'id',
+      results: 0,
+      count: true
+    });
+
+    const totalCount = data.count || 0;
+    countCache.set(cacheKey, totalCount);
+    return totalCount;
+  }
+
+  function buildDailyPageSequence(totalPages, startPage, pagesToFetch) {
+    const pages = [];
+    const seen = new Set();
+    const offsets = [0, 1, -1, 2, -2, 3, -3];
+
+    for (const offset of offsets) {
+      if (pages.length >= pagesToFetch) {
+        break;
+      }
+
+      const page = ((startPage - 1 + offset + totalPages) % totalPages) + 1;
+      if (seen.has(page)) {
+        continue;
+      }
+
+      seen.add(page);
+      pages.push(page);
+    }
+
+    return pages;
+  }
+
+  async function fetchDailyCandidates(filters, seed, totalCount) {
+    if (!totalCount) {
+      return [];
+    }
+
+    const totalPages = Math.max(1, Math.ceil(totalCount / DAILY_POOL_PAGE_SIZE));
+    const pagesToFetch = Math.min(totalPages, totalCount <= DAILY_POOL_PAGE_SIZE ? 1 : totalCount <= DAILY_POOL_PAGE_SIZE * 2 ? 2 : 3);
+    const startPage = (seed % totalPages) + 1;
+    const pageSequence = buildDailyPageSequence(totalPages, startPage, pagesToFetch);
+    const candidates = [];
+    const seenIds = new Set();
+
+    for (const page of pageSequence) {
+      const data = await fetchVNBatch(filters, {
+        results: DAILY_POOL_PAGE_SIZE,
+        page
+      });
+
+      for (const game of data.results || []) {
+        if (!game?.id || seenIds.has(game.id)) {
+          continue;
+        }
+        seenIds.add(game.id);
+        candidates.push(game);
+      }
+    }
+
+    return candidates;
+  }
+
+  function normalizeDescription(description) {
+    return (description || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function hasChineseLanguage(game) {
+    return Array.isArray(game.languages)
+      && game.languages.some(language => language === 'zh-Hans' || language === 'zh-Hant');
+  }
+
+  function getStrongTagCount(game) {
+    if (!Array.isArray(game.tags)) {
+      return 0;
+    }
+
+    return game.tags.filter(tag => (tag.rating || 0) >= 1).length;
+  }
+
+  function getVotecountBonus(votecount) {
+    if (votecount >= 300) return 0.95;
+    if (votecount >= 120) return 0.7;
+    if (votecount >= 50) return 0.45;
+    if (votecount >= 20) return 0.2;
+    if (votecount <= 3) return -1.2;
+    if (votecount <= 10) return -0.7;
+    return -0.2;
+  }
+
+  function scoreDailyCandidate(game, context) {
+    const gameId = game?.id;
+    if (!gameId) {
+      return Number.NEGATIVE_INFINITY;
+    }
+
+    const baseRating = (game.rating || 0) / 10;
+    if (!baseRating) {
+      return Number.NEGATIVE_INFINITY;
+    }
+
+    const description = normalizeDescription(game.description);
+    const tagCount = getStrongTagCount(game);
+    const isRecentRepeat = context.historyContext.recentNoRepeatIds.has(gameId);
+
+    if (!context.allowRepeat && isRecentRepeat) {
+      return Number.NEGATIVE_INFINITY;
+    }
+
+    let score = baseRating;
+
+    if (hasChineseLanguage(game)) {
+      score += 1.15;
+    }
+
+    if (game.image?.url) {
+      score += 0.7;
+    }
+
+    if (description.length >= 220) {
+      score += 0.9;
+    } else if (description.length >= 120) {
+      score += 0.6;
+    } else if (description.length >= 40) {
+      score += 0.3;
+    }
+
+    if (tagCount >= 8) {
+      score += 0.8;
+    } else if (tagCount >= 5) {
+      score += 0.55;
+    } else if (tagCount >= 3) {
+      score += 0.25;
+    }
+
+    score += getVotecountBonus(game.votecount || 0);
+
+    const repeatPenalty = context.historyContext.recentPenaltyWeights.get(gameId) || 0;
+    if (repeatPenalty) {
+      score -= Math.min(1.6, repeatPenalty / 12);
+    }
+
+    if (context.allowRepeat && isRecentRepeat) {
+      score -= 2.8;
+    }
+
+    const jitter = (hashString(`${context.dayKey}-${context.poolKey}-${gameId}`) % 1000) / 1000;
+    score += jitter * 0.65;
+
+    return score;
+  }
+
+  function pickWeightedCandidate(candidates, seed) {
+    const weightedCandidates = candidates.map(candidate => ({
+      ...candidate,
+      weight: Math.max(candidate.score * 100, 1)
+    }));
+    const totalWeight = weightedCandidates.reduce((sum, candidate) => sum + candidate.weight, 0);
+    let target = seed % totalWeight;
+
+    for (const candidate of weightedCandidates) {
+      if (target < candidate.weight) {
+        return candidate;
+      }
+      target -= candidate.weight;
+    }
+
+    return weightedCandidates[0] || null;
+  }
+
+  function selectDailyCandidateForPool(pool, candidates, config, historyContext) {
+    const buildScoredCandidates = (allowRepeat) => candidates
+      .filter(game => !needsImageWarning(game))
+      .map(game => ({
+        game,
+        score: scoreDailyCandidate(game, {
+          allowRepeat,
+          dayKey: config.dayKey,
+          poolKey: pool.key,
+          historyContext
+        })
+      }))
+      .filter(candidate => Number.isFinite(candidate.score))
+      .sort((a, b) => b.score - a.score);
+
+    let scoredCandidates = buildScoredCandidates(false);
+    let allowRepeat = false;
+
+    if (scoredCandidates.length < DAILY_MIN_FRESH_CANDIDATES) {
+      scoredCandidates = buildScoredCandidates(true);
+      allowRepeat = true;
+    }
+
+    if (!scoredCandidates.length) {
+      return null;
+    }
+
+    const shortlist = scoredCandidates.slice(0, Math.min(8, scoredCandidates.length));
+    const pickedCandidate = pickWeightedCandidate(
+      shortlist,
+      hashString(`${config.dayKey}-${pool.key}-final-pick`)
+    );
+
+    if (!pickedCandidate) {
+      return null;
+    }
+
+    return {
+      game: pickedCandidate.game,
+      allowRepeat,
+      candidateCount: scoredCandidates.length
+    };
+  }
+
+  async function fetchGameByTargetId(filters, numericId) {
+    const targetFilter = ['id', '>=', `v${numericId}`];
+    let data = await fetchVNBatch(combineFilters(filters, targetFilter), {
+      results: 1
+    });
+
+    let game = data.results?.[0] || null;
+
+    if (!game) {
+      data = await fetchVNBatch(filters, {
+        sort: 'id',
+        reverse: false,
+        results: 1
+      });
+      game = data.results?.[0] || null;
+    }
+
+    if (!game) {
+      throw new Error('没有找到符合条件的游戏');
+    }
+
+    return game;
+  }
+
+  async function fetchVNDBStats() {
+    try {
+      const response = await fetch(`${API_URL}/stats`);
+      const data = await response.json();
+      totalVNs = data.vn;
+      document.getElementById('stats').textContent = `数据库中共有 ${totalVNs.toLocaleString()} 款视觉小说`;
+    } catch (error) {
+      console.error('获取统计信息失败:', error);
+    }
+  }
+
+  function buildFilters() {
+    const filters = ['and'];
+    
+    const langFilter = document.getElementById('langFilter').value;
+    if (langFilter) {
+      filters.push(['lang', '=', langFilter]);
+    }
+    
+    const ratingFilter = document.getElementById('ratingFilter').value;
+    if (ratingFilter) {
+      if (ratingFilter === 'below6') {
+        filters.push(['rating', '<', 60]);
+      } else if (ratingFilter === '9') {
+        filters.push(['rating', '>=', 90]);
+      } else if (ratingFilter === '8-9') {
+        filters.push(['rating', '>=', 80]);
+        filters.push(['rating', '<', 90]);
+      } else if (ratingFilter === '7-8') {
+        filters.push(['rating', '>=', 70]);
+        filters.push(['rating', '<', 80]);
+      } else if (ratingFilter === '6-7') {
+        filters.push(['rating', '>=', 60]);
+        filters.push(['rating', '<', 70]);
+      }
+    }
+    
+    const yearFilter = document.getElementById('yearFilter').value;
+    if (yearFilter) {
+      if (yearFilter === 'classic') {
+        filters.push(['released', '<', '2000-01-01']);
+      } else if (yearFilter === '2000s') {
+        filters.push(['released', '>=', '2000-01-01']);
+        filters.push(['released', '<', '2010-01-01']);
+      } else if (yearFilter === '2010s') {
+        filters.push(['released', '>=', '2010-01-01']);
+        filters.push(['released', '<', '2020-01-01']);
+      } else {
+        const year = parseInt(yearFilter);
+        filters.push(['released', '>=', `${year}-01-01`]);
+        filters.push(['released', '<', `${year + 1}-01-01`]);
+      }
+    }
+    
+    return filters.length > 1 ? filters : ['id', '>=', 'v1'];
+  }
+
+  function getSafetyMode() {
+    return document.getElementById('safetyFilter')?.value === 'nsfw' ? 'nsfw' : 'sfw';
+  }
+
+  function fillMeta(metaDiv, game) {
+    metaDiv.innerHTML = '';
+
+    if (game.released) {
+      const releaseDate = document.createElement('span');
+      releaseDate.className = 'meta-item';
+      releaseDate.textContent = `📅 ${game.released}`;
+      metaDiv.appendChild(releaseDate);
+    }
+
+    if (game.length) {
+      const lengthMap = {
+        1: '极短 (< 2小时)',
+        2: '短 (2-10小时)',
+        3: '中等 (10-30小时)',
+        4: '长 (30-50小时)',
+        5: '极长 (> 50小时)'
+      };
+      const lengthSpan = document.createElement('span');
+      lengthSpan.className = 'meta-item';
+      lengthSpan.textContent = `⏱️ ${lengthMap[game.length] || '未知'}`;
+      metaDiv.appendChild(lengthSpan);
+    }
+
+    if (game.developers && game.developers.length > 0) {
+      const devSpan = document.createElement('span');
+      devSpan.className = 'meta-item';
+      devSpan.textContent = `🏢 ${game.developers.map(d => d.name).join(', ')}`;
+      metaDiv.appendChild(devSpan);
+    }
+  }
+
+  function fillTags(tagsDiv, game) {
+    tagsDiv.innerHTML = '';
+
+    if (!game.tags || game.tags.length === 0) {
+      return;
+    }
+
+    const topTags = game.tags
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .slice(0, 10);
+
+    topTags.forEach(tag => {
+      const tagSpan = document.createElement('span');
+      tagSpan.className = 'tag';
+      tagSpan.textContent = translateTag(tag.name);
+      tagsDiv.appendChild(tagSpan);
+    });
+  }
+
+  function bindBannerPreview(banner, titleText) {
+    if (!banner) {
+      return;
+    }
+
+    banner.onclick = event => {
+      event.preventDefault();
+      const imageSrc = banner.currentSrc || banner.src || '';
+      if (!imageSrc) {
+        return;
+      }
+
+      const caption = titleText || banner.alt || '';
+
+      if (window.Fancybox?.show) {
+        window.Fancybox.show([{
+          src: imageSrc,
+          type: 'image',
+          caption
+        }]);
+        return;
+      }
+
+      window.open(imageSrc, '_blank', 'noopener');
+    };
+  }
+
+  function needsImageWarning(game) {
+    const sexualScore = Number(game?.image?.sexual ?? 0);
+    const voteCount = Number(game?.image?.votecount ?? 0);
+    return sexualScore >= IMAGE_SEXUAL_WARNING_THRESHOLD && voteCount >= IMAGE_WARNING_MIN_VOTES;
+  }
+
+  function applyBannerGuard(shell, banner, game, titleText) {
+    if (!shell || !banner) {
+      return;
+    }
+
+    const guard = shell.querySelector('.banner-guard');
+    const guardText = shell.querySelector('.banner-guard-text');
+    const revealButton = shell.querySelector('.banner-guard-btn');
+
+    if (!guard || !guardText || !revealButton) {
+      return;
+    }
+
+    const shouldWarn = needsImageWarning(game);
+    const imageScore = Number(game?.image?.sexual ?? 0);
+    const voteCount = Number(game?.image?.votecount ?? 0);
+
+    if (!shouldWarn) {
+      guard.classList.remove('show');
+      banner.classList.remove('is-guarded');
+      revealButton.onclick = null;
+      return;
+    }
+
+    guard.classList.add('show');
+    banner.classList.add('is-guarded');
+    guardText.textContent = `${titleText || '这部作品'} 的封面在 VNDB 上被标记为可能含有成人内容（图片分级 ${imageScore.toFixed(1)} / 2，${voteCount} 票）。`;
+    revealButton.onclick = event => {
+      event.preventDefault();
+      guard.classList.remove('show');
+      banner.classList.remove('is-guarded');
+    };
+  }
+
+  function renderGame(game, prefix) {
+    const ids = prefix === 'game'
+      ? {
+          shell: 'gameBannerShell',
+          banner: 'gameBanner',
+          title: 'gameTitle',
+          ratingScore: 'ratingScore',
+          meta: 'gameMeta',
+          description: 'gameDescription',
+          tags: 'gameTags',
+          link: 'vndbLink',
+          card: 'gameCard'
+        }
+      : {
+          shell: `${prefix}BannerShell`,
+          banner: `${prefix}Banner`,
+          title: `${prefix}Title`,
+          ratingScore: `${prefix}RatingScore`,
+          meta: `${prefix}Meta`,
+          description: `${prefix}Description`,
+          tags: `${prefix}Tags`,
+          link: `${prefix}VndbLink`,
+          card: `${prefix}Card`
+        };
+
+    const shell = document.getElementById(ids.shell);
+    const banner = document.getElementById(ids.banner);
+    const title = document.getElementById(ids.title);
+    const ratingScore = document.getElementById(ids.ratingScore);
+    const metaDiv = document.getElementById(ids.meta);
+    const descriptionDiv = document.getElementById(ids.description);
+    const tagsDiv = document.getElementById(ids.tags);
+    const link = document.getElementById(ids.link);
+    const card = document.getElementById(ids.card);
+
+    if (!shell || !banner || !title || !ratingScore || !metaDiv || !descriptionDiv || !tagsDiv || !link || !card) {
+      throw new Error(`页面节点缺失：${prefix}`);
+    }
+
+    banner.src = game.image?.url || PLACEHOLDER_IMAGE;
+    banner.alt = game.title || '视觉小说封面';
+    title.textContent = game.alttitle || game.title;
+    ratingScore.textContent = game.rating ? (game.rating / 10).toFixed(2) : 'N/A';
+    bindBannerPreview(banner, game.alttitle || game.title || '');
+    applyBannerGuard(shell, banner, game, game.alttitle || game.title || '');
+
+    fillMeta(metaDiv, game);
+    fillTags(tagsDiv, game);
+
+    const description = (game.description || '暂无简介').replace(/\s+/g, ' ').trim();
+    descriptionDiv.textContent = description.substring(0, 500) + (description.length > 500 ? '...' : '');
+
+    link.href = `https://vndb.org/${game.id || ''}`;
+    card.classList.add('show');
+  }
+
+  function renderDailyPickState(game, pool, noteText) {
+    const dailyBadge = document.getElementById('dailyBadge');
+    const dailyNote = document.getElementById('dailyNote');
+    const poolCopy = DAILY_POOL_COPY[pool.key] || {
+      title: pool.label,
+      description: '今天的观测结果已经落定。'
+    };
+
+    renderGame(game, 'daily');
+    dailyBadge.className = `daily-badge ${DAILY_POOL_BADGE_CLASS[pool.key] || ''}`.trim();
+    dailyBadge.textContent = `今日轮换池 · ${poolCopy.title}：${poolCopy.description}`;
+    dailyNote.textContent = `基于 ${buildDateLabel()} 的固定推荐 · ${noteText}`;
+  }
+
+  function persistDailyPick(config, pool, game, options = {}) {
+    updateDailyHistory({
+      date: config.dayKey,
+      id: game.id,
+      title: game.alttitle || game.title || '',
+      poolKey: pool.key
+    });
+
+    cacheDailyPick({
+      date: config.dayKey,
+      poolKey: pool.key,
+      poolLabel: pool.label,
+      snapshotLocked: Boolean(options.snapshotLocked),
+      game
+    });
+  }
+
+  async function resolveDailyPickForConfig(config, historyEntries) {
+    const historyContext = buildHistoryContext(historyEntries, config.dayKey);
+    let selectedPool = null;
+    let selectedResult = null;
+
+    for (const pool of config.pools) {
+      try {
+        const totalCount = await fetchVNCount(pool.filter);
+        if (!totalCount) {
+          continue;
+        }
+
+        const candidates = await fetchDailyCandidates(
+          pool.filter,
+          config.pageSeed + hashString(pool.key),
+          totalCount
+        );
+        const poolResult = selectDailyCandidateForPool(pool, candidates, config, historyContext);
+
+        if (!poolResult) {
+          continue;
+        }
+
+        selectedPool = pool;
+        selectedResult = poolResult;
+        break;
+      } catch (error) {
+        continue;
+      }
+    }
+
+    if (!selectedPool || !selectedResult) {
+      throw new Error('未找到可用作品');
+    }
+
+    return {
+      pool: selectedPool,
+      result: selectedResult
+    };
+  }
+
+  function renderHistoryList(historyItems) {
+    const historySection = document.getElementById('historySection');
+    const historyList = document.getElementById('historyList');
+    const historyToggleLabel = document.getElementById('historyToggleLabel');
+    const historyToggleMeta = document.getElementById('historyToggleMeta');
+
+    if (!historySection || !historyList || !historyToggleLabel || !historyToggleMeta) {
+      return;
+    }
+
+    historyList.innerHTML = '';
+
+    if (!historyItems.length) {
+      historySection.style.display = 'none';
+      return;
+    }
+
+    historyToggleLabel.textContent = '推荐历史回放';
+    historyToggleMeta.textContent = `共 ${historyItems.length} 天`;
+
+    historyItems.forEach(item => {
+      const link = document.createElement('a');
+      link.className = 'history-item';
+      link.href = `https://vndb.org/${item.game.id}`;
+      link.target = '_blank';
+      link.rel = 'noopener';
+
+      const cover = document.createElement('img');
+      cover.className = 'history-cover';
+      cover.src = item.game.image?.url || PLACEHOLDER_IMAGE;
+      cover.alt = item.game.alttitle || item.game.title || '推荐封面';
+
+      const main = document.createElement('div');
+      main.className = 'history-main';
+
+      const meta = document.createElement('div');
+      meta.className = 'history-meta';
+
+      const date = document.createElement('span');
+      date.className = 'history-date';
+      date.textContent = buildDateLabel(item.dateKey);
+
+      const pool = document.createElement('span');
+      pool.className = `history-pool ${DAILY_POOL_BADGE_CLASS[item.pool.key] || ''}`.trim();
+      pool.textContent = item.pool.label;
+
+      meta.appendChild(date);
+      meta.appendChild(pool);
+
+      const name = document.createElement('div');
+      name.className = 'history-name';
+      name.textContent = item.game.alttitle || item.game.title || '未知标题';
+
+      const score = document.createElement('div');
+      score.className = 'history-score';
+      score.textContent = item.game.rating ? `${(item.game.rating / 10).toFixed(2)} · VNDB` : 'N/A · VNDB';
+
+      main.appendChild(meta);
+      main.appendChild(name);
+
+      link.appendChild(cover);
+      link.appendChild(main);
+      link.appendChild(score);
+      historyList.appendChild(link);
+    });
+
+    historySection.style.display = '';
+  }
+
+  async function loadDailyHistoryPreview(baseDayKey) {
+    const historyItems = [];
+    const simulatedHistory = [];
+    const allowProvisional = isSnapshotPreviewMode();
+    const previewStartDate = compareDateKey(shiftDateKey(baseDayKey, -6), HISTORY_START_DATE) < 0
+      ? HISTORY_START_DATE
+      : shiftDateKey(baseDayKey, -6);
+
+    if (compareDateKey(baseDayKey, HISTORY_START_DATE) < 0) {
+      renderHistoryList([]);
+      return;
+    }
+
+    for (let dateKey = previewStartDate; compareDateKey(dateKey, baseDayKey) <= 0; dateKey = shiftDateKey(dateKey, 1)) {
+      const snapshot = await getSnapshotForDate(dateKey);
+
+      if (snapshot) {
+        simulatedHistory.unshift({
+          date: dateKey,
+          id: snapshot.game.id,
+          title: snapshot.game.alttitle || snapshot.game.title || '',
+          poolKey: snapshot.poolKey
+        });
+
+        historyItems.push({
+          dateKey,
+          pool: {
+            key: snapshot.poolKey,
+            label: snapshot.poolLabel || getPoolByKey(snapshot.poolKey).label
+          },
+          game: snapshot.game
+        });
+        continue;
+      }
+
+      if (!allowProvisional) {
+        continue;
+      }
+
+      const config = getDailyRecommendationConfig(dateKey);
+      const { pool, result } = await resolveDailyPickForConfig(config, simulatedHistory);
+      const snapshotEntry = {
+        date: dateKey,
+        poolKey: pool.key,
+        poolLabel: pool.label,
+        game: result.game
+      };
+
+      storeDailySnapshot(snapshotEntry);
+      simulatedHistory.unshift({
+        date: dateKey,
+        id: result.game.id,
+        title: result.game.alttitle || result.game.title || '',
+        poolKey: pool.key
+      });
+
+      historyItems.push({
+        dateKey,
+        pool,
+        game: result.game
+      });
+    }
+
+    renderHistoryList(historyItems.reverse());
+  }
+
+  async function loadDailyRecommendation() {
+    const dailyLoading = document.getElementById('dailyLoading');
+    const dailyError = document.getElementById('dailyError');
+    const dailyNote = document.getElementById('dailyNote');
+
+    dailyLoading.classList.add('show');
+    dailyError.classList.remove('show');
+
+    try {
+      await waitForTagTranslator();
+      const config = getDailyRecommendationConfig();
+      const snapshotPick = await getSnapshotForDate(config.dayKey);
+
+      if (snapshotPick?.game?.id) {
+        renderDailyPickState(
+          snapshotPick.game,
+          {
+            key: snapshotPick.poolKey || config.primaryPoolKey,
+            label: snapshotPick.poolLabel || getPoolByKey(snapshotPick.poolKey || config.primaryPoolKey).label
+          },
+          '今日结果已经固定，刷新也不会改变。'
+        );
+        updateDailyHistory({
+          date: config.dayKey,
+          id: snapshotPick.game.id,
+          title: snapshotPick.game.alttitle || snapshotPick.game.title || '',
+          poolKey: snapshotPick.poolKey || config.primaryPoolKey
+        });
+        persistDailyPick(
+          config,
+          {
+            key: snapshotPick.poolKey || config.primaryPoolKey,
+            label: snapshotPick.poolLabel || getPoolByKey(snapshotPick.poolKey || config.primaryPoolKey).label
+          },
+          snapshotPick.game,
+          { snapshotLocked: true }
+        );
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      const cachedPick = getCachedDailyPick(config.dayKey);
+
+      if (allowProvisional && cachedPick?.game?.id && cachedPick.snapshotLocked) {
+        renderDailyPickState(
+          cachedPick.game,
+          {
+            key: cachedPick.poolKey || config.primaryPoolKey,
+            label: cachedPick.poolLabel || getPoolByKey(cachedPick.poolKey || config.primaryPoolKey).label
+          },
+          '今日结果已经固定，刷新也不会改变。'
+        );
+        updateDailyHistory({
+          date: config.dayKey,
+          id: cachedPick.game.id,
+          title: cachedPick.game.alttitle || cachedPick.game.title || '',
+          poolKey: cachedPick.poolKey || config.primaryPoolKey
+        });
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      if (!allowProvisional) {
+        dailyNote.textContent = '今日快照还在同步中，请稍后再来查看。';
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      const { pool: selectedPool, result: selectedResult } = await resolveDailyPickForConfig(
+        config,
+        getDailyHistory()
+      );
+
+      persistDailyPick(config, selectedPool, selectedResult.game, { snapshotLocked: false });
+      storeDailySnapshot({
+        date: config.dayKey,
+        poolKey: selectedPool.key,
+        poolLabel: selectedPool.label,
+        game: selectedResult.game
+      });
+      renderDailyPickState(
+        selectedResult.game,
+        selectedPool,
+        selectedResult.allowRepeat
+          ? '已启用回流保护，小池子也尽量不让推荐断档。'
+          : '已避开最近 7 天重复，并压低最近 15 次出现过的条目。'
+      );
+      await loadDailyHistoryPreview(config.dayKey);
+    } catch (error) {
+      console.error('获取今日推荐失败:', error);
+      dailyError.textContent = `今日推荐加载失败：${error.message}`;
+      dailyError.classList.add('show');
+      dailyNote.textContent = '今日观测暂时中断，请稍后重试';
+    } finally {
+      dailyLoading.classList.remove('show');
+    }
+  }
+
+  async function getRandomGame() {
+    const btn = document.getElementById('randomBtn');
+    const loading = document.getElementById('loading');
+    const gameCard = document.getElementById('gameCard');
+    const errorDiv = document.getElementById('error');
+    
+    btn.disabled = true;
+    loading.classList.add('show');
+    gameCard.classList.remove('show');
+    errorDiv.classList.remove('show');
+
+    try {
+      await waitForTagTranslator();
+      const filters = buildFilters();
+      const maxId = await fetchMaxId(filters);
+      const safetyMode = getSafetyMode();
+      const maxAttempts = safetyMode === 'sfw' ? 18 : 1;
+      let randomGame = null;
+
+      for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        const targetId = Math.floor(Math.random() * maxId) + 1;
+        const candidate = await fetchGameByTargetId(filters, targetId);
+
+        if (safetyMode === 'sfw' && needsImageWarning(candidate)) {
+          continue;
+        }
+
+        randomGame = candidate;
+        break;
+      }
+
+      if (!randomGame) {
+        throw new Error(
+          safetyMode === 'sfw'
+            ? '当前筛选条件下暂时没抽到安全封面作品，请放宽条件或切换到 NSFW'
+            : '未找到符合条件的作品'
+        );
+      }
+
+      renderGame(randomGame, 'game');
+    } catch (error) {
+      console.error('获取随机游戏失败:', error);
+      errorDiv.textContent = `获取失败: ${error.message}，请重试`;
+      errorDiv.classList.add('show');
+    } finally {
+      btn.disabled = false;
+      loading.classList.remove('show');
+    }
+  }
+
+  window.getRandomGame = getRandomGame;
+  fetchVNDBStats();
+  loadDailyRecommendation();
+})();
+</script>
+<!-- <script data-pjax src="/js/random-playlab.js"></script> -->
+
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/head1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">藍二乗</div><div class="author-info-description">一个普通的生活博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="javascript:toRandomPost()"><i class="fas fa-dice"></i><span>I'm Feeling Lucky</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">GET ROUND IN THE SEASON...</div></div><div class="sticky_layout"><div class="card-widget card-random-post"><div class="item-headline"><i class="fas fa-dice"></i><span>随机文章</span><button class="card-random-post-refresh" type="button" aria-label="换一批">换一批</button></div><div class="aside-list" id="card-random-post-list"><div class="aside-list-item"><div class="content"><span class="title">正在生成随机文章...</span></div></div></div></div><script data-pjax="data-pjax">(() => {
+  const CARD_ID = 'card-random-post-list'
+  const PICK_COUNT = 5
+
+  const normalizePosts = posts => {
+    if (!Array.isArray(posts)) return []
+    return posts
+      .map(item => {
+        if (typeof item === 'string') {
+          const title = decodeURIComponent(item.split('/').filter(Boolean).pop() || '无题')
+          return { title, path: item }
+        }
+        if (item && typeof item === 'object' && item.path) {
+          return {
+            title: item.title || '无题',
+            path: item.path,
+            date: item.date || ''
+          }
+        }
+        return null
+      })
+      .filter(Boolean)
+  }
+
+  const pickRandomPosts = posts => {
+    const currentPath = window.location.pathname.replace(/index\.html$/, '')
+    const filtered = posts.filter(post => {
+      const postPath = String(post.path || '').replace(/index\.html$/, '')
+      return postPath !== currentPath
+    })
+
+    const pool = [...filtered]
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[pool[i], pool[j]] = [pool[j], pool[i]]
+    }
+
+    return pool.slice(0, Math.min(PICK_COUNT, pool.length))
+  }
+
+  const formatDate = post => {
+    if (post?.date) {
+      const date = new Date(post.date)
+      if (!Number.isNaN(date.getTime())) {
+        const year = date.getFullYear()
+        const month = String(date.getMonth() + 1).padStart(2, '0')
+        const day = String(date.getDate()).padStart(2, '0')
+        return `${year}-${month}-${day}`
+      }
+    }
+
+    const path = String(post?.path || '')
+    const matched = path.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//)
+    if (!matched) return ''
+    return `${matched[1]}-${matched[2]}-${matched[3]}`
+  }
+
+  const renderPosts = listEl => posts => {
+    if (!listEl) return
+    if (!posts.length) {
+      listEl.innerHTML = `
+        <div class="aside-list-item">
+          <div class="content">
+            <span class="title">暂无可用文章</span>
+          </div>
+        </div>`
+      return
+    }
+
+    listEl.innerHTML = posts.map(post => `
+      <div class="aside-list-item">
+        <div class="content">
+          <a class="title" href="${post.path}" title="${post.title}">${post.title}</a>
+          ${formatDate(post) ? `<time datetime="${post.date || formatDate(post)}" title="${formatDate(post)}">${formatDate(post)}</time>` : ''}
+        </div>
+      </div>`).join('')
+  }
+
+  const showError = listEl => {
+    if (!listEl) return
+    listEl.innerHTML = `
+      <div class="aside-list-item">
+        <div class="content">
+          <span class="title">随机文章加载失败</span>
+        </div>
+      </div>`
+  }
+
+  const initRandomPostCard = async () => {
+    const listEl = document.getElementById(CARD_ID)
+    const card = listEl?.closest('.card-random-post')
+    const refreshBtn = card?.querySelector('.card-random-post-refresh')
+    if (!listEl || !refreshBtn) return
+
+    if (!window.__randomPostCache) {
+      try {
+        const response = await fetch('/post_list.json')
+        if (!response.ok) throw new Error('Failed to fetch post list')
+        const rawPosts = await response.json()
+        window.__randomPostCache = normalizePosts(rawPosts)
+      } catch (error) {
+        console.error('[random-post-card]', error)
+        showError(listEl)
+        return
+      }
+    }
+
+    const update = () => renderPosts(listEl)(pickRandomPosts(window.__randomPostCache))
+    refreshBtn.onclick = update
+    update()
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRandomPostCard, { once: true })
+  } else {
+    initRandomPostCard()
+  }
+
+  window.addEventListener('pjax:complete', initRandomPostCard)
+})()</script><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">23</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">29</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">13.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-04-05T16:37:55.967Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><div id="run-days" style="text-align: center; margin-top: 10px; font-size: 14px;"></div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"lang":"zh-CN","placeholder":"写下你的留言吧...","emoji":["https://cdn.jsdelivr.net/npm/@waline/emojis@1.0.1/weibo"],"requiredMeta":["nick"],"meta":["nick"],"anonymous":true,"login":"disable"}
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://comment-phi-blond.vercel.app',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script src="/js/random.js"></script><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="/js/custom-aplayer.js"></script><script src="/js/music-autoplay.js"></script><script src="/js/run-days.js"></script><script src="/js/fix-article-bg.js"></script><script src="/js/image-lazy-load.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
