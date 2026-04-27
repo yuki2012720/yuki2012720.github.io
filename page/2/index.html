@@ -1,0 +1,493 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>sea of solitude</title><meta name="author" content="藍二乗"><meta name="copyright" content="藍二乗"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个普通的生活博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="sea of solitude">
+<meta property="og:url" content="https://yuki12720.org/page/2/index.html">
+<meta property="og:site_name" content="sea of solitude">
+<meta property="og:description" content="一个普通的生活博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuki12720.org/img/head1.png">
+<meta property="article:author" content="藍二乗">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuki12720.org/img/head1.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://yuki12720.org/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'sea of solitude',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/waline-custom.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><link rel="stylesheet" href="/css/aplayer-custom.css"><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="sea of solitude" type="application/atom+xml">
+</head><body><div id="loading-box" style="display: none; opacity: 0; visibility: hidden;" aria-hidden="true"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">少女祈祷中…</div></div></div><script>(()=&gt;{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const visitedKey = 'homePreloaderVisited'
+  const forceLoading = new URLSearchParams(window.location.search).has('force_loading')
+  const storage = (() =&gt; {
+    try {
+      return window.localStorage
+    } catch (error) {
+      return null
+    }
+  })()
+  const isHomePage = window.location.pathname === '/' ||
+    window.location.pathname.endsWith('/index.html') ||
+    (window.GLOBAL_CONFIG_SITE &amp;&amp; window.GLOBAL_CONFIG_SITE.pageType === 'home')
+  const hasVisitedHome = storage &amp;&amp; storage.getItem(visitedKey) === 'true'
+
+  const hideLoading = () =&gt; {
+    $body.style.overflow = ''
+    $loadingBox.classList.remove('is-visible', 'loaded')
+    $loadingBox.style.display = 'none'
+    $loadingBox.style.opacity = '0'
+    $loadingBox.style.visibility = 'hidden'
+    $loadingBox.setAttribute('aria-hidden', 'true')
+  }
+
+  if ((!isHomePage || hasVisitedHome) &amp;&amp; !forceLoading) {
+    hideLoading()
+    return
+  }
+
+  let isLoaded = false
+  let isVisible = false
+  let cleanupTimer = null
+
+  const showLoading = () =&gt; {
+    if (isLoaded || isVisible) return
+    isVisible = true
+    $body.style.overflow = 'hidden'
+    $loadingBox.style.display = ''
+    $loadingBox.style.opacity = '1'
+    $loadingBox.style.visibility = 'visible'
+    $loadingBox.setAttribute('aria-hidden', 'false')
+    $loadingBox.classList.add('is-visible')
+  }
+
+  const markVisited = () =&gt; {
+    if (!forceLoading &amp;&amp; isHomePage &amp;&amp; storage) {
+      try {
+        storage.setItem(visitedKey, 'true')
+      } catch (error) {}
+    }
+  }
+
+  const endLoading = () =&gt; {
+    if (isLoaded) return
+    isLoaded = true
+    window.clearTimeout(showTimer)
+    window.clearTimeout(cleanupTimer)
+    markVisited()
+    $body.style.overflow = ''
+
+    if (!isVisible) {
+      hideLoading()
+      return
+    }
+
+    if ($loadingBox.classList.contains('loaded')) return
+    $loadingBox.classList.remove('is-visible')
+    $loadingBox.classList.add('loaded')
+    cleanupTimer = window.setTimeout(hideLoading, 650)
+  }
+
+  const showTimer = window.setTimeout(showLoading, forceLoading ? 0 : 2000)
+
+  if (document.readyState === 'complete') {
+    endLoading()
+  } else {
+    window.addEventListener('load', endLoading, { once: true })
+    setTimeout(endLoading, 10000)
+  }
+})()</script><div class="bg-animation" id="web_bg" style="background-image: url(/img/magic.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/head1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">51</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-toolbox"></i><span> 杂七杂八</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 在线对称</span></a></li><li><a class="site-page child" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></li><li><a class="site-page child" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">藍二乗</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-toolbox"></i><span> 杂七杂八</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 在线对称</span></a></li><li><a class="site-page child" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></li><li><a class="site-page child" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">sea of solitude</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div><script data-pjax>;(() => {
+  const HOME_PATHS = ['/', '/index.html']
+  const TYPE_DELAY = 140
+  const PUNCTUATION_DELAY = 260
+  const INITIAL_DELAY = 420
+
+  const isHomePage = () => {
+    if (window.GLOBAL_CONFIG_SITE && window.GLOBAL_CONFIG_SITE.pageType) {
+      return window.GLOBAL_CONFIG_SITE.pageType === 'home'
+    }
+    return HOME_PATHS.includes(window.location.pathname)
+  }
+
+  const startTyping = () => {
+    if (!isHomePage()) return
+
+    const title = document.getElementById('site-title')
+    if (!title) return
+
+    const currentText = (title.dataset.originalText || title.textContent || '').trim()
+    if (!currentText) {
+      window.clearTimeout(window.__heroTitleTypingWaitTimer)
+      window.__heroTitleTypingWaitTimer = window.setTimeout(startTyping, 120)
+      return
+    }
+
+    if (title.dataset.originalText !== currentText) {
+      title.dataset.originalText = currentText
+    }
+
+    if (title.dataset.heroTypingState === 'running') return
+    if (title.dataset.heroTypingDone === 'true') return
+
+    const fullText = title.dataset.originalText
+    title.dataset.heroTypingDone = 'false'
+    title.dataset.heroTypingState = 'running'
+    title.classList.add('hero-typing-active')
+    title.textContent = ''
+
+    let index = 0
+    window.clearTimeout(window.__heroTitleTypingTimer)
+
+    const typeNext = () => {
+      if (!document.body.contains(title)) return
+
+      if (index >= fullText.length) {
+        title.dataset.heroTypingDone = 'true'
+        title.dataset.heroTypingState = 'done'
+        return
+      }
+
+      index += 1
+      title.textContent = fullText.slice(0, index)
+
+      const latestChar = fullText.charAt(index - 1)
+      const delay = /[,.!?;:]/.test(latestChar) ? PUNCTUATION_DELAY : TYPE_DELAY
+      window.__heroTitleTypingTimer = window.setTimeout(typeNext, delay)
+    }
+
+    window.__heroTitleTypingTimer = window.setTimeout(typeNext, INITIAL_DELAY)
+  }
+
+  document.addEventListener('DOMContentLoaded', startTyping, { once: true })
+  window.addEventListener('load', startTyping, { once: true })
+  window.addEventListener('pjax:complete', startTyping)
+  startTyping()
+})()</script></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/18/2026-04-18-new-post/" title="落花"><img class="post-bg" src="/img/1776442654137-bmj3co.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="落花" loading="eager" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/18/2026-04-18-new-post/" title="落花">落花</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-18T00:00:00.000Z" title="发表于 2026-04-18 00:00:00">2026-04-18</time></span></div><div class="content">更新日志： 1.无 日记： 1.复习+新学100个日语单词 2.狂打落幕曲 3.干了一点点点正事，明天应该出答辩分组了，真得认真起来了 4.我服了这个节气mod，冬天不打雷下雨只下雪的，搞得我想孵化电龙还得等大半年。真肝这个冰与火之歌，一天肝在这上面了 5.用生物笼刷掉落物挺有用的，不用自己一个个找怪物刷了。搭上加速模块快的飞起 6.半夜的雷打得好响！噼里啪啦的，要被闪瞎了  </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/04/17/2026-04-17-new-post/" title="2026-04-17-new-post.md"><img class="post-bg" src="/img/1776357215996-fxqgj3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026-04-17-new-post.md" loading="eager" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/17/2026-04-17-new-post/" title="2026-04-17-new-post.md">2026-04-17-new-post.md</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-17T00:00:00.000Z" title="发表于 2026-04-17 00:00:00">2026-04-17</time></span></div><div class="content">更新日志： 1.无 日记： 1.复习100个日语单词 2.依旧狂打落幕曲 3.简历没改，论文答辩ppt和视频也没弄 4.猎鹰2：1小蜜蜂，王朝崩塌 5.4.18开始一辩，4.17确认一辩名单吗有点意思 6.忍不住热开风扇了 7.明天真得干正事了！  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/16/2026-04-16-new-post/" title="choose life?"><img class="post-bg" src="/img/1776269881866-8isi00.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="choose life?" loading="lazy" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/16/2026-04-16-new-post/" title="choose life?">choose life?</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-16T00:00:00.000Z" title="发表于 2026-04-16 00:00:00">2026-04-16</time></span></div><div class="content">更新日志： 1.无 日记： 1.背120个日语单词，语法未动 2.天气越来越热了，我还在忍着不用风扇，快受不了了 3.狗今天吐出来了，一开始想在我房间里吐，紧赶慢赶把他一路赶到阳台吐出来。但是没看到鸭脚，怎么会事呢 4.打了一天落幕曲，进展好慢 5.论文定稿交了，查重过了，就差ppt和演示视频了，懒得搞。还有一堆报告没交，毕个业怎么这么多事啊 6.一群人还没弄完初稿，有一说一。四月中答辩是人想得出来的吗？到底有几个人能一辩我暂且蒙在鼓里 7.要改简历了，准备继续投 8.今天看到有人在论坛问对未来的规划。普通人到底是被环境推着走还是依靠自己规划一步步往上爬呢？至少我认为走一步看一步才是常态，我认为任何超过五年的规划都可以当放屁，由于我打了一天Minecraft懒得展开陈述了，有时间再说  </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/04/15/2026-04-15-new-post/" title="1111111111"><img class="post-bg" src="/img/1776183194681-63v3ph.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="1111111111" loading="lazy" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/15/2026-04-15-new-post/" title="1111111111">1111111111</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-15T00:00:00.000Z" title="发表于 2026-04-15 00:00:00">2026-04-15</time></span></div><div class="content">更新日志： 1.无 日记： 1.复习+新学100个日语单词，语法未动 2.玩了一天Minecraft，落幕曲二周目，没一周目新鲜了 3.早上逗狗玩的时候，狗把玩具鸭的脚给扯下来了，我以为他最多把脚当玩具玩，谁知道他居然吃了下去。问了下ai狗消化不了这种纤维，要么吐要么拉，人已晕 4.看小蜜蜂打G2，比分十分胶着，王朝差点崩塌了，图一被小分暴打，图二三翻盘打回来了，王朝延续！ 5.图为鸭脚生前影像（  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/14/2026-04-14-new-post/" title="Staple Stable"><img class="post-bg" src="/img/1776095850245-7kd68b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Staple Stable" loading="lazy" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/14/2026-04-14-new-post/" title="Staple Stable">Staple Stable</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-14T00:00:00.000Z" title="发表于 2026-04-14 00:00:00">2026-04-14</time></span></div><div class="content">更新日志： 1.无 日记： 1.复习130个日语单词，语法未动 2.第一次吃了腌饺，好小一个，其实是腌云吞吧！ 3.下午改初稿，然后查重，花了60块。查ai率到底是谁想出来的，拿ai降ai查的ai率，我真呵呵了 4.改完初稿发老师了，也没多大问题，可能是老师比较仁慈，挑了个顺序错误和描述问题就让我改完交系统里，结果我改完交了想起来顺序调了，目录忘记一起改了，还得让老师打回重新交一次，这系统真的垃圾，每年毕业季暴力牟利，也不公开查重的数据库。话说老师作息真健康，大晚上发消息大早上才会回 5.晚上看小蜜蜂和R一串记不清名字的队伍比赛，2：0光速拿下，载大哥又在刷无效数据了。。 6.我家狗以前屁眼都被毛遮住看不见，前段时间剃了，现在天天尾巴翘着露个粉粉的屁眼走路，看着好搞笑，最近天天就逗它玩，怎么逗都不生气。家里人还骂我变态天天盯着狗屁股看 7.github的自动部署真不稳定，搞的今日推荐一会好一会坏的，有时还得手动部署。明天给他改早点部署  </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/04/13/2026-04-13-new-post/" title="醒不来"><img class="post-bg" src="/img/1776008707978-poa1of.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="醒不来" loading="lazy" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/13/2026-04-13-new-post/" title="醒不来">醒不来</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-13T00:00:00.000Z" title="发表于 2026-04-13 00:00:00">2026-04-13</time></span></div><div class="content">更新日志： 1.无 日记： 1.复习+背100个日语单词，语法未动 2.剪掉留了四个月的头发，感觉还是留不长。第一次尝试了全面剪短之外的选项，感觉有点丑，也可能是没适应这个发型 3.试图看《素晴2》和《三狮》看不下去，最后看了一集《罪恶王冠》，明明歌从初中听到现在，就是没看这部番 4.今天能量好低，一直在睡觉发呆，啥都不想去想 5.导师给了初稿批示意见，都是小问题，但是懒得改 6.就业问题也懒得想了，早几个月晚几个月就业好像没什么影响，随缘，焦虑也没用 7.希望世界毁灭，以前只是在压力大的时候产生这种想法，现在是真觉得就算明天世界毁灭也没啥了 8.今天看一个以前挺喜欢的香港YouTuber最近的视频，对着朝鲜现状大惊小怪，是真不知道还是节目效果啊，看的厌蠢症犯了 9.做了两个噩梦，但是醒来没精力第一时间记录下来，全忘了 10.要不二刷《鲁路修》吧，真是好番。不过我现在想先把《超炮S》二刷完 11.想玩俺翼和肢体洗，但是近期应该没精力  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/12/2026-04-12-new-post/" title="Akosmismus"><img class="post-bg" src="/img/1775924687291-0wq9jj.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Akosmismus" loading="lazy" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/12/2026-04-12-new-post/" title="Akosmismus">Akosmismus</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-12T00:00:00.000Z" title="发表于 2026-04-12 00:00:00">2026-04-12</time></span></div><div class="content">更新日志： 1.无 日记： 1.复习130个日语单词，语法未动 2.看完了《为美好的世界献上祝福》，评价一般，适合初中看 3.改毕设初稿，改了一天摆烂了发给老师让她改去 4月中答辩谁想出来的？？  </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/04/11/2026-04-11-new-post/" title="sub specie aeternitatis"><img class="post-bg" src="/img/1775836184023-s1s4wl.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="sub specie aeternitatis" loading="lazy" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/11/2026-04-11-new-post/" title="sub specie aeternitatis">sub specie aeternitatis</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-11T00:00:00.000Z" title="发表于 2026-04-11 00:00:00">2026-04-11</time></span></div><div class="content">更新日志： 1.无 日记： 1.复习+背120个日语单词，语法未动 2.看了四集《为美好的世界献上祝福》 3.改毕设初稿 4.关闭朋友圈入口 5.目标新增：学习拉丁语 6.人类就是受激素控制的动物，怎么发挥主观能动性都没用。或者说主观能动性也是受激素控制的，根本不存在自由意志  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/10/2026-04-10-new-post/" title="revive"><img class="post-bg" src="/img/1775748654919-u8bzzq.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="revive" loading="lazy" decoding="async"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/10/2026-04-10-new-post/" title="revive">revive</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-10T00:00:00.000Z" title="发表于 2026-04-10 00:00:00">2026-04-10</time></span></div><div class="content">更新日志： 1.无 日记： 1.复习100个日语单词，语法未动 2.搞毕设 3.看了三集《为美好的世界献上祝福》 4.参与了国g《世纪末之诗》众筹 5.今日GAL推荐了博客主题游戏《恋狱月狂病》  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/09/2026-04-09-new-post/" title="しう">しう</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-09T00:00:00.000Z" title="发表于 2026-04-09 00:00:00">2026-04-09</time></span></div><div class="content">  suck it up愛らしく、哀しく躓く あなたから匂い立つ死の艱苦(かんく)慎ましく、つましくぬかづく あなたには申し訳ない言い訳そもそも創(はじ)めは投げやり…に創られたあなたの派遣先よまあ色々残念だ諸々、いかんせんなそろそろ気付いて 有耶無耶…に決められたこの世のくまぐまにいやこれでも十分か？それとも不十分か？人の子も どの子も生まれが総て宝籤(くじ)外せば孤独と無力THIS IS LIFE (wow)最低の犠牲者に愛を最低の犠牲者に愛を最低の犠牲者に愛を最低の犠牲者に愛を差し上げたいけど、suck it up騒々しく、仰々しく罵るあなたからあふるる反富裕仕方なく、貧しく客引く あなたには限界だろう？人間界はなぜなぜその子が恨めしい？…いや心の底では羨ましい？まあ誰もが同類かその傷んだ脳髄はそろそろ嘆こう 籤引き…に決められたあなたのすじみちにもう僕には関係ないうまれなおしの歓迎会たかる蝿 寄る亀持たざる情け面構え嗤われ甚だ哀れThis is life (WOW)suck it upどうしてこれをつくったのどうしてここまでほうっておいたのどうしてこのこをうんだのどうして...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/head1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">藍二乗</div><div class="author-info-description">一个普通的生活博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">51</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="javascript:toRandomPost()"><i class="fas fa-dice"></i><span>I'm Feeling Lucky</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">GET ROUND IN THE SEASON...</div></div><div class="sticky_layout"><div class="card-widget card-random-post"><div class="item-headline"><i class="fas fa-dice"></i><span>随机文章</span><button class="card-random-post-refresh" type="button" aria-label="换一批">换一批</button></div><div class="aside-list" id="card-random-post-list"><div class="aside-list-item"><div class="content"><span class="title">正在生成随机文章...</span></div></div></div></div><script data-pjax="data-pjax">(() => {
+  const CARD_ID = 'card-random-post-list'
+  const PICK_COUNT = 5
+
+  const normalizePosts = posts => {
+    if (!Array.isArray(posts)) return []
+    return posts
+      .map(item => {
+        if (typeof item === 'string') {
+          const title = decodeURIComponent(item.split('/').filter(Boolean).pop() || '无题')
+          return { title, path: item }
+        }
+        if (item && typeof item === 'object' && item.path) {
+          return {
+            title: item.title || '无题',
+            path: item.path,
+            date: item.date || ''
+          }
+        }
+        return null
+      })
+      .filter(Boolean)
+  }
+
+  const pickRandomPosts = posts => {
+    const currentPath = window.location.pathname.replace(/index\.html$/, '')
+    const filtered = posts.filter(post => {
+      const postPath = String(post.path || '').replace(/index\.html$/, '')
+      return postPath !== currentPath
+    })
+
+    const pool = [...filtered]
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[pool[i], pool[j]] = [pool[j], pool[i]]
+    }
+
+    return pool.slice(0, Math.min(PICK_COUNT, pool.length))
+  }
+
+  const formatDate = post => {
+    if (post?.date) {
+      const date = new Date(post.date)
+      if (!Number.isNaN(date.getTime())) {
+        const year = date.getFullYear()
+        const month = String(date.getMonth() + 1).padStart(2, '0')
+        const day = String(date.getDate()).padStart(2, '0')
+        return `${year}-${month}-${day}`
+      }
+    }
+
+    const path = String(post?.path || '')
+    const matched = path.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//)
+    if (!matched) return ''
+    return `${matched[1]}-${matched[2]}-${matched[3]}`
+  }
+
+  const renderPosts = listEl => posts => {
+    if (!listEl) return
+    if (!posts.length) {
+      listEl.innerHTML = `
+        <div class="aside-list-item">
+          <div class="content">
+            <span class="title">暂无可用文章</span>
+          </div>
+        </div>`
+      return
+    }
+
+    listEl.innerHTML = posts.map(post => `
+      <div class="aside-list-item">
+        <div class="content">
+          <a class="title" href="${post.path}" title="${post.title}">${post.title}</a>
+          ${formatDate(post) ? `<time datetime="${post.date || formatDate(post)}" title="${formatDate(post)}">${formatDate(post)}</time>` : ''}
+        </div>
+      </div>`).join('')
+  }
+
+  const showError = listEl => {
+    if (!listEl) return
+    listEl.innerHTML = `
+      <div class="aside-list-item">
+        <div class="content">
+          <span class="title">随机文章加载失败</span>
+        </div>
+      </div>`
+  }
+
+  const initRandomPostCard = async () => {
+    const listEl = document.getElementById(CARD_ID)
+    const card = listEl?.closest('.card-random-post')
+    const refreshBtn = card?.querySelector('.card-random-post-refresh')
+    if (!listEl || !refreshBtn) return
+
+    if (!window.__randomPostCache) {
+      try {
+        const response = await fetch('/post_list.json')
+        if (!response.ok) throw new Error('Failed to fetch post list')
+        const rawPosts = await response.json()
+        window.__randomPostCache = normalizePosts(rawPosts)
+      } catch (error) {
+        console.error('[random-post-card]', error)
+        showError(listEl)
+        return
+      }
+    }
+
+    const update = () => renderPosts(listEl)(pickRandomPosts(window.__randomPostCache))
+    refreshBtn.onclick = update
+    update()
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRandomPostCard, { once: true })
+  } else {
+    initRandomPostCard()
+  }
+
+  window.addEventListener('pjax:complete', initRandomPostCard)
+})()</script><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">28</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">23</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">51</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">21.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-04-27T17:00:27.670Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><div id="run-days" style="text-align: center; margin-top: 10px; font-size: 14px;"></div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="/js/random.js"></script><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="/js/custom-aplayer.js"></script><script src="/js/music-autoplay.js"></script><script src="/js/run-days.js"></script><script src="/js/fix-article-bg.js"></script><script src="/js/image-lazy-load.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
