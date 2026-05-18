@@ -1,0 +1,363 @@
+.random-playlab {
+  margin: 40px auto 0;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(120, 132, 168, 0.14);
+  box-shadow: 0 18px 44px rgba(31, 45, 61, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+[data-theme='dark'] .random-playlab {
+  background: rgba(20, 28, 40, 0.78);
+  border-color: rgba(143, 162, 199, 0.16);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+
+.playlab-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.playlab-kicker {
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  font-weight: 700;
+  color: #7b88a8;
+}
+
+.playlab-title {
+  margin: 0;
+  font-size: 1.45rem;
+  color: var(--text-color, #253046);
+}
+
+.playlab-note {
+  max-width: 520px;
+  color: var(--text-color, #516178);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.playlab-note strong {
+  color: #ff7f50;
+  font-weight: 700;
+}
+
+.playlab-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.playlab-panel {
+  grid-column: span 12;
+  padding: 18px;
+  border-radius: 18px;
+  background: transparent;
+  border: 1px solid rgba(132, 145, 180, 0.14);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .playlab-panel {
+  background: transparent;
+  border-color: rgba(143, 162, 199, 0.14);
+}
+
+.playlab-panel h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  color: var(--text-color, #253046);
+}
+
+.playlab-panel p {
+  margin: 0;
+  color: var(--text-color, #607089);
+}
+
+.playlab-panel.actions,
+.playlab-panel.insight {
+  grid-column: span 6;
+}
+
+.playlab-route-chips,
+.playlab-action-buttons,
+.playlab-favorite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.playlab-chip,
+.playlab-action,
+.playlab-soft-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.playlab-chip {
+  background: rgba(108, 123, 255, 0.08);
+  color: #5467d6;
+}
+
+.playlab-chip.active {
+  background: linear-gradient(135deg, #7e8bff, #5eb8ff);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(94, 184, 255, 0.22);
+}
+
+.playlab-action {
+  background: linear-gradient(135deg, #ff8f70, #ff6b6b);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(255, 107, 107, 0.22);
+}
+
+.playlab-action.secondary {
+  background: linear-gradient(135deg, #6e92ff, #53c7ff);
+  box-shadow: 0 10px 24px rgba(83, 199, 255, 0.22);
+}
+
+.playlab-soft-btn {
+  background: rgba(79, 95, 126, 0.08);
+  color: var(--text-color, #4f5f7e);
+}
+
+.playlab-chip:hover,
+.playlab-action:hover,
+.playlab-soft-btn:hover {
+  transform: translateY(-1px);
+}
+
+.playlab-action:disabled,
+.playlab-soft-btn:disabled {
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+.playlab-counters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.playlab-counter {
+  padding: 14px;
+  border-radius: 16px;
+  background: transparent;
+  border: 1px solid rgba(90, 110, 150, 0.15);
+  text-align: center;
+  box-shadow: none;
+}
+
+.playlab-counter strong {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--text-color, #233149);
+}
+
+.playlab-counter span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-color, #6b7b91);
+  font-size: 0.85rem;
+}
+
+.playlab-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.playlab-badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 194, 92, 0.16);
+  color: #b67600;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.playlab-output {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.playlab-card-list,
+.playlab-duel,
+.playlab-pair,
+.playlab-trail,
+.playlab-favorites,
+.playlab-event,
+.playlab-profile {
+  min-height: 120px;
+}
+
+.playlab-card-stack,
+.playlab-favorite-list,
+.playlab-trail-list {
+  display: grid;
+  gap: 12px;
+}
+
+.playlab-mini-card,
+.playlab-trail-item {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: transparent;
+  border: 1px solid rgba(126, 138, 165, 0.12);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .playlab-mini-card,
+[data-theme='dark'] .playlab-trail-item {
+  background: transparent;
+  border-color: rgba(143, 162, 199, 0.12);
+}
+
+.playlab-mini-card img,
+.playlab-trail-item img {
+  width: 74px;
+  height: 98px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.playlab-mini-card h4,
+.playlab-trail-item h4 {
+  margin: 0 0 6px;
+  font-size: 0.98rem;
+  color: var(--text-color, #253046);
+  line-height: 1.35;
+}
+
+.playlab-meta-line {
+  color: var(--text-color, #6b7b91);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.playlab-mini-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.playlab-mini-actions button,
+.playlab-mini-actions a {
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(108, 123, 255, 0.1);
+  color: #5066d4;
+  font-size: 0.82rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.playlab-duel-board,
+.playlab-pair-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.playlab-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px dashed rgba(126, 138, 165, 0.22);
+  color: var(--text-color, #7b889d);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.playlab-event-box {
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 245, 214, 0.9), rgba(255, 229, 222, 0.9));
+  color: #8d4f27;
+  line-height: 1.8;
+}
+
+.playlab-event-box strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.playlab-profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.playlab-profile-tags span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(83, 199, 255, 0.12);
+  color: #28759b;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .playlab-panel.actions,
+  .playlab-panel.insight,
+  .playlab-output {
+    grid-column: span 12;
+  }
+
+  .playlab-output {
+    grid-template-columns: 1fr;
+  }
+
+  .playlab-counters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .random-playlab {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .playlab-duel-board,
+  .playlab-pair-board {
+    grid-template-columns: 1fr;
+  }
+
+  .playlab-mini-card,
+  .playlab-trail-item {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .playlab-mini-card img,
+  .playlab-trail-item img {
+    width: 64px;
+    height: 86px;
+  }
+}
