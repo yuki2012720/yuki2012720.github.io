@@ -1,0 +1,100 @@
+/* Waline 评论系统自定义样式 - 强制覆盖 */
+
+/* 整体容器 */
+#waline,
+.wl-container,
+.wl-wrap {
+  font-size: 18px !important;
+}
+
+/* 昵称标签 - 强制放大到20px */
+label[for="wl-nick"],
+.wl-label[for="wl-nick"],
+label.wl-label {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+/* 昵称输入框 - 强制放大到20px */
+input.wl-input.nick,
+input[name="nick"],
+.wl-meta input[type="text"] {
+  font-size: 20px !important;
+  padding: 12px 16px !important;
+  height: auto !important;
+  min-height: 50px !important;
+}
+
+/* 评论输入框 - 强制放大到20px */
+.wl-editor,
+textarea.wl-editor,
+.wl-input-area textarea {
+  font-size: 20px !important;
+  padding: 16px !important;
+  min-height: 150px !important;
+}
+
+/* 提交按钮 */
+.wl-submit,
+button.wl-submit {
+  font-size: 18px !important;
+  padding: 12px 24px !important;
+  height: auto !important;
+  min-height: 50px !important;
+}
+
+/* 隐藏所有登录相关元素 */
+.wl-login,
+.wl-btn-login,
+.wl-action .wl-login,
+button.wl-btn-login,
+a.wl-login,
+.wl-header-item .wl-login {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* 调整输入区域布局 */
+.wl-meta {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 15px !important;
+}
+
+/* 确保所有文本都放大 */
+.wl-panel,
+.wl-header,
+.wl-header-item {
+  font-size: 18px !important;
+}
+
+/* 隐藏登录按钮的容器 */
+.wl-action {
+  display: flex !important;
+}
+
+.wl-action > *:not(.wl-submit):not(.wl-count) {
+  display: none !important;
+}
+/* Waline 整体容器背景适配 */
+#waline {
+  /* 1. 引用与第一个 CSS 相同的背景变量 */
+  background: var(--card-bg) !important;
+  
+  /* 2. 建议同步第一个 CSS 的圆角和边距，视觉更统一 */
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  
+  /* 3. 如果你的背景是半透明的，可能需要这个属性让背景更清透 */
+  backdrop-filter: blur(10px); 
+  margin-top: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+/* 关键步骤：强制让 Waline 内部嵌套的面板变透明，否则会遮挡上面的背景 */
+.wl-container, .wl-panel, .wl-input-area {
+  background: transparent !important;
+  border: none !important;
+}
