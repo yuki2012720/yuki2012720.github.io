@@ -1,0 +1,2759 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>随机GAL | sea of solitude</title><meta name="author" content="藍二乗"><meta name="copyright" content="藍二乗"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=".random-gal-container {     max-width: 800px;     margin: 0 auto;     padding: 20px;     text-align: center;   }    .random-gal-container h1 {     font-size: 2.5rem;     margin-bottom: 30px;     b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="随机GAL">
+<meta property="og:url" content="https://yuki12720.org/random-gal/index.html">
+<meta property="og:site_name" content="sea of solitude">
+<meta property="og:description" content=".random-gal-container {     max-width: 800px;     margin: 0 auto;     padding: 20px;     text-align: center;   }    .random-gal-container h1 {     font-size: 2.5rem;     margin-bottom: 30px;     b">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuki12720.org/img/head1.png">
+<meta property="article:published_time" content="2026-09-26T18:10:43.450Z">
+<meta property="article:modified_time" content="2026-09-26T18:10:43.450Z">
+<meta property="article:author" content="藍二乗">
+<meta property="article:tag" content="个人博客,日记,阅读,游戏,动画">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuki12720.org/img/head1.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://yuki12720.org/random-gal/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '随机GAL',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/waline-custom.css"><link rel="stylesheet" href="/css/aplayer-custom.css"><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="sea of solitude" type="application/atom+xml">
+</head><body><div id="loading-box" style="display: none; opacity: 0; visibility: hidden;" aria-hidden="true"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">少女祈祷中…</div></div></div><script>(()=&gt;{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const visitedKey = 'homePreloaderVisited'
+  const forceLoading = new URLSearchParams(window.location.search).has('force_loading')
+  const storage = (() =&gt; {
+    try {
+      return window.localStorage
+    } catch (error) {
+      return null
+    }
+  })()
+  const isHomePage = window.location.pathname === '/' ||
+    window.location.pathname.endsWith('/index.html') ||
+    (window.GLOBAL_CONFIG_SITE &amp;&amp; window.GLOBAL_CONFIG_SITE.pageType === 'home')
+  const hasVisitedHome = storage &amp;&amp; storage.getItem(visitedKey) === 'true'
+
+  const hideLoading = () =&gt; {
+    $body.style.overflow = ''
+    $loadingBox.classList.remove('is-visible', 'loaded')
+    $loadingBox.style.display = 'none'
+    $loadingBox.style.opacity = '0'
+    $loadingBox.style.visibility = 'hidden'
+    $loadingBox.setAttribute('aria-hidden', 'true')
+  }
+
+  if ((!isHomePage || hasVisitedHome) &amp;&amp; !forceLoading) {
+    hideLoading()
+    return
+  }
+
+  let isLoaded = false
+  let isVisible = false
+  let cleanupTimer = null
+
+  const showLoading = () =&gt; {
+    if (isLoaded || isVisible) return
+    isVisible = true
+    $body.style.overflow = 'hidden'
+    $loadingBox.style.display = ''
+    $loadingBox.style.opacity = '1'
+    $loadingBox.style.visibility = 'visible'
+    $loadingBox.setAttribute('aria-hidden', 'false')
+    $loadingBox.classList.add('is-visible')
+  }
+
+  const markVisited = () =&gt; {
+    if (!forceLoading &amp;&amp; isHomePage &amp;&amp; storage) {
+      try {
+        storage.setItem(visitedKey, 'true')
+      } catch (error) {}
+    }
+  }
+
+  const endLoading = () =&gt; {
+    if (isLoaded) return
+    isLoaded = true
+    window.clearTimeout(showTimer)
+    window.clearTimeout(cleanupTimer)
+    markVisited()
+    $body.style.overflow = ''
+
+    if (!isVisible) {
+      hideLoading()
+      return
+    }
+
+    if ($loadingBox.classList.contains('loaded')) return
+    $loadingBox.classList.remove('is-visible')
+    $loadingBox.classList.add('loaded')
+    cleanupTimer = window.setTimeout(hideLoading, 650)
+  }
+
+  const showTimer = window.setTimeout(showLoading, forceLoading ? 0 : 2000)
+
+  if (document.readyState === 'complete') {
+    endLoading()
+  } else {
+    window.addEventListener('load', endLoading, { once: true })
+    setTimeout(endLoading, 10000)
+  }
+})()</script><div class="bg-animation" id="web_bg" style="background-image: url(/img/magic.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/head1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/categories/%E6%97%A5%E8%AE%B0/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-toolbox"></i><span> 杂七杂八</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 在线对称</span></a></li><li><a class="site-page child" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></li><li><a class="site-page child" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">藍二乗</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-toolbox"></i><span> 杂七杂八</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 在线对称</span></a></li><li><a class="site-page child" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></li><li><a class="site-page child" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">随机GAL</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container">
+<style>
+  .random-gal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .random-gal-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .stats-info {
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+
+  .daily-section {
+    margin: 0 auto 35px;
+    text-align: left;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .section-kicker {
+    margin-bottom: 6px;
+    font-size: 0.8rem;
+    letter-spacing: 0.24em;
+    color: #ff8e53;
+    font-weight: 700;
+  }
+
+  .section-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-color, #333);
+  }
+
+  .section-note {
+    color: #888;
+    font-size: 0.92rem;
+    text-align: right;
+  }
+
+  .random-btn {
+    display: inline-block;
+    margin: 0 auto 40px;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  }
+
+  .random-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+  }
+
+  .random-btn:active {
+    transform: translateY(-1px);
+  }
+
+  .random-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .game-card {
+    background: var(--card-bg, #fff);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    display: none;
+    text-align: left;
+  }
+
+  .game-card.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .daily-card {
+    border: 1px solid rgba(255, 142, 83, 0.18);
+    box-shadow: 0 14px 45px rgba(255, 142, 83, 0.12);
+  }
+
+  .daily-card .game-info {
+    padding-top: 24px;
+  }
+
+  .history-section {
+    margin-top: 18px;
+  }
+
+  .history-toggle {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 142, 83, 0.12);
+    box-shadow: 0 10px 30px rgba(255, 142, 83, 0.08);
+    overflow: hidden;
+  }
+
+  .history-toggle summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+    user-select: none;
+  }
+
+  .history-toggle summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .history-toggle-label {
+    color: var(--text-color, #333);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .history-toggle-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    font-size: 0.88rem;
+  }
+
+  .history-toggle-icon {
+    color: #ff8e53;
+    font-size: 0.95rem;
+    transition: transform 0.25s ease;
+  }
+
+  .history-toggle[open] .history-toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .history-title {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    color: var(--text-color, #333);
+  }
+
+  .history-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .history-item {
+    display: grid;
+    grid-template-columns: 78px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(255, 142, 83, 0.12);
+    box-shadow: 0 8px 24px rgba(255, 142, 83, 0.08);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .history-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(255, 142, 83, 0.12);
+  }
+
+  .history-cover {
+    width: 78px;
+    height: 104px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: rgba(245, 247, 250, 0.96);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .history-main {
+    min-width: 0;
+  }
+
+  .history-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .history-date {
+    font-size: 0.84rem;
+    color: #888;
+    font-weight: 600;
+  }
+
+  .history-pool {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .history-pool.pool-premium {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 127, 80, 0.18);
+    color: #ff7f50;
+  }
+
+  .history-pool.pool-solid {
+    background: rgba(255, 193, 7, 0.12);
+    border: 1px solid rgba(255, 193, 7, 0.24);
+    color: #c98a00;
+  }
+
+  .history-pool.pool-notable {
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    color: #5b68d6;
+  }
+
+  .history-pool.pool-surprise {
+    background: rgba(0, 191, 165, 0.12);
+    border: 1px solid rgba(0, 191, 165, 0.22);
+    color: #009688;
+  }
+
+  .history-pool.pool-recent {
+    background: rgba(156, 39, 176, 0.1);
+    border: 1px solid rgba(156, 39, 176, 0.2);
+    color: #8e24aa;
+  }
+
+  .history-pool.pool-archive {
+    background: rgba(96, 125, 139, 0.12);
+    border: 1px solid rgba(96, 125, 139, 0.22);
+    color: #546e7a;
+  }
+
+  .history-name {
+    color: var(--text-color, #333);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  .history-score {
+    color: #ffb300;
+    font-size: 1.08rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    .history-item {
+      grid-template-columns: 64px 1fr;
+      gap: 12px;
+    }
+
+    .history-cover {
+      width: 64px;
+      height: 88px;
+    }
+
+    .history-score {
+      grid-column: 2;
+      justify-self: start;
+      font-size: 0.98rem;
+    }
+  }
+
+  .daily-badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 14px;
+    padding: 11px 20px;
+    border-radius: 999px;
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 127, 80, 0.18);
+    color: #ff7f50;
+    font-size: 0.96rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  .daily-badge.pool-premium {
+    background: rgba(255, 107, 107, 0.1);
+    border-color: rgba(255, 127, 80, 0.18);
+    color: #ff7f50;
+  }
+
+  .daily-badge.pool-solid {
+    background: rgba(255, 193, 7, 0.12);
+    border-color: rgba(255, 193, 7, 0.24);
+    color: #c98a00;
+  }
+
+  .daily-badge.pool-notable {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.2);
+    color: #5b68d6;
+  }
+
+  .daily-badge.pool-surprise {
+    background: rgba(0, 191, 165, 0.12);
+    border-color: rgba(0, 191, 165, 0.22);
+    color: #009688;
+  }
+
+  .daily-badge.pool-recent {
+    background: rgba(156, 39, 176, 0.1);
+    border-color: rgba(156, 39, 176, 0.2);
+    color: #8e24aa;
+  }
+
+  .daily-badge.pool-archive {
+    background: rgba(96, 125, 139, 0.12);
+    border-color: rgba(96, 125, 139, 0.22);
+    color: #546e7a;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .banner-shell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.96) 0%, rgba(233, 238, 247, 0.96) 100%);
+  }
+
+  .game-banner {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: min(72vh, 820px);
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    cursor: zoom-in;
+  }
+
+  .game-banner.is-guarded {
+    filter: blur(18px) saturate(0.88);
+    transform: scale(1.03);
+    cursor: default;
+  }
+
+  .banner-guard {
+    position: absolute;
+    inset: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(24, 28, 39, 0.58);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .banner-guard.show {
+    display: flex;
+  }
+
+  .banner-guard-card {
+    max-width: min(480px, 100%);
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    text-align: center;
+  }
+
+  .banner-guard-title {
+    margin: 0 0 8px;
+    color: #2d3748;
+    font-size: 1.02rem;
+    font-weight: 700;
+  }
+
+  .banner-guard-text {
+    margin: 0;
+    color: #4a5568;
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .banner-guard-btn {
+    margin-top: 16px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff8e53 0%, #ff6b6b 100%);
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.22);
+  }
+
+  .banner-guard-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(255, 107, 107, 0.28);
+  }
+
+  @media (max-width: 768px) {
+    .banner-shell {
+      padding: 14px;
+    }
+
+    .game-banner {
+      max-height: min(56vh, 520px);
+      border-radius: 14px;
+    }
+
+    .banner-guard {
+      inset: 14px;
+      padding: 16px;
+      border-radius: 16px;
+    }
+
+    .banner-guard-card {
+      padding: 16px 18px;
+    }
+  }
+
+  .game-info {
+    padding: 30px;
+  }
+
+  .game-title {
+    font-size: 1.8rem;
+    color: var(--text-color, #333);
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+
+  .game-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .meta-item {
+    background: #f0f0f0;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .game-description {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .game-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+  }
+
+  .game-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .link-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .link-btn.vndb {
+    background: #2c3e50;
+    color: white;
+  }
+
+  .link-btn.vndb:hover {
+    background: #34495e;
+  }
+
+  .loading {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+    font-size: 1.2rem;
+    display: none;
+  }
+
+  .loading.show {
+    display: block;
+  }
+
+  .error-msg {
+    background: #ff6b6b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .error-msg.show {
+    display: block;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .rating-score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .rating-label {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+</style>
+<link rel="stylesheet" href="/css/random-gal-filter.css">
+<link rel="stylesheet" href="/css/random-draw-library.css">
+
+<div class="random-gal-container">
+  <h1>🎲 今天玩什么</h1>
+  
+  <div class="stats-info" id="stats"></div>
+  
+  <div class="error-msg" id="error"></div>
+
+  <section class="daily-section">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">TODAY'S PICK</div>
+        <h2 class="section-title">今日推荐</h2>
+      </div>
+      <div class="section-note" id="dailyNote">正在根据今天的日期观测作品...</div>
+    </div>
+
+    <div class="loading" id="dailyLoading">
+      正在生成今日推荐...
+    </div>
+
+    <div class="error-msg" id="dailyError"></div>
+
+    <div class="game-card daily-card" id="dailyCard">
+      <div class="banner-shell" id="dailyBannerShell">
+        <img class="game-banner medium-zoom-image" id="dailyBanner" src="" alt="今日推荐封面" loading='lazy'>
+        <div class="banner-guard" id="dailyBannerGuard">
+          <div class="banner-guard-card">
+            <p class="banner-guard-title">该封面可能包含成人内容</p>
+            <p class="banner-guard-text" id="dailyBannerGuardText">基于 VNDB 的图片分级标记，显示前先提醒你一下。</p>
+            <button class="banner-guard-btn" id="dailyBannerReveal" type="button">继续查看封面</button>
+          </div>
+        </div>
+      </div>
+      <div class="game-info">
+        <div class="daily-badge" id="dailyBadge">今日观测结果</div>
+        <h2 class="game-title" id="dailyTitle"></h2>
+        <div class="rating">
+          <span class="rating-score" id="dailyRatingScore"></span>
+          <span class="rating-label">VNDB 评分</span>
+        </div>
+        <div class="game-meta" id="dailyMeta"></div>
+        <div class="game-description" id="dailyDescription"></div>
+        <div class="game-tags" id="dailyTags"></div>
+        <div class="game-links">
+          <a class="link-btn vndb" id="dailyVndbLink" href="#" target="_blank">
+            先看今天这部
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-section" id="historySection" style="display: none;">
+      <details class="history-toggle" id="historyToggle">
+        <summary>
+          <span class="history-toggle-label" id="historyToggleLabel">最近推荐回放</span>
+          <span class="history-toggle-meta">
+            <span id="historyToggleMeta">点击展开</span>
+            <span class="history-toggle-icon">▾</span>
+          </span>
+        </summary>
+        <div class="history-list" id="historyList"></div>
+      </details>
+    </div>
+  </section>
+  
+  <section class="gal-filter-panel" id="galFilterPanel" aria-label="随机 GAL 筛选">
+    <header class="gal-filter-head">
+      <h2 class="gal-filter-title">不太随机的随机 GAL</h2>
+      <button class="gal-filter-reset" id="galFilterReset" type="button">重置条件</button>
+    </header>
+    <div class="gal-filter-body">
+      <div class="gal-filter-row">
+        <div class="gal-filter-heading"><span>年份</span><small>单年或范围</small></div>
+        <div class="gal-filter-content">
+          <div class="gal-control-line">
+            <div class="gal-chip-list" id="galYearQuickList"></div>
+            <button class="gal-filter-expand" id="galYearExpand" type="button" aria-expanded="false">全部年份⌄</button>
+          </div>
+          <div class="gal-year-more" id="galYearMore"><div class="gal-year-groups" id="galYearGrid"></div></div>
+          <div class="gal-range"><span>自定义范围</span><input id="galYearFrom" type="number" min="1980" max="2100" placeholder="起始年"><b>—</b><input id="galYearTo" type="number" min="1980" max="2100" placeholder="结束年"></div>
+          <p class="gal-filter-error" id="galYearError"></p>
+        </div>
+      </div>
+      <div class="gal-filter-row">
+        <div class="gal-filter-heading"><span>评分</span><small>0–10 分</small></div>
+        <div class="gal-filter-content">
+          <div class="gal-chip-list" id="galRatingPresets"></div>
+          <div class="gal-range"><span>自定义范围</span><input id="galRatingFrom" type="number" min="0" max="10" step="0.1" placeholder="最低分"><b>—</b><input id="galRatingTo" type="number" min="0" max="10" step="0.1" placeholder="最高分"></div>
+          <p class="gal-filter-error" id="galRatingError"></p>
+        </div>
+      </div>
+      <div class="gal-filter-row">
+        <div class="gal-filter-heading"><span>语言</span><small>原始语言</small></div>
+        <div class="gal-filter-content"><div class="gal-chip-list" id="galLanguageList"></div></div>
+      </div>
+      <div class="gal-filter-row">
+        <div class="gal-filter-heading"><span>封面</span><small>显示范围</small></div>
+        <div class="gal-filter-content"><div class="gal-chip-list" id="galSafetyList"></div></div>
+      </div>
+
+      <details class="gal-more-options">
+        <summary>更多条件</summary>
+        <div class="gal-filter-row">
+          <div class="gal-filter-heading"><span>评分人数</span><small>最低票数</small></div>
+          <div class="gal-filter-content"><div class="gal-chip-list" id="galVoteList"></div><div class="gal-range"><span>自定义下限</span><input id="galRatingCount" type="number" min="0" step="1" placeholder="例如 500"></div><p class="gal-filter-error" id="galVoteError"></p></div>
+        </div>
+        <div class="gal-filter-row">
+          <div class="gal-filter-heading"><span>长度</span><small>游玩时长</small></div>
+          <div class="gal-filter-content"><div class="gal-chip-list" id="galLengthList"></div></div>
+        </div>
+        <div class="gal-filter-row">
+          <div class="gal-filter-heading"><span>平台</span><small>选择一种</small></div>
+          <div class="gal-filter-content"><div class="gal-chip-list" id="galPlatformList"></div></div>
+        </div>
+        <div class="gal-filter-row">
+          <div class="gal-filter-heading"><span>标签</span><small>支持多选</small></div>
+          <div class="gal-filter-content">
+            <div class="gal-chip-list gal-tag-all" id="galTagAll"></div>
+            <div class="gal-tag-groups" id="galTagList"></div>
+            <div class="gal-tag-rule" id="galTagRule" hidden><span>多标签规则</span><button class="gal-chip" type="button" data-gal-tag-mode="all">必须同时包含</button><button class="gal-chip" type="button" data-gal-tag-mode="any">包含任一即可</button></div>
+          </div>
+        </div>
+      </details>
+    </div>
+    <footer class="gal-filter-foot"><span>当前条件</span><strong id="galFilterSummary">全部年份 · 不限评分</strong></footer>
+  </section>
+  
+  <button class="random-btn" id="randomBtn" onclick="getRandomGame()">
+    🎮 随机抽取
+  </button>
+  
+  <div class="loading" id="loading" role="status" aria-live="polite">
+    正在抽取中
+  </div>
+  
+  <div class="game-card" id="gameCard">
+    <div class="banner-shell" id="gameBannerShell">
+      <img class="game-banner medium-zoom-image" id="gameBanner" src="" alt="游戏封面" loading='lazy'>
+      <div class="banner-guard" id="gameBannerGuard">
+        <div class="banner-guard-card">
+          <p class="banner-guard-title">该封面可能包含成人内容</p>
+          <p class="banner-guard-text" id="gameBannerGuardText">基于 VNDB 的图片分级标记，显示前先提醒你一下。</p>
+          <button class="banner-guard-btn" id="gameBannerReveal" type="button">继续查看封面</button>
+        </div>
+      </div>
+    </div>
+    <div class="game-info">
+      <h2 class="game-title" id="gameTitle"></h2>
+      <div class="rating">
+        <span class="rating-score" id="ratingScore"></span>
+        <span class="rating-label">VNDB 评分</span>
+      </div>
+      <div class="game-meta" id="gameMeta"></div>
+      <div class="game-description" id="gameDescription"></div>
+      <div class="game-tags" id="gameTags"></div>
+      <div class="game-links">
+        <a class="link-btn vndb" id="vndbLink" href="#" target="_blank">
+          查看 VNDB 详情
+        </a>
+        <button class="link-btn draw-favorite-btn" id="galFavoriteBtn" type="button">加入收藏</button>
+      </div>
+    </div>
+  </div>
+
+  <details class="draw-library" id="galDrawLibrary">
+    <summary>最近抽取与收藏</summary>
+    <div class="draw-library-grid">
+      <section><h3>最近抽取</h3><div class="draw-library-list" id="galRecentList"></div></section>
+      <section><h3>我的收藏</h3><div class="draw-library-list" id="galFavoriteList"></div></section>
+    </div>
+  </details>
+
+</div>
+
+<script data-pjax src="/js/vndb-tags-dict.js"></script>
+<script data-pjax src="/js/daily-recommendation-model.js"></script>
+<script data-pjax src="/js/daily-gal-recommendation.js"></script>
+<script data-pjax src="/js/random-gal-random-model.js"></script>
+<script data-pjax src="/js/random-gal-filter-model.js"></script>
+<script data-pjax src="/js/random-draw-model.js"></script>
+<script data-pjax>
+(() => {
+  const bootRandomGalPage = () => {
+  const API_URL = 'https://api.vndb.org/kana';
+  const VN_FIELDS = 'title, alttitle, description, image.url, image.thumbnail, image.sexual, image.violence, image.votecount, rating, votecount, languages, platforms, length, released, developers.name, tags.id, tags.name, tags.rating';
+  const IMAGE_SEXUAL_WARNING_THRESHOLD = 1;
+  const IMAGE_WARNING_MIN_VOTES = 1;
+  const DAILY_BASE_FILTER = ['id', '>=', 'v1'];
+  const DAILY_PREMIUM_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 82]];
+  const DAILY_SOLID_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 76], ['rating', '<', 82]];
+  const DAILY_NOTABLE_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 72], ['rating', '<', 76]];
+  const DAILY_SURPRISE_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 68], ['rating', '<', 72]];
+  const DAILY_RECENT_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 74], ['released', '>=', '2020-01-01']];
+  const DAILY_ARCHIVE_FILTER = ['and', DAILY_BASE_FILTER, ['rating', '>=', 74], ['released', '<', '2005-01-01']];
+  const PAGE_SIZE = 50;
+  const RANDOM_PAGE_SIZE = 50;
+  const DAILY_POOL_PAGE_SIZE = 24;
+  const DAILY_HISTORY_LIMIT = 90;
+  const DAILY_NO_REPEAT_DAYS = 90;
+  const DAILY_DOWNWEIGHT_WINDOW = 15;
+  const DAILY_CACHE_KEY = 'randomGalDailyCache.v3';
+  const DAILY_HISTORY_KEY = 'randomGalDailyHistory.v3';
+  const REPO_SNAPSHOT_URL = '/data/random-gal-snapshots.json';
+  const allowProvisional = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  const DAILY_SNAPSHOT_KEY = 'randomGalDailySnapshots.v1';
+  const MANUAL_RECENT_KEY = 'randomGalManualRecent.v1';
+  const MANUAL_FAVORITES_KEY = 'randomGalManualFavorites.v1';
+  const MANUAL_LIBRARY_LIMIT = 30;
+  let totalVNs = 0;
+  const countCache = new Map();
+  let repoSnapshotsPromise = null;
+  let galFilterState = { ...RandomGalFilters.DEFAULT_STATE, tags: [] };
+  let currentManualGame = null;
+  let manualRecent = readManualItems(MANUAL_RECENT_KEY);
+  let manualFavorites = readManualItems(MANUAL_FAVORITES_KEY);
+  const DAILY_POOL_ORDER = [
+    {
+      key: 'premium',
+      label: '高分核心池',
+      rotationSlots: 2,
+      filter: DAILY_PREMIUM_FILTER
+    },
+    {
+      key: 'solid',
+      label: '稳妥均衡池',
+      rotationSlots: 3,
+      filter: DAILY_SOLID_FILTER
+    },
+    {
+      key: 'notable',
+      label: '风味补充池',
+      rotationSlots: 3,
+      filter: DAILY_NOTABLE_FILTER
+    },
+    {
+      key: 'surprise',
+      label: '惊喜补位池',
+      rotationSlots: 2,
+      filter: DAILY_SURPRISE_FILTER
+    },
+    {
+      key: 'recent',
+      label: '近期信号池',
+      rotationSlots: 3,
+      filter: DAILY_RECENT_FILTER
+    },
+    {
+      key: 'archive',
+      label: '旧作回响池',
+      rotationSlots: 2,
+      filter: DAILY_ARCHIVE_FILTER
+    }
+  ];
+  const DAILY_ROTATION_DECK = [
+    'premium',
+    'solid',
+    'notable',
+    'recent',
+    'surprise',
+    'archive',
+    'solid',
+    'notable',
+    'recent',
+    'premium',
+    'solid',
+    'notable',
+    'recent',
+    'surprise',
+    'archive'
+  ];
+  const DAILY_POOL_COPY = {
+    premium: {
+      title: '高分核心池',
+      description: '今天先从最不会出错的星光里挑一部。'
+    },
+    solid: {
+      title: '稳妥均衡池',
+      description: '落点依旧稳妥，只是比标准答案多一点呼吸。'
+    },
+    notable: {
+      title: '风味补充池',
+      description: '也许没那么耀眼，但常常更容易留下余味。'
+    },
+    surprise: {
+      title: '惊喜补位池',
+      description: '偶尔偏一点，也许会遇到意外合拍的那部。'
+    },
+    recent: {
+      title: '近期信号池',
+      description: '把视线放近一些，看看这些年的新信号。'
+    },
+    archive: {
+      title: '旧作回响池',
+      description: '有些故事过了很多年，回声还是很清晰。'
+    }
+  };
+  const DAILY_POOL_BADGE_CLASS = {
+    premium: 'pool-premium',
+    solid: 'pool-solid',
+    notable: 'pool-notable',
+    surprise: 'pool-surprise',
+    recent: 'pool-recent',
+    archive: 'pool-archive'
+  };
+  const HISTORY_START_DATE = '2026-03-20';
+  const PLACEHOLDER_IMAGE = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+      <defs>
+        <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f5f7fa" />
+          <stop offset="100%" stop-color="#c3cfe2" />
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="675" fill="url(#g)" />
+      <text x="50%" y="50%" text-anchor="middle" fill="#7b8794" font-size="44" font-family="Arial, sans-serif">No Cover</text>
+    </svg>
+  `);
+  
+  function getTagTranslator() {
+    return typeof window.translateSingleTag === 'function' ? window.translateSingleTag : null;
+  }
+
+  function translateTag(tagName) {
+    const translator = getTagTranslator();
+    return translator ? translator(tagName) : tagName;
+  }
+
+  function waitForTagTranslator(timeoutMs = 1500) {
+    if (getTagTranslator()) {
+      return Promise.resolve(true);
+    }
+
+    return new Promise(resolve => {
+      const startedAt = Date.now();
+
+      const checkTranslator = () => {
+        if (getTagTranslator()) {
+          resolve(true);
+          return;
+        }
+
+        if (Date.now() - startedAt >= timeoutMs) {
+          resolve(false);
+          return;
+        }
+
+        setTimeout(checkTranslator, 50);
+      };
+
+      checkTranslator();
+    });
+  }
+
+  function buildDateKey() {
+    const testDate = new URLSearchParams(window.location.search).get('test_date');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(testDate || '')) {
+      return testDate;
+    }
+
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function isSnapshotPreviewMode() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has('test_date')
+      || window.location.hostname === 'localhost'
+      || window.location.hostname === '127.0.0.1';
+  }
+
+  function isTestMode() {
+    return /^\d{4}-\d{2}-\d{2}$/.test(new URLSearchParams(window.location.search).get('test_date') || '');
+  }
+
+  function buildDateLabel(dateKey = buildDateKey()) {
+    const [year, month, day] = dateKey.split('-');
+    return `${year}.${month}.${day}`;
+  }
+
+  function shiftDateKey(dateKey, offsetDays) {
+    const date = new Date(`${dateKey}T00:00:00+08:00`);
+    date.setDate(date.getDate() + offsetDays);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function compareDateKey(a, b) {
+    return a.localeCompare(b);
+  }
+
+  function hashString(input) {
+    let hash = 0;
+    for (let i = 0; i < input.length; i++) {
+      hash = ((hash << 5) - hash) + input.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  function buildDayIndex(dateKey = buildDateKey()) {
+    return Math.floor(new Date(`${dateKey}T00:00:00+08:00`).getTime() / 86400000);
+  }
+
+  function getPoolByKey(key) {
+    return DAILY_POOL_ORDER.find(pool => pool.key === key) || DAILY_POOL_ORDER[0];
+  }
+
+  function getDailyPoolFallbacks(rotationIndex) {
+    const seen = new Set();
+    const pools = [];
+
+    for (let offset = 0; offset < DAILY_ROTATION_DECK.length; offset++) {
+      const deckKey = DAILY_ROTATION_DECK[(rotationIndex + offset) % DAILY_ROTATION_DECK.length];
+      if (seen.has(deckKey)) {
+        continue;
+      }
+      seen.add(deckKey);
+      pools.push(getPoolByKey(deckKey));
+    }
+
+    return pools;
+  }
+
+  function getDailyRecommendationConfig(dateKey = buildDateKey()) {
+    const dayKey = dateKey;
+    const dayIndex = buildDayIndex(dayKey);
+    const rotationIndex = dayIndex % DAILY_ROTATION_DECK.length;
+    const primaryPoolKey = DAILY_ROTATION_DECK[rotationIndex];
+
+    return {
+      dayKey,
+      dayIndex,
+      rotationIndex,
+      primaryPoolKey,
+      pools: getDailyPoolFallbacks(rotationIndex),
+      pickSeed: hashString(`random-gal-pick-${dayKey}`),
+      pageSeed: hashString(`random-gal-page-${dayKey}`)
+    };
+  }
+
+  function safeReadStorage(key, fallbackValue) {
+    try {
+      const rawValue = localStorage.getItem(key);
+      return rawValue ? JSON.parse(rawValue) : fallbackValue;
+    } catch (error) {
+      return fallbackValue;
+    }
+  }
+
+  function safeWriteStorage(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.warn('写入本地缓存失败:', error);
+    }
+  }
+
+  function normalizeHistoryEntry(entry) {
+    if (!entry || !entry.date || !entry.id) {
+      return null;
+    }
+
+    return {
+      date: entry.date,
+      id: entry.id,
+      title: entry.title || '',
+      poolKey: entry.poolKey || ''
+    };
+  }
+
+  function normalizeSnapshotEntry(entry) {
+    if (!entry || !entry.date || !entry.poolKey || !entry.game?.id) {
+      return null;
+    }
+
+    return {
+      date: entry.date,
+      poolKey: entry.poolKey,
+      poolLabel: entry.poolLabel || '',
+      game: entry.game
+    };
+  }
+
+  function getDailyHistory() {
+    const history = safeReadStorage(DAILY_HISTORY_KEY, []);
+    return Array.isArray(history)
+      ? history
+          .map(normalizeHistoryEntry)
+          .filter(Boolean)
+          .sort((a, b) => b.date.localeCompare(a.date))
+          .slice(0, DAILY_HISTORY_LIMIT)
+      : [];
+  }
+
+  function updateDailyHistory(entry) {
+    const normalizedEntry = normalizeHistoryEntry(entry);
+    if (!normalizedEntry) {
+      return;
+    }
+
+    const nextHistory = [
+      normalizedEntry,
+      ...getDailyHistory().filter(item => item.date !== normalizedEntry.date)
+    ].slice(0, DAILY_HISTORY_LIMIT);
+
+    safeWriteStorage(DAILY_HISTORY_KEY, nextHistory);
+  }
+
+  function buildHistoryContext(historyEntries, dayKey) {
+    return DailyGalRecommendation.buildHistoryContext(historyEntries, dayKey, {
+      noRepeatDays: DAILY_NO_REPEAT_DAYS,
+      downweightWindow: DAILY_DOWNWEIGHT_WINDOW
+    });
+  }
+
+  function getHistoryContext(dayKey) {
+    return buildHistoryContext(getDailyHistory(), dayKey);
+  }
+
+  function getCachedDailyPick(dayKey) {
+    const cache = safeReadStorage(DAILY_CACHE_KEY, null);
+    return cache && cache.date === dayKey ? cache : null;
+  }
+
+  function cacheDailyPick(entry) {
+    safeWriteStorage(DAILY_CACHE_KEY, entry);
+  }
+
+  function getStoredSnapshots() {
+    const snapshots = safeReadStorage(DAILY_SNAPSHOT_KEY, []);
+
+    return Array.isArray(snapshots)
+      ? snapshots
+          .map(normalizeSnapshotEntry)
+          .filter(Boolean)
+          .sort((a, b) => b.date.localeCompare(a.date))
+      : [];
+  }
+
+  function getStoredSnapshotByDate(dateKey) {
+    return getStoredSnapshots().find(entry => entry.date === dateKey) || null;
+  }
+
+  function storeDailySnapshot(entry) {
+    if (isTestMode()) {
+      return;
+    }
+
+    const normalizedEntry = normalizeSnapshotEntry(entry);
+    if (!normalizedEntry) {
+      return;
+    }
+
+    const nextSnapshots = [
+      normalizedEntry,
+      ...getStoredSnapshots().filter(item => item.date !== normalizedEntry.date)
+    ]
+      .sort((a, b) => b.date.localeCompare(a.date));
+
+    safeWriteStorage(DAILY_SNAPSHOT_KEY, nextSnapshots);
+  }
+
+  function fetchSnapshotCollection(url) {
+    return fetch(url, { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => Array.isArray(data)
+        ? data.map(normalizeSnapshotEntry).filter(Boolean)
+        : []
+      )
+      .catch(() => []);
+  }
+
+  async function getRepoSnapshots() {
+    if (!repoSnapshotsPromise) {
+      repoSnapshotsPromise = fetchSnapshotCollection(REPO_SNAPSHOT_URL);
+    }
+
+    return repoSnapshotsPromise;
+  }
+
+  async function hydrateSnapshotEntry(entry) {
+    const normalizedEntry = normalizeSnapshotEntry(entry);
+    if (!normalizedEntry) {
+      return null;
+    }
+
+    if (normalizedEntry.game.image?.url && normalizedEntry.game.rating) {
+      return normalizedEntry;
+    }
+
+    const detailedGame = await fetchGameByExactId(normalizedEntry.game.id);
+    return {
+      date: normalizedEntry.date,
+      poolKey: normalizedEntry.poolKey,
+      poolLabel: normalizedEntry.poolLabel || getPoolByKey(normalizedEntry.poolKey).label,
+      game: detailedGame
+    };
+  }
+
+  async function getSnapshotForDate(dateKey) {
+    const repoSnapshots = await getRepoSnapshots();
+    const repoSnapshot = repoSnapshots.find(entry => entry.date === dateKey);
+    if (repoSnapshot) {
+      return hydrateSnapshotEntry(repoSnapshot);
+    }
+
+    if (isSnapshotPreviewMode()) {
+      const storedSnapshot = getStoredSnapshotByDate(dateKey);
+      if (storedSnapshot) {
+        return hydrateSnapshotEntry(storedSnapshot);
+      }
+    }
+
+    return null;
+  }
+
+  async function fetchVNBatch(filters, options = {}) {
+    const response = await fetch(`${API_URL}/vn`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        filters,
+        fields: options.fields ?? VN_FIELDS,
+        sort: options.sort ?? 'id',
+        reverse: options.reverse ?? false,
+        results: options.results ?? PAGE_SIZE,
+        page: options.page ?? 1,
+        ...options
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
+  }
+
+  async function fetchGameByExactId(vndbId) {
+    const data = await fetchVNBatch(['id', '=', vndbId], {
+      results: 1
+    });
+
+    const game = data.results?.[0] || null;
+    if (!game) {
+      throw new Error('未找到手动指定的作品');
+    }
+
+    return game;
+  }
+
+  function getCountCacheKey(filters) {
+    return JSON.stringify(filters);
+  }
+
+  const GAL_LANGUAGES = [
+    ['', '不限'], ['ja', '日语'], ['zh-Hans', '简体中文'], ['zh-Hant', '繁体中文'], ['en', '英语'], ['ko', '韩语']
+  ];
+  const GAL_PLATFORMS = [
+    ['', '不限'], ['win', 'Windows'], ['lin', 'Linux'], ['mac', 'macOS'], ['and', 'Android'], ['ios', 'iOS'], ['swi', 'Switch'], ['ps4', 'PS4'], ['ps5', 'PS5']
+  ];
+  const GAL_LENGTHS = [
+    ['', '不限'], ['1', '极短'], ['2', '短篇'], ['3', '中等'], ['4', '长篇'], ['5', '极长']
+  ];
+  const GAL_RATING_PRESETS = [
+    ['', '不限'], ['6', '6 分以上'], ['7', '7 分以上'], ['8', '8 分以上'], ['9', '9 分以上']
+  ];
+  const GAL_VOTE_PRESETS = [
+    ['', '不限'], ['50', '≥ 50'], ['200', '≥ 200'], ['1000', '≥ 1000']
+  ];
+  const GAL_TAG_GROUPS = RandomGalFilters.getTagGroups();
+  const GAL_TAG_LABELS = RandomGalFilters.getTagLabels();
+
+  function readManualItems(key) {
+    try {
+      return RandomDrawModel.parseStoredItems(localStorage.getItem(key), MANUAL_LIBRARY_LIMIT);
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function writeManualItems(key, items) {
+    try {
+      localStorage.setItem(key, JSON.stringify(items));
+    } catch (error) {
+      // Local history is optional; API drawing must remain available.
+    }
+  }
+
+  function createGalChip(label, dataset = {}) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'gal-chip';
+    button.textContent = label;
+    Object.entries(dataset).forEach(([key, value]) => { button.dataset[key] = value; });
+    button.setAttribute('aria-pressed', 'false');
+    return button;
+  }
+
+  function setGalChipActive(button, active) {
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', active ? 'true' : 'false');
+  }
+
+  function setGalFilterState(patch) {
+    galFilterState = {
+      ...galFilterState,
+      ...patch,
+      tags: patch.tags ? [...patch.tags] : [...galFilterState.tags]
+    };
+    renderGalFilters();
+  }
+
+  function renderGalFilters() {
+    const result = RandomGalFilters.normalize(galFilterState);
+    galFilterState = result.state;
+    const { errors } = result;
+
+    document.querySelectorAll('[data-gal-year]').forEach(button => {
+      const value = button.dataset.galYear;
+      setGalChipActive(button, value
+        ? galFilterState.yearMode === 'single' && galFilterState.year === value
+        : galFilterState.yearMode === 'all');
+    });
+    document.querySelectorAll('[data-gal-rating]').forEach(button => {
+      setGalChipActive(button, galFilterState.ratingFrom === button.dataset.galRating && galFilterState.ratingTo === '');
+    });
+    document.querySelectorAll('[data-gal-votes]').forEach(button => setGalChipActive(button, galFilterState.ratingCount === button.dataset.galVotes));
+    document.querySelectorAll('[data-gal-language]').forEach(button => setGalChipActive(button, galFilterState.language === button.dataset.galLanguage));
+    document.querySelectorAll('[data-gal-platform]').forEach(button => setGalChipActive(button, galFilterState.platform === button.dataset.galPlatform));
+    document.querySelectorAll('[data-gal-length]').forEach(button => setGalChipActive(button, galFilterState.length === button.dataset.galLength));
+    document.querySelectorAll('[data-gal-safety]').forEach(button => setGalChipActive(button, galFilterState.safety === button.dataset.galSafety));
+    document.querySelectorAll('[data-gal-tag]').forEach(button => {
+      const tag = button.dataset.galTag;
+      setGalChipActive(button, tag ? galFilterState.tags.includes(tag) : galFilterState.tags.length === 0);
+    });
+    document.querySelectorAll('[data-gal-tag-mode]').forEach(button => setGalChipActive(button, galFilterState.tagMode === button.dataset.galTagMode));
+
+    const inputs = {
+      galYearFrom: galFilterState.yearFrom,
+      galYearTo: galFilterState.yearTo,
+      galRatingFrom: galFilterState.ratingFrom,
+      galRatingTo: galFilterState.ratingTo,
+      galRatingCount: galFilterState.ratingCount
+    };
+    Object.entries(inputs).forEach(([id, value]) => { document.getElementById(id).value = value; });
+    document.getElementById('galYearFrom').setAttribute('aria-invalid', errors.yearFrom || errors.yearRange ? 'true' : 'false');
+    document.getElementById('galYearTo').setAttribute('aria-invalid', errors.yearTo || errors.yearRange ? 'true' : 'false');
+    document.getElementById('galRatingFrom').setAttribute('aria-invalid', errors.ratingFrom || errors.ratingRange ? 'true' : 'false');
+    document.getElementById('galRatingTo').setAttribute('aria-invalid', errors.ratingTo || errors.ratingRange ? 'true' : 'false');
+    document.getElementById('galRatingCount').setAttribute('aria-invalid', errors.ratingCount ? 'true' : 'false');
+    document.getElementById('galYearError').textContent = errors.year || errors.yearFrom || errors.yearTo || errors.yearRange || '';
+    document.getElementById('galRatingError').textContent = errors.ratingFrom || errors.ratingTo || errors.ratingRange || '';
+    document.getElementById('galVoteError').textContent = errors.ratingCount || '';
+    document.getElementById('galTagRule').hidden = galFilterState.tags.length < 2;
+    document.getElementById('galFilterSummary').textContent = Object.keys(errors).length
+      ? `请先修正：${Object.values(errors)[0]}`
+      : RandomGalFilters.describe(galFilterState, GAL_TAG_LABELS);
+    document.getElementById('randomBtn').disabled = Object.keys(errors).length > 0;
+  }
+
+  function appendGalChoices(targetId, choices, dataKey, updateKey, extraPatch = {}) {
+    const target = document.getElementById(targetId);
+    choices.forEach(([value, label]) => {
+      const button = createGalChip(label, { [dataKey]: value });
+      button.addEventListener('click', () => setGalFilterState({ ...extraPatch, [updateKey]: value }));
+      target.appendChild(button);
+    });
+  }
+
+  function installGalFilters() {
+    const years = RandomGalFilters.listYears(new Date().getFullYear());
+    const yearGroups = RandomGalFilters.listYearGroups(new Date().getFullYear());
+    const quickYears = years.slice(0, 12);
+    const quickYearSet = new Set(quickYears);
+    const quickTarget = document.getElementById('galYearQuickList');
+    const gridTarget = document.getElementById('galYearGrid');
+    const allYears = createGalChip('全部', { galYear: '' });
+    allYears.addEventListener('click', () => setGalFilterState({ yearMode: 'all', year: '', yearFrom: '', yearTo: '' }));
+    quickTarget.appendChild(allYears);
+    quickYears.forEach(year => {
+      const button = createGalChip(String(year), { galYear: String(year) });
+      button.addEventListener('click', () => setGalFilterState({ yearMode: 'single', year: String(year), yearFrom: '', yearTo: '' }));
+      quickTarget.appendChild(button);
+    });
+    yearGroups.forEach(group => {
+      const remainingYears = group.years.filter(year => !quickYearSet.has(year));
+      if (!remainingYears.length) return;
+      const section = document.createElement('section');
+      section.className = 'gal-year-decade';
+      const heading = document.createElement('h3');
+      heading.textContent = group.label;
+      const choices = document.createElement('div');
+      choices.className = 'gal-year-grid';
+      remainingYears.forEach(year => {
+        const button = createGalChip(String(year), { galYear: String(year) });
+        button.addEventListener('click', () => setGalFilterState({ yearMode: 'single', year: String(year), yearFrom: '', yearTo: '' }));
+        choices.appendChild(button);
+      });
+      section.append(heading, choices);
+      gridTarget.appendChild(section);
+    });
+    document.getElementById('galYearExpand').addEventListener('click', event => {
+      const target = document.getElementById('galYearMore');
+      const opening = !target.classList.contains('is-open');
+      target.classList.toggle('is-open', opening);
+      event.currentTarget.setAttribute('aria-expanded', opening ? 'true' : 'false');
+      event.currentTarget.textContent = opening ? '收起年份⌃' : '全部年份⌄';
+    });
+
+    for (const [id, key] of [['galYearFrom', 'yearFrom'], ['galYearTo', 'yearTo']]) {
+      document.getElementById(id).addEventListener('input', event => setGalFilterState({ yearMode: 'range', year: '', [key]: event.target.value }));
+    }
+    for (const [id, key] of [['galRatingFrom', 'ratingFrom'], ['galRatingTo', 'ratingTo'], ['galRatingCount', 'ratingCount']]) {
+      document.getElementById(id).addEventListener('input', event => setGalFilterState({ [key]: event.target.value }));
+    }
+
+    appendGalChoices('galRatingPresets', GAL_RATING_PRESETS, 'galRating', 'ratingFrom', { ratingTo: '' });
+    appendGalChoices('galVoteList', GAL_VOTE_PRESETS, 'galVotes', 'ratingCount');
+    appendGalChoices('galLanguageList', GAL_LANGUAGES, 'galLanguage', 'language');
+    appendGalChoices('galPlatformList', GAL_PLATFORMS, 'galPlatform', 'platform');
+    appendGalChoices('galLengthList', GAL_LENGTHS, 'galLength', 'length');
+    appendGalChoices('galSafetyList', [['safe', '安全封面'], ['allow', '允许敏感封面']], 'galSafety', 'safety');
+
+    const tagAllTarget = document.getElementById('galTagAll');
+    const tagTarget = document.getElementById('galTagList');
+    const allTags = createGalChip('不限标签', { galTag: '' });
+    allTags.addEventListener('click', () => setGalFilterState({ tags: [] }));
+    tagAllTarget.appendChild(allTags);
+    GAL_TAG_GROUPS.forEach(group => {
+      const section = document.createElement('section');
+      section.className = 'gal-tag-group';
+      const heading = document.createElement('h3');
+      heading.textContent = group.label;
+      const choices = document.createElement('div');
+      choices.className = 'gal-chip-list';
+      group.tags.forEach(({ id, label }) => {
+        const button = createGalChip(label, { galTag: id });
+        button.addEventListener('click', () => {
+          const tags = galFilterState.tags.includes(id)
+            ? galFilterState.tags.filter(tag => tag !== id)
+            : [...galFilterState.tags, id];
+          setGalFilterState({ tags });
+        });
+        choices.appendChild(button);
+      });
+      section.append(heading, choices);
+      tagTarget.appendChild(section);
+    });
+    document.querySelectorAll('[data-gal-tag-mode]').forEach(button => button.addEventListener('click', () => setGalFilterState({ tagMode: button.dataset.galTagMode })));
+    document.getElementById('galFilterReset').addEventListener('click', () => {
+      galFilterState = { ...RandomGalFilters.DEFAULT_STATE, tags: [] };
+      renderGalFilters();
+    });
+    renderGalFilters();
+  }
+
+  function getGalFilterState() {
+    const result = RandomGalFilters.normalize(galFilterState);
+    galFilterState = result.state;
+    renderGalFilters();
+    if (Object.keys(result.errors).length) throw new Error(Object.values(result.errors)[0]);
+    return result.state;
+  }
+
+  async function fetchVNCount(filters) {
+    const cacheKey = getCountCacheKey(filters);
+    if (countCache.has(cacheKey)) {
+      return countCache.get(cacheKey);
+    }
+
+    const data = await fetchVNBatch(filters, {
+      fields: 'id',
+      results: 0,
+      count: true
+    });
+
+    const totalCount = data.count || 0;
+    countCache.set(cacheKey, totalCount);
+    return totalCount;
+  }
+
+  function buildDailyPageSequence(totalPages, startPage, pagesToFetch) {
+    const pages = [];
+    const seen = new Set();
+    const offsets = [0, 1, -1, 2, -2, 3, -3];
+
+    for (const offset of offsets) {
+      if (pages.length >= pagesToFetch) {
+        break;
+      }
+
+      const page = ((startPage - 1 + offset + totalPages) % totalPages) + 1;
+      if (seen.has(page)) {
+        continue;
+      }
+
+      seen.add(page);
+      pages.push(page);
+    }
+
+    return pages;
+  }
+
+  async function fetchDailyCandidates(filters, seed, totalCount) {
+    if (!totalCount) {
+      return [];
+    }
+
+    const totalPages = Math.max(1, Math.ceil(totalCount / DAILY_POOL_PAGE_SIZE));
+    const pagesToFetch = Math.min(totalPages, totalCount <= DAILY_POOL_PAGE_SIZE ? 1 : totalCount <= DAILY_POOL_PAGE_SIZE * 2 ? 2 : 3);
+    const startPage = (seed % totalPages) + 1;
+    const pageSequence = buildDailyPageSequence(totalPages, startPage, pagesToFetch);
+    const candidates = [];
+    const seenIds = new Set();
+
+    for (const page of pageSequence) {
+      const data = await fetchVNBatch(filters, {
+        results: DAILY_POOL_PAGE_SIZE,
+        page
+      });
+
+      for (const game of data.results || []) {
+        if (!game?.id || seenIds.has(game.id)) {
+          continue;
+        }
+        seenIds.add(game.id);
+        candidates.push(game);
+      }
+    }
+
+    return candidates;
+  }
+
+  function selectDailyCandidateForPool(pool, candidates, config, historyContext) {
+    return DailyGalRecommendation.selectCandidateForPool(pool, candidates, config, historyContext, {
+      sexualThreshold: IMAGE_SEXUAL_WARNING_THRESHOLD,
+      minimumVotes: IMAGE_WARNING_MIN_VOTES
+    });
+  }
+
+  async function fetchGamePoolByRandomPosition(filters, totalCount) {
+    const position = RandomGalRandomModel.positionFromRandom(
+      totalCount,
+      RANDOM_PAGE_SIZE,
+      Math.random()
+    );
+    const data = await fetchVNBatch(filters, {
+      sort: 'id',
+      reverse: false,
+      results: RANDOM_PAGE_SIZE,
+      page: position.page
+    });
+
+    return RandomDrawModel.rotateFromIndex(data.results || [], position.index);
+  }
+
+  async function fetchVNDBStats() {
+    try {
+      const response = await fetch(`${API_URL}/stats`);
+      const data = await response.json();
+      totalVNs = data.vn;
+      document.getElementById('stats').textContent = `数据库中共有 ${totalVNs.toLocaleString()} 款视觉小说`;
+    } catch (error) {
+      console.error('获取统计信息失败:', error);
+    }
+  }
+
+  function fillMeta(metaDiv, game) {
+    metaDiv.innerHTML = '';
+
+    if (game.released) {
+      const releaseDate = document.createElement('span');
+      releaseDate.className = 'meta-item';
+      releaseDate.textContent = `📅 ${game.released}`;
+      metaDiv.appendChild(releaseDate);
+    }
+
+    if (game.length) {
+      const lengthMap = {
+        1: '极短 (< 2小时)',
+        2: '短 (2-10小时)',
+        3: '中等 (10-30小时)',
+        4: '长 (30-50小时)',
+        5: '极长 (> 50小时)'
+      };
+      const lengthSpan = document.createElement('span');
+      lengthSpan.className = 'meta-item';
+      lengthSpan.textContent = `⏱️ ${lengthMap[game.length] || '未知'}`;
+      metaDiv.appendChild(lengthSpan);
+    }
+
+    if (game.developers && game.developers.length > 0) {
+      const devSpan = document.createElement('span');
+      devSpan.className = 'meta-item';
+      devSpan.textContent = `🏢 ${game.developers.map(d => d.name).join(', ')}`;
+      metaDiv.appendChild(devSpan);
+    }
+  }
+
+  function fillTags(tagsDiv, game) {
+    tagsDiv.innerHTML = '';
+
+    if (!game.tags || game.tags.length === 0) {
+      return;
+    }
+
+    const topTags = game.tags
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .slice(0, 10);
+
+    topTags.forEach(tag => {
+      const tagSpan = document.createElement('span');
+      tagSpan.className = 'tag';
+      tagSpan.textContent = translateTag(tag.name);
+      tagsDiv.appendChild(tagSpan);
+    });
+  }
+
+  function bindBannerPreview(banner, titleText) {
+    if (!banner) {
+      return;
+    }
+
+    banner.onclick = event => {
+      event.preventDefault();
+      const imageSrc = banner.currentSrc || banner.src || '';
+      if (!imageSrc) {
+        return;
+      }
+
+      const caption = titleText || banner.alt || '';
+
+      if (window.Fancybox?.show) {
+        window.Fancybox.show([{
+          src: imageSrc,
+          type: 'image',
+          caption
+        }]);
+        return;
+      }
+
+      window.open(imageSrc, '_blank', 'noopener');
+    };
+  }
+
+  function needsImageWarning(game) {
+    const sexualScore = Number(game?.image?.sexual ?? 0);
+    const voteCount = Number(game?.image?.votecount ?? 0);
+    return sexualScore >= IMAGE_SEXUAL_WARNING_THRESHOLD && voteCount >= IMAGE_WARNING_MIN_VOTES;
+  }
+
+  function applyBannerGuard(shell, banner, game, titleText) {
+    if (!shell || !banner) {
+      return;
+    }
+
+    const guard = shell.querySelector('.banner-guard');
+    const guardText = shell.querySelector('.banner-guard-text');
+    const revealButton = shell.querySelector('.banner-guard-btn');
+
+    if (!guard || !guardText || !revealButton) {
+      return;
+    }
+
+    const shouldWarn = needsImageWarning(game);
+    const imageScore = Number(game?.image?.sexual ?? 0);
+    const voteCount = Number(game?.image?.votecount ?? 0);
+
+    if (!shouldWarn) {
+      guard.classList.remove('show');
+      banner.classList.remove('is-guarded');
+      revealButton.onclick = null;
+      return;
+    }
+
+    guard.classList.add('show');
+    banner.classList.add('is-guarded');
+    guardText.textContent = `${titleText || '这部作品'} 的封面在 VNDB 上被标记为可能含有成人内容（图片分级 ${imageScore.toFixed(1)} / 2，${voteCount} 票）。`;
+    revealButton.onclick = event => {
+      event.preventDefault();
+      guard.classList.remove('show');
+      banner.classList.remove('is-guarded');
+    };
+  }
+
+  function renderGame(game, prefix) {
+    const ids = prefix === 'game'
+      ? {
+          shell: 'gameBannerShell',
+          banner: 'gameBanner',
+          title: 'gameTitle',
+          ratingScore: 'ratingScore',
+          meta: 'gameMeta',
+          description: 'gameDescription',
+          tags: 'gameTags',
+          link: 'vndbLink',
+          card: 'gameCard'
+        }
+      : {
+          shell: `${prefix}BannerShell`,
+          banner: `${prefix}Banner`,
+          title: `${prefix}Title`,
+          ratingScore: `${prefix}RatingScore`,
+          meta: `${prefix}Meta`,
+          description: `${prefix}Description`,
+          tags: `${prefix}Tags`,
+          link: `${prefix}VndbLink`,
+          card: `${prefix}Card`
+        };
+
+    const shell = document.getElementById(ids.shell);
+    const banner = document.getElementById(ids.banner);
+    const title = document.getElementById(ids.title);
+    const ratingScore = document.getElementById(ids.ratingScore);
+    const metaDiv = document.getElementById(ids.meta);
+    const descriptionDiv = document.getElementById(ids.description);
+    const tagsDiv = document.getElementById(ids.tags);
+    const link = document.getElementById(ids.link);
+    const card = document.getElementById(ids.card);
+
+    if (!shell || !banner || !title || !ratingScore || !metaDiv || !descriptionDiv || !tagsDiv || !link || !card) {
+      throw new Error(`页面节点缺失：${prefix}`);
+    }
+
+    banner.src = game.image?.url || PLACEHOLDER_IMAGE;
+    banner.alt = game.title || '视觉小说封面';
+    title.textContent = game.alttitle || game.title;
+    ratingScore.textContent = game.rating ? (game.rating / 10).toFixed(2) : 'N/A';
+    bindBannerPreview(banner, game.alttitle || game.title || '');
+    applyBannerGuard(shell, banner, game, game.alttitle || game.title || '');
+
+    fillMeta(metaDiv, game);
+    fillTags(tagsDiv, game);
+
+    const description = (game.description || '暂无简介').replace(/\s+/g, ' ').trim();
+    descriptionDiv.textContent = description.substring(0, 500) + (description.length > 500 ? '...' : '');
+
+    link.href = `https://vndb.org/${game.id || ''}`;
+    card.classList.add('show');
+  }
+
+  function toManualGameItem(game) {
+    return {
+      id: game.id,
+      title: game.alttitle || game.title || game.id,
+      subtitle: game.alttitle ? game.title || '' : '',
+      image: game.image?.thumbnail || game.image?.url || '',
+      url: `https://vndb.org/${game.id}`,
+      meta: game.rating ? `${(game.rating / 10).toFixed(2)} 分` : '暂无评分'
+    };
+  }
+
+  function isManualGameFavorite(item) {
+    const id = RandomDrawModel.stableId(item);
+    return manualFavorites.some(entry => RandomDrawModel.stableId(entry) === id);
+  }
+
+  function updateManualGameFavoriteButton() {
+    const button = document.getElementById('galFavoriteBtn');
+    if (!button) return;
+    const active = currentManualGame && isManualGameFavorite(currentManualGame);
+    button.disabled = !currentManualGame;
+    button.classList.toggle('is-favorite', Boolean(active));
+    button.textContent = active ? '已收藏，点击取消' : '加入收藏';
+  }
+
+  function createManualGameLibraryItem(item, removable) {
+    const row = document.createElement('article');
+    row.className = 'draw-library-item';
+    const image = document.createElement('img');
+    image.className = 'draw-library-cover';
+    image.loading = 'lazy';
+    image.alt = '';
+    image.src = item.image || PLACEHOLDER_IMAGE;
+    const copy = document.createElement('div');
+    copy.className = 'draw-library-copy';
+    const link = document.createElement('a');
+    link.className = 'draw-library-title';
+    link.href = item.url || `https://vndb.org/${item.id}`;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = item.title || item.subtitle || item.id;
+    const meta = document.createElement('span');
+    meta.className = 'draw-library-meta';
+    meta.textContent = item.meta || item.subtitle || '';
+    copy.append(link, meta);
+    row.append(image, copy);
+
+    if (removable) {
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'draw-library-remove';
+      remove.textContent = '移除';
+      remove.addEventListener('click', () => {
+        manualFavorites = manualFavorites.filter(entry => RandomDrawModel.stableId(entry) !== RandomDrawModel.stableId(item));
+        writeManualItems(MANUAL_FAVORITES_KEY, manualFavorites);
+        renderManualGameLibrary();
+      });
+      row.appendChild(remove);
+    }
+    return row;
+  }
+
+  function renderManualGameList(targetId, items, removable) {
+    const target = document.getElementById(targetId);
+    target.replaceChildren();
+    if (!items.length) {
+      const empty = document.createElement('p');
+      empty.className = 'draw-library-empty';
+      empty.textContent = removable ? '还没有收藏作品' : '还没有抽取记录';
+      target.appendChild(empty);
+      return;
+    }
+    items.slice(0, 10).forEach(item => target.appendChild(createManualGameLibraryItem(item, removable)));
+  }
+
+  function renderManualGameLibrary() {
+    renderManualGameList('galRecentList', manualRecent, false);
+    renderManualGameList('galFavoriteList', manualFavorites, true);
+    updateManualGameFavoriteButton();
+  }
+
+  function rememberManualGame(game) {
+    currentManualGame = toManualGameItem(game);
+    manualRecent = RandomDrawModel.prependRecent(manualRecent, currentManualGame, MANUAL_LIBRARY_LIMIT);
+    writeManualItems(MANUAL_RECENT_KEY, manualRecent);
+    renderManualGameLibrary();
+  }
+
+  function toggleCurrentManualGameFavorite() {
+    if (!currentManualGame) return;
+    manualFavorites = RandomDrawModel.toggleFavorite(manualFavorites, currentManualGame, MANUAL_LIBRARY_LIMIT);
+    writeManualItems(MANUAL_FAVORITES_KEY, manualFavorites);
+    renderManualGameLibrary();
+  }
+
+  function renderDailyPickState(game, pool, noteText) {
+    const dailyBadge = document.getElementById('dailyBadge');
+    const dailyNote = document.getElementById('dailyNote');
+    const poolCopy = DAILY_POOL_COPY[pool.key] || {
+      title: pool.label,
+      description: '今天的观测结果已经落定。'
+    };
+
+    renderGame(game, 'daily');
+    dailyBadge.className = `daily-badge ${DAILY_POOL_BADGE_CLASS[pool.key] || ''}`.trim();
+    dailyBadge.textContent = `今日轮换池 · ${poolCopy.title}：${poolCopy.description}`;
+    dailyNote.textContent = `基于 ${buildDateLabel()} 的固定推荐 · ${noteText}`;
+  }
+
+  function persistDailyPick(config, pool, game, options = {}) {
+    updateDailyHistory({
+      date: config.dayKey,
+      id: game.id,
+      title: game.alttitle || game.title || '',
+      poolKey: pool.key
+    });
+
+    cacheDailyPick({
+      date: config.dayKey,
+      poolKey: pool.key,
+      poolLabel: pool.label,
+      snapshotLocked: Boolean(options.snapshotLocked),
+      game
+    });
+  }
+
+  async function resolveDailyPickForConfig(config, historyEntries) {
+    const historyContext = buildHistoryContext(historyEntries, config.dayKey);
+    const evaluations = [];
+
+    for (const pool of config.pools) {
+      try {
+        const totalCount = await fetchVNCount(pool.filter);
+        if (!totalCount) {
+          continue;
+        }
+
+        const candidates = await fetchDailyCandidates(
+          pool.filter,
+          config.pageSeed + hashString(pool.key),
+          totalCount
+        );
+        const evaluation = selectDailyCandidateForPool(pool, candidates, config, historyContext);
+        evaluations.push({ pool, evaluation });
+
+        if (!evaluation?.freshResult) {
+          continue;
+        }
+        return {
+          pool,
+          result: {
+            game: evaluation.freshResult.candidate,
+            allowRepeat: false,
+            candidateCount: evaluation.freshResult.candidateCount
+          }
+        };
+      } catch (error) {
+        continue;
+      }
+    }
+
+    const emergency = DailyRecommendationModel.choosePoolEvaluation(evaluations);
+    if (!emergency?.result) {
+      throw new Error('未找到可用作品');
+    }
+
+    return {
+      pool: emergency.pool,
+      result: {
+        game: emergency.result.candidate,
+        allowRepeat: true,
+        candidateCount: emergency.result.candidateCount
+      }
+    };
+  }
+
+  function renderHistoryList(historyItems) {
+    const historySection = document.getElementById('historySection');
+    const historyList = document.getElementById('historyList');
+    const historyToggleLabel = document.getElementById('historyToggleLabel');
+    const historyToggleMeta = document.getElementById('historyToggleMeta');
+
+    if (!historySection || !historyList || !historyToggleLabel || !historyToggleMeta) {
+      return;
+    }
+
+    historyList.innerHTML = '';
+
+    if (!historyItems.length) {
+      historySection.style.display = 'none';
+      return;
+    }
+
+    historyToggleLabel.textContent = '推荐历史回放';
+    historyToggleMeta.textContent = `共 ${historyItems.length} 天`;
+
+    historyItems.forEach(item => {
+      const link = document.createElement('a');
+      link.className = 'history-item';
+      link.href = `https://vndb.org/${item.game.id}`;
+      link.target = '_blank';
+      link.rel = 'noopener';
+
+      const cover = document.createElement('img');
+      cover.className = 'history-cover';
+      cover.src = item.game.image?.url || PLACEHOLDER_IMAGE;
+      cover.alt = item.game.alttitle || item.game.title || '推荐封面';
+
+      const main = document.createElement('div');
+      main.className = 'history-main';
+
+      const meta = document.createElement('div');
+      meta.className = 'history-meta';
+
+      const date = document.createElement('span');
+      date.className = 'history-date';
+      date.textContent = buildDateLabel(item.dateKey);
+
+      const pool = document.createElement('span');
+      pool.className = `history-pool ${DAILY_POOL_BADGE_CLASS[item.pool.key] || ''}`.trim();
+      pool.textContent = item.pool.label;
+
+      meta.appendChild(date);
+      meta.appendChild(pool);
+
+      const name = document.createElement('div');
+      name.className = 'history-name';
+      name.textContent = item.game.alttitle || item.game.title || '未知标题';
+
+      const score = document.createElement('div');
+      score.className = 'history-score';
+      score.textContent = item.game.rating ? `${(item.game.rating / 10).toFixed(2)} · VNDB` : 'N/A · VNDB';
+
+      main.appendChild(meta);
+      main.appendChild(name);
+
+      link.appendChild(cover);
+      link.appendChild(main);
+      link.appendChild(score);
+      historyList.appendChild(link);
+    });
+
+    historySection.style.display = '';
+  }
+
+  async function loadDailyHistoryPreview(baseDayKey) {
+    const historyItems = [];
+    const simulatedHistory = [];
+    const allowProvisional = isSnapshotPreviewMode();
+    const previewStartDate = compareDateKey(shiftDateKey(baseDayKey, -6), HISTORY_START_DATE) < 0
+      ? HISTORY_START_DATE
+      : shiftDateKey(baseDayKey, -6);
+
+    if (compareDateKey(baseDayKey, HISTORY_START_DATE) < 0) {
+      renderHistoryList([]);
+      return;
+    }
+
+    for (let dateKey = previewStartDate; compareDateKey(dateKey, baseDayKey) <= 0; dateKey = shiftDateKey(dateKey, 1)) {
+      const snapshot = await getSnapshotForDate(dateKey);
+
+      if (snapshot) {
+        simulatedHistory.unshift({
+          date: dateKey,
+          id: snapshot.game.id,
+          title: snapshot.game.alttitle || snapshot.game.title || '',
+          poolKey: snapshot.poolKey
+        });
+
+        historyItems.push({
+          dateKey,
+          pool: {
+            key: snapshot.poolKey,
+            label: snapshot.poolLabel || getPoolByKey(snapshot.poolKey).label
+          },
+          game: snapshot.game
+        });
+        continue;
+      }
+
+      if (!allowProvisional) {
+        continue;
+      }
+
+      const config = getDailyRecommendationConfig(dateKey);
+      const { pool, result } = await resolveDailyPickForConfig(config, simulatedHistory);
+      const snapshotEntry = {
+        date: dateKey,
+        poolKey: pool.key,
+        poolLabel: pool.label,
+        game: result.game
+      };
+
+      storeDailySnapshot(snapshotEntry);
+      simulatedHistory.unshift({
+        date: dateKey,
+        id: result.game.id,
+        title: result.game.alttitle || result.game.title || '',
+        poolKey: pool.key
+      });
+
+      historyItems.push({
+        dateKey,
+        pool,
+        game: result.game
+      });
+    }
+
+    renderHistoryList(historyItems.reverse());
+  }
+
+  async function loadDailyRecommendation() {
+    const dailyLoading = document.getElementById('dailyLoading');
+    const dailyError = document.getElementById('dailyError');
+    const dailyNote = document.getElementById('dailyNote');
+
+    dailyLoading.classList.add('show');
+    dailyError.classList.remove('show');
+
+    try {
+      await waitForTagTranslator();
+      const config = getDailyRecommendationConfig();
+      const snapshotPick = await getSnapshotForDate(config.dayKey);
+
+      if (snapshotPick?.game?.id) {
+        renderDailyPickState(
+          snapshotPick.game,
+          {
+            key: snapshotPick.poolKey || config.primaryPoolKey,
+            label: snapshotPick.poolLabel || getPoolByKey(snapshotPick.poolKey || config.primaryPoolKey).label
+          },
+          '今日结果已经固定，刷新也不会改变。'
+        );
+        updateDailyHistory({
+          date: config.dayKey,
+          id: snapshotPick.game.id,
+          title: snapshotPick.game.alttitle || snapshotPick.game.title || '',
+          poolKey: snapshotPick.poolKey || config.primaryPoolKey
+        });
+        persistDailyPick(
+          config,
+          {
+            key: snapshotPick.poolKey || config.primaryPoolKey,
+            label: snapshotPick.poolLabel || getPoolByKey(snapshotPick.poolKey || config.primaryPoolKey).label
+          },
+          snapshotPick.game,
+          { snapshotLocked: true }
+        );
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      const cachedPick = getCachedDailyPick(config.dayKey);
+
+      if (allowProvisional && cachedPick?.game?.id && cachedPick.snapshotLocked) {
+        renderDailyPickState(
+          cachedPick.game,
+          {
+            key: cachedPick.poolKey || config.primaryPoolKey,
+            label: cachedPick.poolLabel || getPoolByKey(cachedPick.poolKey || config.primaryPoolKey).label
+          },
+          '今日结果已经固定，刷新也不会改变。'
+        );
+        updateDailyHistory({
+          date: config.dayKey,
+          id: cachedPick.game.id,
+          title: cachedPick.game.alttitle || cachedPick.game.title || '',
+          poolKey: cachedPick.poolKey || config.primaryPoolKey
+        });
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      if (!allowProvisional) {
+        dailyNote.textContent = '今日快照还在同步中，请稍后再来查看。';
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      const { pool: selectedPool, result: selectedResult } = await resolveDailyPickForConfig(
+        config,
+        getDailyHistory()
+      );
+
+      persistDailyPick(config, selectedPool, selectedResult.game, { snapshotLocked: false });
+      storeDailySnapshot({
+        date: config.dayKey,
+        poolKey: selectedPool.key,
+        poolLabel: selectedPool.label,
+        game: selectedResult.game
+      });
+      renderDailyPickState(
+        selectedResult.game,
+        selectedPool,
+        selectedResult.allowRepeat
+          ? '已启用回流保护，小池子也尽量不让推荐断档。'
+          : '已避开最近 90 天重复，并压低近期出现过的条目。'
+      );
+      await loadDailyHistoryPreview(config.dayKey);
+    } catch (error) {
+      console.error('获取今日推荐失败:', error);
+      dailyError.textContent = `今日推荐加载失败：${error.message}`;
+      dailyError.classList.add('show');
+      dailyNote.textContent = '今日观测暂时中断，请稍后重试';
+    } finally {
+      dailyLoading.classList.remove('show');
+    }
+  }
+
+  async function getRandomGame() {
+    const drawStartedAt = performance.now();
+    const btn = document.getElementById('randomBtn');
+    const loading = document.getElementById('loading');
+    const gameCard = document.getElementById('gameCard');
+    const errorDiv = document.getElementById('error');
+    
+    btn.disabled = true;
+    loading.classList.add('show');
+    gameCard.classList.remove('show');
+    errorDiv.classList.remove('show');
+
+    try {
+      await waitForTagTranslator();
+      const filterState = getGalFilterState();
+      const filters = RandomGalFilters.buildFilters(filterState);
+      const totalCount = await fetchVNCount(filters);
+      if (!totalCount) {
+        throw new Error('未找到符合条件的作品');
+      }
+      const safetyMode = filterState.safety;
+      const maxAttempts = safetyMode === 'safe' ? 18 : 1;
+      let randomGame = null;
+      for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
+        const candidate = await RandomDrawModel.drawFreshCandidate(
+          () => fetchGamePoolByRandomPosition(filters, totalCount),
+          { preserveOrder: true }
+        );
+        if (!candidate) continue;
+        if (safetyMode === 'safe' && needsImageWarning(candidate)) continue;
+        randomGame = candidate;
+        break;
+      }
+
+      if (!randomGame) {
+        throw new Error(
+          safetyMode === 'safe'
+            ? '当前筛选条件下暂时没抽到安全封面作品，请放宽条件或允许敏感封面'
+            : '未找到符合条件的作品'
+        );
+      }
+
+      const revealDelay = RandomGalRandomModel.remainingRevealDelay(drawStartedAt, performance.now());
+      if (revealDelay > 0) {
+        await new Promise(resolve => setTimeout(resolve, revealDelay));
+      }
+      renderGame(randomGame, 'game');
+      rememberManualGame(randomGame);
+    } catch (error) {
+      console.error('获取随机游戏失败:', error);
+      errorDiv.textContent = `获取失败: ${error.message}，请重试`;
+      errorDiv.classList.add('show');
+    } finally {
+      btn.disabled = false;
+      loading.classList.remove('show');
+    }
+  }
+
+  installGalFilters();
+  document.getElementById('galFavoriteBtn').addEventListener('click', toggleCurrentManualGameFavorite);
+  renderManualGameLibrary();
+  window.getRandomGame = getRandomGame;
+  fetchVNDBStats();
+  loadDailyRecommendation();
+  };
+
+  const requiredModelsReady = () => Boolean(
+    window.DailyRecommendationModel
+    && window.DailyGalRecommendation
+    && window.RandomGalRandomModel
+    && window.RandomGalFilters
+    && window.RandomDrawModel
+  );
+  let pageBooted = false;
+  const tryBootRandomGalPage = () => {
+    if (pageBooted || !requiredModelsReady()) return;
+    pageBooted = true;
+    bootRandomGalPage();
+  };
+  const showModelLoadError = () => {
+    const errorDiv = document.getElementById('error');
+    if (errorDiv) {
+      errorDiv.textContent = '随机筛选器加载失败，请刷新页面重试';
+      errorDiv.classList.add('show');
+    }
+  };
+
+  if (requiredModelsReady()) {
+    tryBootRandomGalPage();
+    return;
+  }
+
+  const requiredScriptPaths = [
+    '/js/daily-recommendation-model.js',
+    '/js/daily-gal-recommendation.js',
+    '/js/random-gal-random-model.js',
+    '/js/random-gal-filter-model.js',
+    '/js/random-draw-model.js'
+  ];
+  const modelScriptsByPath = new Map();
+  [...document.scripts].forEach(script => {
+    try {
+      const pathname = new URL(script.src, window.location.href).pathname;
+      if (requiredScriptPaths.includes(pathname) && !modelScriptsByPath.has(pathname)) {
+        modelScriptsByPath.set(pathname, script);
+      }
+    } catch (error) {
+      // Ignore inline scripts and malformed third-party URLs.
+    }
+  });
+  const modelScripts = requiredScriptPaths.map(pathname => modelScriptsByPath.get(pathname)).filter(Boolean);
+  if (modelScripts.length === requiredScriptPaths.length) {
+    modelScripts.forEach(script => {
+      script.addEventListener('load', tryBootRandomGalPage, { once: true });
+      script.addEventListener('error', showModelLoadError, { once: true });
+    });
+  } else {
+    showModelLoadError();
+  }
+})();
+</script>
+
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/head1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">藍二乗</div><div class="author-info-description">一个普通的生活博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/categories/%E6%97%A5%E8%AE%B0/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" href="javascript:toRandomPost()"><i class="fas fa-dice"></i><span>I'm Feeling Lucky</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">GET ROUND IN THE SEASON...</div></div><div class="sticky_layout"><div class="card-widget card-random-post"><div class="item-headline"><i class="fas fa-dice"></i><span>随机文章</span><button class="card-random-post-refresh" type="button" aria-label="换一批">换一批</button></div><div class="aside-list" id="card-random-post-list"><div class="aside-list-item"><div class="content"><span class="title">正在生成随机文章...</span></div></div></div></div><script data-pjax="data-pjax">(() => {
+  const CARD_ID = 'card-random-post-list'
+  const PICK_COUNT = 5
+
+  const normalizePosts = posts => {
+    if (!Array.isArray(posts)) return []
+    return posts
+      .map(item => {
+        if (typeof item === 'string') {
+          const title = decodeURIComponent(item.split('/').filter(Boolean).pop() || '无题')
+          return { title, path: item }
+        }
+        if (item && typeof item === 'object' && item.path) {
+          return {
+            title: item.title || '无题',
+            path: item.path,
+            date: item.date || ''
+          }
+        }
+        return null
+      })
+      .filter(Boolean)
+  }
+
+  const pickRandomPosts = posts => {
+    const currentPath = window.location.pathname.replace(/index\.html$/, '')
+    const filtered = posts.filter(post => {
+      const postPath = String(post.path || '').replace(/index\.html$/, '')
+      return postPath !== currentPath
+    })
+
+    const pool = [...filtered]
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[pool[i], pool[j]] = [pool[j], pool[i]]
+    }
+
+    return pool.slice(0, Math.min(PICK_COUNT, pool.length))
+  }
+
+  const renderPosts = listEl => posts => {
+    window.RandomPostCard.renderPosts(listEl, posts)
+  }
+
+  const showError = listEl => {
+    window.RandomPostCard.renderMessage(listEl, '随机文章加载失败')
+  }
+
+  const initRandomPostCard = async () => {
+    const listEl = document.getElementById(CARD_ID)
+    const card = listEl?.closest('.card-random-post')
+    const refreshBtn = card?.querySelector('.card-random-post-refresh')
+    if (!listEl || !refreshBtn) return
+
+    if (!window.__randomPostCache) {
+      try {
+        const response = await fetch('/post_list.json')
+        if (!response.ok) throw new Error('Failed to fetch post list')
+        const rawPosts = await response.json()
+        window.__randomPostCache = normalizePosts(rawPosts)
+      } catch (error) {
+        console.error('[random-post-card]', error)
+        showError(listEl)
+        return
+      }
+    }
+
+    const update = () => renderPosts(listEl)(pickRandomPosts(window.__randomPostCache))
+    refreshBtn.onclick = update
+    update()
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRandomPostCard, { once: true })
+  } else {
+    initRandomPostCard()
+  }
+
+  window.addEventListener('pjax:complete', initRandomPostCard)
+})()</script><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">164</span></a></li>
+          </ul></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              八月 2026
+            </span>
+            <span class="card-archive-list-count">19</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/07/">
+            <span class="card-archive-list-date">
+              七月 2026
+            </span>
+            <span class="card-archive-list-count">30</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              六月 2026
+            </span>
+            <span class="card-archive-list-count">30</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              五月 2026
+            </span>
+            <span class="card-archive-list-count">32</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">30</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">23</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">164</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">35.3k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-09-26T18:11:29.370Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><div id="run-days" style="text-align: center; margin-top: 10px; font-size: 14px;"></div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"lang":"zh-CN","placeholder":"写下你的留言吧...","emoji":["https://cdn.jsdelivr.net/npm/@waline/emojis@1.0.1/weibo"],"requiredMeta":["nick"],"meta":["nick"],"anonymous":true,"login":"disable"}
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://comment-phi-blond.vercel.app',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script src="/js/random-post-card.js"></script><script src="/js/random.js"></script><div id="aplayer"></div><script src="/js/aplayer-loader.js"></script><script src="/js/custom-aplayer.js"></script><script src="/js/music-autoplay.js"></script><script src="/js/run-days.js"></script><script src="/js/fix-article-bg.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>

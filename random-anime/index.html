@@ -1,0 +1,2965 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>随机动画 | sea of solitude</title><meta name="author" content="藍二乗"><meta name="copyright" content="藍二乗"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content=".random-anime-container {     max-width: 800px;     margin: 0 auto;     padding: 20px;     text-align: center;   }    .random-anime-container h1 {     font-size: 2.5rem;     margin-bottom: 30px;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="随机动画">
+<meta property="og:url" content="https://yuki12720.org/random-anime/index.html">
+<meta property="og:site_name" content="sea of solitude">
+<meta property="og:description" content=".random-anime-container {     max-width: 800px;     margin: 0 auto;     padding: 20px;     text-align: center;   }    .random-anime-container h1 {     font-size: 2.5rem;     margin-bottom: 30px;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuki12720.org/img/head1.png">
+<meta property="article:published_time" content="2026-09-26T18:10:43.450Z">
+<meta property="article:modified_time" content="2026-09-26T18:10:43.450Z">
+<meta property="article:author" content="藍二乗">
+<meta property="article:tag" content="个人博客,日记,阅读,游戏,动画">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuki12720.org/img/head1.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://yuki12720.org/random-anime/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '随机动画',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/waline-custom.css"><link rel="stylesheet" href="/css/aplayer-custom.css"><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="sea of solitude" type="application/atom+xml">
+</head><body><div id="loading-box" style="display: none; opacity: 0; visibility: hidden;" aria-hidden="true"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">少女祈祷中…</div></div></div><script>(()=&gt;{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const visitedKey = 'homePreloaderVisited'
+  const forceLoading = new URLSearchParams(window.location.search).has('force_loading')
+  const storage = (() =&gt; {
+    try {
+      return window.localStorage
+    } catch (error) {
+      return null
+    }
+  })()
+  const isHomePage = window.location.pathname === '/' ||
+    window.location.pathname.endsWith('/index.html') ||
+    (window.GLOBAL_CONFIG_SITE &amp;&amp; window.GLOBAL_CONFIG_SITE.pageType === 'home')
+  const hasVisitedHome = storage &amp;&amp; storage.getItem(visitedKey) === 'true'
+
+  const hideLoading = () =&gt; {
+    $body.style.overflow = ''
+    $loadingBox.classList.remove('is-visible', 'loaded')
+    $loadingBox.style.display = 'none'
+    $loadingBox.style.opacity = '0'
+    $loadingBox.style.visibility = 'hidden'
+    $loadingBox.setAttribute('aria-hidden', 'true')
+  }
+
+  if ((!isHomePage || hasVisitedHome) &amp;&amp; !forceLoading) {
+    hideLoading()
+    return
+  }
+
+  let isLoaded = false
+  let isVisible = false
+  let cleanupTimer = null
+
+  const showLoading = () =&gt; {
+    if (isLoaded || isVisible) return
+    isVisible = true
+    $body.style.overflow = 'hidden'
+    $loadingBox.style.display = ''
+    $loadingBox.style.opacity = '1'
+    $loadingBox.style.visibility = 'visible'
+    $loadingBox.setAttribute('aria-hidden', 'false')
+    $loadingBox.classList.add('is-visible')
+  }
+
+  const markVisited = () =&gt; {
+    if (!forceLoading &amp;&amp; isHomePage &amp;&amp; storage) {
+      try {
+        storage.setItem(visitedKey, 'true')
+      } catch (error) {}
+    }
+  }
+
+  const endLoading = () =&gt; {
+    if (isLoaded) return
+    isLoaded = true
+    window.clearTimeout(showTimer)
+    window.clearTimeout(cleanupTimer)
+    markVisited()
+    $body.style.overflow = ''
+
+    if (!isVisible) {
+      hideLoading()
+      return
+    }
+
+    if ($loadingBox.classList.contains('loaded')) return
+    $loadingBox.classList.remove('is-visible')
+    $loadingBox.classList.add('loaded')
+    cleanupTimer = window.setTimeout(hideLoading, 650)
+  }
+
+  const showTimer = window.setTimeout(showLoading, forceLoading ? 0 : 2000)
+
+  if (document.readyState === 'complete') {
+    endLoading()
+  } else {
+    window.addEventListener('load', endLoading, { once: true })
+    setTimeout(endLoading, 10000)
+  }
+})()</script><div class="bg-animation" id="web_bg" style="background-image: url(/img/magic.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/head1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/categories/%E6%97%A5%E8%AE%B0/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-toolbox"></i><span> 杂七杂八</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 在线对称</span></a></li><li><a class="site-page child" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></li><li><a class="site-page child" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">藍二乗</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-toolbox"></i><span> 杂七杂八</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/miscellaneous/"><i class="fa-fw fas fa-flask"></i><span> 在线对称</span></a></li><li><a class="site-page child" href="/random-gal/"><i class="fa-fw fas fa-random"></i><span> 随机GAL</span></a></li><li><a class="site-page child" href="/random-anime/"><i class="fa-fw fas fa-film"></i><span> 随机动画</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">随机动画</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container">
+<style>
+  .random-anime-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .random-anime-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .stats-info {
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+
+  .daily-section {
+    margin: 0 auto 35px;
+    text-align: left;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .section-kicker {
+    margin-bottom: 6px;
+    font-size: 0.8rem;
+    letter-spacing: 0.24em;
+    color: #3a7bd5;
+    font-weight: 700;
+  }
+
+  .section-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-color, #333);
+  }
+
+  .section-note {
+    color: #888;
+    font-size: 0.92rem;
+    text-align: right;
+  }
+
+  .random-btn {
+    display: inline-block;
+    margin: 0 auto 40px;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+  }
+
+  .random-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.6);
+  }
+
+  .random-btn:active {
+    transform: translateY(-1px);
+  }
+
+  .random-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .anime-card {
+    background: var(--card-bg, #fff);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    display: none;
+    text-align: left;
+  }
+
+  .anime-card.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .daily-card {
+    border: 1px solid rgba(58, 123, 213, 0.18);
+    box-shadow: 0 14px 45px rgba(58, 123, 213, 0.14);
+  }
+
+  .daily-card .anime-info {
+    padding-top: 24px;
+  }
+
+  .daily-badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 14px;
+    padding: 11px 20px;
+    border-radius: 999px;
+    background: rgba(58, 123, 213, 0.1);
+    border: 1px solid rgba(58, 123, 213, 0.18);
+    color: #2f67b5;
+    font-size: 0.96rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  .daily-badge.pool-premium {
+    background: rgba(58, 123, 213, 0.1);
+    border-color: rgba(58, 123, 213, 0.18);
+    color: #2f67b5;
+  }
+
+  .daily-badge.pool-solid {
+    background: rgba(76, 175, 80, 0.12);
+    border-color: rgba(76, 175, 80, 0.22);
+    color: #3d8b40;
+  }
+
+  .daily-badge.pool-notable {
+    background: rgba(240, 145, 153, 0.12);
+    border-color: rgba(240, 145, 153, 0.22);
+    color: #d56f79;
+  }
+
+  .daily-badge.pool-surprise {
+    background: rgba(255, 152, 0, 0.12);
+    border-color: rgba(255, 152, 0, 0.22);
+    color: #dd8600;
+  }
+
+  .daily-badge.pool-recent {
+    background: rgba(0, 188, 212, 0.12);
+    border-color: rgba(0, 188, 212, 0.22);
+    color: #0097a7;
+  }
+
+  .daily-badge.pool-archive {
+    background: rgba(121, 85, 72, 0.12);
+    border-color: rgba(121, 85, 72, 0.22);
+    color: #795548;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .banner-shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.96) 0%, rgba(231, 241, 255, 0.96) 100%);
+  }
+
+  .anime-banner {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: min(72vh, 820px);
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    cursor: zoom-in;
+  }
+
+  @media (max-width: 768px) {
+    .banner-shell {
+      padding: 14px;
+    }
+
+    .anime-banner {
+      max-height: min(56vh, 520px);
+      border-radius: 14px;
+    }
+  }
+
+  .anime-info {
+    padding: 30px;
+  }
+
+  .anime-title {
+    font-size: 1.8rem;
+    color: var(--text-color, #333);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .anime-title-cn {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  .anime-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .meta-item {
+    background: #f0f0f0;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .anime-description {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .anime-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+  }
+
+  .anime-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .link-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .link-btn.bangumi {
+    background: #f09199;
+    color: white;
+  }
+
+  .link-btn.bangumi:hover {
+    background: #e08088;
+  }
+
+  .loading {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+    font-size: 1.2rem;
+    display: none;
+  }
+
+  .loading.show {
+    display: block;
+  }
+
+  .error-msg {
+    background: #ff6b6b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .error-msg.show {
+    display: block;
+  }
+
+  .history-section {
+    margin-top: 18px;
+  }
+
+  .history-toggle {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(58, 123, 213, 0.12);
+    box-shadow: 0 10px 30px rgba(58, 123, 213, 0.08);
+    overflow: hidden;
+  }
+
+  .history-toggle summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+    user-select: none;
+  }
+
+  .history-toggle summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .history-toggle-label {
+    color: var(--text-color, #333);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .history-toggle-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    font-size: 0.88rem;
+  }
+
+  .history-toggle-icon {
+    color: #3a7bd5;
+    font-size: 0.95rem;
+    transition: transform 0.25s ease;
+  }
+
+  .history-toggle[open] .history-toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .history-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .history-item {
+    display: grid;
+    grid-template-columns: 78px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px 18px;
+    background: rgba(255, 255, 255, 0.86);
+    border-top: 1px solid rgba(58, 123, 213, 0.08);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .history-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(58, 123, 213, 0.12);
+  }
+
+  .history-cover {
+    width: 78px;
+    height: 104px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: rgba(245, 247, 250, 0.96);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .history-main {
+    min-width: 0;
+  }
+
+  .history-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .history-date {
+    font-size: 0.84rem;
+    color: #888;
+    font-weight: 600;
+  }
+
+  .history-pool {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .history-pool.pool-premium {
+    background: rgba(58, 123, 213, 0.1);
+    border: 1px solid rgba(58, 123, 213, 0.18);
+    color: #2f67b5;
+  }
+
+  .history-pool.pool-solid {
+    background: rgba(76, 175, 80, 0.12);
+    border: 1px solid rgba(76, 175, 80, 0.22);
+    color: #3d8b40;
+  }
+
+  .history-pool.pool-notable {
+    background: rgba(240, 145, 153, 0.12);
+    border: 1px solid rgba(240, 145, 153, 0.22);
+    color: #d56f79;
+  }
+
+  .history-pool.pool-surprise {
+    background: rgba(255, 152, 0, 0.12);
+    border: 1px solid rgba(255, 152, 0, 0.22);
+    color: #dd8600;
+  }
+
+  .history-pool.pool-recent {
+    background: rgba(0, 188, 212, 0.12);
+    border: 1px solid rgba(0, 188, 212, 0.22);
+    color: #0097a7;
+  }
+
+  .history-pool.pool-archive {
+    background: rgba(121, 85, 72, 0.12);
+    border: 1px solid rgba(121, 85, 72, 0.22);
+    color: #795548;
+  }
+
+  .history-name {
+    color: var(--text-color, #333);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .history-score {
+    color: #f09199;
+    font-size: 0.92rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .rating-score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f09199;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .rating-label {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 640px) {
+    .history-item {
+      grid-template-columns: 64px 1fr;
+      gap: 12px;
+    }
+
+    .history-cover {
+      width: 64px;
+      height: 88px;
+    }
+
+    .history-score {
+      grid-column: 2;
+      justify-self: start;
+      margin-top: -2px;
+    }
+  }
+</style>
+<link rel="stylesheet" href="/css/random-anime-filter.css">
+<link rel="stylesheet" href="/css/random-draw-library.css">
+
+<div class="random-anime-container">
+  <h1>🎬 今天看什么</h1>
+  
+  <div class="stats-info" id="stats">支持全年代动漫随机抽取</div>
+  
+  <div class="error-msg" id="error"></div>
+
+  <section class="daily-section">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">TODAY'S PICK</div>
+        <h2 class="section-title">今日推荐</h2>
+      </div>
+      <div class="section-note" id="dailyNote">正在根据今天的日期、情绪与季节观测作品...</div>
+    </div>
+
+    <div class="loading" id="dailyLoading">
+      正在生成今日推荐...
+    </div>
+
+    <div class="error-msg" id="dailyError"></div>
+
+    <div class="anime-card daily-card" id="dailyCard">
+      <div class="banner-shell">
+        <img class="anime-banner medium-zoom-image" id="dailyBanner" src="" alt="今日推荐封面" loading='lazy'>
+      </div>
+      <div class="anime-info">
+        <div class="daily-badge" id="dailyBadge">今日观测结果</div>
+        <h2 class="anime-title" id="dailyTitle"></h2>
+        <div class="anime-title-cn" id="dailyTitleCn"></div>
+        <div class="rating">
+          <span class="rating-score" id="dailyRatingScore"></span>
+          <span class="rating-label">Bangumi 评分</span>
+        </div>
+        <div class="anime-meta" id="dailyMeta"></div>
+        <div class="anime-description" id="dailyDescription"></div>
+        <div class="anime-tags" id="dailyTags"></div>
+        <div class="anime-links">
+          <a class="link-btn bangumi" id="dailyBangumiLink" href="#" target="_blank">
+            先看今天这部
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-section" id="historySection" style="display: none;">
+      <details class="history-toggle" id="historyToggle">
+        <summary>
+          <span class="history-toggle-label" id="historyToggleLabel">推荐历史回放</span>
+          <span class="history-toggle-meta">
+            <span id="historyToggleMeta">点击展开</span>
+            <span class="history-toggle-icon">▾</span>
+          </span>
+        </summary>
+        <div class="history-list" id="historyList"></div>
+      </details>
+    </div>
+  </section>
+  
+  <section class="anime-filter-panel" id="animeFilterPanel" aria-label="随机动画筛选" data-raf>
+    <header class="anime-filter-head">
+      <div>
+        <h2 class="anime-filter-title">不太随机的随机动画</h2>
+      </div>
+      <button class="filter-reset" id="filterReset" type="button">重置条件</button>
+    </header>
+
+    <div class="anime-filter-body">
+      <div class="anime-filter-row">
+        <div class="filter-row-heading">
+          <span class="filter-row-label">年份</span>
+          <span class="filter-row-hint">单年或范围</span>
+        </div>
+        <div class="filter-row-content">
+          <div class="filter-control-line">
+            <div class="filter-chip-list" id="yearQuickList" aria-label="常用年份"></div>
+            <button class="filter-expand" id="yearExpand" type="button" aria-expanded="false" aria-controls="yearMore">
+              全部年份 <span aria-hidden="true">⌄</span>
+            </button>
+          </div>
+          <div class="filter-year-more" id="yearMore">
+            <div class="filter-year-grid" id="yearGrid" aria-label="全部年份"></div>
+          </div>
+          <div class="filter-range-block">
+            <span class="filter-range-caption">自定义范围</span>
+            <input class="filter-number" id="yearFrom" type="number" min="1892" max="2100" inputmode="numeric" placeholder="起始年" aria-label="起始年份">
+            <span class="filter-range-separator" aria-hidden="true">—</span>
+            <input class="filter-number" id="yearTo" type="number" min="1892" max="2100" inputmode="numeric" placeholder="结束年" aria-label="结束年份">
+          </div>
+          <p class="filter-inline-error" id="yearError" role="alert"></p>
+        </div>
+      </div>
+
+      <div class="anime-filter-row">
+        <div class="filter-row-heading">
+          <span class="filter-row-label">评分</span>
+          <span class="filter-row-hint">0–10 分</span>
+        </div>
+        <div class="filter-row-content">
+          <div class="filter-chip-list" id="scoreQuickList" aria-label="常用评分"></div>
+          <div class="filter-range-block">
+            <span class="filter-range-caption">自定义范围</span>
+            <input class="filter-number" id="scoreFrom" type="number" min="0" max="10" step="0.1" inputmode="decimal" placeholder="最低分" aria-label="最低评分">
+            <span class="filter-range-separator" aria-hidden="true">—</span>
+            <input class="filter-number" id="scoreTo" type="number" min="0" max="10" step="0.1" inputmode="decimal" placeholder="最高分" aria-label="最高评分">
+          </div>
+          <p class="filter-inline-error" id="scoreError" role="alert"></p>
+        </div>
+      </div>
+
+      <div class="anime-filter-row">
+        <div class="filter-row-heading">
+          <span class="filter-row-label">形式</span>
+          <span class="filter-row-hint">选择一种</span>
+        </div>
+        <div class="filter-row-content">
+          <div class="filter-chip-list" id="formatList" aria-label="动画形式"></div>
+        </div>
+      </div>
+
+      <div class="anime-filter-row">
+        <div class="filter-row-heading">
+          <span class="filter-row-label">标签</span>
+          <span class="filter-row-hint">支持多选</span>
+        </div>
+        <div class="filter-row-content">
+          <div class="filter-control-line">
+            <div class="filter-chip-list" id="tagQuickList" aria-label="常用标签"></div>
+            <button class="filter-expand" id="tagExpand" type="button" aria-expanded="false" aria-controls="tagMore">
+              展开全部 <span aria-hidden="true">⌄</span>
+            </button>
+          </div>
+          <div class="filter-tag-more" id="tagMore">
+            <div class="filter-chip-list" id="tagFullList" aria-label="全部标签"></div>
+          </div>
+          <div class="filter-tag-meta">
+            <span class="filter-tag-count" id="tagCount">未限制标签</span>
+            <div class="filter-tag-rules" id="tagRules" aria-label="多标签匹配规则" hidden>
+              <span class="filter-rule-label">多标签规则</span>
+              <button class="filter-chip" type="button" data-tag-mode="all">必须同时包含</button>
+              <button class="filter-chip" type="button" data-tag-mode="any">包含任一即可</button>
+            </div>
+          </div>
+          <div class="filter-selected-tags" id="selectedTags" aria-label="已选标签" aria-live="polite" hidden></div>
+        </div>
+      </div>
+
+      <details class="filter-more-options">
+        <summary>更多条件</summary>
+        <div class="anime-filter-row">
+          <div class="filter-row-heading">
+            <span class="filter-row-label">评分人数</span>
+            <span class="filter-row-hint">过滤样本过少的评分</span>
+          </div>
+          <div class="filter-row-content">
+            <div class="filter-chip-list" id="ratingCountList" aria-label="最低评分人数"></div>
+            <div class="filter-range-block">
+              <span class="filter-range-caption">自定义下限</span>
+              <input class="filter-number" id="ratingCount" type="number" min="0" step="1" inputmode="numeric" placeholder="例如 500" aria-label="最低评分人数">
+            </div>
+            <p class="filter-inline-error" id="ratingCountError" role="alert"></p>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <footer class="anime-filter-foot">
+      <span class="filter-summary-label">当前条件</span>
+      <span class="filter-summary" id="filterSummary">全部年份 · 不限评分 · 全部形式 · 不限标签</span>
+    </footer>
+  </section>
+  
+  <button class="random-btn" id="randomBtn" onclick="getRandomAnime()">
+    🎲 随机抽取
+  </button>
+  
+  <div class="loading" id="loading">
+    正在抽取中...
+  </div>
+  
+  <div class="anime-card" id="animeCard">
+    <div class="banner-shell">
+      <img class="anime-banner medium-zoom-image" id="animeBanner" src="" alt="动漫封面" loading='lazy'>
+    </div>
+    <div class="anime-info">
+      <h2 class="anime-title" id="animeTitle"></h2>
+      <div class="anime-title-cn" id="animeTitleCn"></div>
+      <div class="rating">
+        <span class="rating-score" id="ratingScore"></span>
+        <span class="rating-label">Bangumi 评分</span>
+      </div>
+      <div class="anime-meta" id="animeMeta"></div>
+      <div class="anime-description" id="animeDescription"></div>
+      <div class="anime-tags" id="animeTags"></div>
+      <div class="anime-links">
+        <a class="link-btn bangumi" id="bangumiLink" href="#" target="_blank">
+          查看 Bangumi 详情
+        </a>
+        <button class="link-btn draw-favorite-btn" id="animeFavoriteBtn" type="button">加入收藏</button>
+      </div>
+    </div>
+  </div>
+
+  <details class="draw-library" id="animeDrawLibrary">
+    <summary>最近抽取与收藏</summary>
+    <div class="draw-library-grid">
+      <section>
+        <h3>最近抽取</h3>
+        <div class="draw-library-list" id="animeRecentList"></div>
+      </section>
+      <section>
+        <h3>我的收藏</h3>
+        <div class="draw-library-list" id="animeFavoriteList"></div>
+      </section>
+    </div>
+  </details>
+
+</div>
+
+<script data-pjax src="/js/random-anime-filter-model.js"></script>
+<script data-pjax src="/js/random-draw-model.js"></script>
+<script data-pjax src="/js/daily-recommendation-model.js"></script>
+<script data-pjax src="/js/daily-anime-recommendation.js"></script>
+<script data-pjax>
+(() => {
+  const bootRandomAnimePage = () => {
+  const BANGUMI_API = '/api/bgm';
+  const SEARCH_LIMIT = 1;
+  const BANGUMI_SEARCH_CAP = 1000;
+  const MANUAL_SEARCH_LOAD_LIMIT = 16;
+  const DAILY_POOL_PAGE_SIZE = 24;
+  const DAILY_HISTORY_LIMIT = 90;
+  const DAILY_NO_REPEAT_DAYS = 90;
+  const DAILY_DOWNWEIGHT_WINDOW = 15;
+  const DAILY_CACHE_KEY = 'randomAnimeDailyCache.v1';
+  const DAILY_HISTORY_KEY = 'randomAnimeDailyHistory.v1';
+  const REPO_SNAPSHOT_URL = '/data/random-anime-snapshots.json';
+  const DAILY_SNAPSHOT_KEY = 'randomAnimeDailySnapshots.v1';
+  const HISTORY_START_DATE = '2026-03-20';
+  const SNAPSHOT_NOTE_TEXT = '今日结果已经固定，刷新也不会改变。';
+  const DEFAULT_STATS_TEXT = '支持全年代动漫随机抽取';
+  const MANUAL_RECENT_KEY = 'randomAnimeManualRecent.v1';
+  const MANUAL_FAVORITES_KEY = 'randomAnimeManualFavorites.v1';
+  const MANUAL_LIBRARY_LIMIT = 30;
+  const DAILY_POOL_ORDER = [
+    {
+      key: 'premium',
+      label: '名作定标池',
+      rotationSlots: 2,
+      ratingRange: ['>=8.0'],
+      minVotes: 100
+    },
+    {
+      key: 'solid',
+      label: '顺滑主航道',
+      rotationSlots: 4,
+      ratingRange: ['>=7.6', '<8.0'],
+      minVotes: 50
+    },
+    {
+      key: 'notable',
+      label: '余味分支池',
+      rotationSlots: 3,
+      ratingRange: ['>=7.1', '<7.6'],
+      minVotes: 50
+    },
+    {
+      key: 'surprise',
+      label: '偏锋补位池',
+      rotationSlots: 2,
+      ratingRange: ['>=6.6', '<7.1'],
+      minVotes: 50
+    },
+    {
+      key: 'recent',
+      label: '新作雷达池',
+      rotationSlots: 3,
+      ratingRange: ['>=7.2'],
+      airDateRange: ['>=2023-01-01'],
+      minVotes: 50
+    },
+    {
+      key: 'archive',
+      label: '千年回响池',
+      rotationSlots: 2,
+      ratingRange: ['>=7.4'],
+      airDateRange: ['<2001-01-01'],
+      minVotes: 50
+    }
+  ];
+  const DAILY_ROTATION_DECK = [
+    'premium',
+    'solid',
+    'notable',
+    'recent',
+    'surprise',
+    'archive',
+    'solid',
+    'notable',
+    'recent',
+    'premium',
+    'solid',
+    'surprise',
+    'notable',
+    'recent',
+    'archive',
+    'solid'
+  ];
+  const DAILY_POOL_COPY = {
+    premium: {
+      title: '名作定标池',
+      description: '先从口碑最稳的一批里确认今天的基准线。'
+    },
+    solid: {
+      title: '顺滑主航道',
+      description: '落点更平衡，大多数时候都会舒服地命中。'
+    },
+    notable: {
+      title: '余味分支池',
+      description: '不只看标准答案，也给更有记忆点的作品机会。'
+    },
+    surprise: {
+      title: '偏锋补位池',
+      description: '偶尔稍微偏一点，也许正好撞上今天的频率。'
+    },
+    recent: {
+      title: '新作雷达池',
+      description: '把视线拉近到 2023 年之后，看看最新的波形。'
+    },
+    archive: {
+      title: '千年回响池',
+      description: '把时间拨回 2000 年及以前，有些光到现在还没熄。'
+    }
+  };
+  const DAILY_POOL_BADGE_CLASS = {
+    premium: 'pool-premium',
+    solid: 'pool-solid',
+    notable: 'pool-notable',
+    surprise: 'pool-surprise',
+    recent: 'pool-recent',
+    archive: 'pool-archive'
+  };
+  const EMOTION_PROFILES = [
+    {
+      key: 'free',
+      label: '自由漫游',
+      tags: ['搞笑', '喜剧', '原创', '百合']
+    },
+    {
+      key: 'calm',
+      label: '缓和开场',
+      tags: ['治愈', '日常', '轻松', '温馨']
+    },
+    {
+      key: 'youth',
+      label: '青春脉冲',
+      tags: ['青春', '校园', '恋爱', '成长']
+    },
+    {
+      key: 'night',
+      label: '夜色回路',
+      tags: ['悬疑', '推理', '心理', '黑暗']
+    },
+    {
+      key: 'fantasy',
+      label: '幻想跃迁',
+      tags: ['奇幻', '冒险', '科幻', '魔法']
+    },
+    {
+      key: 'hype',
+      label: '热量拉满',
+      tags: ['热血', '战斗', '运动', '机战']
+    },
+    {
+      key: 'longwave',
+      label: '长波沉浸',
+      tags: ['音乐', '成长', '剧情', '旅行']
+    }
+  ];
+  const SEASON_PROFILES = {
+    spring: {
+      key: 'spring',
+      label: '春季偏置',
+      tags: ['青春', '校园', '恋爱', '治愈']
+    },
+    summer: {
+      key: 'summer',
+      label: '夏季偏置',
+      tags: ['热血', '冒险', '运动', '喜剧']
+    },
+    autumn: {
+      key: 'autumn',
+      label: '秋季偏置',
+      tags: ['悬疑', '心理', '奇幻', '推理']
+    },
+    winter: {
+      key: 'winter',
+      label: '冬季偏置',
+      tags: ['日常', '音乐', '成长', '科幻']
+    }
+  };
+  let isLoading = false;
+  let repoSnapshotsPromise = null;
+  let randomFilterState = { ...RandomAnimeFilters.DEFAULT_STATE, tags: [] };
+  let currentManualAnime = null;
+  let manualRecent = readManualItems(MANUAL_RECENT_KEY);
+  let manualFavorites = readManualItems(MANUAL_FAVORITES_KEY);
+
+  const RANDOM_TAGS = [
+    '热血', '恋爱', '搞笑', '科幻', '治愈', '悬疑', '冒险', '奇幻', '日常', '校园', '战斗', '音乐',
+    '纯爱', '运动', '百合', '轻百合', '机战', '后宫', '乙女', 'BL', '国产', '童年', '原创', '漫画改',
+    '轻小说改', '游戏改', 'GAL改', '魔法', '异世界', '穿越', '喜剧', '偶像', '美食', '青春', '励志',
+    '黑暗', '心理', '惊悚', '猎奇', '恐怖', '推理', '侦探', '超能力', '末世', '生存', 'NTR',
+    '肉番', '泡面番', '里番'
+  ];
+
+  const RANDOM_FORMATS = [
+    ['all', '全部'],
+    ['tv', 'TV 动画'],
+    ['movie', '剧场版'],
+    ['ova-oad', 'OVA / OAD'],
+    ['web', 'Web 动画'],
+    ['short', '短片']
+  ];
+
+  const RANDOM_SCORE_PRESETS = [
+    ['', '不限'],
+    ['9', '9 分以上'],
+    ['8', '8 分以上'],
+    ['7', '7 分以上'],
+    ['6', '6 分以上']
+  ];
+
+  const RANDOM_RATING_COUNT_PRESETS = [
+    ['', '不限'],
+    ['50', '≥ 50'],
+    ['200', '≥ 200'],
+    ['1000', '≥ 1000']
+  ];
+
+  function readManualItems(key) {
+    try {
+      return RandomDrawModel.parseStoredItems(localStorage.getItem(key), MANUAL_LIBRARY_LIMIT);
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function writeManualItems(key, items) {
+    try {
+      localStorage.setItem(key, JSON.stringify(items));
+    } catch (error) {
+      // Drawing still works when storage is blocked or full.
+    }
+  }
+
+  function createFilterChip(label, attributes = {}) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'filter-chip';
+    button.textContent = label;
+    Object.entries(attributes).forEach(([key, value]) => {
+      button.dataset[key] = value;
+    });
+    button.setAttribute('aria-pressed', 'false');
+    return button;
+  }
+
+  function setRandomFilterState(patch) {
+    randomFilterState = {
+      ...randomFilterState,
+      ...patch,
+      tags: patch.tags ? [...patch.tags] : [...randomFilterState.tags]
+    };
+    renderRandomFilters();
+  }
+
+  function setChipActive(button, active) {
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', active ? 'true' : 'false');
+  }
+
+  function renderSelectedTags() {
+    const selectedTags = document.getElementById('selectedTags');
+    selectedTags.replaceChildren();
+    selectedTags.hidden = randomFilterState.tags.length === 0;
+
+    randomFilterState.tags.forEach(tag => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'filter-selected-tag';
+      button.textContent = tag;
+      button.setAttribute('aria-label', `移除标签 ${tag}`);
+      button.addEventListener('click', () => {
+        setRandomFilterState({ tags: randomFilterState.tags.filter(item => item !== tag) });
+      });
+      selectedTags.appendChild(button);
+    });
+  }
+
+  function renderRandomFilters() {
+    const result = RandomAnimeFilters.normalize(randomFilterState);
+    randomFilterState = result.state;
+    const { errors } = result;
+
+    document.querySelectorAll('[data-filter-year]').forEach(button => {
+      const value = button.dataset.filterYear;
+      setChipActive(button, value
+        ? randomFilterState.yearMode === 'single' && randomFilterState.year === value
+        : randomFilterState.yearMode === 'all');
+    });
+
+    document.querySelectorAll('[data-filter-score]').forEach(button => {
+      const value = button.dataset.filterScore;
+      setChipActive(button, randomFilterState.scoreFrom === value && randomFilterState.scoreTo === '');
+    });
+
+    document.querySelectorAll('[data-filter-format]').forEach(button => {
+      setChipActive(button, randomFilterState.format === button.dataset.filterFormat);
+    });
+
+    document.querySelectorAll('[data-filter-rating-count]').forEach(button => {
+      setChipActive(button, randomFilterState.ratingCount === button.dataset.filterRatingCount);
+    });
+
+    document.querySelectorAll('[data-filter-tag]').forEach(button => {
+      setChipActive(button, randomFilterState.tags.includes(button.dataset.filterTag));
+    });
+    const allTagsButton = document.querySelector('[data-filter-tag-all]');
+    if (allTagsButton) setChipActive(allTagsButton, randomFilterState.tags.length === 0);
+
+    document.querySelectorAll('[data-tag-mode]').forEach(button => {
+      setChipActive(button, randomFilterState.tagMode === button.dataset.tagMode);
+    });
+
+    const yearFrom = document.getElementById('yearFrom');
+    const yearTo = document.getElementById('yearTo');
+    const scoreFrom = document.getElementById('scoreFrom');
+    const scoreTo = document.getElementById('scoreTo');
+    const ratingCount = document.getElementById('ratingCount');
+    yearFrom.value = randomFilterState.yearFrom;
+    yearTo.value = randomFilterState.yearTo;
+    scoreFrom.value = randomFilterState.scoreFrom;
+    scoreTo.value = randomFilterState.scoreTo;
+    ratingCount.value = randomFilterState.ratingCount;
+    yearFrom.setAttribute('aria-invalid', errors.yearFrom || errors.yearRange ? 'true' : 'false');
+    yearTo.setAttribute('aria-invalid', errors.yearTo || errors.yearRange ? 'true' : 'false');
+    scoreFrom.setAttribute('aria-invalid', errors.scoreFrom || errors.scoreRange ? 'true' : 'false');
+    scoreTo.setAttribute('aria-invalid', errors.scoreTo || errors.scoreRange ? 'true' : 'false');
+    ratingCount.setAttribute('aria-invalid', errors.ratingCount ? 'true' : 'false');
+
+    document.getElementById('yearError').textContent =
+      errors.year || errors.yearFrom || errors.yearTo || errors.yearRange || '';
+    document.getElementById('scoreError').textContent =
+      errors.scoreFrom || errors.scoreTo || errors.scoreRange || '';
+    document.getElementById('ratingCountError').textContent = errors.ratingCount || '';
+    document.getElementById('filterSummary').textContent = Object.keys(errors).length
+      ? `请先修正：${Object.values(errors)[0]}`
+      : RandomAnimeFilters.describe(randomFilterState);
+    document.getElementById('tagCount').textContent = randomFilterState.tags.length
+      ? `已选 ${randomFilterState.tags.length} 个标签`
+      : '未限制标签';
+    document.getElementById('tagRules').hidden = randomFilterState.tags.length < 2;
+    renderSelectedTags();
+
+    const randomButton = document.getElementById('randomBtn');
+    randomButton.disabled = isLoading || Object.keys(errors).length > 0;
+  }
+
+  function toggleTag(tag) {
+    const nextTags = randomFilterState.tags.includes(tag)
+      ? randomFilterState.tags.filter(item => item !== tag)
+      : [...randomFilterState.tags, tag];
+    setRandomFilterState({ tags: nextTags });
+  }
+
+  function installRandomFilters() {
+    const panel = document.getElementById('animeFilterPanel');
+    if (!panel || !window.RandomAnimeFilters) return;
+
+    const currentYear = new Date().getFullYear();
+    const years = RandomAnimeFilters.listYears(currentYear);
+    const quickYears = years.slice(0, 12);
+    const olderYears = years.slice(12);
+    const yearQuickList = document.getElementById('yearQuickList');
+    const yearGrid = document.getElementById('yearGrid');
+
+    const allYears = createFilterChip('全部', { filterYear: '' });
+    allYears.addEventListener('click', () => setRandomFilterState({
+      yearMode: 'all', year: '', yearFrom: '', yearTo: ''
+    }));
+    yearQuickList.appendChild(allYears);
+
+    quickYears.forEach(year => {
+      const button = createFilterChip(String(year), { filterYear: String(year) });
+      button.addEventListener('click', () => setRandomFilterState({
+        yearMode: 'single', year: String(year), yearFrom: '', yearTo: ''
+      }));
+      yearQuickList.appendChild(button);
+    });
+
+    olderYears.forEach(year => {
+      const button = createFilterChip(String(year), { filterYear: String(year) });
+      button.addEventListener('click', () => setRandomFilterState({
+        yearMode: 'single', year: String(year), yearFrom: '', yearTo: ''
+      }));
+      yearGrid.appendChild(button);
+    });
+
+    const yearExpand = document.getElementById('yearExpand');
+    yearExpand.addEventListener('click', () => {
+      const yearMore = document.getElementById('yearMore');
+      const opening = !yearMore.classList.contains('is-open');
+      yearMore.classList.toggle('is-open', opening);
+      yearExpand.setAttribute('aria-expanded', opening ? 'true' : 'false');
+      yearExpand.firstChild.textContent = opening ? '收起年份 ' : '全部年份 ';
+    });
+
+    for (const inputId of ['yearFrom', 'yearTo']) {
+      document.getElementById(inputId).addEventListener('input', event => {
+        setRandomFilterState({
+          yearMode: 'range',
+          year: '',
+          [inputId]: event.target.value
+        });
+      });
+    }
+
+    const scoreQuickList = document.getElementById('scoreQuickList');
+    RANDOM_SCORE_PRESETS.forEach(([value, label]) => {
+      const button = createFilterChip(label, { filterScore: value });
+      button.addEventListener('click', () => setRandomFilterState({ scoreFrom: value, scoreTo: '' }));
+      scoreQuickList.appendChild(button);
+    });
+    for (const inputId of ['scoreFrom', 'scoreTo']) {
+      document.getElementById(inputId).addEventListener('input', event => {
+        setRandomFilterState({ [inputId]: event.target.value });
+      });
+    }
+
+    const ratingCountList = document.getElementById('ratingCountList');
+    RANDOM_RATING_COUNT_PRESETS.forEach(([value, label]) => {
+      const button = createFilterChip(label, { filterRatingCount: value });
+      button.addEventListener('click', () => setRandomFilterState({ ratingCount: value }));
+      ratingCountList.appendChild(button);
+    });
+    document.getElementById('ratingCount').addEventListener('input', event => {
+      setRandomFilterState({ ratingCount: event.target.value });
+    });
+
+    const formatList = document.getElementById('formatList');
+    RANDOM_FORMATS.forEach(([value, label]) => {
+      const button = createFilterChip(label, { filterFormat: value });
+      button.addEventListener('click', () => setRandomFilterState({ format: value }));
+      formatList.appendChild(button);
+    });
+
+    const tagQuickList = document.getElementById('tagQuickList');
+    const allTags = createFilterChip('全部', { filterTagAll: '' });
+    allTags.addEventListener('click', () => setRandomFilterState({ tags: [] }));
+    tagQuickList.appendChild(allTags);
+    RANDOM_TAGS.slice(0, 12).forEach(tag => {
+      const button = createFilterChip(tag, { filterTag: tag });
+      button.addEventListener('click', () => toggleTag(tag));
+      tagQuickList.appendChild(button);
+    });
+
+    const tagFullList = document.getElementById('tagFullList');
+    RANDOM_TAGS.slice(12).forEach(tag => {
+      const button = createFilterChip(tag, { filterTag: tag });
+      button.addEventListener('click', () => toggleTag(tag));
+      tagFullList.appendChild(button);
+    });
+
+    const tagExpand = document.getElementById('tagExpand');
+    tagExpand.addEventListener('click', () => {
+      const tagMore = document.getElementById('tagMore');
+      const opening = !tagMore.classList.contains('is-open');
+      tagMore.classList.toggle('is-open', opening);
+      tagExpand.setAttribute('aria-expanded', opening ? 'true' : 'false');
+      tagExpand.firstChild.textContent = opening ? '收起标签 ' : '展开全部 ';
+    });
+
+    document.querySelectorAll('[data-tag-mode]').forEach(button => {
+      button.addEventListener('click', () => setRandomFilterState({ tagMode: button.dataset.tagMode }));
+    });
+    document.getElementById('filterReset').addEventListener('click', () => {
+      randomFilterState = { ...RandomAnimeFilters.DEFAULT_STATE, tags: [] };
+      renderRandomFilters();
+    });
+
+    renderRandomFilters();
+  }
+
+  function getRandomFilterState() {
+    const result = RandomAnimeFilters.normalize(randomFilterState);
+    randomFilterState = result.state;
+    renderRandomFilters();
+    if (Object.keys(result.errors).length > 0) {
+      throw new Error(Object.values(result.errors)[0]);
+    }
+    return result.state;
+  }
+
+  const PLACEHOLDER_IMAGE = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+      <defs>
+        <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#e0f7ff" />
+          <stop offset="100%" stop-color="#b9d6ff" />
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="675" fill="url(#g)" />
+      <text x="50%" y="50%" text-anchor="middle" fill="#4b6b88" font-size="44" font-family="Arial, sans-serif">No Cover</text>
+    </svg>
+  `);
+
+  function buildDateKey() {
+    const testDate = new URLSearchParams(window.location.search).get('test_date');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(testDate || '')) {
+      return testDate;
+    }
+
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function isSnapshotPreviewMode() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has('test_date')
+      || window.location.hostname === 'localhost'
+      || window.location.hostname === '127.0.0.1';
+  }
+
+  function isTestMode() {
+    return /^\d{4}-\d{2}-\d{2}$/.test(new URLSearchParams(window.location.search).get('test_date') || '');
+  }
+
+  function buildDateLabel(dateKey = buildDateKey()) {
+    const [year, month, day] = dateKey.split('-');
+    return `${year}.${month}.${day}`;
+  }
+
+  function shiftDateKey(dateKey, offsetDays) {
+    const date = new Date(`${dateKey}T00:00:00+08:00`);
+    date.setDate(date.getDate() + offsetDays);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function compareDateKey(a, b) {
+    return a.localeCompare(b);
+  }
+
+  function hashString(input) {
+    let hash = 0;
+    for (let i = 0; i < input.length; i++) {
+      hash = ((hash << 5) - hash) + input.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  function buildDayIndex(dateKey = buildDateKey()) {
+    return Math.floor(new Date(`${dateKey}T00:00:00+08:00`).getTime() / 86400000);
+  }
+
+  function getPoolByKey(key) {
+    return DAILY_POOL_ORDER.find(pool => pool.key === key) || DAILY_POOL_ORDER[0];
+  }
+
+  function getSeasonProfile(date = new Date()) {
+    const month = date.getMonth();
+    if (month >= 2 && month <= 4) return SEASON_PROFILES.spring;
+    if (month >= 5 && month <= 7) return SEASON_PROFILES.summer;
+    if (month >= 8 && month <= 10) return SEASON_PROFILES.autumn;
+    return SEASON_PROFILES.winter;
+  }
+
+  function getDailyPoolFallbacks(rotationIndex) {
+    const seen = new Set();
+    const pools = [];
+
+    for (let offset = 0; offset < DAILY_ROTATION_DECK.length; offset++) {
+      const poolKey = DAILY_ROTATION_DECK[(rotationIndex + offset) % DAILY_ROTATION_DECK.length];
+      if (seen.has(poolKey)) continue;
+      seen.add(poolKey);
+      pools.push(getPoolByKey(poolKey));
+    }
+
+    return pools;
+  }
+
+  function getDailyRecommendationConfig() {
+    const dayKey = buildDateKey();
+    const dayDate = new Date(`${dayKey}T00:00:00+08:00`);
+    const dayIndex = buildDayIndex(dayKey);
+    const rotationIndex = dayIndex % DAILY_ROTATION_DECK.length;
+    const primaryPoolKey = DAILY_ROTATION_DECK[rotationIndex];
+
+    return {
+      dayKey,
+      dayIndex,
+      rotationIndex,
+      primaryPoolKey,
+      pools: getDailyPoolFallbacks(rotationIndex),
+      pickSeed: hashString(`random-anime-pick-${dayKey}`),
+      pageSeed: hashString(`random-anime-page-${dayKey}`),
+      emotionProfile: EMOTION_PROFILES[dayDate.getDay()],
+      seasonProfile: getSeasonProfile(dayDate)
+    };
+  }
+
+  function safeReadStorage(key, fallbackValue) {
+    try {
+      const rawValue = localStorage.getItem(key);
+      return rawValue ? JSON.parse(rawValue) : fallbackValue;
+    } catch (error) {
+      return fallbackValue;
+    }
+  }
+
+  function safeWriteStorage(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.warn('写入本地缓存失败:', error);
+    }
+  }
+
+  function normalizeHistoryEntry(entry) {
+    if (!entry || !entry.date || !entry.id) {
+      return null;
+    }
+
+    return {
+      date: entry.date,
+      id: entry.id,
+      title: entry.title || '',
+      poolKey: entry.poolKey || ''
+    };
+  }
+
+  function getDailyHistory() {
+    const history = safeReadStorage(DAILY_HISTORY_KEY, []);
+    return Array.isArray(history)
+      ? history
+          .map(normalizeHistoryEntry)
+          .filter(Boolean)
+          .sort((a, b) => b.date.localeCompare(a.date))
+          .slice(0, DAILY_HISTORY_LIMIT)
+      : [];
+  }
+
+  function updateDailyHistory(entry) {
+    const normalizedEntry = normalizeHistoryEntry(entry);
+    if (!normalizedEntry) {
+      return;
+    }
+
+    const nextHistory = [
+      normalizedEntry,
+      ...getDailyHistory().filter(item => item.date !== normalizedEntry.date)
+    ].slice(0, DAILY_HISTORY_LIMIT);
+
+    safeWriteStorage(DAILY_HISTORY_KEY, nextHistory);
+  }
+
+  function normalizeSnapshotEntry(entry) {
+    if (!entry || !entry.date || !entry.poolKey || !entry.anime) {
+      return null;
+    }
+
+    const anime = entry.anime.id || entry.anime.title ? entry.anime : null;
+    if (!anime) {
+      return null;
+    }
+
+    return {
+      date: entry.date,
+      poolKey: entry.poolKey,
+      poolLabel: entry.poolLabel || getPoolByKey(entry.poolKey).label,
+      algorithmVersion: entry.algorithmVersion || 'anime-daily-v2',
+      anime
+    };
+  }
+
+  function getStoredSnapshots() {
+    const snapshots = safeReadStorage(DAILY_SNAPSHOT_KEY, []);
+    return Array.isArray(snapshots)
+      ? snapshots
+          .map(normalizeSnapshotEntry)
+          .filter(Boolean)
+          .sort((a, b) => b.date.localeCompare(a.date))
+      : [];
+  }
+
+  function getStoredSnapshotByDate(dateKey) {
+    return getStoredSnapshots().find(entry => entry.date === dateKey) || null;
+  }
+
+  function storeDailySnapshot(entry) {
+    const normalizedEntry = normalizeSnapshotEntry(entry);
+    if (!normalizedEntry) {
+      return;
+    }
+
+    const nextSnapshots = [
+      normalizedEntry,
+      ...getStoredSnapshots().filter(item => item.date !== normalizedEntry.date)
+    ].sort((a, b) => b.date.localeCompare(a.date));
+
+    safeWriteStorage(DAILY_SNAPSHOT_KEY, nextSnapshots);
+  }
+
+  function fetchSnapshotCollection(url) {
+    return fetch(url, {
+      cache: 'no-store'
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => Array.isArray(data)
+        ? data.map(normalizeSnapshotEntry).filter(Boolean)
+        : []
+      )
+      .catch(() => []);
+  }
+
+  async function getRepoSnapshots() {
+    if (!repoSnapshotsPromise) {
+      repoSnapshotsPromise = fetchSnapshotCollection(REPO_SNAPSHOT_URL);
+    }
+
+    return repoSnapshotsPromise;
+  }
+
+  async function hydrateSnapshotEntry(entry) {
+    const normalizedEntry = normalizeSnapshotEntry(entry);
+    if (!normalizedEntry) {
+      return null;
+    }
+
+    if (normalizedEntry.anime.images && (normalizedEntry.anime.rating?.score || normalizedEntry.anime.score)) {
+      return normalizedEntry;
+    }
+
+    if (normalizedEntry.anime.id) {
+      const detailedAnime = await fetchAnimeById(normalizedEntry.anime.id);
+      if (detailedAnime) {
+        return {
+          ...normalizedEntry,
+          anime: detailedAnime
+        };
+      }
+    }
+
+    if (normalizedEntry.anime.title) {
+      const searchedAnime = await searchAnimeByTitle(normalizedEntry.anime.title);
+      if (searchedAnime?.id) {
+        const detailedAnime = await fetchAnimeById(searchedAnime.id);
+        if (detailedAnime) {
+          return {
+            ...normalizedEntry,
+            anime: detailedAnime
+          };
+        }
+      }
+    }
+
+    return null;
+  }
+
+  async function getSnapshotForDate(dateKey) {
+    const repoSnapshots = await getRepoSnapshots();
+    const repoSnapshot = repoSnapshots.find(entry => entry.date === dateKey);
+    if (repoSnapshot) {
+      return hydrateSnapshotEntry(repoSnapshot);
+    }
+
+    if (isSnapshotPreviewMode()) {
+      const storedSnapshot = getStoredSnapshotByDate(dateKey);
+      if (storedSnapshot) {
+        return hydrateSnapshotEntry(storedSnapshot);
+      }
+    }
+
+    return null;
+  }
+
+  function buildHistoryContext(historyEntries, dayKey) {
+    return DailyAnimeRecommendation.buildHistoryContext(historyEntries, dayKey, {
+      noRepeatDays: DAILY_NO_REPEAT_DAYS,
+      downweightWindow: DAILY_DOWNWEIGHT_WINDOW
+    });
+  }
+
+  function getHistoryContext(dayKey) {
+    return buildHistoryContext(getDailyHistory(), dayKey);
+  }
+
+  function splitPoolSequenceByRecentStreak(pools, historyEntries, dayKey) {
+    return DailyAnimeRecommendation.splitPoolSequenceByRecentStreak(pools, historyEntries, dayKey);
+  }
+
+  function getCachedDailyPick(dayKey) {
+    const cache = safeReadStorage(DAILY_CACHE_KEY, null);
+    return cache && cache.date === dayKey ? cache : null;
+  }
+
+  function cacheDailyPick(entry) {
+    safeWriteStorage(DAILY_CACHE_KEY, entry);
+  }
+
+  function buildAnimeRequestBody({
+    year = null,
+    tag = null,
+    format = null,
+    rating = null,
+    sort = 'heat',
+    ratingRange = null,
+    airDateRange = null
+  } = {}) {
+    const requestBody = {
+      keyword: '',
+      filter: {
+        type: [2]
+      },
+      sort
+    };
+
+    const tags = [];
+    if (tag) tags.push(tag);
+    if (format) tags.push(format);
+    if (tags.length > 0) {
+      requestBody.filter.tag = tags;
+    }
+
+    if (ratingRange) {
+      requestBody.filter.rating = ratingRange;
+    } else if (rating) {
+      if (rating === 'below5') {
+        requestBody.filter.rating = ['<5'];
+      } else if (rating === '9') {
+        requestBody.filter.rating = ['>=9'];
+      } else if (rating === '8-9') {
+        requestBody.filter.rating = ['>=8', '<9'];
+      } else if (rating === '7-8') {
+        requestBody.filter.rating = ['>=7', '<8'];
+      } else if (rating === '6-7') {
+        requestBody.filter.rating = ['>=6', '<7'];
+      } else if (rating === '5-6') {
+        requestBody.filter.rating = ['>=5', '<6'];
+      }
+    }
+
+    if (airDateRange) {
+      requestBody.filter.air_date = airDateRange;
+    } else if (year) {
+      if (year >= 2000 && year < 2010) {
+        requestBody.filter.air_date = ['>=2000-01-01', '<2010-01-01'];
+      } else if (year >= 1990 && year < 2000) {
+        requestBody.filter.air_date = ['>=1990-01-01', '<2000-01-01'];
+      } else if (year >= 1980 && year < 1990) {
+        requestBody.filter.air_date = ['>=1980-01-01', '<1990-01-01'];
+      } else if (year < 1980) {
+        requestBody.filter.air_date = ['<1980-01-01'];
+      } else {
+        requestBody.filter.air_date = [`>=${year}-01-01`, `<${year + 1}-01-01`];
+      }
+    }
+
+    return requestBody;
+  }
+
+  async function fetchSearchData(requestBody, limit = SEARCH_LIMIT, offset = 0) {
+    const response = await fetch(`${BANGUMI_API}/v0/search/subjects?limit=${limit}&offset=${offset}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Bangumi API错误:', errorText);
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
+  }
+
+  async function loadAnimeSearchPlan(plan) {
+    const requestBody = {
+      keyword: '',
+      filter: plan.filter,
+      sort: 'heat'
+    };
+    const countData = await fetchSearchData(requestBody, 1, 0);
+    const total = Number(countData.total) || 0;
+
+    if (total === 0) return { total, items: [] };
+    if (total >= BANGUMI_SEARCH_CAP && !plan.month) {
+      return { total, items: [] };
+    }
+
+    const randomOffset = RandomDrawModel.randomIndex(total, Math.random());
+    const data = await fetchSearchData(requestBody, SEARCH_LIMIT, randomOffset);
+    return {
+      total,
+      items: Array.isArray(data.data) ? data.data : []
+    };
+  }
+
+  async function drawFreshAnime(filterState, summary) {
+    const searchPlans = RandomAnimeFilters.buildRandomSearchPlans(
+      filterState,
+      new Date().getFullYear(),
+      Math.random
+    );
+
+    return RandomDrawModel.drawFromPartitionedPlans(
+      searchPlans,
+      loadAnimeSearchPlan,
+      {
+        resultCap: BANGUMI_SEARCH_CAP,
+        maxLoads: MANUAL_SEARCH_LOAD_LIMIT,
+        splitPlan: plan => RandomAnimeFilters.buildMonthlySearchPlans(plan, Math.random),
+        candidateOptions: { random: Math.random },
+        onPlan: plan => {
+          const period = plan.month ? `${plan.year} 年 ${plan.month} 月` : `${plan.year} 年`;
+          document.getElementById('stats').textContent = `正在搜索：${summary} · ${period}`;
+        }
+      }
+    );
+  }
+
+  async function fetchAnimeById(animeId) {
+    try {
+      const response = await fetch(`${BANGUMI_API}/v0/subjects/${animeId}`);
+      if (!response.ok) {
+        return null;
+      }
+      return await response.json();
+    } catch (error) {
+      return null;
+    }
+  }
+
+  async function searchAnimeByTitle(title) {
+    try {
+      const response = await fetch(`${BANGUMI_API}/v0/search/subjects?limit=10&offset=0`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          keyword: title,
+          filter: {
+            type: [2]
+          },
+          sort: 'rank'
+        })
+      });
+
+      if (!response.ok) {
+        return null;
+      }
+
+      const data = await response.json();
+      return (data.data || []).find(item => item.name === title || item.name_cn === title)
+        || (data.data || [])[0]
+        || null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function getAnimeImage(anime) {
+    const images = anime.images || anime.image;
+    if (!images) {
+      return PLACEHOLDER_IMAGE;
+    }
+
+    return images.large || images.common || images.medium || images.small || PLACEHOLDER_IMAGE;
+  }
+
+  function normalizeSummary(summary) {
+    return (summary || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function selectDailyCandidateForPool(pool, candidates, config, historyContext) {
+    return DailyAnimeRecommendation.selectCandidateForPool(pool, candidates, config, historyContext);
+  }
+
+  function buildDailyPageSequence(totalPages, startPage, pagesToFetch) {
+    const pages = [];
+    const seen = new Set();
+    const offsets = [0, 1, -1, 2, -2, 3, -3];
+
+    for (const offset of offsets) {
+      if (pages.length >= pagesToFetch) {
+        break;
+      }
+
+      const page = ((startPage - 1 + offset + totalPages) % totalPages) + 1;
+      if (seen.has(page)) {
+        continue;
+      }
+
+      seen.add(page);
+      pages.push(page);
+    }
+
+    return pages;
+  }
+
+  async function fetchDailyAnimeCount(requestBody) {
+    const countData = await fetchSearchData(requestBody, 1, 0);
+    return countData.total || 0;
+  }
+
+  async function fetchDailyAnimeCandidates(requestBody, seed, totalCount) {
+    if (!totalCount) {
+      return [];
+    }
+
+    const totalPages = Math.max(1, Math.ceil(totalCount / DAILY_POOL_PAGE_SIZE));
+    const pagesToFetch = Math.min(
+      totalPages,
+      totalCount <= DAILY_POOL_PAGE_SIZE ? 1 : totalCount <= DAILY_POOL_PAGE_SIZE * 2 ? 2 : 3
+    );
+    const startPage = (seed % totalPages) + 1;
+    const pageSequence = buildDailyPageSequence(totalPages, startPage, pagesToFetch);
+    const candidates = [];
+    const seenIds = new Set();
+
+    for (const page of pageSequence) {
+      const data = await fetchSearchData(requestBody, DAILY_POOL_PAGE_SIZE, (page - 1) * DAILY_POOL_PAGE_SIZE);
+
+      for (const anime of data.data || []) {
+        const animeId = anime?.id || anime?.subject_id;
+        if (!animeId || seenIds.has(animeId)) {
+          continue;
+        }
+
+        seenIds.add(animeId);
+        candidates.push(anime);
+      }
+    }
+
+    return candidates;
+  }
+
+  function getDailyPoolRequestBody(pool) {
+    return buildAnimeRequestBody({
+      sort: 'rank',
+      ratingRange: pool.ratingRange || null,
+      airDateRange: pool.airDateRange || null
+    });
+  }
+
+  function fillAnimeMeta(metaDiv, anime) {
+    metaDiv.innerHTML = '';
+
+    const airDate = anime.air_date || anime.date || anime.begin || anime.info?.find(i => i.key === '放送开始')?.value;
+    if (airDate) {
+      const dateSpan = document.createElement('span');
+      dateSpan.className = 'meta-item';
+      dateSpan.textContent = `📅 ${airDate}`;
+      metaDiv.appendChild(dateSpan);
+    }
+
+    const eps = anime.eps || anime.eps_count || anime.info?.find(i => i.key === '话数')?.value;
+    if (eps) {
+      const epsSpan = document.createElement('span');
+      epsSpan.className = 'meta-item';
+      epsSpan.textContent = `📺 ${eps} 集`;
+      metaDiv.appendChild(epsSpan);
+    }
+  }
+
+  function fillAnimeTags(tagsDiv, anime) {
+    tagsDiv.innerHTML = '';
+
+    const tags = anime.tags || [];
+    tags.slice(0, 10).forEach(tag => {
+      const tagSpan = document.createElement('span');
+      tagSpan.className = 'tag';
+      tagSpan.textContent = typeof tag === 'string' ? tag : (tag.name || tag);
+      tagsDiv.appendChild(tagSpan);
+    });
+  }
+
+  function bindBannerPreview(banner, titleText) {
+    if (!banner) {
+      return;
+    }
+
+    banner.onclick = event => {
+      event.preventDefault();
+      const imageSrc = banner.currentSrc || banner.src || '';
+      if (!imageSrc) {
+        return;
+      }
+
+      const caption = titleText || banner.alt || '';
+
+      if (window.Fancybox?.show) {
+        window.Fancybox.show([{
+          src: imageSrc,
+          type: 'image',
+          caption
+        }]);
+        return;
+      }
+
+      window.open(imageSrc, '_blank', 'noopener');
+    };
+  }
+
+  function renderAnime(anime, variant = 'main') {
+    const ids = variant === 'main'
+      ? {
+          card: 'animeCard',
+          banner: 'animeBanner',
+          title: 'animeTitle',
+          titleCn: 'animeTitleCn',
+          ratingScore: 'ratingScore',
+          meta: 'animeMeta',
+          description: 'animeDescription',
+          tags: 'animeTags',
+          link: 'bangumiLink'
+        }
+      : {
+          card: 'dailyCard',
+          banner: 'dailyBanner',
+          title: 'dailyTitle',
+          titleCn: 'dailyTitleCn',
+          ratingScore: 'dailyRatingScore',
+          meta: 'dailyMeta',
+          description: 'dailyDescription',
+          tags: 'dailyTags',
+          link: 'dailyBangumiLink'
+        };
+
+    const card = document.getElementById(ids.card);
+    const banner = document.getElementById(ids.banner);
+    const title = document.getElementById(ids.title);
+    const titleCn = document.getElementById(ids.titleCn);
+    const ratingScore = document.getElementById(ids.ratingScore);
+    const metaDiv = document.getElementById(ids.meta);
+    const descriptionDiv = document.getElementById(ids.description);
+    const tagsDiv = document.getElementById(ids.tags);
+    const link = document.getElementById(ids.link);
+
+    if (!card || !banner || !title || !titleCn || !ratingScore || !metaDiv || !descriptionDiv || !tagsDiv || !link) {
+      throw new Error(`页面节点缺失：${variant}`);
+    }
+
+    banner.src = getAnimeImage(anime);
+    banner.alt = anime.name || '动漫封面';
+    title.textContent = anime.name || '未知标题';
+    titleCn.textContent = anime.name_cn || '';
+    titleCn.style.display = anime.name_cn ? 'block' : 'none';
+    bindBannerPreview(banner, anime.name_cn || anime.name || '');
+
+    const rating = anime.rating?.score || anime.score;
+    ratingScore.textContent = rating ? Number(rating).toFixed(1) : 'N/A';
+
+    fillAnimeMeta(metaDiv, anime);
+    fillAnimeTags(tagsDiv, anime);
+
+    const summary = normalizeSummary(anime.summary || anime.short_summary || '暂无简介');
+    descriptionDiv.textContent = summary.substring(0, 500) + (summary.length > 500 ? '...' : '');
+
+    const animeId = anime.id || anime.subject_id;
+    link.href = `https://bgm.tv/subject/${animeId}`;
+
+    card.classList.add('show');
+  }
+
+  function toManualAnimeItem(anime) {
+    const id = anime?.id || anime?.subject_id;
+    const image = getAnimeImage(anime);
+    const rating = Number(anime?.rating?.score || anime?.score || 0);
+    return {
+      id,
+      title: anime?.name_cn || anime?.name || '未知标题',
+      subtitle: anime?.name_cn ? anime?.name || '' : '',
+      image: image.startsWith('data:') ? '' : image,
+      url: `https://bgm.tv/subject/${id}`,
+      meta: rating ? `${rating.toFixed(1)} 分` : '暂无评分'
+    };
+  }
+
+  function isManualFavorite(item) {
+    const id = RandomDrawModel.stableId(item);
+    return manualFavorites.some(entry => RandomDrawModel.stableId(entry) === id);
+  }
+
+  function updateManualFavoriteButton() {
+    const button = document.getElementById('animeFavoriteBtn');
+    if (!button) return;
+    const active = currentManualAnime && isManualFavorite(currentManualAnime);
+    button.disabled = !currentManualAnime;
+    button.classList.toggle('is-favorite', Boolean(active));
+    button.textContent = active ? '已收藏，点击取消' : '加入收藏';
+  }
+
+  function createManualLibraryItem(item, removable) {
+    const row = document.createElement('article');
+    row.className = 'draw-library-item';
+
+    const image = document.createElement('img');
+    image.className = 'draw-library-cover';
+    image.loading = 'lazy';
+    image.alt = '';
+    image.src = item.image || PLACEHOLDER_IMAGE;
+
+    const copy = document.createElement('div');
+    copy.className = 'draw-library-copy';
+    const link = document.createElement('a');
+    link.className = 'draw-library-title';
+    link.href = item.url || `https://bgm.tv/subject/${item.id}`;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = item.title || item.subtitle || `Bangumi #${item.id}`;
+    const meta = document.createElement('span');
+    meta.className = 'draw-library-meta';
+    meta.textContent = item.meta || item.subtitle || '';
+    copy.append(link, meta);
+    row.append(image, copy);
+
+    if (removable) {
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'draw-library-remove';
+      remove.textContent = '移除';
+      remove.addEventListener('click', () => {
+        manualFavorites = manualFavorites.filter(entry =>
+          RandomDrawModel.stableId(entry) !== RandomDrawModel.stableId(item));
+        writeManualItems(MANUAL_FAVORITES_KEY, manualFavorites);
+        renderManualLibrary();
+      });
+      row.appendChild(remove);
+    }
+
+    return row;
+  }
+
+  function renderManualLibraryList(targetId, items, removable) {
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    target.replaceChildren();
+    if (!items.length) {
+      const empty = document.createElement('p');
+      empty.className = 'draw-library-empty';
+      empty.textContent = removable ? '还没有收藏作品' : '还没有抽取记录';
+      target.appendChild(empty);
+      return;
+    }
+    items.slice(0, 10).forEach(item => target.appendChild(createManualLibraryItem(item, removable)));
+  }
+
+  function renderManualLibrary() {
+    renderManualLibraryList('animeRecentList', manualRecent, false);
+    renderManualLibraryList('animeFavoriteList', manualFavorites, true);
+    updateManualFavoriteButton();
+  }
+
+  function rememberManualAnime(anime) {
+    currentManualAnime = toManualAnimeItem(anime);
+    manualRecent = RandomDrawModel.prependRecent(
+      manualRecent,
+      currentManualAnime,
+      MANUAL_LIBRARY_LIMIT
+    );
+    writeManualItems(MANUAL_RECENT_KEY, manualRecent);
+    renderManualLibrary();
+  }
+
+  function toggleCurrentManualFavorite() {
+    if (!currentManualAnime) return;
+    manualFavorites = RandomDrawModel.toggleFavorite(
+      manualFavorites,
+      currentManualAnime,
+      MANUAL_LIBRARY_LIMIT
+    );
+    writeManualItems(MANUAL_FAVORITES_KEY, manualFavorites);
+    renderManualLibrary();
+  }
+
+  function renderDailyPickState(anime, pool, config, noteText) {
+    const dailyBadge = document.getElementById('dailyBadge');
+    const dailyNote = document.getElementById('dailyNote');
+    const poolCopy = DAILY_POOL_COPY[pool.key] || {
+      title: pool.label,
+      description: '今天的观测结果已经落定。'
+    };
+
+    renderAnime(anime, 'daily');
+    dailyBadge.className = `daily-badge ${DAILY_POOL_BADGE_CLASS[pool.key] || ''}`.trim();
+    dailyBadge.textContent = `今日轮换池 · ${poolCopy.title}：${poolCopy.description}`;
+    dailyNote.textContent = `基于 ${buildDateLabel(config.dayKey)} 的固定推荐 · ${config.emotionProfile.label} + ${config.seasonProfile.label} · ${noteText}`;
+  }
+
+  function persistDailyPick(config, pool, anime, options = {}) {
+    updateDailyHistory({
+      date: config.dayKey,
+      id: anime.id,
+      title: anime.name_cn || anime.name || '',
+      poolKey: pool.key
+    });
+
+    cacheDailyPick({
+      date: config.dayKey,
+      poolKey: pool.key,
+      poolLabel: pool.label,
+      snapshotLocked: Boolean(options.snapshotLocked),
+      anime
+    });
+  }
+
+  async function resolveDailyPickForConfig(config, historyEntries) {
+    const historyContext = buildHistoryContext(historyEntries, config.dayKey);
+    const { preferredPools, fallbackPool } = splitPoolSequenceByRecentStreak(config.pools, historyEntries, config.dayKey);
+    const evaluations = [];
+
+    const rememberEvaluation = (pool, evaluation) => {
+      evaluations.push({ pool, evaluation });
+      return evaluation;
+    };
+
+    for (const pool of preferredPools) {
+      try {
+        const requestBody = getDailyPoolRequestBody(pool);
+        const totalCount = await fetchDailyAnimeCount(requestBody);
+        if (!totalCount) {
+          continue;
+        }
+
+        const candidates = await fetchDailyAnimeCandidates(
+          requestBody,
+          config.pageSeed + hashString(pool.key),
+          totalCount
+        );
+        const evaluation = rememberEvaluation(
+          pool,
+          selectDailyCandidateForPool(pool, candidates, config, historyContext)
+        );
+
+        if (!evaluation?.freshResult) {
+          continue;
+        }
+        const selectedAnime = evaluation.freshResult.candidate;
+        return hydrateDailySelection(pool, evaluation.freshResult, selectedAnime);
+      } catch (error) {
+        continue;
+      }
+    }
+
+    if (fallbackPool) {
+      try {
+        const requestBody = getDailyPoolRequestBody(fallbackPool);
+        const totalCount = await fetchDailyAnimeCount(requestBody);
+        if (totalCount) {
+          const candidates = await fetchDailyAnimeCandidates(
+            requestBody,
+            config.pageSeed + hashString(fallbackPool.key),
+            totalCount
+          );
+          const evaluation = rememberEvaluation(
+            fallbackPool,
+            selectDailyCandidateForPool(fallbackPool, candidates, config, historyContext)
+          );
+
+          if (evaluation?.freshResult) {
+            return hydrateDailySelection(fallbackPool, evaluation.freshResult, evaluation.freshResult.candidate);
+          }
+        }
+      } catch (error) {
+        // ignore and let the unified no-result branch handle it
+      }
+    }
+
+    const emergency = DailyRecommendationModel.choosePoolEvaluation(evaluations);
+    if (!emergency?.result) {
+      throw new Error('未找到可用作品');
+    }
+
+    return hydrateDailySelection(emergency.pool, emergency.result, emergency.result.candidate);
+  }
+
+  async function hydrateDailySelection(pool, selection, anime) {
+    let selectedAnime = anime;
+    if (selectedAnime?.id) {
+      const detailedAnime = await fetchAnimeById(selectedAnime.id);
+      if (detailedAnime) {
+        selectedAnime = { ...selectedAnime, ...detailedAnime };
+      }
+    }
+
+    return {
+      pool,
+      result: {
+        allowRepeat: selection.allowRepeat,
+        candidateCount: selection.candidateCount,
+        anime: selectedAnime
+      }
+    };
+  }
+
+  function renderHistoryList(historyItems) {
+    const historySection = document.getElementById('historySection');
+    const historyList = document.getElementById('historyList');
+    const historyToggleLabel = document.getElementById('historyToggleLabel');
+    const historyToggleMeta = document.getElementById('historyToggleMeta');
+
+    if (!historySection || !historyList || !historyToggleLabel || !historyToggleMeta) {
+      return;
+    }
+
+    historyList.innerHTML = '';
+
+    if (!historyItems.length) {
+      historySection.style.display = 'none';
+      return;
+    }
+
+    historyToggleLabel.textContent = '推荐历史回放';
+    historyToggleMeta.textContent = `共 ${historyItems.length} 天`;
+
+    historyItems.forEach(item => {
+      const link = document.createElement('a');
+      link.className = 'history-item';
+      link.href = `https://bgm.tv/subject/${item.anime.id}`;
+      link.target = '_blank';
+      link.rel = 'noopener';
+
+      const cover = document.createElement('img');
+      cover.className = 'history-cover';
+      cover.src = getAnimeImage(item.anime);
+      cover.alt = item.anime.name_cn || item.anime.name || '推荐封面';
+
+      const main = document.createElement('div');
+      main.className = 'history-main';
+
+      const meta = document.createElement('div');
+      meta.className = 'history-meta';
+
+      const date = document.createElement('span');
+      date.className = 'history-date';
+      date.textContent = buildDateLabel(item.dateKey);
+
+      const pool = document.createElement('span');
+      pool.className = `history-pool ${DAILY_POOL_BADGE_CLASS[item.pool.key] || ''}`.trim();
+      pool.textContent = item.pool.label;
+
+      meta.appendChild(date);
+      meta.appendChild(pool);
+
+      const name = document.createElement('div');
+      name.className = 'history-name';
+      name.textContent = item.anime.name_cn || item.anime.name || '未知标题';
+
+      const score = document.createElement('div');
+      score.className = 'history-score';
+      score.textContent = item.anime.rating?.score
+        ? `${Number(item.anime.rating.score).toFixed(1)} · Bangumi`
+        : 'N/A · Bangumi';
+
+      main.appendChild(meta);
+      main.appendChild(name);
+      link.appendChild(cover);
+      link.appendChild(main);
+      link.appendChild(score);
+      historyList.appendChild(link);
+    });
+
+    historySection.style.display = '';
+  }
+
+  async function loadDailyHistoryPreview(baseDayKey) {
+    if (compareDateKey(baseDayKey, HISTORY_START_DATE) < 0) {
+      renderHistoryList([]);
+      return;
+    }
+
+    const historyItems = [];
+    const simulatedHistory = [];
+    const allowProvisional = isSnapshotPreviewMode();
+    const previewStartDate = compareDateKey(shiftDateKey(baseDayKey, -6), HISTORY_START_DATE) < 0
+      ? HISTORY_START_DATE
+      : shiftDateKey(baseDayKey, -6);
+
+    for (let dateKey = previewStartDate; compareDateKey(dateKey, baseDayKey) <= 0; dateKey = shiftDateKey(dateKey, 1)) {
+      const snapshot = await getSnapshotForDate(dateKey);
+
+      if (snapshot?.anime?.id) {
+        simulatedHistory.unshift({
+          date: dateKey,
+          id: snapshot.anime.id,
+          title: snapshot.anime.name_cn || snapshot.anime.name || '',
+          poolKey: snapshot.poolKey
+        });
+
+        historyItems.push({
+          dateKey,
+          pool: {
+            key: snapshot.poolKey,
+            label: snapshot.poolLabel || getPoolByKey(snapshot.poolKey).label
+          },
+          anime: snapshot.anime
+        });
+        continue;
+      }
+
+      if (!allowProvisional) {
+        continue;
+      }
+
+      const config = getDailyRecommendationConfig(dateKey);
+      const { pool, result } = await resolveDailyPickForConfig(config, simulatedHistory);
+      const snapshotEntry = {
+        date: dateKey,
+        poolKey: pool.key,
+        poolLabel: pool.label,
+        anime: result.anime
+      };
+
+      storeDailySnapshot(snapshotEntry);
+      simulatedHistory.unshift({
+        date: dateKey,
+        id: result.anime.id,
+        title: result.anime.name_cn || result.anime.name || '',
+        poolKey: pool.key
+      });
+
+      historyItems.push({
+        dateKey,
+        pool,
+        anime: result.anime
+      });
+    }
+
+    renderHistoryList(historyItems.reverse());
+  }
+
+  async function loadDailyRecommendation() {
+    const dailyLoading = document.getElementById('dailyLoading');
+    const dailyError = document.getElementById('dailyError');
+    const dailyNote = document.getElementById('dailyNote');
+    const dailyCard = document.getElementById('dailyCard');
+    const allowProvisional = isSnapshotPreviewMode();
+
+    dailyLoading.classList.add('show');
+    dailyError.classList.remove('show');
+    dailyCard.classList.remove('show');
+
+    try {
+      const config = getDailyRecommendationConfig();
+      const snapshotPick = await getSnapshotForDate(config.dayKey);
+
+      if (snapshotPick?.anime?.id) {
+        renderDailyPickState(
+          snapshotPick.anime,
+          {
+            key: snapshotPick.poolKey || config.primaryPoolKey,
+            label: snapshotPick.poolLabel || getPoolByKey(snapshotPick.poolKey || config.primaryPoolKey).label
+          },
+          config,
+          SNAPSHOT_NOTE_TEXT
+        );
+        updateDailyHistory({
+          date: config.dayKey,
+          id: snapshotPick.anime.id,
+          title: snapshotPick.anime.name_cn || snapshotPick.anime.name || '',
+          poolKey: snapshotPick.poolKey || config.primaryPoolKey
+        });
+        persistDailyPick(
+          config,
+          {
+            key: snapshotPick.poolKey || config.primaryPoolKey,
+            label: snapshotPick.poolLabel || getPoolByKey(snapshotPick.poolKey || config.primaryPoolKey).label
+          },
+          snapshotPick.anime,
+          { snapshotLocked: true }
+        );
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      const cachedPick = getCachedDailyPick(config.dayKey);
+
+      if (allowProvisional && cachedPick?.anime?.id && cachedPick.snapshotLocked) {
+        renderDailyPickState(
+          cachedPick.anime,
+          {
+            key: cachedPick.poolKey || config.primaryPoolKey,
+            label: cachedPick.poolLabel || getPoolByKey(cachedPick.poolKey || config.primaryPoolKey).label
+          },
+          config,
+          '今日结果已经固定，刷新也不会改变。'
+        );
+        updateDailyHistory({
+          date: config.dayKey,
+          id: cachedPick.anime.id,
+          title: cachedPick.anime.name_cn || cachedPick.anime.name || '',
+          poolKey: cachedPick.poolKey || config.primaryPoolKey
+        });
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      if (!allowProvisional) {
+        dailyNote.textContent = '今日快照还在同步中，请稍后再来查看。';
+        await loadDailyHistoryPreview(config.dayKey);
+        return;
+      }
+
+      const { pool: selectedPool, result: selectedResult } = await resolveDailyPickForConfig(
+        config,
+        getDailyHistory()
+      );
+
+      persistDailyPick(config, selectedPool, selectedResult.anime, { snapshotLocked: false });
+      storeDailySnapshot({
+        date: config.dayKey,
+        poolKey: selectedPool.key,
+        poolLabel: selectedPool.label,
+        anime: selectedResult.anime
+      });
+      renderDailyPickState(
+        selectedResult.anime,
+        selectedPool,
+        config,
+        selectedResult.allowRepeat
+          ? '已启用回流保护，小池子也尽量不让推荐断档。'
+          : '已避开最近 90 天重复，并压低近期出现过的条目。'
+      );
+      await loadDailyHistoryPreview(config.dayKey);
+    } catch (error) {
+      console.error('获取今日推荐失败:', error);
+      dailyError.textContent = `今日推荐加载失败：${error.message}`;
+      dailyError.classList.add('show');
+      dailyNote.textContent = '今日观测暂时中断，请稍后重试';
+    } finally {
+      dailyLoading.classList.remove('show');
+    }
+  }
+
+  async function getRandomAnime() {
+    if (isLoading) return;
+
+    const btn = document.getElementById('randomBtn');
+    const loading = document.getElementById('loading');
+    const animeCard = document.getElementById('animeCard');
+    const errorDiv = document.getElementById('error');
+
+    btn.disabled = true;
+    isLoading = true;
+    loading.classList.add('show');
+    animeCard.classList.remove('show');
+    errorDiv.classList.remove('show');
+
+    try {
+      const filterState = getRandomFilterState();
+      const summary = RandomAnimeFilters.describe(filterState);
+      let anime = await drawFreshAnime(filterState, summary);
+
+      if (!anime) {
+        throw new Error('没有找到同时满足这些条件的作品，请放宽一项后再试');
+      }
+
+      if (anime.id) {
+        const detailedAnime = await fetchAnimeById(anime.id);
+        if (detailedAnime) {
+          anime = { ...anime, ...detailedAnime };
+        }
+      }
+
+      renderAnime(anime, 'main');
+      rememberManualAnime(anime);
+      document.getElementById('stats').textContent = DEFAULT_STATS_TEXT;
+    } catch (error) {
+      console.error('获取随机动漫失败:', error);
+      errorDiv.textContent = `获取失败: ${error.message}，请重试`;
+      errorDiv.classList.add('show');
+    } finally {
+      btn.disabled = false;
+      isLoading = false;
+      loading.classList.remove('show');
+      renderRandomFilters();
+    }
+  }
+
+  installRandomFilters();
+  document.getElementById('animeFavoriteBtn').addEventListener('click', toggleCurrentManualFavorite);
+  renderManualLibrary();
+  window.getRandomAnime = getRandomAnime;
+  loadDailyRecommendation();
+  };
+
+  const requiredModelsReady = () => Boolean(
+    window.RandomAnimeFilters
+    && window.RandomDrawModel
+    && window.DailyRecommendationModel
+    && window.DailyAnimeRecommendation
+  );
+
+  let pageBooted = false;
+  const tryBootRandomAnimePage = () => {
+    if (pageBooted || !requiredModelsReady()) return;
+    pageBooted = true;
+    bootRandomAnimePage();
+  };
+
+  if (requiredModelsReady()) {
+    tryBootRandomAnimePage();
+    return;
+  }
+
+  const requiredScriptPaths = [
+    '/js/random-anime-filter-model.js',
+    '/js/random-draw-model.js',
+    '/js/daily-recommendation-model.js',
+    '/js/daily-anime-recommendation.js'
+  ];
+  const modelScriptsByPath = new Map();
+  [...document.scripts].forEach(script => {
+    try {
+      const pathname = new URL(script.src, window.location.href).pathname;
+      if (requiredScriptPaths.includes(pathname) && !modelScriptsByPath.has(pathname)) {
+        modelScriptsByPath.set(pathname, script);
+      }
+    } catch (error) {
+      // Ignore inline scripts and malformed third-party URLs.
+    }
+  });
+  const modelScripts = requiredScriptPaths.map(pathname => modelScriptsByPath.get(pathname)).filter(Boolean);
+
+  const showFilterLoadError = () => {
+    const errorDiv = document.getElementById('error');
+    if (errorDiv) {
+      errorDiv.textContent = '筛选器加载失败，请刷新页面重试';
+      errorDiv.classList.add('show');
+    }
+  };
+
+  if (modelScripts.length === requiredScriptPaths.length) {
+    modelScripts.forEach(script => {
+      script.addEventListener('load', tryBootRandomAnimePage, { once: true });
+      script.addEventListener('error', showFilterLoadError, { once: true });
+    });
+  } else {
+    showFilterLoadError();
+  }
+})();
+</script>
+
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/head1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">藍二乗</div><div class="author-info-description">一个普通的生活博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">164</div></a><a href="/categories/%E6%97%A5%E8%AE%B0/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" href="javascript:toRandomPost()"><i class="fas fa-dice"></i><span>I'm Feeling Lucky</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">GET ROUND IN THE SEASON...</div></div><div class="sticky_layout"><div class="card-widget card-random-post"><div class="item-headline"><i class="fas fa-dice"></i><span>随机文章</span><button class="card-random-post-refresh" type="button" aria-label="换一批">换一批</button></div><div class="aside-list" id="card-random-post-list"><div class="aside-list-item"><div class="content"><span class="title">正在生成随机文章...</span></div></div></div></div><script data-pjax="data-pjax">(() => {
+  const CARD_ID = 'card-random-post-list'
+  const PICK_COUNT = 5
+
+  const normalizePosts = posts => {
+    if (!Array.isArray(posts)) return []
+    return posts
+      .map(item => {
+        if (typeof item === 'string') {
+          const title = decodeURIComponent(item.split('/').filter(Boolean).pop() || '无题')
+          return { title, path: item }
+        }
+        if (item && typeof item === 'object' && item.path) {
+          return {
+            title: item.title || '无题',
+            path: item.path,
+            date: item.date || ''
+          }
+        }
+        return null
+      })
+      .filter(Boolean)
+  }
+
+  const pickRandomPosts = posts => {
+    const currentPath = window.location.pathname.replace(/index\.html$/, '')
+    const filtered = posts.filter(post => {
+      const postPath = String(post.path || '').replace(/index\.html$/, '')
+      return postPath !== currentPath
+    })
+
+    const pool = [...filtered]
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[pool[i], pool[j]] = [pool[j], pool[i]]
+    }
+
+    return pool.slice(0, Math.min(PICK_COUNT, pool.length))
+  }
+
+  const renderPosts = listEl => posts => {
+    window.RandomPostCard.renderPosts(listEl, posts)
+  }
+
+  const showError = listEl => {
+    window.RandomPostCard.renderMessage(listEl, '随机文章加载失败')
+  }
+
+  const initRandomPostCard = async () => {
+    const listEl = document.getElementById(CARD_ID)
+    const card = listEl?.closest('.card-random-post')
+    const refreshBtn = card?.querySelector('.card-random-post-refresh')
+    if (!listEl || !refreshBtn) return
+
+    if (!window.__randomPostCache) {
+      try {
+        const response = await fetch('/post_list.json')
+        if (!response.ok) throw new Error('Failed to fetch post list')
+        const rawPosts = await response.json()
+        window.__randomPostCache = normalizePosts(rawPosts)
+      } catch (error) {
+        console.error('[random-post-card]', error)
+        showError(listEl)
+        return
+      }
+    }
+
+    const update = () => renderPosts(listEl)(pickRandomPosts(window.__randomPostCache))
+    refreshBtn.onclick = update
+    update()
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRandomPostCard, { once: true })
+  } else {
+    initRandomPostCard()
+  }
+
+  window.addEventListener('pjax:complete', initRandomPostCard)
+})()</script><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">164</span></a></li>
+          </ul></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              八月 2026
+            </span>
+            <span class="card-archive-list-count">19</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/07/">
+            <span class="card-archive-list-date">
+              七月 2026
+            </span>
+            <span class="card-archive-list-count">30</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              六月 2026
+            </span>
+            <span class="card-archive-list-count">30</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              五月 2026
+            </span>
+            <span class="card-archive-list-count">32</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">30</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">23</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">164</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">35.3k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-09-26T18:11:29.370Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><div id="run-days" style="text-align: center; margin-top: 10px; font-size: 14px;"></div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"lang":"zh-CN","placeholder":"写下你的留言吧...","emoji":["https://cdn.jsdelivr.net/npm/@waline/emojis@1.0.1/weibo"],"requiredMeta":["nick"],"meta":["nick"],"anonymous":true,"login":"disable"}
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://comment-phi-blond.vercel.app',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script src="/js/random-post-card.js"></script><script src="/js/random.js"></script><div id="aplayer"></div><script src="/js/aplayer-loader.js"></script><script src="/js/custom-aplayer.js"></script><script src="/js/music-autoplay.js"></script><script src="/js/run-days.js"></script><script src="/js/fix-article-bg.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
