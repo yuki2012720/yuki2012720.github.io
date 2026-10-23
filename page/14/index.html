@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  
+  <title>半月</title>
+  <meta name="description" content="一个普通的生活博客">
+  <link rel="canonical" href="https://yuki12720.org/page/14/">
+  
+  <link rel="icon" href="/hangetsu/moon-thin.svg" type="image/svg+xml">
+  <link rel="preload" href="/hangetsu/hangetsu.woff2" as="font" type="font/woff2" crossorigin>
+  <style id="navigation-style">@view-transition{navigation:none}/* Native cross-document transitions; no JS fallback animates or delays navigation. */
+::view-transition{pointer-events:none}
+::view-transition-group(root){animation-duration:300ms}
+::view-transition-old(root){animation:reading-page-out 180ms ease-out both;mix-blend-mode:normal}
+::view-transition-new(root){animation:reading-page-in 300ms cubic-bezier(.22,1,.36,1) both;mix-blend-mode:normal}
+@keyframes reading-page-out{to{opacity:0}}
+@keyframes reading-page-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
+</style>
+  
+  <style id="page-loading-style">/* Inline so a delayed main stylesheet cannot leave the waiting feedback unstyled. */
+.page-loading[hidden]{display:none!important}
+.loading-style-pending body{margin:0}
+.loading-style-pending body>:not(#page-loading){visibility:hidden;animation:page-content-release 0s var(--loading-safety,8500ms) forwards!important}
+.page-loading{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;margin:0;padding:24px;background:var(--bg,#fff);color:var(--ink,#3e3449);pointer-events:none;opacity:1;transition:opacity var(--loading-fade,500ms) ease-in-out;animation:page-loading-release 0s var(--loading-safety,8500ms) forwards}
+.page-loading__content{display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center;font-family:var(--serif,'Yu Mincho'),SimSun,serif}
+.page-loading__moon{display:block;width:38px;height:38px;margin-bottom:7px;color:var(--moon,#a88c58);opacity:.55;animation:page-loading-breath var(--loading-breath,2200ms) ease-in-out infinite}
+.page-loading__moon svg{display:block;width:100%;height:100%}
+.page-loading__name{margin:0;font-size:24px;font-weight:400;line-height:1.6;letter-spacing:.2em;text-indent:.2em}
+.page-loading__quote{margin:0;font-size:11px;line-height:1.9;letter-spacing:.04em;color:var(--muted,#746b7a)}
+.page-loading[data-leaving]{opacity:0}
+.page-loading[data-leaving] .page-loading__moon{animation-play-state:paused}
+@keyframes page-loading-breath{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes page-loading-release{to{opacity:0;visibility:hidden}}
+@keyframes page-content-release{to{visibility:visible}}
+@media(prefers-reduced-motion:reduce){.page-loading{transition:none;animation:page-loading-release 0s var(--loading-safety,8500ms) forwards!important}.page-loading__moon{animation:none!important;opacity:1}}
+</style>
+  <script id="page-loading-boot" data-home="false">/* Early enhancement: wait feedback only, never a mandatory opening sequence. */
+(function (init) {
+  if (typeof module === 'object' && module.exports) module.exports = init
+  else window.hangetsuLoading = init(window, {home:document.currentScript?.dataset.home === 'true'})
+})(function initLoading(win, options) {
+  'use strict'
+  options = options || {}
+  const doc = win.document
+  // All loading time parameters in ms. No minimum display time.
+  const timing = {threshold:500, timeout:8000, fade:500, breath:2200}
+  const navigationKey='hangetsu.navigationWait'
+  let incomingWait=false
+  try{
+    const hint=JSON.parse(win.sessionStorage.getItem(navigationKey)||'null')
+    win.sessionStorage.removeItem(navigationKey)
+    incomingWait=!!hint&&hint.url===win.location.href.split('#')[0]&&Date.now()-hint.at>=0&&Date.now()-hint.at<timing.timeout
+  }catch{}
+  const started = win.performance.now()
+  let done = false, disposed = false, shown = false, cssReady = false, parsed = false
+  let heroReady = !options.home, imageHandled = false, observer, showTimer, deadline, removeTimer, intro, layer, blueprint, navigationLayer
+  const api = {beginNavigation(href) {
+    if(!done || !blueprint || !doc.body)return
+    api.endNavigation()
+    // Native modals occupy the top layer above body overlays. Close them only
+    // when a real, slow document navigation needs visible wait feedback.
+    doc.querySelectorAll?.('dialog[open]').forEach(dialog=>dialog.close())
+    navigationLayer=blueprint.cloneNode(true)
+    navigationLayer.removeAttribute('data-leaving')
+    navigationLayer.setAttribute('data-navigation-wait','')
+    navigationLayer.hidden=false
+    navigationLayer.style.setProperty('--loading-breath',timing.breath+'ms')
+    navigationLayer.style.setProperty('--loading-safety',timing.timeout+'ms')
+    doc.body.append(navigationLayer)
+    try{win.sessionStorage.setItem(navigationKey,JSON.stringify({url:new URL(href,win.location.href).href.split('#')[0],at:Date.now()}))}catch{}
+  },endNavigation(handoff=false){navigationLayer?.remove();navigationLayer=undefined;if(!handoff)try{win.sessionStorage.removeItem(navigationKey)}catch{}},isVisible(){return !!navigationLayer || (shown&&!done)},attachIntro(hooks) {
+    intro = hooks
+    if (disposed) return
+    if (done) notify('ready', shown)
+    else if (shown) notify('wait')
+  }}
+  function notify(name, value) { try { intro?.[name]?.(value) } catch {} }
+  function stopWaiting() {
+    win.clearTimeout(showTimer)
+    win.clearTimeout(deadline)
+    observer?.disconnect()
+    doc.removeEventListener('load', resource, true)
+    doc.removeEventListener('error', resource, true)
+  }
+  function remove() {
+    win.clearTimeout(removeTimer)
+    const node=layer || doc.querySelector('#page-loading')
+    if(!blueprint && node?.cloneNode)blueprint=node.cloneNode(true)
+    node?.remove()
+    win.removeEventListener('pagehide', dispose)
+    win.removeEventListener('pageshow', restore)
+  }
+  function dispose() {
+    disposed = true
+    done = true
+    stopWaiting()
+    doc.documentElement.classList.remove('loading-style-pending')
+    doc.documentElement.style.removeProperty('--loading-safety')
+    remove()
+    intro = undefined
+  }
+  function restore(event) { if (event.persisted) dispose() }
+  function settle() {
+    if (done || disposed) return
+    done = true
+    stopWaiting()
+    doc.documentElement.classList.remove('loading-style-pending')
+    doc.documentElement.style.removeProperty('--loading-safety')
+    // The intro starts as the overlay begins fading, never after another wait.
+    notify('ready', shown)
+    if (!shown || !layer) return remove()
+    layer.setAttribute('data-leaving', '')
+    let reduced = true
+    try { reduced = win.matchMedia('(prefers-reduced-motion: reduce)').matches } catch {}
+    if (reduced) remove()
+    else removeTimer = win.setTimeout(remove, timing.fade)
+  }
+  function show() {
+    if (done || disposed || shown) return
+    layer = doc.querySelector('#page-loading')
+    if (!layer) return // Streaming HTML may not have delivered the body yet.
+    layer.style.setProperty('--loading-fade', timing.fade+'ms')
+    layer.style.setProperty('--loading-breath', timing.breath+'ms')
+    layer.style.setProperty('--loading-safety', (timing.timeout+timing.fade)+'ms')
+    // Keep the native fast path. Only a genuinely slow stylesheet releases its
+    // render block so this already-styled indicator can paint at the threshold.
+    if (!cssReady) {
+      const sheet = doc.querySelector('#site-styles')
+      if (sheet) sheet.media = 'print'
+    }
+    layer.hidden = false
+    shown = true
+    notify('wait')
+  }
+  function check() { if (parsed && cssReady && heroReady) settle() }
+  function portrait(image, failed) {
+    if (done || disposed || imageHandled) return
+    imageHandled = true
+    const ready = () => {
+      if (done || disposed) return
+      heroReady = true
+      check()
+    }
+    if (failed || !image.decode) ready()
+    else { try { Promise.resolve(image.decode()).then(ready, ready) } catch { ready() } }
+  }
+  function scan() {
+    if (done || disposed) return
+    // Continue only feedback which was actually shown in the outgoing document.
+    if(incomingWait && !shown)show()
+    if (doc.querySelector('#page-content-ready')) {
+      parsed = true
+      if (options.home && !imageHandled) {
+        const image = doc.querySelector('.hero-art img')
+        if (!image) heroReady = true
+        else if (image.complete) portrait(image, !image.naturalWidth)
+      }
+      observer?.disconnect()
+    }
+    check()
+    if (!done && win.performance.now()-started >= timing.threshold) show()
+  }
+  function resource(event) {
+    if (event.target?.id === 'site-styles') {
+      if (event.type === 'error') return settle()
+      event.target.media = 'all'
+      doc.documentElement.classList.remove('loading-style-pending')
+      cssReady = true
+      scan()
+    } else if (options.home && event.target?.matches?.('.hero-art img')) {
+      portrait(event.target, event.type === 'error')
+    }
+  }
+  try {
+    // Install the escape before anything can display the overlay.
+    deadline = win.setTimeout(settle, timing.timeout)
+    doc.documentElement.style.setProperty('--loading-safety', (timing.timeout+timing.fade)+'ms')
+    doc.documentElement.classList.add('loading-style-pending')
+    showTimer = win.setTimeout(show, timing.threshold)
+    win.addEventListener('pagehide', dispose)
+    win.addEventListener('pageshow', restore)
+    doc.addEventListener('load', resource, true)
+    doc.addEventListener('error', resource, true)
+    observer = new win.MutationObserver(scan)
+    observer.observe(doc.documentElement, {childList:true,subtree:true})
+    cssReady = !!doc.querySelector('#site-styles')?.sheet
+    scan()
+  } catch {
+    settle()
+    remove()
+  }
+  return api
+})
+</script>
+  
+  <script id="navigation-boot" data-home="true">/* Observe ordinary MPA navigation. Never cancel links, fetch pages, or alter history. */
+(function(factory){
+  const api=factory()
+  if(typeof module==='object'&&module.exports)module.exports=api
+  else api.initNavigation(window,{home:document.currentScript?.dataset.home==='true'})
+})(function(){
+  'use strict'
+  const timing={threshold:400,timeout:8000}
+  function eligible(link,event,location){
+    if(!link||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||link.hasAttribute('download')||(link.target&&link.target!=='_self'))return false
+    try{
+      const url=new URL(link.href,location.href),current=new URL(location.href)
+      return /^https?:$/.test(url.protocol)&&url.origin===current.origin&&
+        (url.pathname!==current.pathname||url.search!==current.search)&&
+        (url.pathname.endsWith('/')||/\.html?$/.test(url.pathname)||!url.pathname.split('/').pop().includes('.'))
+    }catch{return false}
+  }
+  function initNavigation(win,options={}){
+    const doc=win.document;let timer,deadline,waiting=false,leaving=false,lifecycle=0
+    function skip(transition){transition?.ready?.catch(()=>{});transition?.skipTransition()}
+    function clear(handoff=false){win.clearTimeout(timer);win.clearTimeout(deadline);waiting=false;win.hangetsuLoading?.endNavigation(handoff)}
+    // Check after the complete dispatch, including later window listeners.
+    win.addEventListener('click',event=>{
+      const observedLifecycle=lifecycle
+      win.setTimeout(()=>{
+      const link=event.target?.closest?.('a[href]')
+      if(observedLifecycle!==lifecycle||leaving||doc.visibilityState==='hidden'||!eligible(link,event,win.location))return
+      clear()
+      leaving=false
+      timer=win.setTimeout(()=>{if(!event.defaultPrevented&&doc.visibilityState!=='hidden'){waiting=true;win.hangetsuLoading?.beginNavigation(link.href)}},timing.threshold)
+      deadline=win.setTimeout(clear,timing.timeout)
+      },0)
+    })
+    win.addEventListener('pagehide',()=>{lifecycle++;leaving=true;clear(true)})
+    win.addEventListener('pageshow',()=>{lifecycle++;leaving=false;clear()})
+    doc.addEventListener('visibilitychange',()=>{if(doc.visibilityState==='hidden'){lifecycle++;clear(leaving)}})
+    win.addEventListener('pageswap',event=>{
+      let home=options.home
+      try{home ||= /^\/(?:page\/\d+\/)?$/.test(new URL(event.activation.entry.url).pathname)}catch{}
+      const shouldSkip=home||waiting||win.hangetsuLoading?.isVisible()||win.matchMedia('(prefers-reduced-motion: reduce)').matches
+      lifecycle++;leaving=true;clear(true) // Remove wait feedback before an outgoing snapshot; retain the short-lived handoff.
+      if(shouldSkip)skip(event.viewTransition)
+    })
+    win.addEventListener('pagereveal',event=>{
+      if(options.home||win.hangetsuLoading?.isVisible()||win.matchMedia('(prefers-reduced-motion: reduce)').matches)skip(event.viewTransition)
+    })
+  }
+  return {eligible,initNavigation}
+})
+</script>
+  
+  
+  <link id="site-styles" rel="stylesheet" href="/hangetsu/site.css?v=bd419a4e7e92" onload="this.media='all';document.documentElement.classList.remove('loading-style-pending')" onerror="document.documentElement.classList.remove('loading-style-pending')">
+  
+  <script defer src="/hangetsu/search-model.js?v=802ce1e507e4"></script>
+  <script defer src="/js/random.js"></script>
+  <script defer src="/hangetsu/site.js?v=5c61043a5e75"></script>
+  
+  <script defer src="/hangetsu/runtime.js"></script>
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body class="hangetsu home-page" data-page="page">
+  <div class="page-loading" id="page-loading" role="status" aria-label="正在准备页面" hidden>
+  <div class="page-loading__content" aria-hidden="true">
+    <span class="page-loading__moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M230.72,145.06a4,4,0,0,0-4-1A92.08,92.08,0,0,1,111.94,29.27a4,4,0,0,0-5-5A100.78,100.78,0,0,0,56.08,59.88a100,100,0,0,0,140,140,100.78,100.78,0,0,0,35.59-50.87A4,4,0,0,0,230.72,145.06ZM191.3,193.53A92,92,0,0,1,62.47,64.7a93,93,0,0,1,39.88-30.35,100.09,100.09,0,0,0,119.3,119.3A93,93,0,0,1,191.3,193.53Z"/></svg></span>
+    <p class="page-loading__name">半月</p>
+    <p class="page-loading__quote" lang="ja">空には、半分の月が輝いていた</p>
+  </div>
+</div>
+
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header shell">
+  <a class="brand" href="/" aria-label="半月 首页"><span class="moon-mark" aria-hidden="true"></span><span>半月</span></a>
+  <div class="header-actions"><button class="menu-toggle" type="button" data-open="menu-dialog" aria-label="打开导航菜单" aria-controls="menu-dialog" aria-expanded="false">Menu</button></div>
+</header>
+<template id="navigation-links">
+  <a href="/">首页 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/archives/">日记归档 <span class="direction-icon" aria-hidden="true"></span></a>
+  <button type="button" data-open="search-dialog">搜索 <span class="direction-icon" aria-hidden="true"></span></button>
+  <a href="/about/">关于我 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/message/">留言 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/link/">友链 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/random-anime/">随机动画 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/random-gal/">随机 GAL <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/miscellaneous/">图片 / GIF 对称工具 <span class="direction-icon" aria-hidden="true"></span></a>
+  <button type="button" data-random-post>随机文章 <span class="direction-icon" aria-hidden="true"></span></button>
+</template>
+<noscript><nav class="no-script-nav shell" aria-label="网站导航"><a href="/">首页</a><a href="/archives/">日记归档</a><a href="/about/">关于我</a><a href="/message/">留言</a><a href="/link/">友链</a><a href="/random-anime/">随机动画</a><a href="/random-gal/">随机 GAL</a><a href="/miscellaneous/">图片工具</a></nav></noscript>
+
+  <main id="main" tabindex="-1">
+<section class="journal-wrap" id="journal" aria-labelledby="journal-title"><div class="shell">
+  <div class="journal-top"><h2 id="journal-title">日记</h2><a class="text-link" href="/archives/" lang="ja">すべて見る <span class="direction-icon" aria-hidden="true"></span></a></div>
+  <div class="journal-grid"><div class="post-list">
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/12/2026-04-12-new-post/"><time datetime="2026-04-11T16:00:00.000Z">2026.04.12</time><div><h3>Akosmismus</h3><p class="auto-excerpt">更新日志： 1.无 日记： 1.复习130个日语单词，语法未动 2.看完了《为美好的世界献上祝福》，评价一般，适合初中看 3.改毕设初稿，改了一天摆烂了发给老师让她改去 4月中答辩谁想出来的？？</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/11/2026-04-11-new-post/"><time datetime="2026-04-10T16:00:00.000Z">2026.04.11</time><div><h3>sub specie aeternitatis</h3><p class="auto-excerpt">更新日志： 1.无 日记： 1.复习+背120个日语单词，语法未动 2.看了四集《为美好的世界献上祝福》 3.改毕设初稿 4.关闭朋友圈入口 5.目标新增：学习拉丁语 6.人类就是受激素控制的动物，怎…</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/10/2026-04-10-new-post/"><time datetime="2026-04-09T16:00:00.000Z">2026.04.10</time><div><h3>revive</h3><p class="auto-excerpt">更新日志： 1.无 日记： 1.复习100个日语单词，语法未动 2.搞毕设 3.看了三集《为美好的世界献上祝福》 4.参与了国g《世纪末之诗》众筹 5.今日GAL推荐了博客主题游戏《恋狱月狂病》</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/09/2026-04-09-new-post/"><time datetime="2026-04-08T16:00:00.000Z">2026.04.09</time><div><h3>しう</h3><p class="auto-excerpt">suck it up愛らしく、哀しく躓く あなたから匂い立つ死の艱苦(かんく)慎ましく、つましくぬかづく あなたには申し訳ない言い訳そもそも創(はじ)めは投げやり…に創られたあなたの派遣先よまあ色々残…</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/08/2026-04-08-new-post/"><time datetime="2026-04-07T16:00:00.000Z">2026.04.08</time><div><h3>雨になりたい</h3><p class="auto-excerpt">更新日志： 1.无 日记： 1.复习+背100个日语单词，语法未动 2.下雨，家中解决三餐 3.把之前没看完的《超能力女儿》看完了，笑的停不下来 4.下午随缘投简历 5.好像今天也什么都没做 6.用了…</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/07/2026-04-07-new-post/"><time datetime="2026-04-06T16:00:00.000Z">2026.04.07</time><div><h3>幸福論</h3><p class="auto-excerpt">更新日志： 1.修复今日推荐问题，优化推荐逻辑 日记： 1.早中晚餐都在家里解决 2.复习140个日语单词，语法未动 3.白天都在看二战史，看困了睡觉 4.玩了下CS电竞经理，还是个demo，很没意思…</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/06/2026-04-06-new-post/"><time datetime="2026-04-05T16:00:00.000Z">2026.04.06</time><div><h3>Last Song</h3><p class="auto-excerpt">更新日志： 1.无 日记： 1.早中晚餐全部家中解决 2.复习+背100个日语单词，复习昨天新学的语法 3.懒得修今日推荐bug。。 4.下午把死亡搁浅打通了，并没有什么感触，只能说不算糟吧 5.晚上…</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/05/2026-04-05-new-post/"><time datetime="2026-04-04T16:00:00.000Z">2026.04.05</time><div><h3>16:28</h3><p class="auto-excerpt">更新日志： 1.无 日记： 1.早中晚餐都在家中解决 2.复习130个日语单词，复习+新学114514个语法，人已晕 3.下午玩昨天跑的同人游戏，接着睡觉 4.晚上跑一些汉化质量很差的同人游戏，以前因…</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/04/2026-04-04-new-post/"><time datetime="2026-04-03T16:00:00.000Z">2026.04.04</time><div><h3>夜紛い</h3><p class="auto-excerpt">更新日志： 1.在线对称页面新增加速&amp;#x2F;减速功能 日记： 1.依旧下雨，点外卖咯 2.面试，感觉面试官不是很懂我简历的技术栈，问的问题我都有点无语了。这家公司主要技术栈跟我做的也不搭边，不过也…</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+  <article class="post-item" data-reveal>
+    <a href="/2026/04/03/2026-04-03-new-post/"><time datetime="2026-04-02T16:00:00.000Z">2026.04.03</time><div><h3>CONTINUE...?</h3><p class="auto-excerpt">更新日志： 1.优化动画今日推荐逻辑 日记： 1.复习+学120个日语单词，语法未动 2.懒得动，叫了个外卖。南昌拌粉，有点一般 3.下午到处投简历，约到一个线上面试，但是有点黑奴。明天就要面了，但是…</p></div><span class="arrow direction-icon" aria-hidden="true"></span></a>
+  </article>
+
+</div>
+</div>
+  <nav class="pagination" aria-label="分页"><a class="extend prev" rel="prev" href="/page/13/">← 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/15/">下一页 →</a></nav>
+
+</div></section>
+
+</main>
+  <template id="page-content-ready"></template>
+  <footer class="footer shell">
+  <small class="footer-runtime"><span>© 2026 半月</span><span class="footer-separator" aria-hidden="true">／</span><span>半轮月下，已走过 <span id="site-runtime" data-since="2026-02-25T22:21:00+08:00" aria-live="off" title="始于北京时间 2026 年 2 月 25 日 22:21">正在计时…</span></span></small>
+</footer>
+
+  <dialog id="search-dialog" aria-labelledby="search-title">
+  <div class="dialog-top"><h2 id="search-title">搜索文章</h2><button type="button" class="close-button" data-close aria-label="关闭搜索">×</button></div>
+  <label class="search-label" for="search-input">标题和正文</label><input id="search-input" class="search-input" type="search" placeholder="输入关键词…" autocomplete="off">
+  <p id="search-status" role="status" aria-live="polite">输入关键词，搜索全部文章。</p><button type="button" id="search-retry" hidden>重新加载</button><ol id="search-results" class="search-results"></ol>
+</dialog>
+<dialog id="menu-dialog" aria-labelledby="menu-title"><div class="dialog-top"><h2 id="menu-title">Menu</h2><button type="button" class="close-button" data-close aria-label="关闭菜单">×</button></div><nav id="menu-links" class="menu-links" aria-label="全部页面"></nav></dialog>
+<dialog id="image-dialog" class="image-dialog" aria-label="图片大图"><button type="button" class="close-button" data-close aria-label="关闭大图">×</button><img id="large-image" alt=""><p id="large-image-caption"></p></dialog>
+
+  <link rel="stylesheet" href="/hangetsu/products.css">
+</body>
+</html>
