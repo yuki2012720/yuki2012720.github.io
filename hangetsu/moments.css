@@ -1,0 +1,15 @@
+.moments-page{max-width:900px}
+.moments-list{margin-top:12px}
+.moment{display:grid;grid-template-columns:150px minmax(0,1fr);gap:32px;padding:34px 0 38px;border-bottom:1px solid var(--line);scroll-margin-top:30px;min-width:0}
+.moment-time{font:13px/2 var(--sans);color:var(--muted);text-decoration:none;padding-top:2px;align-self:start;white-space:nowrap}
+.moment-time:hover{color:var(--accent)}
+.moment-content{min-width:0;font-size:17px;line-height:1.95;overflow-wrap:anywhere}
+.moment-content>:first-child{margin-top:0}
+.moment-content>:last-child{margin-bottom:0}
+.moment-content img{display:block;max-width:100%;width:auto;height:auto;margin:18px 0;object-fit:contain}
+.moment-content pre{max-width:100%;overflow:auto}
+.moment-content table{display:block;max-width:100%;overflow:auto}
+.moments-pagination{display:flex;justify-content:space-between;gap:24px;margin-top:36px;font-size:14px}
+.moments-pagination a{padding:10px 0;color:var(--accent)}
+.moments-empty{color:var(--muted);padding:36px 0 60px;font-size:16px}
+@media(max-width:767px){.moment{grid-template-columns:minmax(0,1fr);gap:12px;padding:26px 0 30px}.moment-time{font-size:13px;padding:0}.moment-content{font-size:16px}}

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  
+  <style id="reading-style">/* Article environment only. Inline variables prevent a white frame before night paint. */
+html[data-reading-mode="white"]{--bg:#fff;--paper:#f8f6f9;--ink:#3e3449;--text:#4f4956;--muted:#746b7a;--accent:#765d86;--line:#e1dce5;color-scheme:light}
+html[data-reading-mode="warm"]{--bg:#f7f3ec;--paper:#efe9df;--ink:#40343b;--text:#493e43;--muted:#71636b;--accent:#79556c;--line:#d9cfc6;--moon:#917747;color-scheme:light}
+html[data-reading-mode="night"]{--bg:#24212a;--paper:#302b37;--ink:#eee5f0;--text:#e9e1eb;--muted:#b9aebe;--accent:#cdb3de;--line:#514757;--moon:#c3aa77;color-scheme:dark}
+.reading-layout.reading-layout--plain{grid-template-columns:minmax(0,800px)}
+.reading-page .skip-link{background:var(--bg);color:var(--text)}
+.reading-page .post-meta,.reading-page .reading-controls{font-size:13px;color:var(--text)}
+.reading-page .reading-aside{color:var(--text);line-height:1.95}.reading-page .toc a{display:inline-block;padding-block:3px;text-underline-offset:5px}.reading-page .toc a:focus-visible{text-decoration:underline}
+.reading-page .reading-controls :is(button,a,summary):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.reading-mode-toggle[hidden]{display:none}.reading-mode-toggle svg{display:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+html[data-reading-mode="white"] [data-reading-mode-icon="white"],html[data-reading-mode="warm"] [data-reading-mode-icon="warm"],html[data-reading-mode="night"] [data-reading-mode-icon="night"]{display:block}
+.reading-page .reading-arrow{display:inline-block;transition:transform 250ms var(--ease),color 250ms;will-change:auto}.reading-page .post-neighbors a>span{position:relative;align-self:flex-start;width:fit-content;max-width:100%}.reading-page .post-neighbors a:last-child>span{align-self:flex-end}.reading-page .post-neighbors a>span:after{content:'';position:absolute;inset:auto 0 -12px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 250ms var(--ease)}
+.reading-page .post-neighbors a:focus-visible>span:after{transform:scaleX(1)}.reading-page a:focus-visible .reading-arrow{transform:translateX(-3px);color:var(--accent)}.reading-page a:focus-visible .reading-arrow--right{transform:translateX(3px)}
+.reading-page .post-neighbors small .reading-arrow{font:inherit}
+.reading-page a:focus-visible .reading-arrow--down{transform:translateY(3px)}
+.reading-page .reading-aside .direction-icon{transition:transform 250ms var(--ease),color 250ms}.reading-page .reading-aside :is(a,button):focus-visible .direction-icon{transform:translate(2px,-2px)}
+@media(hover:hover) and (pointer:fine){.reading-page a:hover .reading-arrow{transform:translateX(-3px);color:var(--accent)}.reading-page a:hover .reading-arrow--right{transform:translateX(3px)}.reading-page .post-neighbors a:hover>span:after{transform:scaleX(1)}.reading-page .toc a:hover{text-decoration:underline}}
+@media(hover:hover) and (pointer:fine){.reading-page a:hover .reading-arrow--down{transform:translateY(3px)}.reading-page .reading-aside :is(a,button):hover .direction-icon{transform:translate(2px,-2px)}}
+html[data-reading-mode]:not([data-reading-mode="white"]) :is(.post-title,.post-content){color:var(--text)}
+html[data-reading-mode]:not([data-reading-mode="white"]) .post-content :is(h1,h2,h3,h4){color:var(--ink)}
+html[data-reading-mode] .post-content :is(pre,code){background:var(--paper);color:var(--text)}
+html[data-reading-mode] .post-content blockquote{border-color:var(--line)}
+html[data-reading-mode] .reading-controls button:hover{background:var(--paper)}
+html[data-reading-mode]:not([data-reading-mode="white"]) .footer-runtime .footer-separator{color:var(--muted)}
+.reading-mode-changing,.reading-mode-changing :is(body,.site-header,.post-content,.post-meta,.reading-controls,.reading-aside,dialog,.footer,.wl-panel,.wl-btn,.wl-editor,.wl-input,pre,code,blockquote,td,th){transition:background-color 220ms ease,color 220ms ease,border-color 220ms ease}
+@media(max-width:767px){.reading-page .post-meta{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.reading-page .reading-arrow{transition:none;transform:none}.reading-page .post-neighbors a>span:after{transition:none}.reading-page a:is(:hover,:focus-visible) .reading-arrow,.reading-page .reading-aside :is(a,button):is(:hover,:focus-visible) .direction-icon{transition:none;transform:none}.reading-mode-changing,.reading-mode-changing *{transition:none!important}}
+</style>
+  <script id="reading-boot">/* Article-only, inlined before styles: preference restoration must precede paint. */
+(function (win) {
+  'use strict'
+  const doc=win.document,root=doc.documentElement,key='hangetsu.readingMode'
+  const backgrounds={white:'#ffffff',warm:'#f7f3ec',night:'#24212a'}
+  const next={white:'warm',warm:'night',night:'white'},labels={white:'白纸',warm:'暖纸',night:'夜间'}
+  function apply(value,save=false){
+    const mode=Object.hasOwn(backgrounds,value)?value:'white'
+    root.dataset.readingMode=mode;root.dataset.theme=mode==='night'?'dark':'light'
+    root.style.setProperty('background-color',backgrounds[mode])
+    doc.querySelector('meta[name="color-scheme"]')?.setAttribute('content',mode==='night'?'dark':'light')
+    const control=doc.querySelector('[data-reading-picker]')
+    if(control){
+      const label='阅读模式：'+labels[mode]+'，点击切换为'+labels[next[mode]]
+      control.setAttribute('aria-label',label)
+    }
+    if(save)try{win.localStorage.setItem(key,mode)}catch{}
+  }
+  function restore(){
+    // A restored document must paint the latest preference immediately, not
+    // animate from the colour captured in BFCache on another article.
+    root.classList?.remove('reading-mode-changing')
+    let mode;try{mode=win.localStorage.getItem(key)}catch{}apply(mode)
+  }
+  restore()
+  doc.addEventListener('DOMContentLoaded',()=>{
+    const picker=doc.querySelector('[data-reading-picker]')
+    if(!picker)return
+    picker.hidden=false;apply(root.dataset.readingMode)
+    picker.addEventListener('click',()=>{
+      root.classList.add('reading-mode-changing');apply(next[root.dataset.readingMode],true)
+    })
+  },{once:true})
+  win.addEventListener('pagereveal',restore)
+  win.addEventListener('pageshow',event=>{if(event.persisted)restore()})
+})(window)
+</script>
+  
+  <title>sea · 半月</title>
+  <meta name="description" content="一个普通的生活博客">
+  <link rel="canonical" href="https://yuki12720.org/2026/07/03/2026-07-03-new-post/">
+  
+  <link rel="icon" href="/hangetsu/moon-thin.svg" type="image/svg+xml">
+  <link rel="preload" href="/hangetsu/hangetsu.woff2" as="font" type="font/woff2" crossorigin>
+  <style id="navigation-style">@view-transition{navigation:auto}/* Native cross-document transitions; no JS fallback animates or delays navigation. */
+::view-transition{pointer-events:none}
+::view-transition-group(root){animation-duration:300ms}
+::view-transition-old(root){animation:reading-page-out 180ms ease-out both;mix-blend-mode:normal}
+::view-transition-new(root){animation:reading-page-in 300ms cubic-bezier(.22,1,.36,1) both;mix-blend-mode:normal}
+@keyframes reading-page-out{to{opacity:0}}
+@keyframes reading-page-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
+</style>
+  
+  <style id="page-loading-style">/* Inline so a delayed main stylesheet cannot leave the waiting feedback unstyled. */
+.page-loading[hidden]{display:none!important}
+.loading-style-pending body{margin:0}
+.loading-style-pending body>:not(#page-loading){visibility:hidden;animation:page-content-release 0s var(--loading-safety,8500ms) forwards!important}
+.page-loading{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;margin:0;padding:24px;background:var(--bg,#fff);color:var(--ink,#3e3449);pointer-events:none;opacity:1;transition:opacity var(--loading-fade,500ms) ease-in-out;animation:page-loading-release 0s var(--loading-safety,8500ms) forwards}
+.page-loading__content{display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center;font-family:var(--serif,'Yu Mincho'),SimSun,serif}
+.page-loading__moon{display:block;width:38px;height:38px;margin-bottom:7px;color:var(--moon,#a88c58);opacity:.55;animation:page-loading-breath var(--loading-breath,2200ms) ease-in-out infinite}
+.page-loading__moon svg{display:block;width:100%;height:100%}
+.page-loading__name{margin:0;font-size:24px;font-weight:400;line-height:1.6;letter-spacing:.2em;text-indent:.2em}
+.page-loading__quote{margin:0;font-size:11px;line-height:1.9;letter-spacing:.04em;color:var(--muted,#746b7a)}
+.page-loading[data-leaving]{opacity:0}
+.page-loading[data-leaving] .page-loading__moon{animation-play-state:paused}
+@keyframes page-loading-breath{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes page-loading-release{to{opacity:0;visibility:hidden}}
+@keyframes page-content-release{to{visibility:visible}}
+@media(prefers-reduced-motion:reduce){.page-loading{transition:none;animation:page-loading-release 0s var(--loading-safety,8500ms) forwards!important}.page-loading__moon{animation:none!important;opacity:1}}
+</style>
+  <script id="page-loading-boot" data-home="false">/* Early enhancement: wait feedback only, never a mandatory opening sequence. */
+(function (init) {
+  if (typeof module === 'object' && module.exports) module.exports = init
+  else window.hangetsuLoading = init(window, {home:document.currentScript?.dataset.home === 'true'})
+})(function initLoading(win, options) {
+  'use strict'
+  options = options || {}
+  const doc = win.document
+  // All loading time parameters in ms. No minimum display time.
+  const timing = {threshold:500, timeout:8000, fade:500, breath:2200}
+  const navigationKey='hangetsu.navigationWait'
+  let incomingWait=false
+  try{
+    const hint=JSON.parse(win.sessionStorage.getItem(navigationKey)||'null')
+    win.sessionStorage.removeItem(navigationKey)
+    incomingWait=!!hint&&hint.url===win.location.href.split('#')[0]&&Date.now()-hint.at>=0&&Date.now()-hint.at<timing.timeout
+  }catch{}
+  const started = win.performance.now()
+  let done = false, disposed = false, shown = false, cssReady = false, parsed = false
+  let heroReady = !options.home, imageHandled = false, observer, showTimer, deadline, removeTimer, intro, layer, blueprint, navigationLayer
+  const api = {beginNavigation(href) {
+    if(!done || !blueprint || !doc.body)return
+    api.endNavigation()
+    // Native modals occupy the top layer above body overlays. Close them only
+    // when a real, slow document navigation needs visible wait feedback.
+    doc.querySelectorAll?.('dialog[open]').forEach(dialog=>dialog.close())
+    navigationLayer=blueprint.cloneNode(true)
+    navigationLayer.removeAttribute('data-leaving')
+    navigationLayer.setAttribute('data-navigation-wait','')
+    navigationLayer.hidden=false
+    navigationLayer.style.setProperty('--loading-breath',timing.breath+'ms')
+    navigationLayer.style.setProperty('--loading-safety',timing.timeout+'ms')
+    doc.body.append(navigationLayer)
+    try{win.sessionStorage.setItem(navigationKey,JSON.stringify({url:new URL(href,win.location.href).href.split('#')[0],at:Date.now()}))}catch{}
+  },endNavigation(handoff=false){navigationLayer?.remove();navigationLayer=undefined;if(!handoff)try{win.sessionStorage.removeItem(navigationKey)}catch{}},isVisible(){return !!navigationLayer || (shown&&!done)},attachIntro(hooks) {
+    intro = hooks
+    if (disposed) return
+    if (done) notify('ready', shown)
+    else if (shown) notify('wait')
+  }}
+  function notify(name, value) { try { intro?.[name]?.(value) } catch {} }
+  function stopWaiting() {
+    win.clearTimeout(showTimer)
+    win.clearTimeout(deadline)
+    observer?.disconnect()
+    doc.removeEventListener('load', resource, true)
+    doc.removeEventListener('error', resource, true)
+  }
+  function remove() {
+    win.clearTimeout(removeTimer)
+    const node=layer || doc.querySelector('#page-loading')
+    if(!blueprint && node?.cloneNode)blueprint=node.cloneNode(true)
+    node?.remove()
+    win.removeEventListener('pagehide', dispose)
+    win.removeEventListener('pageshow', restore)
+  }
+  function dispose() {
+    disposed = true
+    done = true
+    stopWaiting()
+    doc.documentElement.classList.remove('loading-style-pending')
+    doc.documentElement.style.removeProperty('--loading-safety')
+    remove()
+    intro = undefined
+  }
+  function restore(event) { if (event.persisted) dispose() }
+  function settle() {
+    if (done || disposed) return
+    done = true
+    stopWaiting()
+    doc.documentElement.classList.remove('loading-style-pending')
+    doc.documentElement.style.removeProperty('--loading-safety')
+    // The intro starts as the overlay begins fading, never after another wait.
+    notify('ready', shown)
+    if (!shown || !layer) return remove()
+    layer.setAttribute('data-leaving', '')
+    let reduced = true
+    try { reduced = win.matchMedia('(prefers-reduced-motion: reduce)').matches } catch {}
+    if (reduced) remove()
+    else removeTimer = win.setTimeout(remove, timing.fade)
+  }
+  function show() {
+    if (done || disposed || shown) return
+    layer = doc.querySelector('#page-loading')
+    if (!layer) return // Streaming HTML may not have delivered the body yet.
+    layer.style.setProperty('--loading-fade', timing.fade+'ms')
+    layer.style.setProperty('--loading-breath', timing.breath+'ms')
+    layer.style.setProperty('--loading-safety', (timing.timeout+timing.fade)+'ms')
+    // Keep the native fast path. Only a genuinely slow stylesheet releases its
+    // render block so this already-styled indicator can paint at the threshold.
+    if (!cssReady) {
+      const sheet = doc.querySelector('#site-styles')
+      if (sheet) sheet.media = 'print'
+    }
+    layer.hidden = false
+    shown = true
+    notify('wait')
+  }
+  function check() { if (parsed && cssReady && heroReady) settle() }
+  function portrait(image, failed) {
+    if (done || disposed || imageHandled) return
+    imageHandled = true
+    const ready = () => {
+      if (done || disposed) return
+      heroReady = true
+      check()
+    }
+    if (failed || !image.decode) ready()
+    else { try { Promise.resolve(image.decode()).then(ready, ready) } catch { ready() } }
+  }
+  function scan() {
+    if (done || disposed) return
+    // Continue only feedback which was actually shown in the outgoing document.
+    if(incomingWait && !shown)show()
+    if (doc.querySelector('#page-content-ready')) {
+      parsed = true
+      if (options.home && !imageHandled) {
+        const image = doc.querySelector('.hero-art img')
+        if (!image) heroReady = true
+        else if (image.complete) portrait(image, !image.naturalWidth)
+      }
+      observer?.disconnect()
+    }
+    check()
+    if (!done && win.performance.now()-started >= timing.threshold) show()
+  }
+  function resource(event) {
+    if (event.target?.id === 'site-styles') {
+      if (event.type === 'error') return settle()
+      event.target.media = 'all'
+      doc.documentElement.classList.remove('loading-style-pending')
+      cssReady = true
+      scan()
+    } else if (options.home && event.target?.matches?.('.hero-art img')) {
+      portrait(event.target, event.type === 'error')
+    }
+  }
+  try {
+    // Install the escape before anything can display the overlay.
+    deadline = win.setTimeout(settle, timing.timeout)
+    doc.documentElement.style.setProperty('--loading-safety', (timing.timeout+timing.fade)+'ms')
+    doc.documentElement.classList.add('loading-style-pending')
+    showTimer = win.setTimeout(show, timing.threshold)
+    win.addEventListener('pagehide', dispose)
+    win.addEventListener('pageshow', restore)
+    doc.addEventListener('load', resource, true)
+    doc.addEventListener('error', resource, true)
+    observer = new win.MutationObserver(scan)
+    observer.observe(doc.documentElement, {childList:true,subtree:true})
+    cssReady = !!doc.querySelector('#site-styles')?.sheet
+    scan()
+  } catch {
+    settle()
+    remove()
+  }
+  return api
+})
+</script>
+  
+  <script id="navigation-boot" data-home="false">/* Observe ordinary MPA navigation. Never cancel links, fetch pages, or alter history. */
+(function(factory){
+  const api=factory()
+  if(typeof module==='object'&&module.exports)module.exports=api
+  else api.initNavigation(window,{home:document.currentScript?.dataset.home==='true'})
+})(function(){
+  'use strict'
+  const timing={threshold:400,timeout:8000}
+  function eligible(link,event,location){
+    if(!link||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||link.hasAttribute('download')||(link.target&&link.target!=='_self'))return false
+    try{
+      const url=new URL(link.href,location.href),current=new URL(location.href)
+      return /^https?:$/.test(url.protocol)&&url.origin===current.origin&&
+        (url.pathname!==current.pathname||url.search!==current.search)&&
+        (url.pathname.endsWith('/')||/\.html?$/.test(url.pathname)||!url.pathname.split('/').pop().includes('.'))
+    }catch{return false}
+  }
+  function initNavigation(win,options={}){
+    const doc=win.document;let timer,deadline,waiting=false,leaving=false,lifecycle=0
+    function skip(transition){transition?.ready?.catch(()=>{});transition?.skipTransition()}
+    function clear(handoff=false){win.clearTimeout(timer);win.clearTimeout(deadline);waiting=false;win.hangetsuLoading?.endNavigation(handoff)}
+    // Check after the complete dispatch, including later window listeners.
+    win.addEventListener('click',event=>{
+      const observedLifecycle=lifecycle
+      win.setTimeout(()=>{
+      const link=event.target?.closest?.('a[href]')
+      if(observedLifecycle!==lifecycle||leaving||doc.visibilityState==='hidden'||!eligible(link,event,win.location))return
+      clear()
+      leaving=false
+      timer=win.setTimeout(()=>{if(!event.defaultPrevented&&doc.visibilityState!=='hidden'){waiting=true;win.hangetsuLoading?.beginNavigation(link.href)}},timing.threshold)
+      deadline=win.setTimeout(clear,timing.timeout)
+      },0)
+    })
+    win.addEventListener('pagehide',()=>{lifecycle++;leaving=true;clear(true)})
+    win.addEventListener('pageshow',()=>{lifecycle++;leaving=false;clear()})
+    doc.addEventListener('visibilitychange',()=>{if(doc.visibilityState==='hidden'){lifecycle++;clear(leaving)}})
+    win.addEventListener('pageswap',event=>{
+      let home=options.home
+      try{home ||= /^\/(?:page\/\d+\/)?$/.test(new URL(event.activation.entry.url).pathname)}catch{}
+      const shouldSkip=home||waiting||win.hangetsuLoading?.isVisible()||win.matchMedia('(prefers-reduced-motion: reduce)').matches
+      lifecycle++;leaving=true;clear(true) // Remove wait feedback before an outgoing snapshot; retain the short-lived handoff.
+      if(shouldSkip)skip(event.viewTransition)
+    })
+    win.addEventListener('pagereveal',event=>{
+      if(options.home||win.hangetsuLoading?.isVisible()||win.matchMedia('(prefers-reduced-motion: reduce)').matches)skip(event.viewTransition)
+    })
+  }
+  return {eligible,initNavigation}
+})
+</script>
+  
+  
+  <link id="site-styles" rel="stylesheet" href="/hangetsu/site.css?v=bd419a4e7e92" onload="this.media='all';document.documentElement.classList.remove('loading-style-pending')" onerror="document.documentElement.classList.remove('loading-style-pending')">
+  
+  <script defer src="/hangetsu/search-model.js?v=802ce1e507e4"></script>
+  <script defer src="/js/random.js"></script>
+  <script defer src="/hangetsu/site.js?v=5c61043a5e75"></script>
+  
+  <script defer src="/hangetsu/runtime.js"></script>
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body class="hangetsu reading-page" data-page="2026">
+  <div class="page-loading" id="page-loading" role="status" aria-label="正在准备页面" hidden>
+  <div class="page-loading__content" aria-hidden="true">
+    <span class="page-loading__moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M230.72,145.06a4,4,0,0,0-4-1A92.08,92.08,0,0,1,111.94,29.27a4,4,0,0,0-5-5A100.78,100.78,0,0,0,56.08,59.88a100,100,0,0,0,140,140,100.78,100.78,0,0,0,35.59-50.87A4,4,0,0,0,230.72,145.06ZM191.3,193.53A92,92,0,0,1,62.47,64.7a93,93,0,0,1,39.88-30.35,100.09,100.09,0,0,0,119.3,119.3A93,93,0,0,1,191.3,193.53Z"/></svg></span>
+    <p class="page-loading__name">半月</p>
+    <p class="page-loading__quote" lang="ja">空には、半分の月が輝いていた</p>
+  </div>
+</div>
+
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header shell">
+  <a class="brand" href="/" aria-label="半月 首页"><span class="moon-mark" aria-hidden="true"></span><span>半月</span></a>
+  <div class="header-actions"><button class="menu-toggle" type="button" data-open="menu-dialog" aria-label="打开导航菜单" aria-controls="menu-dialog" aria-expanded="false">Menu</button></div>
+</header>
+<template id="navigation-links">
+  <a href="/">首页 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/archives/">日记归档 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/moments/">动态 <span class="direction-icon" aria-hidden="true"></span></a>
+  <button type="button" data-open="search-dialog">搜索 <span class="direction-icon" aria-hidden="true"></span></button>
+  <a href="/about/">关于我 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/message/">留言 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/link/">友链 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/random-anime/">随机动画 <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/random-gal/">随机 GAL <span class="direction-icon" aria-hidden="true"></span></a>
+  <a href="/miscellaneous/">图片 / GIF 对称工具 <span class="direction-icon" aria-hidden="true"></span></a>
+  <button type="button" data-random-post>随机文章 <span class="direction-icon" aria-hidden="true"></span></button>
+</template>
+<noscript><nav class="no-script-nav shell" aria-label="网站导航"><a href="/">首页</a><a href="/archives/">日记归档</a><a href="/moments/">动态</a><a href="/about/">关于我</a><a href="/message/">留言</a><a href="/link/">友链</a><a href="/random-anime/">随机动画</a><a href="/random-gal/">随机 GAL</a><a href="/miscellaneous/">图片工具</a></nav></noscript>
+
+  <main id="main" tabindex="-1">
+
+<div class="reading-layout shell reading-layout--plain">
+<article class="reading-sheet" >
+  <header class="article-head" id="post-info"><a class="back-link" href="/archives/"><span class="reading-arrow" aria-hidden="true">←</span> 日记</a><h1 class="post-title">sea</h1>
+    <div class="post-meta" id="post-meta"><time datetime="2026-07-02T16:00:00.000Z">2026.07.03</time><a href="/categories/%E6%97%A5%E8%AE%B0/">日记</a><span>21 字</span><span>1 分钟</span><span id="busuanzi_container_page_pv">阅读 <span id="busuanzi_value_page_pv">—</span></span></div>
+  </header>
+  <div class="reading-controls"><span>字号</span><button type="button" data-font="-1" aria-label="减小字号">A−</button><button type="button" data-font="1" aria-label="增大字号">A＋</button><button type="button" class="reading-mode-toggle" data-reading-picker hidden aria-label="阅读模式：白纸，点击切换为暖纸">
+    <svg data-reading-mode-icon="white" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    <svg data-reading-mode-icon="warm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5.5C9 3.7 6 3.3 3 4.2v14c3-.9 6-.5 9 1.3 3-1.8 6-2.2 9-1.3v-14c-3-.9-6-.5-9 1.3Zm0 0v14"/></svg>
+    <svg data-reading-mode-icon="night" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.3 8.3 0 0 1 9.5 4a8.3 8.3 0 1 0 10.5 10.5ZM18 3v4m-2-2h4"/></svg>
+  </button><button type="button" data-copy-url>复制链接</button><a href="#post-comment">留言 <span class="reading-arrow reading-arrow--down" aria-hidden="true">↓</span></a></div>
+  
+  <div id="article-container" class="prose post-content"><p>复习10个日语单词</p>
+<p>和朋友出去玩</p>
+<p>海的对面是香港</p>
+<p><img src="/img/1783080752520-hh604f.jpg" alt="图片"></p>
+</div>
+  
+  <nav class="post-neighbors" aria-label="相邻文章"><a href="/2026/07/04/2026-07-04-new-post/"><small><span class="reading-arrow" aria-hidden="true">←</span> 较新一篇</small><span>uma</span></a><a href="/2026/07/02/2026-07-02-new-post/"><small>较早一篇 <span class="reading-arrow reading-arrow--right" aria-hidden="true">→</span></small><span>n</span></a></nav>
+  
+
+<section class="comments-section" id="post-comment" aria-labelledby="comments-heading"><h2 id="comments-heading">留言</h2>
+  <style>/* Stable Waline 3 public variables, scoped at the component (also after late CSS). */
+#waline-wrap{font-family:var(--sans);color:var(--text);font-size:15px;--waline-font-size:16px;--waline-white:var(--bg);--waline-color:var(--text);--waline-light-grey:var(--muted);--waline-dark-grey:var(--text);--waline-theme-color:var(--accent);--waline-active-color:var(--ink);--waline-bg-color:var(--bg);--waline-bg-color-light:var(--paper);--waline-bg-color-hover:var(--paper);--waline-border-color:var(--line);--waline-disable-bg-color:var(--paper);--waline-disable-color:var(--muted);--waline-code-bg-color:var(--paper);--waline-bq-color:var(--line);--waline-info-bg-color:var(--paper);--waline-info-color:var(--muted);--waline-info-font-size:12px;--waline-badge-color:var(--accent);--waline-border:1px solid var(--line);--waline-box-shadow:none}
+#waline-wrap .wl-panel{border-radius:2px;box-shadow:none}
+#waline-wrap .wl-panel:focus-within{border-color:var(--accent)}
+#waline-wrap .wl-header{border-bottom:1px solid var(--line);border-radius:2px 2px 0 0;padding:2px 8px}
+#waline-wrap .wl-header label{font-size:13px}
+#waline-wrap .wl-header .wl-input{font:14px/1.8 var(--sans);min-height:32px}
+#waline-wrap .wl-editor{font:15px/1.9 var(--sans);min-height:150px;border-radius:0;padding:8px}
+#waline-wrap .wl-btn{border-radius:2px;font:13px/1.6 var(--sans);min-height:40px;box-sizing:border-box}
+#waline-wrap .wl-actions{gap:6px;flex-wrap:wrap}
+#waline-wrap .wl-action{min-width:36px;min-height:36px;margin:0;border-radius:2px}
+#waline-wrap :is(button,a,input,textarea,[tabindex]):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#waline-wrap .wl-card{border-bottom:1px solid var(--line);padding-bottom:20px}
+#waline-wrap .wl-card-item{padding-block:16px}
+#waline-wrap .wl-card .wl-head .wl-nick{font-size:15px;font-weight:400;line-height:1.5}
+#waline-wrap .wl-card .wl-time{font-size:12px}
+#waline-wrap .wl-card .wl-content{font-size:15px;line-height:1.95}
+#waline-wrap .wl-content :is(pre,pre[class*="language-"]),#waline-wrap .wl-content pre code{color:var(--text);background:var(--paper)}
+#waline-wrap .wl-sort li{font-size:13px;padding-block:6px}
+#waline-wrap .wl-empty{font-size:14px;color:var(--muted)}
+#comment-retry{min-height:44px;font-size:13px}
+@media(max-width:767px){#waline-wrap .wl-action{min-width:44px;min-height:44px}#waline-wrap .wl-footer{flex-wrap:wrap;gap:8px}#waline-wrap .wl-info{margin-inline-start:auto}#waline-wrap .wl-btn{min-height:44px}#waline-wrap .wl-header-item{border-bottom-width:1px;border-bottom-style:solid}}
+</style>
+  <div id="waline-wrap" data-path="/2026/07/03/2026-07-03-new-post/" data-config="{&#34;serverURL&#34;:&#34;https://comment-phi-blond.vercel.app&#34;,&#34;js&#34;:&#34;https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.js&#34;,&#34;css&#34;:&#34;https://cdn.jsdelivr.net/npm/@waline/client@3.8.0/dist/waline.css&#34;,&#34;option&#34;:{&#34;lang&#34;:&#34;zh-CN&#34;,&#34;placeholder&#34;:&#34;写下你的留言吧...&#34;,&#34;emoji&#34;:[&#34;https://cdn.jsdelivr.net/npm/@waline/emojis@1.0.1/weibo&#34;],&#34;requiredMeta&#34;:[&#34;nick&#34;],&#34;meta&#34;:[&#34;nick&#34;,&#34;mail&#34;],&#34;anonymous&#34;:true,&#34;login&#34;:&#34;enable&#34;}}"><p class="muted" id="comment-status">正在加载评论…</p></div>
+  <button id="comment-retry" type="button" hidden>重新加载评论</button><noscript>请启用 JavaScript 以查看和发送留言。</noscript>
+</section>
+
+
+</article>
+
+</div>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</main>
+  <template id="page-content-ready"></template>
+  <footer class="footer shell">
+  <small class="footer-runtime"><span>© 2026 半月</span><span class="footer-separator" aria-hidden="true">／</span><span>半轮月下，已走过 <span id="site-runtime" data-since="2026-02-25T22:21:00+08:00" aria-live="off" title="始于北京时间 2026 年 2 月 25 日 22:21">正在计时…</span></span></small>
+</footer>
+
+  <dialog id="search-dialog" aria-labelledby="search-title">
+  <div class="dialog-top"><h2 id="search-title">搜索文章</h2><button type="button" class="close-button" data-close aria-label="关闭搜索">×</button></div>
+  <label class="search-label" for="search-input">标题和正文</label><input id="search-input" class="search-input" type="search" placeholder="输入关键词…" autocomplete="off">
+  <p id="search-status" role="status" aria-live="polite">输入关键词，搜索全部文章。</p><button type="button" id="search-retry" hidden>重新加载</button><ol id="search-results" class="search-results"></ol>
+</dialog>
+<dialog id="menu-dialog" aria-labelledby="menu-title"><div class="dialog-top"><h2 id="menu-title">Menu</h2><button type="button" class="close-button" data-close aria-label="关闭菜单">×</button></div><nav id="menu-links" class="menu-links" aria-label="全部页面"></nav></dialog>
+<dialog id="image-dialog" class="image-dialog" aria-label="图片大图"><button type="button" class="close-button" data-close aria-label="关闭大图">×</button><img id="large-image" alt=""><p id="large-image-caption"></p></dialog>
+
+  <link rel="stylesheet" href="/hangetsu/products.css">
+</body>
+</html>
