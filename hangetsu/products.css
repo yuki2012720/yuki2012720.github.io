@@ -1,0 +1,114 @@
+/* Page-scoped adaptation layer. Product markup, IDs and behavior stay unchanged. */
+.hangetsu .product-content{--card-bg:#fff;--text-color:var(--text);--font-color:var(--text)}
+.hangetsu .random-anime-container,.hangetsu .random-gal-container{max-width:none;padding:0;text-align:left}
+.hangetsu .random-anime-container>h1,.hangetsu .random-gal-container>h1,.hangetsu #symmetry-tool .tool-header h1{display:none}
+.hangetsu .product-content h2,.hangetsu .product-content h3{font-family:var(--serif);font-weight:400;color:var(--ink)}
+.hangetsu .product-content .stats-info{text-align:left;color:var(--muted);font-size:12px;margin:0 0 30px}
+.hangetsu .section-kicker{color:var(--muted);font-size:10px;font-weight:400;letter-spacing:.16em}
+.hangetsu .section-title{font:26px/1.5 var(--serif);color:var(--ink)}
+.hangetsu .section-note{font-size:12px;color:var(--muted);max-width:450px}
+.hangetsu .daily-section{margin:0 0 52px}
+.hangetsu .anime-card,.hangetsu .game-card{border:1px solid var(--line);border-radius:2px;background:var(--bg);box-shadow:none}
+.hangetsu .anime-card.show,.hangetsu .game-card.show{display:grid;grid-template-columns:minmax(180px,30%) minmax(0,1fr);animation:arrive .35s var(--ease)}
+.hangetsu .daily-card{box-shadow:none;border-color:var(--line)}
+.hangetsu .banner-shell{padding:20px;background:var(--paper);min-width:0}
+.hangetsu .anime-banner,.hangetsu .game-banner{max-height:420px;max-width:100%;width:auto;object-fit:contain;border-radius:1px;box-shadow:none}
+.hangetsu .anime-info,.hangetsu .game-info{padding:25px 30px;min-width:0}
+.hangetsu .anime-title,.hangetsu .game-title{font:26px/1.5 var(--serif);margin:6px 0 10px;color:var(--ink)}
+.hangetsu .anime-title-cn,.hangetsu .game-title-cn{font-size:15px;color:var(--muted);margin:6px 0 16px}
+.hangetsu .anime-description,.hangetsu .game-description{font-size:14px;line-height:1.95;color:var(--text)}
+.hangetsu .daily-badge{background:var(--paper);color:var(--accent);border:1px solid var(--line);border-radius:2px;font-size:12px;font-weight:400;padding:5px 10px}
+.hangetsu .meta-item,.hangetsu .tag{background:var(--paper);color:var(--muted);border-radius:2px;font-size:11px;padding:4px 9px}
+.hangetsu .rating-score{color:var(--accent);font:28px var(--serif);background:none;-webkit-text-fill-color:currentColor}
+.hangetsu .rating-label{color:var(--muted);font-size:11px}
+.hangetsu .random-btn{display:block;margin:28px auto 36px;padding:12px 44px;font-size:16px;font-weight:400;letter-spacing:.08em;border:1px solid var(--accent);border-radius:2px;box-shadow:none;background:var(--accent);color:white}
+.hangetsu .random-btn:hover{background:#655070;transform:translateY(-1px);box-shadow:none}
+.hangetsu .random-btn:disabled{background:#c3b8c9;border-color:#c3b8c9;transform:none}
+.hangetsu .link-btn{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:8px 15px;box-shadow:none;color:var(--accent);font-size:12px;min-height:38px}
+.hangetsu .link-btn:hover{background:#ece5f0;box-shadow:none;transform:none}
+.hangetsu .draw-favorite-btn{background:var(--paper)!important;border-color:var(--line)!important;color:var(--accent)!important}
+.hangetsu .draw-favorite-btn.is-favorite{background:var(--accent)!important;color:white!important}
+.hangetsu .error-msg{border:1px solid #d6b5bd;border-radius:2px;background:#fcf5f5;color:#954d61;padding:15px;text-align:left;font-size:14px}
+.hangetsu .loading{font-size:14px;color:var(--muted);padding:30px}
+.hangetsu .anime-filter-panel{--raf-accent:var(--accent);--raf-accent-strong:#604c6f;--raf-pink:#ab8d9c;--raf-muted:var(--muted);--raf-line:var(--line);--raf-soft:var(--paper);--raf-surface:var(--bg);--raf-input:var(--bg);background:var(--bg);border-color:var(--line);border-radius:2px;box-shadow:none}
+.hangetsu .gal-filter-panel{--rgf-accent:var(--accent);--rgf-accent-strong:#604c6f;--rgf-muted:var(--muted);--rgf-line:var(--line);--rgf-soft:var(--paper);--rgf-surface:var(--bg);--rgf-input:var(--bg);background:var(--bg);border-color:var(--line);border-radius:2px;box-shadow:none}
+.hangetsu #article-container .anime-filter-title,.hangetsu #article-container .gal-filter-title{font:23px/1.5 var(--serif)!important;font-weight:400!important}
+.hangetsu .filter-chip,.hangetsu .gal-chip{border-radius:3px!important;font-size:12px!important;font-weight:400!important;min-height:34px}
+.hangetsu .filter-chip.is-active,.hangetsu .gal-chip.is-active{background:var(--paper)!important;border-color:#bca7c8!important;color:#684a7b!important;box-shadow:none!important}
+.hangetsu .filter-reset,.hangetsu .filter-expand,.hangetsu .gal-filter-reset,.hangetsu .gal-filter-expand{border-radius:3px!important;font-weight:400!important;font-size:12px!important}
+.hangetsu .filter-number,.hangetsu .gal-filter-number{border-radius:2px!important;font-size:13px!important;max-width:100%}
+.hangetsu .filter-range-block,.hangetsu .filter-year-more,.hangetsu .filter-tag-more,.hangetsu .gal-range,.hangetsu .gal-year-more{border-color:var(--line);background:var(--paper);border-radius:2px}
+.hangetsu .gal-range input{border-radius:2px;font-size:13px}
+.hangetsu .gal-more-options{border-radius:2px;background:var(--paper);border-color:var(--line)}
+.hangetsu .filter-more-options,.hangetsu .gal-filter-more-options{background:var(--paper);border-color:var(--line);border-radius:2px}
+.hangetsu .anime-filter-foot,.hangetsu .gal-filter-foot{background:var(--paper);font-size:12px}
+.hangetsu .draw-library{--draw-line:var(--line);--draw-surface:var(--bg);--draw-soft:var(--paper);border-radius:2px;box-shadow:none;margin:30px 0}
+.hangetsu .draw-library>summary{font-size:14px;font-weight:400;padding:16px 20px}
+.hangetsu .draw-library-item{border-radius:2px;background:var(--paper)}
+.hangetsu .history-toggle{border-radius:2px;border-color:var(--line);background:var(--paper);box-shadow:none}
+.hangetsu .history-item{border-radius:2px;border-color:var(--line);background:var(--paper)}
+.hangetsu .history-item:hover{box-shadow:none;border-color:#bca7c8;transform:none}
+.hangetsu .history-section{margin-top:20px}
+
+/* Friends and the existing copy/apply workflow. */
+.hangetsu .flink-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;margin:28px 0 42px}
+.hangetsu .flink-list-item{border-bottom:1px solid var(--line);min-width:0}
+.hangetsu .flink-list-item>a{display:grid;grid-template-columns:52px minmax(0,1fr) 15px;align-items:center;gap:18px;padding:24px 0;text-decoration:none;color:var(--text)}
+.hangetsu .flink-list-item img{width:52px;height:52px;object-fit:cover;border-radius:50%;margin:0}
+.hangetsu .flink-list-item h2{margin:0;font:19px/1.6 var(--serif)}
+.hangetsu .flink-list-item p{font-size:12px;color:var(--muted);margin:5px 0 0}
+.hangetsu .flink-apply-heading h2{font:21px/1.7 var(--serif);margin:12px 0}
+.hangetsu .flink-apply-heading p,.hangetsu .flink-apply-rules{font-size:13px;color:var(--muted)}
+.hangetsu .flink-apply-badge{font-size:11px;color:var(--muted);letter-spacing:.08em}
+.hangetsu .own-flink-card,.hangetsu .flink-apply-card{padding:28px 0;border-top:1px solid var(--line);margin:30px 0}
+.hangetsu .own-flink-panel{display:grid;grid-template-columns:72px minmax(0,1fr);gap:24px;margin-top:25px}
+.hangetsu .own-flink-avatar img{width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0}
+.hangetsu .own-flink-row{display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;align-items:start;margin:10px 0;font-size:13px}
+.hangetsu .own-flink-value-group{display:flex;gap:12px;justify-content:space-between;align-items:start;min-width:0;overflow-wrap:anywhere}
+.hangetsu .own-flink-label{color:var(--muted)}
+.hangetsu .own-flink-copy{flex-shrink:0;font-size:11px;border:1px solid var(--line);padding:2px 10px;border-radius:2px}
+.hangetsu .own-flink-actions,.hangetsu .flink-apply-actions{display:flex;gap:16px;flex-wrap:wrap;margin:24px 0 12px;align-items:center}
+.hangetsu .own-flink-action,.hangetsu .flink-apply-action{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:7px 14px;font-size:12px;text-decoration:none}
+.hangetsu .flink-apply-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+.hangetsu .flink-apply-field{display:flex;flex-direction:column;gap:8px;font-size:12px;color:var(--muted)}
+.hangetsu .flink-apply-field--full{grid-column:1/-1}
+.hangetsu .flink-apply-field input{border:1px solid var(--line);border-radius:2px;padding:10px 12px;min-width:0;width:100%;background:var(--bg);color:var(--text);font-size:14px}
+.hangetsu .flink-apply-status{font-size:12px;color:var(--accent)}
+.hangetsu .message-board{padding:0!important;margin-bottom:20px!important}
+.hangetsu .message-board h1{display:none}
+
+/* Image tool: keep controls/remote processing; replace the previous dark box skin. */
+.hangetsu #symmetry-tool{max-width:none;padding:0;font-family:var(--sans)}
+.hangetsu #symmetry-tool .tool-header{text-align:left;margin:0 0 24px}
+.hangetsu #symmetry-tool .control-panel,.hangetsu #symmetry-tool .preview-panel{background:var(--bg);border:1px solid var(--line);box-shadow:none;border-radius:2px;padding:24px;min-width:0}
+.hangetsu #symmetry-tool h3,.hangetsu #symmetry-tool h4{color:var(--ink)!important;font:20px/1.5 var(--serif)}
+.hangetsu #symmetry-tool .upload-area{background:var(--paper);border:1px dashed #bca7c8;border-radius:2px;transform:none}
+.hangetsu #symmetry-tool .upload-icon{font-size:25px}
+.hangetsu #symmetry-tool .upload-area p{font-size:12px}
+.hangetsu #symmetry-tool .mode-btn,.hangetsu #symmetry-tool .speed-btn{background:var(--paper);border:1px solid var(--line);border-radius:2px;box-shadow:none;color:var(--text);font-size:13px;font-weight:400}
+.hangetsu #symmetry-tool .mode-btn.active,.hangetsu #symmetry-tool .speed-btn.active{background:var(--accent);border-color:var(--accent);color:white;box-shadow:none}
+.hangetsu #symmetry-tool .action-btn{background:var(--accent);color:white;border-radius:2px;box-shadow:none;font-weight:400;font-size:14px}
+.hangetsu #symmetry-tool .action-btn:disabled{background:#c3b8c9}
+.hangetsu #symmetry-tool .gif-speed-section{background:var(--paper);border:1px solid var(--line);border-radius:2px}
+.hangetsu #symmetry-tool .gif-speed-hint,.hangetsu #symmetry-tool .gif-speed-empty,.hangetsu #symmetry-tool .placeholder-text{color:var(--muted);font-size:12px}
+.hangetsu #symmetry-tool .gif-speed-empty{border:1px dashed var(--line);border-radius:2px}
+.hangetsu #symmetry-tool .gif-speed-value,.hangetsu #symmetry-tool .progress-text{color:var(--accent)}
+.hangetsu #symmetry-tool .preview-container{background:var(--paper);border:1px solid var(--line);border-radius:2px}
+.hangetsu #symmetry-tool .preview-image{max-width:100%;height:auto}
+.hangetsu #symmetry-tool .gif-speed-slider{accent-color:var(--accent)}
+.hangetsu #symmetry-tool .progress-fill{background:var(--accent)}
+@media(max-width:767px){
+ .hangetsu .anime-card.show,.hangetsu .game-card.show{grid-template-columns:1fr}
+ .hangetsu .anime-banner,.hangetsu .game-banner{max-height:330px}
+ .hangetsu .anime-info,.hangetsu .game-info{padding:20px}
+ .hangetsu .anime-title,.hangetsu .game-title{font-size:23px}
+ .hangetsu .daily-section{margin-bottom:36px}
+ .hangetsu .section-note{text-align:left}
+ .hangetsu .flink-list{grid-template-columns:1fr;gap:0}
+ .hangetsu .own-flink-panel{grid-template-columns:1fr}
+ .hangetsu .own-flink-avatar{display:none}
+ .hangetsu .flink-apply-grid{grid-template-columns:1fr}
+ .hangetsu #symmetry-tool .control-panel,.hangetsu #symmetry-tool .preview-panel{padding:18px}
+ .hangetsu .anime-filter-head,.hangetsu .gal-filter-head{gap:14px}
+ .hangetsu #article-container .anime-filter-title,.hangetsu #article-container .gal-filter-title{font-size:20px!important}
+}

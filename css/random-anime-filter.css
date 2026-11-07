@@ -1,0 +1,479 @@
+.anime-filter-panel {
+  --raf-accent: #5a72e8;
+  --raf-accent-strong: #3f58ce;
+  --raf-pink: #f09199;
+  --raf-text: var(--font-color, #343747);
+  --raf-muted: #72778a;
+  --raf-line: rgba(74, 92, 150, 0.13);
+  --raf-soft: rgba(90, 114, 232, 0.08);
+  --raf-surface: rgba(255, 255, 255, 0.82);
+  --raf-input: rgba(255, 255, 255, 0.9);
+  position: relative;
+  margin: 8px auto 28px;
+  overflow: hidden;
+  border: 1px solid var(--raf-line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(90, 114, 232, 0.13), transparent 34%),
+    radial-gradient(circle at 0 100%, rgba(240, 145, 153, 0.11), transparent 31%),
+    var(--raf-surface);
+  box-shadow: 0 18px 55px rgba(58, 73, 130, 0.11);
+  color: var(--raf-text);
+  text-align: left;
+}
+
+[data-theme='dark'] .anime-filter-panel {
+  --raf-text: rgba(255, 255, 255, 0.86);
+  --raf-muted: rgba(255, 255, 255, 0.52);
+  --raf-line: rgba(187, 198, 255, 0.13);
+  --raf-soft: rgba(123, 145, 255, 0.12);
+  --raf-surface: rgba(20, 21, 29, 0.9);
+  --raf-input: rgba(255, 255, 255, 0.055);
+  background:
+    radial-gradient(circle at 100% 0, rgba(90, 114, 232, 0.19), transparent 35%),
+    radial-gradient(circle at 0 100%, rgba(240, 145, 153, 0.1), transparent 32%),
+    var(--raf-surface);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+}
+
+.anime-filter-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 24px 26px 20px;
+  border-bottom: 1px solid var(--raf-line);
+}
+
+#article-container .anime-filter-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--raf-text) !important;
+  font-size: 1.25rem !important;
+  line-height: 1.4 !important;
+}
+
+#article-container .anime-filter-title::before,
+#article-container .anime-filter-title::after {
+  display: none !important;
+}
+
+.anime-filter-panel .filter-reset,
+.anime-filter-panel .filter-expand {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 6px 13px !important;
+  border: 1px solid var(--raf-line) !important;
+  border-radius: 999px !important;
+  background: var(--raf-input) !important;
+  box-shadow: none !important;
+  color: var(--raf-muted) !important;
+  font-size: 0.82rem !important;
+  font-weight: 650 !important;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.anime-filter-panel .filter-reset:hover,
+.anime-filter-panel .filter-expand:hover {
+  border-color: rgba(90, 114, 232, 0.38) !important;
+  background: var(--raf-soft) !important;
+  box-shadow: none !important;
+  color: var(--raf-accent-strong) !important;
+  transform: none !important;
+}
+
+.anime-filter-body {
+  padding: 2px 26px;
+}
+
+.anime-filter-row {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--raf-line);
+}
+
+.anime-filter-row:last-child {
+  border-bottom: 0;
+}
+
+.filter-more-options {
+  margin: 4px 0 16px;
+  border: 1px solid var(--raf-line);
+  border-radius: 16px;
+  background: rgba(90, 114, 232, 0.035);
+}
+
+.filter-more-options > summary {
+  padding: 13px 16px;
+  color: var(--raf-muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.filter-more-options[open] > summary {
+  border-bottom: 1px solid var(--raf-line);
+  color: var(--raf-accent-strong);
+}
+
+.filter-more-options .anime-filter-row {
+  margin: 0 16px;
+}
+
+.filter-row-heading {
+  padding-top: 7px;
+}
+
+.filter-row-label {
+  display: block;
+  color: var(--raf-text);
+  font-size: 0.95rem;
+  font-weight: 750;
+}
+
+.filter-row-hint {
+  display: block;
+  margin-top: 4px;
+  color: var(--raf-muted);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.filter-row-content {
+  min-width: 0;
+}
+
+.filter-control-line,
+.filter-chip-list,
+.filter-tag-rules,
+.filter-selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-control-line {
+  justify-content: space-between;
+  gap: 10px 14px;
+}
+
+.anime-filter-panel .filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 13px !important;
+  border: 1px solid transparent !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--raf-muted) !important;
+  font-size: 0.86rem !important;
+  font-weight: 560 !important;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease, transform 0.18s ease !important;
+}
+
+.anime-filter-panel .filter-chip:hover {
+  border-color: rgba(90, 114, 232, 0.22) !important;
+  background: var(--raf-soft) !important;
+  box-shadow: none !important;
+  color: var(--raf-accent-strong) !important;
+  transform: translateY(-1px) !important;
+}
+
+.anime-filter-panel .filter-chip.is-active {
+  border-color: rgba(90, 114, 232, 0.44) !important;
+  background: rgba(90, 114, 232, 0.13) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28) !important;
+  color: var(--raf-accent-strong) !important;
+  font-weight: 720 !important;
+}
+
+[data-theme='dark'] .anime-filter-panel .filter-chip.is-active {
+  border-color: rgba(142, 158, 255, 0.52) !important;
+  background: rgba(90, 114, 232, 0.23) !important;
+  color: #cbd3ff !important;
+}
+
+.filter-year-more,
+.filter-tag-more {
+  display: none;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--raf-line);
+  border-radius: 16px;
+  background: rgba(90, 114, 232, 0.035);
+}
+
+.filter-year-more.is-open,
+.filter-tag-more.is-open {
+  display: block;
+  animation: filterReveal 0.2s ease-out;
+}
+
+.filter-year-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(52px, 1fr));
+  gap: 7px;
+  max-height: 240px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding-right: 5px;
+}
+
+.filter-year-grid .filter-chip {
+  width: 100%;
+  padding-inline: 6px !important;
+}
+
+.filter-range-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--raf-line);
+  border-radius: 16px;
+  background: rgba(90, 114, 232, 0.035);
+}
+
+.filter-range-caption {
+  flex: 0 0 auto;
+  margin-right: 4px;
+  color: var(--raf-muted);
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.filter-range-separator {
+  color: var(--raf-muted);
+}
+
+.anime-filter-panel .filter-number {
+  width: 112px;
+  min-width: 0;
+  height: 38px;
+  padding: 7px 11px;
+  border: 1px solid var(--raf-line);
+  border-radius: 11px;
+  outline: none;
+  background: var(--raf-input);
+  color: var(--raf-text);
+  font: inherit;
+  font-size: 0.86rem;
+  text-align: center;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.anime-filter-panel .filter-number::placeholder {
+  color: var(--raf-muted);
+  opacity: 0.74;
+}
+
+.anime-filter-panel .filter-number:focus {
+  border-color: rgba(90, 114, 232, 0.65);
+  box-shadow: 0 0 0 3px rgba(90, 114, 232, 0.11);
+}
+
+.anime-filter-panel .filter-number[aria-invalid='true'] {
+  border-color: #df6875;
+  box-shadow: 0 0 0 3px rgba(223, 104, 117, 0.1);
+}
+
+.filter-inline-error {
+  min-height: 20px;
+  margin: 7px 0 -5px;
+  color: #cf5662;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.filter-tag-more .filter-chip-list {
+  max-height: 250px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding-right: 4px;
+}
+
+.filter-tag-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--raf-line);
+}
+
+.filter-tag-rules[hidden],
+.filter-selected-tags[hidden] {
+  display: none;
+}
+
+.filter-rule-label,
+.filter-tag-count {
+  color: var(--raf-muted);
+  font-size: 0.78rem;
+}
+
+.filter-tag-rules {
+  gap: 5px;
+}
+
+.filter-tag-rules .filter-chip {
+  min-height: 30px;
+  padding: 5px 10px !important;
+  font-size: 0.78rem !important;
+}
+
+.filter-selected-tags {
+  margin-top: 12px;
+}
+
+.anime-filter-panel .filter-selected-tag {
+  position: relative;
+  min-height: 30px;
+  padding: 5px 28px 5px 11px !important;
+  border: 1px solid rgba(240, 145, 153, 0.3) !important;
+  border-radius: 999px !important;
+  background: rgba(240, 145, 153, 0.1) !important;
+  box-shadow: none !important;
+  color: var(--raf-text) !important;
+  font-size: 0.78rem !important;
+  font-weight: 650 !important;
+  cursor: pointer;
+}
+
+.filter-selected-tag::after {
+  content: '×';
+  position: absolute;
+  right: 10px;
+  color: var(--raf-pink);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.anime-filter-foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 55px;
+  padding: 13px 26px;
+  border-top: 1px solid var(--raf-line);
+  background: rgba(90, 114, 232, 0.045);
+}
+
+.filter-summary-label {
+  flex: 0 0 auto;
+  color: var(--raf-muted);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.filter-summary {
+  min-width: 0;
+  color: var(--raf-text);
+  font-size: 0.84rem;
+  font-weight: 580;
+  line-height: 1.5;
+}
+
+@keyframes filterReveal {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 720px) {
+  .anime-filter-panel {
+    margin-inline: -4px;
+    border-radius: 20px;
+  }
+
+  .anime-filter-head {
+    padding: 20px 18px 17px;
+  }
+
+  .anime-filter-body {
+    padding-inline: 18px;
+  }
+
+  .anime-filter-row {
+    grid-template-columns: 1fr;
+    gap: 11px;
+    padding: 18px 0;
+  }
+
+  .filter-row-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding-top: 0;
+  }
+
+  .filter-row-hint {
+    margin-top: 0;
+  }
+
+  .filter-control-line {
+    align-items: flex-start;
+  }
+
+  .filter-year-grid {
+    grid-template-columns: repeat(4, minmax(54px, 1fr));
+    max-height: 270px;
+  }
+
+  .filter-range-block {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .filter-range-caption {
+    grid-column: 1 / -1;
+  }
+
+  .anime-filter-panel .filter-number {
+    width: 100%;
+  }
+
+  .filter-tag-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .anime-filter-foot {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding: 13px 18px 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .anime-filter-head {
+    position: relative;
+    display: block;
+    padding-top: 20px;
+  }
+
+  .anime-filter-panel .filter-reset {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+  }
+
+  .anime-filter-panel .filter-chip {
+    min-height: 32px;
+    padding-inline: 11px !important;
+    font-size: 0.82rem !important;
+  }
+}
