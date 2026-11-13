@@ -1,0 +1,8 @@
+/* Native cross-document transitions; no JS fallback animates or delays navigation. */
+::view-transition{pointer-events:none}
+::view-transition-group(root){animation-duration:300ms}
+::view-transition-old(root){animation:reading-page-out 180ms ease-out both;mix-blend-mode:normal}
+::view-transition-new(root){animation:reading-page-in 300ms cubic-bezier(.22,1,.36,1) both;mix-blend-mode:normal}
+@keyframes reading-page-out{to{opacity:0}}
+@keyframes reading-page-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
