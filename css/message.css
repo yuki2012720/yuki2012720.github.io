@@ -1,0 +1,79 @@
+/* 留言板页面样式 - 扁平化优化 */
+.message-board {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .message-board {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+/* 评论区扁平化 */
+#waline {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 2rem;
+}
+
+[data-theme="dark"] #waline {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.message-board h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.message-board h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.message-board p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-color-secondary);
+  margin-bottom: 2rem;
+}
+
+/* 评论区样式 */
+#waline {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .message-board {
+    padding: 1.5rem;
+  }
+  
+  .message-board h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .message-board {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,240 @@
+/* =========================================================
+   APlayer 悬浮黑胶唱片版 (毛玻璃极致美化版)
+   ========================================================= */
+
+/* 1. 将常规播放器悬浮在左下角，注入毛玻璃灵魂 */
+#aplayer {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    width: 320px !important;
+    z-index: 9999 !important;
+    border-radius: 12px !important; /* 圆角调大，呼应网站整体卡片 */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08) !important;
+    /* 替换纯白背景为半透明毛玻璃 */
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important; /* 精致高光边框 */
+    margin: 0 !important;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    padding-right: 12px !important;
+}
+
+/* 夜间模式底色适配 */
+[data-theme="dark"] #aplayer {
+    background: rgba(30, 35, 50, 0.35) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 2. 定义收起状态（aplayer-collapsed 类） */
+#aplayer.aplayer-collapsed {
+    width: 108px !important;
+}
+
+#aplayer .aplayer-collapse-toggle {
+    position: absolute !important;
+    top: 50% !important;
+    right: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 12px !important;
+    height: 20px !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    color: rgba(74, 85, 104, 0.92) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    z-index: 10001 !important;
+    transform: translateY(-50%) !important;
+    transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s ease !important;
+    opacity: 0.9 !important;
+}
+
+#aplayer .aplayer-collapse-toggle:hover {
+    color: #2d3748 !important;
+    opacity: 1 !important;
+    transform: translateY(-50%) scale(1.06) !important;
+}
+
+[data-theme="dark"] #aplayer .aplayer-collapse-toggle {
+    color: #e2e8f0 !important;
+}
+
+#aplayer.aplayer-collapsed {
+    padding-right: 10px !important;
+}
+
+/* 3. 收起时，让文字和进度条渐隐并失去点击响应 */
+#aplayer .aplayer-info {
+    transition: opacity 0.3s ease !important;
+}
+#aplayer.aplayer-collapsed .aplayer-info {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+#aplayer.aplayer-collapsed .aplayer-lrc {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+#aplayer.aplayer-no-lrc .aplayer-lrc {
+    display: none !important;
+}
+
+/* 4. 把 CD 封面变成一个可以点击的按钮 */
+#aplayer .aplayer-pic {
+    cursor: pointer !important;
+}
+
+/* 5. 黑胶 CD 样式与旋转动画 (稍微柔和一点的黑胶边缘) */
+@keyframes aplayer-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#aplayer .aplayer-pic {
+    border-radius: 50% !important;
+    animation: aplayer-spin 15s linear infinite;
+    animation-play-state: paused;
+    margin: 10px !important;
+    width: 70px !important;
+    height: 70px !important;
+    border: 3px solid rgba(20, 20, 20, 0.85) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+}
+
+/* 隐藏 APlayer 默认播放/暂停控件，恢复黑胶中心点样式 */
+#aplayer .aplayer-pic .aplayer-button {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* 恢复黑胶中心小圆孔 */
+#aplayer .aplayer-pic::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 12px !important;
+    height: 12px !important;
+    background: rgba(255, 255, 255, 0.86) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.65) !important;
+}
+
+[data-theme="dark"] #aplayer .aplayer-pic::after {
+    background: rgba(30, 30, 30, 0.82) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* 6. 接收 JS 信号，开始旋转 */
+#aplayer.is-playing .aplayer-pic {
+    animation-play-state: running !important;
+}
+
+/* 7. 优化歌词显示（歌词框同步毛玻璃化） */
+#aplayer .aplayer-lrc {
+    position: absolute !important;
+    bottom: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 80px !important;
+    /* 替换原有的实心黑/白背景 */
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-bottom: none !important; /* 底部无缝衔接播放器 */
+    border-radius: 12px 12px 0 0 !important;
+    padding: 10px 0 !important;
+    margin-bottom: 0 !important;
+    overflow: hidden !important;
+    z-index: 9998 !important;
+    display: block !important;
+}
+
+[data-theme="dark"] #aplayer .aplayer-lrc {
+    background: rgba(30, 35, 50, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#aplayer .aplayer-lrc-contents {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+/* 歌词文字颜色：柔和灰蓝 */
+#aplayer .aplayer-lrc p {
+    color: #4a5568 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+/* 当前高亮歌词：深蓝灰加粗，拒绝亮橙色 */
+#aplayer .aplayer-lrc p.aplayer-lrc-current {
+    color: #2c3e50 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* 深色模式歌词文字 */
+[data-theme="dark"] #aplayer .aplayer-lrc p {
+    color: #a0aec0 !important;
+}
+[data-theme="dark"] #aplayer .aplayer-lrc p.aplayer-lrc-current {
+    color: #e2e8f0 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* 8. 手机端收成更轻的悬浮条，尽量不挡阅读 */
+@media screen and (max-width: 768px) {
+    #aplayer {
+        bottom: 14px !important;
+        left: 12px !important;
+        width: 320px !important;
+        transform: none !important;
+    }
+
+    #aplayer.aplayer-collapsed {
+        width: 320px !important;
+        left: -294px !important;
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    #aplayer .aplayer-collapse-toggle {
+        right: 8px !important;
+        width: 12px !important;
+        height: 22px !important;
+        font-size: 15px !important;
+        opacity: 0.86 !important;
+    }
+}

@@ -1,0 +1,2126 @@
+/* ========================================
+   字体设置 - 数字花园风格现代黑体
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css');
+
+/* ========================================
+   自定义滚动条样式 - 柔和配色
+   ======================================== */
+::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(100, 149, 237, 0.3) !important; /* 柔和的灰蓝色 */
+    border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 149, 237, 0.5) !important;
+}
+
+/* 深色模式滚动条 */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* 全局字体设置 - Lato + HarmonyOS Sans SC */
+body {
+  font-family: 'Lato', 'HarmonyOS Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+/* 标题字体设置 - 收紧字间距 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* 一级标题特殊处理 */
+h1 {
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* ========================================
+   首页副标题 - 文学质感优化
+   ======================================== */
+
+#site-subtitle,
+.site-subtitle,
+#subtitle,
+.subtitle {
+  font-size: 1.5rem !important;
+  font-family: 'Georgia', 'Playfair Display', serif !important; /* 衬线体提升文学感 */
+  letter-spacing: 0.15em !important; /* 增加字间距，营造疏离感 */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4) !important; /* 柔和外发光 */
+  animation: subtitleBreath 6s ease-in-out infinite !important; /* 呼吸动画 */
+  transition: all 0.5s ease !important; /* 平滑过渡 */
+}
+
+/* 悬停效果 - 烟雾消散又重现（暂停呼吸动画） */
+#page-header #site-subtitle:hover,
+#page-header .site-subtitle:hover,
+#page-header #subtitle:hover,
+#site-subtitle:hover,
+.site-subtitle:hover,
+#subtitle:hover {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.9),
+               0 0 60px rgba(255, 255, 255, 0.7),
+               0 0 90px rgba(255, 255, 255, 0.5) !important; /* 强烈光晕 */
+  filter: blur(2px) !important; /* 明显模糊 */
+  opacity: 0.6 !important; /* 更透明 */
+  animation: none !important; /* 暂停呼吸动画 */
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 呼吸动画 - 模拟海面呼吸感 */
+@keyframes subtitleBreath {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* 烟雾扩散动画 - 悬停时触发 */
+@keyframes subtitleSmoke {
+  0%, 100% {
+    filter: blur(0.5px);
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    filter: blur(1px);
+    opacity: 0.75;
+    transform: scale(1.01);
+  }
+}
+
+/* ========================================
+   字体大小优化 - 提升阅读舒适度
+   ======================================== */
+
+/* 文章正文字号和行高 */
+#post .post-content,
+#article-container {
+  font-size: 18px !important;
+  line-height: 1.9 !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 400 !important;
+}
+
+/* 段落间距 */
+#post .post-content p,
+#article-container p {
+  margin-bottom: 1.2em !important;
+}
+
+/* 多级标题字号 */
+#post .post-content h2,
+#article-container h2 {
+  font-size: 1.6em !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.8em !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+#post .post-content h3,
+#article-container h3 {
+  font-size: 1.4em !important;
+  margin-top: 1.3em !important;
+  margin-bottom: 0.6em !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+
+#post .post-content h4,
+#article-container h4 {
+  font-size: 1.2em !important;
+  margin-top: 1.1em !important;
+  margin-bottom: 0.5em !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* 首页文章卡片标题字号 */
+#recent-posts .recent-post-item .article-title {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* 首页文章卡片摘要字号 */
+#recent-posts .recent-post-item .content,
+#recent-posts .recent-post-item .article-desc {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+}
+
+/* Meta 信息样式 - 小字、淡灰、加宽字间距 */
+#recent-posts .recent-post-item .article-meta-wrap,
+.article-meta-wrap,
+.post-meta,
+.post-meta-wrap,
+#post .post-meta,
+#article-container .post-meta {
+  font-size: 13px !important;
+  color: rgba(100, 100, 100, 0.7) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+}
+
+[data-theme="dark"] #recent-posts .recent-post-item .article-meta-wrap,
+[data-theme="dark"] .article-meta-wrap,
+[data-theme="dark"] .post-meta,
+[data-theme="dark"] .post-meta-wrap,
+[data-theme="dark"] #post .post-meta,
+[data-theme="dark"] #article-container .post-meta {
+  color: rgba(200, 200, 200, 0.6) !important;
+}
+
+/* 文章底部标签等小字 */
+.post-tag,
+.post-category,
+.article-tag,
+.article-category {
+  font-size: 13px !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  /* 移动端正文字号 */
+  #post .post-content,
+  #article-container {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+  }
+  
+  /* 移动端标题字号 */
+  #post .post-content h2,
+  #article-container h2 {
+    font-size: 1.4em !important;
+  }
+  
+  #post .post-content h3,
+  #article-container h3 {
+    font-size: 1.25em !important;
+  }
+  
+  #post .post-content h4,
+  #article-container h4 {
+    font-size: 1.1em !important;
+  }
+  
+  /* 移动端首页标题 */
+  #recent-posts .recent-post-item .article-title {
+    font-size: 20px !important;
+  }
+  
+  /* 移动端首页摘要 */
+  #recent-posts .recent-post-item .content,
+  #recent-posts .recent-post-item .article-desc {
+    font-size: 14px !important;
+  }
+  
+  /* 移动端 Meta 信息 */
+  #recent-posts .recent-post-item .article-meta-wrap,
+  .article-meta-wrap,
+  .post-meta {
+    font-size: 12px !important;
+  }
+}
+
+/* ========================================
+   页脚透明化
+   ======================================== */
+#footer {
+  background: transparent !important;
+}
+#footer::before {
+  background: transparent !important;
+}
+
+/* 副标题星光闪烁特效 */
+#site-subtitle {
+  text-shadow: 0 0 5px rgba(73, 177, 245, 0.8),
+               0 0 10px rgba(73, 177, 245, 0.6),
+               0 0 15px rgba(73, 177, 245, 0.4);
+  animation: flare 3s ease-in-out infinite;
+}
+
+@keyframes flare {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(73, 177, 245, 0.8),
+                 0 0 10px rgba(73, 177, 245, 0.6),
+                 0 0 15px rgba(73, 177, 245, 0.4);
+  }
+  50% {
+    opacity: 0.85;
+    text-shadow: 0 0 8px rgba(73, 177, 245, 1),
+                 0 0 15px rgba(73, 177, 245, 0.8),
+                 0 0 25px rgba(73, 177, 245, 0.6),
+                 0 0 35px rgba(73, 177, 245, 0.4);
+  }
+}
+
+/* ========================================
+   文章列表页优化
+   ======================================== */
+
+/* 减小卡片间距 */
+#recent-posts .recent-post-item {
+  margin-bottom: 12px !important;
+  background: rgba(255, 255, 255, 0.3) !important; /* 与侧边栏一致的透明度 */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] #recent-posts .recent-post-item {
+  background: rgba(30, 30, 30, 0.4) !important;
+}
+
+/* 缩减卡片内边距 */
+#recent-posts .recent-post-item .recent-post-info {
+  padding: 15px 20px !important;
+}
+
+/* 卡片标题与摘要间距 */
+#recent-posts .article-title {
+  margin-bottom: 8px !important;
+}
+
+/* ========================================
+   正文阅读体验优化
+   ======================================== */
+
+/* 正文文字颜色 */
+#post .post-content,
+#article-container {
+  color: #333 !important;
+}
+
+[data-theme="dark"] #post .post-content,
+[data-theme="dark"] #article-container {
+  color: #c0c0c0 !important;
+}
+
+/* ========================================
+   深度清除内层容器顽固白色背景
+   ======================================== */
+
+/* 文章内层容器全部透明化 */
+#article-container,
+#article-container > *,
+#article-container .post-content,
+#article-container .article-content,
+.post-content,
+.post-content > *,
+.article-post,
+.article-post > *,
+#post #article-container,
+#post .post-content,
+#post .post-content > *,
+.layout_post > #content-inner,
+.layout_post #content-inner,
+#content-inner .post-content {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ========================================
+   外层容器毛玻璃效果（统一质感）
+   ======================================== */
+
+/* 文章外层容器 - 毛玻璃效果 */
+#post,
+.layout_post,
+#content-inner {
+  background: rgba(255, 255, 255, 0.3) !important; /* 与侧边栏一致的透明度 */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: none !important;
+  border-radius: 12px !important;
+}
+
+[data-theme="dark"] #post,
+[data-theme="dark"] .layout_post,
+[data-theme="dark"] #content-inner {
+  background: rgba(30, 30, 30, 0.4) !important;
+}
+
+/* ========================================
+   页面内部容器（留言、杂七杂八、随机GAL、随机动漫等） - 强制全透，融入外层卡片
+   ======================================== */
+.page #article-container,
+.page .article-container,
+.layout_page #article-container,
+.layout_page .article-container,
+#page #article-container,
+#page .article-container {
+  background: transparent !important; /* 抽掉白底 */
+  box-shadow: none !important;        /* 抽掉阴影 */
+  border: none !important;            /* 抽掉边框 */
+}
+
+/* 深色模式同样全透 */
+[data-theme="dark"] .page #article-container,
+[data-theme="dark"] .page .article-container,
+[data-theme="dark"] .layout_page #article-container,
+[data-theme="dark"] .layout_page .article-container,
+[data-theme="dark"] #page #article-container,
+[data-theme="dark"] #page .article-container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 主布局区域透明 */
+.layout,
+.main-inner {
+  background: transparent !important;
+}
+
+/* ========================================
+   底部版权/打赏区域透明化
+   ======================================== */
+
+.post-copyright,
+.post-reward,
+#post .post-copyright,
+#post .post-reward,
+.article-copyright,
+.article-reward {
+  background: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .post-copyright,
+[data-theme="dark"] .post-reward,
+[data-theme="dark"] #post .post-copyright,
+[data-theme="dark"] #post .post-reward {
+  background: rgba(50, 50, 50, 0.3) !important;
+}
+
+/* ========================================
+   文章页面信息框和上下篇导航柔化颜色
+   ======================================== */
+
+/* 文章作者信息框 - 极淡的灰白色 */
+#post .post-copyright,
+.post-copyright,
+.article-copyright {
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* 上下篇导航 - 极淡的灰蓝色，不再使用深蓝色 */
+#pagination,
+#pagination .pagination,
+.pagination,
+.article-navigation,
+#post .article-navigation {
+  background: rgba(100, 149, 237, 0.15) !important; /* 极淡的灰蓝色 */
+  border: 1px solid rgba(100, 149, 237, 0.2) !important;
+  box-shadow: none !important;
+}
+
+/* 上下篇导航文字颜色 */
+#pagination a,
+.pagination a,
+.article-navigation a {
+  color: #4a5568 !important; /* 柔和的深灰色 */
+}
+
+/* 上下篇导航标签小字 */
+#pagination .label,
+.pagination .label,
+.article-navigation .label {
+  color: #6b7280 !important; /* 更浅的灰色 */
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] #pagination,
+[data-theme="dark"] .pagination,
+[data-theme="dark"] .article-navigation {
+  background: rgba(100, 149, 237, 0.2) !important;
+  border-color: rgba(100, 149, 237, 0.3) !important;
+}
+
+[data-theme="dark"] #pagination a,
+[data-theme="dark"] .pagination a,
+[data-theme="dark"] .article-navigation a {
+  color: #d1d5db !important;
+}
+
+/* ========================================
+   多媒体与细节优化
+   ======================================== */
+
+/* 文章内图片圆角和阴影 */
+#post .post-content img,
+#article-container img {
+  border-radius: 8px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+  margin: 1.5em auto !important;
+}
+
+/* ========================================
+   侧边栏优化
+   ======================================== */
+
+/* 侧边栏紧凑 - 与文章页面统一 */
+#aside-content .card-widget {
+  margin-bottom: 12px !important;
+  padding: 16px !important;
+  background: rgba(255, 255, 255, 0.3) !important; /* 与文章页面一致的透明度 */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* 与文章页面一致的边框 */
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] #aside-content .card-widget {
+  background: rgba(30, 30, 30, 0.4) !important; /* 与文章页面一致的透明度 */
+}
+
+#aside-content .card-widget .card-content {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* 侧边栏标题间距 */
+#aside-content .item-headline {
+  margin-bottom: 10px !important;
+}
+
+/* ========================================
+   首屏内容密度优化
+   ======================================== */
+
+/* 减少首页整体留白 */
+.layout > .recent-posts {
+  margin-top: 10px !important;
+}
+
+/* 分页区域 - 透明背景，去掉蓝色块 */
+#pagination,
+#pagination .pagination,
+.pagination {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 分页按钮背景透明化 */
+#pagination .page-number,
+#pagination .current,
+#pagination .extend,
+#pagination a,
+.pagination .page-number,
+.pagination .current,
+.pagination .extend,
+.pagination a {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* 当前页码的特殊样式 */
+#pagination .current,
+.pagination .current {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #2c3e50 !important;
+}
+
+/* ========================================
+   1. 精准选中独立页面、归档、标签的“卡片主体” (注意这里是 # 开头的 ID)
+   ======================================== */
+/* 关于我、留言、杂七杂八等独立页面 - 与侧边栏统一 */
+#page {
+  background: rgba(255, 255, 255, 0.3) !important; /* 与侧边栏一致的透明度 */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* 与侧边栏一致的边框 */
+  box-shadow: none !important;
+  border-radius: 12px !important; 
+}
+
+/* 其他页面保持原样 */
+#archive,
+#tag,
+#category {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 12px !important; 
+}
+
+/* 深色模式下的卡片主体 */
+[data-theme="dark"] #page {
+  background: rgba(30, 30, 30, 0.4) !important; /* 与侧边栏一致的透明度 */
+}
+
+[data-theme="dark"] #archive,
+[data-theme="dark"] #tag,
+[data-theme="dark"] #category {
+  background: rgba(30, 30, 30, 0.5) !important;
+}
+
+/* 确保归档列表等内置组件不会有底色挡住背景 */
+.category-lists .category-list,
+.article-sort-item,
+.tag-cloud-list a {
+  background: transparent !important;
+}
+
+/* ========================================
+   1. 修复文字太淡看不清的问题 (强制覆盖内联的白字)
+   ======================================== */
+.control-panel h3, 
+.preview-panel h3 {
+  color: var(--text-color, #333) !important; /* 使用全局文字颜色，通常是深灰 */
+  font-weight: 700 !important;
+  text-shadow: none !important; /* 去掉可能存在的发光特效 */
+}
+
+/* 预览区里面的提示文字（"处理后的图片将显示在这里"） */
+.placeholder-text {
+  color: #888 !important;
+}
+
+/* ========================================
+   2. 修复预览区域太黑、太死板的问题
+   ======================================== */
+.preview-container {
+  background: rgba(0, 0, 0, 0.03) !important; /* 极淡的灰色底，不抢戏 */
+  border: 2px dashed rgba(0, 0, 0, 0.1) !important; /* 加虚线边框，像个占位框 */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.02) !important; /* 淡淡的内阴影 */
+  border-radius: 12px !important;
+}
+
+/* ========================================
+   3. 修复按钮过于刺眼的问题 (改为半透明玻璃质感)
+   ======================================== */
+/* 顶部 4 个模式切换按钮 */
+.mode-btn {
+  background: rgba(102, 126, 234, 0.15) !important; /* 淡淡的紫色底 */
+  color: var(--text-color, #555) !important;
+  border: 1px solid rgba(102, 126, 234, 0.3) !important;
+  box-shadow: none !important;
+}
+
+/* 被选中的按钮状态 */
+.mode-btn.active {
+  background: rgba(102, 126, 234, 0.8) !important; /* 选中时加深 */
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* 底部长条操作按钮统一样式 */
+.action-btn {
+  color: var(--text-color, #555) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none !important;
+}
+
+/* 开始处理按钮（原粉色） */
+.process-btn {
+  background: rgba(245, 87, 108, 0.15) !important; 
+}
+.process-btn:hover:not(:disabled) {
+  background: rgba(245, 87, 108, 0.8) !important;
+  color: #fff !important;
+}
+
+/* 下载结果按钮（原蓝色） */
+.download-btn {
+  background: rgba(79, 172, 254, 0.15) !important;
+}
+.download-btn:hover:not(:disabled) {
+  background: rgba(79, 172, 254, 0.8) !important;
+  color: #fff !important;
+}
+
+/* ========================================
+   4. 深色模式完美适配
+   ======================================== */
+[data-theme="dark"] .control-panel h3, 
+[data-theme="dark"] .preview-panel h3,
+[data-theme="dark"] .mode-btn,
+[data-theme="dark"] .action-btn {
+  color: #eee !important; /* 深色模式下文字变白 */
+}
+
+[data-theme="dark"] .preview-container {
+  background: rgba(255, 255, 255, 0.05) !important; /* 深色模式下预览框用半透明白 */
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .action-btn,
+[data-theme="dark"] .mode-btn {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+/* 上传框底色打穿 */
+.upload-area {
+  background: transparent !important;
+}
+[data-theme="dark"] .upload-area {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+/* ========================================
+   强制清除所有工具面板的深色死黑背景
+   ======================================== */
+#symmetry-tool .control-panel,
+#symmetry-tool .preview-panel,
+#melt-tool .control-panel,
+#melt-tool .preview-panel {
+  background: transparent !important; /* 强行抽空黑底 */
+  box-shadow: none !important;        /* 去除阴影 */
+  border: none !important;            /* 去除边框 */
+  padding: 0 15px !important;         /* 稍微缩减一点内边距，让排版更紧凑 */
+}
+
+/* ========================================
+   改造上传区和预览区的深色背景（改成极淡的浅灰色边框框）
+   ======================================== */
+#symmetry-tool .upload-area,
+#melt-tool .upload-area,
+#symmetry-tool .preview-container,
+#melt-tool .preview-container {
+  background: rgba(0, 0, 0, 0.02) !important; /* 极淡极淡的灰色，只是为了占个位置 */
+  border: 2px dashed rgba(0, 0, 0, 0.1) !important; /* 换成淡淡的虚线边框 */
+}
+
+/* 深色模式下的适配 */
+[data-theme="dark"] #symmetry-tool .upload-area,
+[data-theme="dark"] #melt-tool .upload-area,
+[data-theme="dark"] #symmetry-tool .preview-container,
+[data-theme="dark"] #melt-tool .preview-container {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ========================================
+   终极补丁：修复按钮、标签和粉色框颜色异常
+   ======================================== */
+
+/* 1. 强制修复侧边栏 I'm Feeling Lucky 按钮的白字 */
+#aside-content .card-widget button,
+#aside-content .card-widget a.button,
+#aside-content .card-widget .card-info-btn,
+#aside-content .card-widget button span,
+#aside-content .card-widget a.button span,
+#aside-content .card-widget .card-info-btn span {
+  color: #ffffff !important;
+}
+
+/* 2. 强制加深随机页面的灰色小标签文字（如"国产"、"1959"等） */
+.layout_page #page .tag-item,
+.layout_page #page .tag-item span,
+.layout_page #page .game-tags .tag-item,
+.layout_page #page .anime-tags .tag-item {
+  color: #374151 !important; /* 深灰色文字，保证能看清 */
+  background: rgba(0, 0, 0, 0.08) !important; /* 稍微加深底色描边 */
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 深色模式下的标签反色修复 */
+[data-theme="dark"] .layout_page #page .tag-item,
+[data-theme="dark"] .layout_page #page .tag-item span {
+  color: #e5e7eb !important;
+}
+
+/* 3. 强制弱化底部的实心粉色提示框（"今日给猴池..."） */
+/* 穷举可能的类名，确保命中目标 */
+.layout_page #page .error-msg,
+.layout_page #page .notice-box,
+.layout_page #page .daily-notice,
+.layout_page #page .tip-box,
+.layout_page #page div[style*="background: #ffe4e6"],
+.layout_page #page div[style*="background-color: #ffe4e6"],
+.layout_page #page div[style*="background: rgb(255, 228, 230)"] {
+  background: rgba(225, 29, 72, 0.08) !important; /* 极淡的透明红 */
+  background-color: rgba(225, 29, 72, 0.08) !important;
+  border: 1px solid rgba(225, 29, 72, 0.2) !important; /* 细红边框 */
+  color: #be123c !important; /* 深红色文字 */
+}
+
+/* 确保粉框内的 span 文字也是红色而不是深灰 */
+.layout_page #page .error-msg span,
+.layout_page #page .notice-box span,
+.layout_page #page .daily-notice span {
+  color: #be123c !important;
+}
+
+/* ========================================
+   紧急修复：摧毁最外层大白框，恢复独立卡片悬浮感
+   ======================================== */
+.layout,
+#content-inner.layout,
+.main-inner,
+#page-header.full_page + #content-inner.layout {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 确保深色模式下也不会出现外层黑框 */
+[data-theme="dark"] .layout,
+[data-theme="dark"] #content-inner.layout,
+[data-theme="dark"] .main-inner,
+[data-theme="dark"] #page-header.full_page + #content-inner.layout {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ========================================
+   打字效果光标样式 - 让光标一直闪烁
+   ======================================== */
+
+/* 主标题打字效果光标 */
+#site-title.hero-typing-active::after {
+  content: '|';
+  opacity: 1;
+  animation: heroTitleBlink 0.7s infinite;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+/* 深色模式光标颜色 */
+[data-theme="dark"] #site-title.hero-typing-active::after {
+  color: #e2e8f0;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* 打字完成后仍然显示光标 */
+#site-title[data-hero-typing-done="true"].hero-typing-active::after {
+  opacity: 1;
+  animation: heroTitleBlink 0.7s infinite;
+}
+
+/* 光标闪烁动画 */
+@keyframes heroTitleBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ========================================
+   将打字机光标修改为经典下划线 "_"
+   ======================================== */
+#page-header.full_page #site-title.hero-typing-active::after {
+  content: '_' !important;       /* 直接将内容替换为下划线字符 */
+  display: inline-block !important;
+  width: auto !important;        /* 取消竖线的固定宽度 */
+  height: auto !important;       /* 取消竖线的固定高度 */
+  margin-left: 0.1em !important; /* 稍微留一点间距 */
+  background: transparent !important; /* 清除原有竖线的背景色 */
+  box-shadow: none !important;   /* 清除原有竖线的阴影 */
+  vertical-align: baseline !important;
+  animation: hero-caret-blink 1s steps(1, end) infinite !important;
+}
+
+/* 下划线光标闪烁动画 */
+@keyframes hero-caret-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ========================================
+   APlayer 音乐播放器毛玻璃化改造
+   ======================================== */
+.aplayer {
+  background: rgba(255, 255, 255, 0.2) !important; /* 极淡的半透明白色 */
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+}
+
+/* 修复内部文字颜色，确保在半透明背景下清晰可见 */
+.aplayer .aplayer-info .aplayer-music .aplayer-title {
+  color: #2c3e50 !important; /* 歌名深灰色 */
+  font-weight: 600 !important;
+}
+
+.aplayer .aplayer-info .aplayer-music .aplayer-author {
+  color: #4a5568 !important; /* 歌手名稍浅 */
+}
+
+/* 播放控制器图标颜色 */
+.aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  color: #4a5568 !important;
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+  fill: #2c3e50 !important;
+}
+
+/* 进度条主题色优化 (改为柔和的蓝/白色系) */
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+  background: rgba(102, 126, 234, 0.8) !important; /* 进度条主题色 */
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+  background: #fff !important;
+  border: 1px solid rgba(102, 126, 234, 0.8) !important;
+}
+
+/* =========================================================
+   APlayer 最终稳定版：毛玻璃黑胶交互
+   ========================================================= */
+
+/* 1. 播放器基础容器 - 默认收起为一个透明方块 */
+#aplayer.aplayer-fixed.aplayer-narrow .aplayer-body,
+#aplayer.aplayer-fixed .aplayer-body {
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    overflow: visible !important;
+    padding: 0 !important;
+}
+
+/* 2. 强制 CD 封面居中且为圆形 */
+#aplayer .aplayer-pic {
+    position: relative !important;
+    width: 66px !important;
+    height: 66px !important;
+    margin: 7px 7px 7px 10px !important;
+    border-radius: 50% !important;
+    border: 3px solid #222 !important;
+    background-size: cover !important;
+    transition: all 0.3s ease !important;
+    z-index: 10 !important;
+}
+
+/* CD 中心圆孔 */
+#aplayer .aplayer-pic::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px; height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+/* 3. 播放时旋转 */
+#aplayer.is-playing .aplayer-pic {
+    animation: aplayer-spin 15s linear infinite !important;
+}
+
+@keyframes aplayer-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 4. 修复点击问题：确保暂停按钮在 CD 上方可见 */
+#aplayer .aplayer-pic .aplayer-button {
+    width: 26px !important;
+    height: 26px !important;
+    opacity: 0.8 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    top: 50% !important;
+    left: 50% !important;
+}
+
+/* 5. 展开后的信息栏颜色（防止隐身） */
+#aplayer .aplayer-info {
+    background: transparent !important;
+    padding: 10px 10px 10px 5px !important;
+}
+
+#aplayer .aplayer-info .aplayer-music .aplayer-title,
+#aplayer .aplayer-info .aplayer-music .aplayer-author {
+    color: #2c3e50 !important;
+}
+
+/* 6. 滚动浮现的逻辑 - 强制修复动画（对抗内联样式） */
+/* 状态 1：默认隐藏，向下偏移并模糊 */
+div#aplayer[id="aplayer"] {
+    display: block !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: translate3d(0, 50px, 0) !important;
+    filter: blur(5px);
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* 状态 2：显示，恢复原位并消除模糊 */
+div#aplayer[id="aplayer"].aplayer-show {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    filter: blur(0px);
+}
+
+/* =========================================================
+   弱化侧边栏按钮，契合极简毛玻璃主题
+   ========================================================= */
+
+/* 针对该按钮的专属降噪处理 */
+#aside-content .card-widget button.feeling-lucky-btn,
+#aside-content .card-widget .card-info-social-icons + button,
+.feeling-lucky-btn {
+    background: rgba(100, 149, 237, 0.15) !important; /* 极淡的灰蓝色 */
+    color: #4a5568 !important; /* 柔和的深灰蓝文字 */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 悬停时稍微加深 */
+#aside-content .card-widget button.feeling-lucky-btn:hover,
+#aside-content .card-widget .card-info-social-icons + button:hover,
+.feeling-lucky-btn:hover {
+    background: rgba(100, 149, 237, 0.3) !important;
+    color: #2d3748 !important;
+}
+
+/* 将高饱和实心按钮改为半透明玻璃质感 */
+#aside-content .card-widget button,
+#aside-content .card-widget a.button {
+    background: rgba(255, 255, 255, 0.4) !important; /* 半透明白底 */
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important; /* 精致的高光白边 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* 按钮内部文字和图标改用柔和的深灰蓝色（因为底色变亮了） */
+#aside-content .card-widget button,
+#aside-content .card-widget a.button,
+#aside-content .card-widget button span,
+#aside-content .card-widget a.button span,
+#aside-content .card-widget button i,
+#aside-content .card-widget a.button i {
+    color: #4a5568 !important;
+    font-weight: 600 !important;
+}
+
+/* 悬停状态：微微加深底色，文字变深 */
+#aside-content .card-widget button:hover,
+#aside-content .card-widget a.button:hover {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.9) !important;
+    transform: translateY(-2px) !important;
+}
+
+#aside-content .card-widget button:hover span,
+#aside-content .card-widget button:hover i {
+    color: #2c3e50 !important;
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] #aside-content .card-widget button,
+[data-theme="dark"] #aside-content .card-widget a.button {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+[data-theme="dark"] #aside-content .card-widget button span,
+[data-theme="dark"] #aside-content .card-widget button i {
+    color: #a0aec0 !important;
+}
+
+[data-theme="dark"] #aside-content .card-widget .feeling-lucky-btn {
+    background: rgba(100, 149, 237, 0.2) !important;
+    color: #a0aec0 !important;
+}
+
+[data-theme="dark"] #aside-content .card-widget .feeling-lucky-btn:hover {
+    background: rgba(100, 149, 237, 0.35) !important;
+    color: #e2e8f0 !important;
+}
+
+/* =========================================================
+   彻底清除 Lucky 按钮所在区域的任何残留背景
+   ========================================================= */
+#aside-content .card-widget.card-info {
+    background: rgba(255, 255, 255, 0.3) !important; /* 与文章页面一致的透明度 */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* 与文章页面一致的边框 */
+}
+
+#aside-content .card-info #aside-content-button {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* =========================================================
+   恢复侧边栏卡片的磨砂玻璃底色 - 与文章页面统一
+   ========================================================= */
+#aside-content .card-widget {
+    background: rgba(255, 255, 255, 0.3) !important; /* 与文章页面一致的透明度 */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* 与文章页面一致的边框 */
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] #aside-content .card-widget {
+    background: rgba(30, 30, 30, 0.4) !important; /* 与文章页面一致的透明度 */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* =========================================================
+   文章区域和侧边栏顶部对齐（不破坏滑动效果）
+   ========================================================= */
+/* 给文章区域添加最小高度，确保和侧边栏顶部齐平 */
+.layout > .recent-posts {
+    min-height: calc(100vh - 20px) !important;
+}
+
+/* 移除可能的顶部间距 */
+#aside-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.layout > .recent-posts {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* =========================================================
+   Lucky 按钮"降噪"处理 - 最终暴力补丁
+   ========================================================= */
+
+/* 1. 强力锁定按钮容器与按钮本身，强制改色 */
+#aside-content .card-info #aside-content-button,
+#aside-content .card-info #aside-content-button a,
+#aside-content .card-widget button.feeling-lucky-btn,
+.feeling-lucky-btn,
+#aside-content-button {
+    background: rgba(255, 255, 255, 0.2) !important; /* 玻璃半透明感 */
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #4a5568 !important; /* 灰蓝色文字 */
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    text-shadow: none !important; /* 去掉可能存在的发光 */
+}
+
+/* 2. 强制修改内部图标颜色 */
+#aside-content .card-info #aside-content-button i,
+#aside-content .card-info #aside-content-button span {
+    color: #4a5568 !important;
+}
+
+/* 3. 悬停效果：增加对比度 */
+#aside-content .card-info #aside-content-button:hover,
+#aside-content .card-info #aside-content-button a:hover {
+    background: rgba(255, 255, 255, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    transform: translateY(-2px) !important;
+}
+
+#aside-content .card-info #aside-content-button:hover i,
+#aside-content .card-info #aside-content-button:hover span {
+    color: #2c3e50 !important;
+}
+
+/* 4. 如果该按钮是通过渐变色实现的，强制取消渐变 */
+#aside-content .card-info #aside-content-button,
+#aside-content .card-info #aside-content-button a {
+    background-image: none !important;
+}
+
+/* =========================================================
+   终极修复：直接覆盖 CSS 变量，从根源解决问题
+   ========================================================= */
+:root {
+    --btn-bg: rgba(255, 255, 255, 0.2) !important; /* 按钮背景改为半透明白 */
+    --btn-hover-color: rgba(255, 255, 255, 0.4) !important; /* 悬停背景 */
+}
+
+/* 强制覆盖主题生成的 #card-info-btn 样式 */
+#aside-content .card-info #card-info-btn {
+    background: rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #4a5568 !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+#aside-content .card-info #card-info-btn:hover {
+    background: rgba(255, 255, 255, 0.4) !important;
+    color: #2c3e50 !important;
+}
+
+#aside-content .card-info #card-info-btn span {
+    color: #4a5568 !important;
+}
+
+/* =========================================================
+   【核心修复】随机页面组件视觉大一统 - 彻底消除突兀感
+   ========================================================= */
+
+/* 0. 恢复卡片容器的白色玻璃感 */
+.random-gal-container,
+.random-anime-container,
+.game-card,
+.anime-card {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    padding: 20px !important;
+}
+
+/* 1. 强制统一所有小标签（Tag）的视觉 - 消除亮蓝、深紫、粉红 */
+.random-gal-container .tag-item,
+.random-anime-container .tag-item,
+.game-card .tag-item,
+.anime-card .tag-item,
+.random-gal-container span[style*="background-color"],
+.random-anime-container span[style*="background-color"],
+.tag-item[style*="background"] {
+    background: rgba(102, 126, 234, 0.25) !important; /* 明显的灰蓝玻璃 */
+    color: #2c3e50 !important; /* 深色文字 */
+    border: 1px solid rgba(102, 126, 234, 0.3) !important;
+    backdrop-filter: blur(4px) !important;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15) !important;
+    text-shadow: none !important;
+    padding: 4px 12px !important;
+    border-radius: 16px !important;
+    font-weight: 500 !important;
+}
+
+/* 2. 改造"推荐历史回放"和"下拉筛选菜单" - 与外层容器融为一体 */
+.random-gal-container details,
+.random-anime-container details,
+.random-gal-container .history-section,
+.random-anime-container .history-section,
+.random-gal-container .filter-section,
+.random-anime-container .filter-section {
+    background: transparent !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    padding: 10px 0 20px 0 !important; /* 增加底部间距到 20px */
+    margin: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+
+/* 筛选框样式 - 保持白色药丸形状 */
+.random-gal-container select,
+.random-anime-container select {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    color: #2c3e50 !important;
+    padding: 6px 16px !important;
+    font-size: 14px !important;
+    border-radius: 20px !important;
+    cursor: pointer;
+    margin: 0 4px !important;
+}
+
+/* 筛选标签文字样式 */
+.random-gal-container .filter-section label,
+.random-anime-container .filter-section label {
+    color: #4a5568 !important;
+    font-size: 14px !important;
+    margin-right: 6px !important;
+}
+
+/* 3. 彻底重塑两个核心按钮（先看这部 & 随机抽取） */
+/* 消除粉红渐变和亮蓝渐变 */
+.random-gal-container .process-btn,
+.random-anime-container .process-btn,
+.random-gal-container .random-pull-btn,
+.random-anime-container .random-pull-btn,
+.random-gal-container button,
+.random-anime-container button {
+    background: rgba(102, 126, 234, 0.3) !important; /* 明显的灰蓝色玻璃 */
+    background-image: none !important; /* 必须杀掉渐变色 */
+    color: #2c3e50 !important;
+    border: 1px solid rgba(102, 126, 234, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2) !important;
+    transition: all 0.3s ease !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+/* 悬停状态 */
+.random-gal-container button:hover,
+.random-anime-container button:hover {
+    background: rgba(102, 126, 234, 0.3) !important;
+    color: #2c3e50 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.15) !important;
+}
+
+/* 4. 深色模式微调 */
+[data-theme="dark"] .random-gal-container select,
+[data-theme="dark"] .random-anime-container select {
+    background: rgba(30, 30, 30, 0.5) !important;
+    color: #e2e8f0 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .random-gal-container button,
+[data-theme="dark"] .random-anime-container button {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #d1d5db !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* =========================================================
+   【精准补丁】强制覆盖标签和按钮的行内样式
+   ========================================================= */
+
+/* 针对随机页面标签的颜色重置 */
+.layout_page #page .tag-item,
+.layout_page #page .game-tags .tag-item,
+.layout_page #page .anime-tags .tag-item,
+#page .tag-item[style*="background-color"] {
+    background-color: rgba(100, 149, 237, 0.15) !important; /* 改为浅灰蓝色 */
+    background: rgba(100, 149, 237, 0.15) !important;
+    color: #4a5568 !important; /* 深灰文字 */
+    border: 1px solid rgba(100, 149, 237, 0.2) !important;
+}
+
+/* 修改下方的黑色按钮颜色（先看今天这部） */
+.layout_page #page .action-btn,
+.layout_page #page .primary-btn,
+.layout_page #page button[style*="background-color: rgb(44, 62, 80)"] {
+    background-color: rgba(44, 62, 80, 0.1) !important;
+    background: rgba(44, 62, 80, 0.1) !important;
+    color: #2c3e50 !important;
+    border: 1px solid rgba(44, 62, 80, 0.2) !important;
+}
+
+/* =========================================================
+   文章底部：版权/分享/翻页 视觉降噪
+   ========================================================= */
+
+/* 1. 版权信息区域：变淡、半透明 */
+#post .post-copyright {
+    background: rgba(255, 255, 255, 0.3) !important; /* 极淡的底色 */
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    color: #556b2f !important; /* 文字改用低饱和度的灰绿/深灰 */
+    border-radius: 12px !important;
+}
+
+/* 版权区域内的蓝色图标和链接，全部降噪 */
+#post .post-copyright .post-copyright-meta,
+#post .post-copyright .post-copyright-info a,
+#post .post-copyright i {
+    color: #4a5568 !important; /* 统一改为柔和的深灰蓝 */
+}
+
+/* 2. 社交分享图标：去掉鲜艳色，变淡 */
+.social-share .social-share-icon,
+#post .post-share .share-button {
+    background: rgba(255, 255, 255, 0.4) !important;
+    color: #4a5568 !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    opacity: 0.8 !important;
+}
+
+/* 3. 翻页导航（下一篇）：摧毁深蓝色块 */
+#pagination.post-navigation {
+    background: transparent !important; /* 抽掉大底色 */
+}
+
+.post-navigation .nav-item {
+    background: rgba(44, 62, 80, 0.1) !important; /* 改用极淡的灰蓝玻璃感 */
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.post-navigation .nav-item:hover {
+    background: rgba(44, 62, 80, 0.2) !important;
+}
+
+/* 翻页里的文字颜色 */
+.post-navigation .label,
+.post-navigation .prev-post .label,
+.post-navigation .next-post .label,
+.post-navigation .title {
+    color: #2c3e50 !important;
+}
+
+/* 4. 深色模式适配 */
+[data-theme="dark"] #post .post-copyright {
+    background: rgba(30, 30, 30, 0.4) !important;
+}
+[data-theme="dark"] .post-navigation .nav-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* =========================================================
+   文章页最终覆盖：只保留外层 #post 作为唯一卡片
+   ========================================================= */
+/* 保留外层 #post 作为主卡片 */
+.layout_post #post {
+    background: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none !important;
+    border-radius: 12px !important;
+}
+
+/* 强制内层 #article-container 透明，避免嵌套卡片效果 */
+.layout_post #article-container,
+.layout_post article#article-container.container.post-content,
+.layout_post #post #article-container,
+.layout_post #post .post-content,
+.layout_post #article-container.container,
+.layout_post .container.post-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .layout_post #post {
+    background: rgba(30, 30, 30, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-theme="dark"] .layout_post #article-container,
+[data-theme="dark"] .layout_post article#article-container.container.post-content,
+[data-theme="dark"] .layout_post #post #article-container,
+[data-theme="dark"] .layout_post #post .post-content {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* =========================================================
+   友链页：扁平、轻量的小卡片列表
+   ========================================================= */
+#page .flink {
+    margin-top: 6px;
+}
+
+#page .flink > .flink-desc {
+    margin: 0 0 16px !important;
+    color: #718096 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.8 !important;
+}
+
+#page .flink .flink-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px 18px !important;
+    padding: 4px 0 8px !important;
+    overflow: visible !important;
+    text-align: left !important;
+}
+
+#page .flink .flink-list > .flink-list-item {
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.24) !important;
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    box-shadow: 0 8px 24px rgba(31, 38, 135, 0.06) !important;
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+#page .flink .flink-list > .flink-list-item::before {
+    display: none !important;
+}
+
+#page .flink .flink-list > .flink-list-item:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(102, 126, 234, 0.26) !important;
+    box-shadow: 0 10px 28px rgba(31, 38, 135, 0.1) !important;
+}
+
+#page .flink .flink-list > .flink-list-item a {
+    display: grid !important;
+    grid-template-columns: 56px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 14px !important;
+    padding: 16px 18px !important;
+    min-height: 92px !important;
+    color: #2d3748 !important;
+}
+
+#page .flink .flink-item-icon {
+    float: none !important;
+    margin: 0 !important;
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+    align-self: center !important;
+    justify-self: center !important;
+}
+
+#page .flink .flink-list > .flink-list-item:hover .flink-item-icon {
+    margin-left: 0 !important;
+    width: 56px !important;
+    transform: none !important;
+}
+
+#page .flink .flink-item-icon img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    margin: 0 !important;
+    border-radius: inherit !important;
+    box-shadow: none !important;
+}
+
+#page .flink .flink-item-content {
+    min-width: 0;
+}
+
+#page .flink .flink-item-name {
+    padding: 0 !important;
+    height: auto !important;
+    margin: 0 0 4px !important;
+    color: #2d3748 !important;
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+}
+
+#page .flink .flink-item-desc {
+    padding: 0 !important;
+    height: auto !important;
+    color: #718096 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    white-space: normal !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden !important;
+}
+
+[data-theme="dark"] #page .flink > .flink-desc {
+    color: #a0aec0 !important;
+}
+
+[data-theme="dark"] #page .flink .flink-list > .flink-list-item {
+    background: rgba(30, 30, 30, 0.36) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+[data-theme="dark"] #page .flink .flink-list > .flink-list-item a,
+[data-theme="dark"] #page .flink .flink-item-name {
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] #page .flink .flink-item-desc {
+    color: #a0aec0 !important;
+}
+
+@media screen and (max-width: 900px) {
+    #page .flink .flink-list {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+}
+
+/* =========================================================
+   友链页：本站名片
+   ========================================================= */
+#page .own-flink-card {
+    margin: 6px 0 22px !important;
+    padding: 20px 22px !important;
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, 0.22) !important;
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    box-shadow: 0 10px 28px rgba(31, 38, 135, 0.06) !important;
+}
+
+#page .own-flink-heading {
+    margin-bottom: 18px !important;
+}
+
+#page .own-flink-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 4px 10px !important;
+    margin-bottom: 10px !important;
+    border-radius: 999px !important;
+    background: rgba(102, 126, 234, 0.14) !important;
+    color: #5a67d8 !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+}
+
+#page .own-flink-heading h2 {
+    margin: 0 !important;
+    color: #2d3748 !important;
+    font-size: 1.18rem !important;
+    line-height: 1.5 !important;
+}
+
+#page .own-flink-panel {
+    display: grid !important;
+    grid-template-columns: 92px minmax(0, 1fr) !important;
+    gap: 18px !important;
+    align-items: start !important;
+}
+
+#page .own-flink-avatar {
+    width: 92px !important;
+    height: 92px !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    align-self: start !important;
+    justify-self: start !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+#page .own-flink-avatar img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: inherit !important;
+    box-shadow: none !important;
+}
+
+#page .own-flink-content {
+    min-width: 0 !important;
+}
+
+#page .own-flink-row {
+    display: grid !important;
+    grid-template-columns: 52px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: start !important;
+    padding: 7px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+#page .own-flink-row:last-of-type {
+    border-bottom: none !important;
+}
+
+#page .own-flink-label {
+    color: #718096 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.7 !important;
+}
+
+#page .own-flink-value-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-width: 0 !important;
+    flex-wrap: wrap !important;
+}
+
+#page .own-flink-value,
+#page .own-flink-link {
+    color: #2d3748 !important;
+    font-size: 0.96rem !important;
+    line-height: 1.7 !important;
+    word-break: break-all !important;
+}
+
+#page .own-flink-link {
+    text-decoration: none !important;
+    border-bottom: 1px dashed rgba(102, 126, 234, 0.26) !important;
+}
+
+#page .own-flink-link:hover {
+    color: #5a67d8 !important;
+}
+
+#page .own-flink-copy,
+#page .own-flink-action {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 32px !important;
+    padding: 0 12px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(102, 126, 234, 0.18) !important;
+    background: rgba(255, 255, 255, 0.26) !important;
+    color: #4a5568 !important;
+    font-size: 0.84rem !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+#page .own-flink-action[href],
+#page button.own-flink-copy,
+#page button.flink-apply-action {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border-radius: 999px !important;
+    text-decoration: none !important;
+}
+
+#page .own-flink-copy:hover,
+#page .own-flink-action:hover {
+    color: #2d3748 !important;
+    border-color: rgba(102, 126, 234, 0.28) !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+    transform: translateY(-1px) !important;
+}
+
+#page .own-flink-actions {
+    display: flex !important;
+    gap: 10px !important;
+    margin-top: 16px !important;
+    flex-wrap: wrap !important;
+}
+
+[data-theme="dark"] #page .own-flink-card {
+    background: rgba(30, 30, 30, 0.36) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18) !important;
+}
+
+[data-theme="dark"] #page .own-flink-badge {
+    background: rgba(129, 140, 248, 0.18) !important;
+    color: #c7d2fe !important;
+}
+
+[data-theme="dark"] #page .own-flink-heading h2,
+[data-theme="dark"] #page .own-flink-value,
+[data-theme="dark"] #page .own-flink-link {
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] #page .own-flink-label {
+    color: #a0aec0 !important;
+}
+
+[data-theme="dark"] #page .own-flink-copy,
+[data-theme="dark"] #page .own-flink-action {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    color: #cbd5e0 !important;
+}
+
+@media screen and (max-width: 768px) {
+    #page .own-flink-card {
+        padding: 18px 16px !important;
+    }
+
+    #page .own-flink-panel {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    #page .own-flink-avatar {
+        width: 84px !important;
+        height: 84px !important;
+    }
+
+    #page .own-flink-row {
+        grid-template-columns: 1fr !important;
+        gap: 4px !important;
+    }
+}
+
+#page .flink .flink-list {
+    margin-bottom: 28px !important;
+}
+
+#page #own-flink-card-root,
+#page #flink-apply-root {
+    margin-top: 28px !important;
+}
+
+#page .flink-apply-card {
+    padding: 28px 30px !important;
+    border-radius: 22px !important;
+    background: rgba(255, 255, 255, 0.58) !important;
+    border: 1px solid rgba(255, 255, 255, 0.38) !important;
+    box-shadow: 0 12px 34px rgba(31, 38, 135, 0.08) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+#page .flink-apply-heading {
+    margin-bottom: 22px !important;
+}
+
+#page .flink-apply-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+    background: rgba(122, 127, 255, 0.12) !important;
+    color: #6f6bd7 !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+}
+
+#page .flink-apply-heading h2 {
+    margin: 12px 0 10px !important;
+    color: #23324d !important;
+    font-size: 1.35rem !important;
+    line-height: 1.5 !important;
+}
+
+#page .flink-apply-heading p {
+    margin: 0 !important;
+    color: #6b7280 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.8 !important;
+}
+
+#page .flink-apply-rules {
+    margin-top: 18px !important;
+    padding: 16px 18px !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.42) !important;
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+}
+
+#page .flink-apply-rules-title {
+    margin-bottom: 10px !important;
+    color: #334155 !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+}
+
+#page .flink-apply-rules-list {
+    margin: 0 !important;
+    padding-left: 1.35rem !important;
+    color: #5b6472 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.9 !important;
+}
+
+#page .flink-apply-rules-list li + li {
+    margin-top: 6px !important;
+}
+
+#page .flink-apply-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px 20px !important;
+}
+
+#page .flink-apply-field {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+#page .flink-apply-field--full {
+    grid-column: 1 / -1 !important;
+}
+
+#page .flink-apply-field span {
+    color: #334155 !important;
+    font-size: 0.94rem !important;
+    font-weight: 600 !important;
+}
+
+#page .flink-apply-field input {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 0 16px !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(148, 163, 184, 0.26) !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    color: #334155 !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s ease, background 0.2s ease !important;
+}
+
+#page .flink-apply-field input::placeholder {
+    color: #94a3b8 !important;
+}
+
+#page .flink-apply-field input:focus {
+    outline: none !important;
+    border-color: rgba(111, 107, 215, 0.46) !important;
+    background: rgba(255, 255, 255, 0.84) !important;
+}
+
+#page .flink-apply-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-top: 22px !important;
+}
+
+#page .flink-apply-action {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 136px !important;
+    min-height: 44px !important;
+    padding: 0 18px !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(111, 107, 215, 0.16) !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    color: #4b5563 !important;
+    font-size: 0.94rem !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+#page .flink-apply-submit {
+    background: linear-gradient(135deg, rgba(111, 107, 215, 0.92), rgba(136, 123, 242, 0.88)) !important;
+    color: #fff !important;
+}
+
+#page .flink-apply-action:hover {
+    transform: translateY(-1px) !important;
+}
+
+#page .flink-apply-status {
+    min-height: 24px !important;
+    margin-top: 14px !important;
+    color: #6b7280 !important;
+    font-size: 0.92rem !important;
+}
+
+[data-theme="dark"] #page .flink-apply-card {
+    background: rgba(30, 30, 30, 0.36) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18) !important;
+}
+
+[data-theme="dark"] #page .flink-apply-badge {
+    background: rgba(129, 140, 248, 0.18) !important;
+    color: #c7d2fe !important;
+}
+
+[data-theme="dark"] #page .flink-apply-heading h2,
+[data-theme="dark"] #page .flink-apply-field span {
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] #page .flink-apply-heading p,
+[data-theme="dark"] #page .flink-apply-status {
+    color: #a0aec0 !important;
+}
+
+[data-theme="dark"] #page .flink-apply-rules {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] #page .flink-apply-rules-title {
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] #page .flink-apply-rules-list {
+    color: #cbd5e0 !important;
+}
+
+[data-theme="dark"] #page .flink-apply-field input,
+[data-theme="dark"] #page .flink-apply-action {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    color: #cbd5e0 !important;
+}
+
+@media screen and (max-width: 768px) {
+    #page .flink-apply-card {
+        padding: 24px 18px !important;
+        border-radius: 18px !important;
+    }
+
+    #page .flink-apply-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    #page .flink-apply-field--full {
+        grid-column: auto !important;
+    }
+
+    #page .flink-apply-actions {
+        flex-direction: column !important;
+    }
+
+    #page .flink-apply-action {
+        width: 100% !important;
+    }
+}
+.card-random-post .item-headline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.card-random-post .item-headline span {
+  flex: 1;
+}
+
+.card-random-post-refresh {
+  border: 1px solid rgba(124, 124, 230, 0.18);
+  background: rgba(255, 255, 255, 0.5);
+  color: #5a61b8;
+  border-radius: 999px;
+  padding: 0.18rem 0.7rem;
+  font-size: 0.76rem;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-random-post-refresh:hover {
+  background: rgba(124, 124, 230, 0.12);
+  color: #434bb2;
+}
+
+.card-random-post .aside-list-item .content {
+  width: 100%;
+}
+
+.card-random-post .aside-list-item .title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.55;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.card-random-post .aside-list-item time {
+  display: block;
+  margin-top: 0.32rem;
+  font-size: 0.78rem;
+  color: #7c8aa5;
+}
+
+/* ========================================
+   首页文章封面：手机端固定展示，无悬停动画
+   ======================================== */
+@media screen and (max-width: 768px) {
+  #recent-posts .recent-post-item {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  #recent-posts .recent-post-item .post_cover {
+    display: block !important;
+    width: 100% !important;
+    height: 230px !important;
+    opacity: 1 !important;
+    overflow: hidden !important;
+    transition: none !important;
+    order: 0 !important;
+  }
+
+  #recent-posts .recent-post-item .post_cover.right {
+    order: 0 !important;
+  }
+
+  #recent-posts .recent-post-item .post_cover .post-bg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  #recent-posts .recent-post-item > .recent-post-info,
+  #recent-posts .recent-post-item > .recent-post-info:not(.no-cover),
+  #recent-posts .recent-post-item:hover > .recent-post-info:not(.no-cover) {
+    width: 100% !important;
+    padding: 20px 20px 30px !important;
+    transition: none !important;
+  }
+
+  #recent-posts .recent-post-item:hover .post_cover {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+
+  #recent-posts .recent-post-item:hover .post_cover .post-bg {
+    transform: none !important;
+  }
+}

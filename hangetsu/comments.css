@@ -1,0 +1,22 @@
+/* Stable Waline 3 public variables, scoped at the component (also after late CSS). */
+#waline-wrap{font-family:var(--sans);color:var(--text);font-size:15px;--waline-font-size:16px;--waline-white:var(--bg);--waline-color:var(--text);--waline-light-grey:var(--muted);--waline-dark-grey:var(--text);--waline-theme-color:var(--accent);--waline-active-color:var(--ink);--waline-bg-color:var(--bg);--waline-bg-color-light:var(--paper);--waline-bg-color-hover:var(--paper);--waline-border-color:var(--line);--waline-disable-bg-color:var(--paper);--waline-disable-color:var(--muted);--waline-code-bg-color:var(--paper);--waline-bq-color:var(--line);--waline-info-bg-color:var(--paper);--waline-info-color:var(--muted);--waline-info-font-size:12px;--waline-badge-color:var(--accent);--waline-border:1px solid var(--line);--waline-box-shadow:none}
+#waline-wrap .wl-panel{border-radius:2px;box-shadow:none}
+#waline-wrap .wl-panel:focus-within{border-color:var(--accent)}
+#waline-wrap .wl-header{border-bottom:1px solid var(--line);border-radius:2px 2px 0 0;padding:2px 8px}
+#waline-wrap .wl-header label{font-size:13px}
+#waline-wrap .wl-header .wl-input{font:14px/1.8 var(--sans);min-height:32px}
+#waline-wrap .wl-editor{font:15px/1.9 var(--sans);min-height:150px;border-radius:0;padding:8px}
+#waline-wrap .wl-btn{border-radius:2px;font:13px/1.6 var(--sans);min-height:40px;box-sizing:border-box}
+#waline-wrap .wl-actions{gap:6px;flex-wrap:wrap}
+#waline-wrap .wl-action{min-width:36px;min-height:36px;margin:0;border-radius:2px}
+#waline-wrap :is(button,a,input,textarea,[tabindex]):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#waline-wrap .wl-card{border-bottom:1px solid var(--line);padding-bottom:20px}
+#waline-wrap .wl-card-item{padding-block:16px}
+#waline-wrap .wl-card .wl-head .wl-nick{font-size:15px;font-weight:400;line-height:1.5}
+#waline-wrap .wl-card .wl-time{font-size:12px}
+#waline-wrap .wl-card .wl-content{font-size:15px;line-height:1.95}
+#waline-wrap .wl-content :is(pre,pre[class*="language-"]),#waline-wrap .wl-content pre code{color:var(--text);background:var(--paper)}
+#waline-wrap .wl-sort li{font-size:13px;padding-block:6px}
+#waline-wrap .wl-empty{font-size:14px;color:var(--muted)}
+#comment-retry{min-height:44px;font-size:13px}
+@media(max-width:767px){#waline-wrap .wl-action{min-width:44px;min-height:44px}#waline-wrap .wl-footer{flex-wrap:wrap;gap:8px}#waline-wrap .wl-info{margin-inline-start:auto}#waline-wrap .wl-btn{min-height:44px}#waline-wrap .wl-header-item{border-bottom-width:1px;border-bottom-style:solid}}

@@ -1,0 +1,16 @@
+/* Inline so a delayed main stylesheet cannot leave the waiting feedback unstyled. */
+.page-loading[hidden]{display:none!important}
+.loading-style-pending body{margin:0}
+.loading-style-pending body>:not(#page-loading){visibility:hidden;animation:page-content-release 0s var(--loading-safety,8500ms) forwards!important}
+.page-loading{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;margin:0;padding:24px;background:var(--bg,#fff);color:var(--ink,#3e3449);pointer-events:none;opacity:1;transition:opacity var(--loading-fade,500ms) ease-in-out;animation:page-loading-release 0s var(--loading-safety,8500ms) forwards}
+.page-loading__content{display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center;font-family:var(--serif,'Yu Mincho'),SimSun,serif}
+.page-loading__moon{display:block;width:38px;height:38px;margin-bottom:7px;color:var(--moon,#a88c58);opacity:.55;animation:page-loading-breath var(--loading-breath,2200ms) ease-in-out infinite}
+.page-loading__moon svg{display:block;width:100%;height:100%}
+.page-loading__name{margin:0;font-size:24px;font-weight:400;line-height:1.6;letter-spacing:.2em;text-indent:.2em}
+.page-loading__quote{margin:0;font-size:11px;line-height:1.9;letter-spacing:.04em;color:var(--muted,#746b7a)}
+.page-loading[data-leaving]{opacity:0}
+.page-loading[data-leaving] .page-loading__moon{animation-play-state:paused}
+@keyframes page-loading-breath{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes page-loading-release{to{opacity:0;visibility:hidden}}
+@keyframes page-content-release{to{visibility:visible}}
+@media(prefers-reduced-motion:reduce){.page-loading{transition:none;animation:page-loading-release 0s var(--loading-safety,8500ms) forwards!important}.page-loading__moon{animation:none!important;opacity:1}}
