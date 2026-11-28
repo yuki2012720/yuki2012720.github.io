@@ -1,0 +1,156 @@
+.draw-favorite-btn {
+  border: 1px solid rgba(90, 114, 232, 0.24) !important;
+  background: rgba(90, 114, 232, 0.09) !important;
+  box-shadow: none !important;
+  color: var(--font-color, #4a5270) !important;
+  font: inherit;
+  cursor: pointer;
+}
+
+[data-theme='dark'] .draw-favorite-btn {
+  border-color: rgba(170, 184, 255, 0.22) !important;
+  background: rgba(123, 145, 255, 0.13) !important;
+  color: rgba(255, 255, 255, 0.84) !important;
+}
+
+.anime-links,
+.game-links {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.draw-favorite-btn.is-favorite {
+  background: linear-gradient(135deg, #f09199, #e16f88) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+.draw-library {
+  --draw-line: rgba(74, 92, 150, 0.14);
+  --draw-surface: rgba(255, 255, 255, 0.76);
+  --draw-soft: rgba(90, 114, 232, 0.07);
+  margin: 20px auto 8px;
+  border: 1px solid var(--draw-line);
+  border-radius: 18px;
+  background: var(--draw-surface);
+  text-align: left;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .draw-library {
+  --draw-line: rgba(187, 198, 255, 0.14);
+  --draw-surface: rgba(20, 21, 29, 0.86);
+  --draw-soft: rgba(123, 145, 255, 0.12);
+}
+
+.draw-library > summary {
+  padding: 15px 18px;
+  color: var(--font-color, #343747);
+  font-weight: 700;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.draw-library[open] > summary {
+  border-bottom: 1px solid var(--draw-line);
+}
+
+.draw-library-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 18px;
+}
+
+#article-container .draw-library h3 {
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--font-color, #343747) !important;
+  font-size: 0.95rem !important;
+}
+
+#article-container .draw-library h3::before,
+#article-container .draw-library h3::after {
+  display: none !important;
+}
+
+.draw-library-list {
+  display: grid;
+  gap: 8px;
+}
+
+.draw-library-empty {
+  margin: 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--draw-soft);
+  color: #81869a;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.draw-library-item {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid var(--draw-line);
+  border-radius: 12px;
+  background: var(--draw-soft);
+}
+
+.draw-library-cover {
+  width: 44px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: rgba(128, 128, 128, 0.1);
+}
+
+.draw-library-copy {
+  min-width: 0;
+}
+
+.draw-library-title {
+  display: block;
+  overflow: hidden;
+  color: var(--font-color, #343747);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.draw-library-meta {
+  display: block;
+  margin-top: 3px;
+  color: #858a9b;
+  font-size: 0.72rem;
+}
+
+.draw-library-remove {
+  padding: 5px 8px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #9296a5 !important;
+  font-size: 0.74rem !important;
+  cursor: pointer;
+}
+
+.draw-library-remove:hover {
+  background: rgba(240, 145, 153, 0.12) !important;
+  color: #d56f79 !important;
+  transform: none !important;
+}
+
+@media (max-width: 640px) {
+  .draw-library-grid {
+    grid-template-columns: 1fr;
+  }
+}
